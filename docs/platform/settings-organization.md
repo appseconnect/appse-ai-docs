@@ -53,22 +53,25 @@ Displays the user's current status in the organization.
 - **Invitation Expired**: The invite link sent to the user has expired. The admin can re-invite the user.
 
 #### Actions
-An ellipsis (`...`) menu appears for each user (except for your own account) to perform further actions, such as:
+A kebab menu icon appears for each user (except for your own account) to perform further actions, such as:
 
 - Change role
 - Re-invite user
 - Remove user
 
-*Note*: Only Admin will be allowed to make these changes.
+*Note: Only Admin will be allowed to make these changes.*
+
+
 ---
 
 ## Inviting Members
 
-### Invite Members Button
+#### Invite Members Button
 
 Located at the top-right of the screen.
 
-**To invite a new member:**
+#### To invite a new member:
+
 1. Click the **"Invite Members"** button.
 2. Enter the user's email and assign a role(editor or viewer).
 3. Send the invite.
