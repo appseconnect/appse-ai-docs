@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "APPSeAI - Docs",
   tagline: "Build AI Agents with Ease",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon-appse-ai.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -78,7 +78,7 @@ const config: Config = {
       title: "APPSeAI Docs",
       logo: {
         alt: "APPSeAI Docs",
-        src: "img/logo01.png",
+        src: "img/brand-logo.svg",
       },
       items: [
         {
