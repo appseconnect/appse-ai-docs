@@ -1,0 +1,11 @@
+{
+  "label": "Create Your First Flow",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Create Your First Flow",
+    "description": "Step-by-step guide to creating your first workflow in the APPSeAI platform.",
+    "slug": "/platform/getting-started/create-flow/"
+  },
+  "collapsed": false
+}

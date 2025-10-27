@@ -1,11 +1,11 @@
 {
   "label": "Key Concepts",
-  "position": 2,
+  "position": 3,
   "link": {
     "type": "generated-index",
     "title": "Key Concepts",
     "description": "Learn about the key concepts used in the platform to create dynamic and flexible workflows.",
-    "slug": "/platform/key_concepts/"
+    "slug": "/platform/key-concepts/"
   },
   "collapsed": false
 }

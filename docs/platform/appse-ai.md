@@ -1,8 +1,7 @@
 ---
-id: appseai-introduction
 title: What is APPSe AI?
 sidebar_position: 1
-slug: /what-is-appse-ai-flow
+slug: platform/what-is-appse-ai
 keywords:
   - appse ai
   - integration platform as a service

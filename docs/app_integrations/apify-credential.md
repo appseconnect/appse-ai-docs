@@ -1,6 +1,6 @@
 ---
 title: "Apify"
-slug : /credentials/apify-credential
+slug : /app-integrations/apify
 ---
 
 Welcome to the Apify credential setup guide!
@@ -32,13 +32,13 @@ You’ll be asked to fill in the following details:
 
 ### 2. Find Your Bearer Token
 
-1. Log in to your **Apify** account at [https://console.apify.com](https://console.apify.com).
-2. Go to the **Settings** page from the sidebar.
-<img src="/img/credentials/apify-cred-settings.png" alt="Apify Credentials Settings" width="700"/>
+- Log in to your **Apify** account at [https://console.apify.com](https://console.apify.com).
+- Go to the **Settings** page from the sidebar.
+<img src="/img/credentials/apify/apify-cred-settings.png" alt="Apify Credentials Settings" width="700"/>
 
-3. Click on the **Integrations** tab. Next, under **API**, copy the **Personal API Token**.
+- Click on the **Integrations** tab. Next, under **API**, copy the **Personal API Token**.
 
-<img src="/img/credentials/apify-cred-bearer-token.png" alt="Apify Credentials Bearer Token" width="700"/>
+<img src="/img/credentials/apify/apify-cred-bearer-token.png" alt="Apify Credentials Bearer Token" width="700"/>
 
 > Example: `apify_api_o6GFG3aT3ZTfXdkKJGMPpUbdT2abcde3`
 

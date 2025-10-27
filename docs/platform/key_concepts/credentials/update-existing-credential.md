@@ -1,7 +1,9 @@
 ---
-title: Decision Node
-sidebar_position: 4
+title: Update Existing Credential
+sidebar_position: 2
+description: Learn how to modify an existing credential within the appse ai platform.
 ---
+
 <div style={{ textAlign: 'center' }}>
   <img
     src="\img\empty-page.svg"

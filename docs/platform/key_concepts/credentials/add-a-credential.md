@@ -1,7 +1,6 @@
 ---
-title: "Credentials"
-slug : /credentials
-sidebar_position: 2.1
+title: "Add a Credential"
+sidebar_position: 1
 ---
 
 In APPSe AI, credentials are the secure connection details that enable your automations to interact with external applications. As an integration platform (iPaaS), APPSe AI leverages these credentials to facilitate seamless data flow between various systems — whether it’s your AI, ERP, CRM, eCommerce, or other apps.

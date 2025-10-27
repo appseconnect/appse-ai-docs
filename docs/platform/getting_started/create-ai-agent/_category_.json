@@ -1,0 +1,11 @@
+{
+  "label": "Create Your First AI Agent",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "title": "Create Your First AI Agent",
+    "description": "Step-by-step guide to creating your first AI agent in the appse ai platform.",
+    "slug": "/platform/getting-started/create-ai-agent/"
+  },
+  "collapsed": false
+}

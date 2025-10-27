@@ -1,7 +1,11 @@
 ---
-title: Decision Node
-sidebar_position: 4
+id: intro
+title: Overview
+sidebar_position: 0
+description: Step-by-step guide to creating your first AI agent in the APPSeAI platform.
+keywords: [getting started, create flow, workflow, APPSeAI]
 ---
+
 <div style={{ textAlign: 'center' }}>
   <img
     src="\img\empty-page.svg"

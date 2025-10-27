@@ -1,0 +1,11 @@
+{
+  "label": "Get Started",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Get Started",
+    "description": "Familiarize yourself with the appse ai platform by building your very first flow.",
+    "slug": "/platform/getting-started/"
+  },
+  "collapsed": false
+}

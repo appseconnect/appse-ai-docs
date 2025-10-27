@@ -1,6 +1,6 @@
 ---
 title: "Pipedrive"
-slug : /credentials/pipedrive-credential
+slug : /app-integrations/pipedrive
 ---
 
 Welcome to the Pipedrive credential setup guide!
@@ -36,12 +36,12 @@ You’ll be asked to fill in the following details:
 
 1. Log in to your **Pipedrive** account.
 2. Click your profile icon (top right) → **Personal preferences** → **API**.
-<img src="/img/credentials/pipedrive-cred-app-preferences.png" alt="APPSeAI Pipedrive Find Account Preferences" width="700"/>
+<img src="/img/credentials/pipedrive/pipedrive-cred-app-preferences.png" alt="APPSeAI Pipedrive Find Account Preferences" width="700"/>
 
 3. Copy the **API token** provided under the "API" section.
 > **Example**:
 > - API Token: `d5a1234e5678abcde9012345fghij6789klm0n`
-<img src="/img/credentials/pipedrive-cred-api-key.png" alt="APPSeAI Pipedrive API Key" width="700"/>
+<img src="/img/credentials/pipedrive/pipedrive-cred-api-key.png" alt="APPSeAI Pipedrive API Key" width="700"/>
 
 > **Note**: Treat your API key like a password. Do not share it publicly.
 
@@ -50,10 +50,10 @@ You’ll be asked to fill in the following details:
 ### 3. Find Your Pipedrive Domain
 
 1. From the same dashboard. Click your profile icon (top right) → **Company Settings**.
-<img src="/img/credentials/pipedrive-cred-company-settings.png" alt="APPSeAI Pipedrive Company Settings" width="700"/>
+<img src="/img/credentials/pipedrive/pipedrive-cred-company-settings.png" alt="APPSeAI Pipedrive Company Settings" width="700"/>
 
 2. You will be able to see a field with your **Company Domain** in it.
-<img src="/img/credentials/pipedrive-cred-company-domain.png" alt="APPSeAI Pipedrive Company Domain" width="700"/>
+<img src="/img/credentials/pipedrive/pipedrive-cred-company-domain.png" alt="APPSeAI Pipedrive Company Domain" width="700"/>
 
 
 > **Example**:
