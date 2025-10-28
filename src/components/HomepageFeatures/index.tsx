@@ -18,7 +18,7 @@ const FeatureList: FeatureItem[] = [
       <>
         Browse key features like credential management, processflows, execution
         history, and AI agents, everything built to simplify integration.{' '}
-        <a href="/platform">Explore</a>
+        <a href="/what-is-appse-ai-flow">Explore</a>
       </>
     ),
   },

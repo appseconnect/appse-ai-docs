@@ -18,7 +18,7 @@ Curious to see how APPSe AI can transform your automation strategy?
 
 <div style={{ textAlign: 'center', margin: 'em 0' }}>
   <a
-    href="https://reimagine.insync.pro/login?callbackUrl=%2F"
+    href="https://workflow.appse.ai/"
     style={{
       display: 'inline-block',
       width: '234.462px',

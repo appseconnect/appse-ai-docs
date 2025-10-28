@@ -4,9 +4,9 @@ slug : /platform/getting-started
 sidebar_position: 2
 ---
 
-If you don’t have an account yet, you visit [reimagine.insync.pro](https://reimagine.insync.pro/login?callbackUrl=%2F) and finish the onboarding steps to sign up for absolutely free. This gives you access to core features to start building integrations right away.
+If you don’t have an account yet, you can visit [appse ai](https://workflow.appse.ai/) and finish the onboarding steps to sign up for absolutely free. This gives you access to core features to start building integrations right away.
 
-When you're ready to unlock premium features & higher usage limits, check out our [pricing page](https://appseconnect.ai/pricing) to explore available plans.
+When you're ready to unlock premium features & higher usage limits, check out our [pricing page](https://appse.ai/pricing/) to explore available plans.
 
 ## Onboarding to APPSe AI Platform
 
@@ -15,7 +15,7 @@ This guide walks you through the onboarding journey, from accessing the platform
 
 ### Step 1: Visit APPSe AI
 
-Go to [https://reimagine.insyc.pro/](https://reimagine.insync.pro/). You’ll have a choice between `Login` and `Register for free`. Since we are creating a new account, select `Register for free`
+Go to [appse ai](https://workflow.appse.ai/). You’ll have a choice between `Login` and `Register for free`. Since we are creating a new account, select `Register for free`
 
 
 ### Step 2: Add Your Email and Password
@@ -38,7 +38,7 @@ Then click on `Sign up` to proceed. You will receive a verification email.
 
 ## Log in to the platform
 
-If you want to log in to APPSe AI, visit [https://reimagine.insyc.pro/](https://reimagine.insync.pro/) again and click on the `Log in` button this time.
+If you want to log in to APPSe AI, visit [appse ai](https://workflow.appse.ai/) again and click on the `Log in` button this time.
 
 ---
 
