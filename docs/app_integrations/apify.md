@@ -1,17 +1,18 @@
 ---
 title: "Apify"
-slug : /app-integrations/apify
+slug : /app-integrations/apify/
+description: Learn how to setup and use Apify on appse ai.
 ---
 
-Welcome to the Apify credential setup guide!
+Apify is a platform designed for automating and scaling data workflows, offering powerful capabilities to manage and process information from various sources. With appse ai, you can easily connect your Apify account, authenticate securely, and perform a range of actions within your automation flows — enabling a smoother, more integrated experience for your data and process automation needs.
 
-This guide will help you connect your Apify account with our platform using a secure bearer token. Once connected, you can automate data extraction, trigger actor runs, and sync your Apify workflows seamlessly.
+---
+
+## Setup Credential
 
 Follow the steps below to quickly find your bearer token and complete the credential setup.
 
----
-
-## Required Fields
+### Required Fields
 
 You’ll be asked to fill in the following details:
 
@@ -20,17 +21,14 @@ You’ll be asked to fill in the following details:
 | Connection Name | A name to identify the connection           |
 | Bearer Token    | Your Apify API token (also called API key)  |
 
----
+### Step-by-Step Guide
 
-## Step-by-Step Guide
-
-### 1. Add Connection Name
+#### 1. Add Connection Name
 
 - Provide a descriptive name for your connection (e.g., `Apify Scraper`, `Product Monitor Feed`).
 - This helps you easily recognize the connection within our platform.
 
-
-### 2. Find Your Bearer Token
+#### 2. Find Your Bearer Token
 
 - Log in to your **Apify** account at [https://console.apify.com](https://console.apify.com).
 - Go to the **Settings** page from the sidebar.
@@ -44,9 +42,7 @@ You’ll be asked to fill in the following details:
 
 > Note: This token gives access to your Apify account. Keep it secure and do not share it publicly.
 
----
-
-## Save Your Credential
+### Save Your Credential
 
 Once you've filled in the necessary fields, click **"Save"** to store and verify your setup.
 

@@ -1,7 +1,7 @@
 ---
 title: What is APPSe AI?
 sidebar_position: 1
-slug: platform/what-is-appse-ai
+slug: /platform/what-is-appse-ai
 keywords:
   - appse ai
   - integration platform as a service
@@ -27,7 +27,7 @@ Curious to see how APPSe AI can transform your automation strategy?
 
 <div style={{ textAlign: 'center', margin: 'em 0' }}>
   <a
-    href="https://reimagine.insync.pro/login?callbackUrl=%2F"
+    href="https://workflow.appse.ai/"
     style={{
       display: 'inline-block',
       width: '234.462px',

@@ -20,7 +20,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="https://reimagine.insync.pro/login?callbackUrl=%2F"
+            to="https://workflow.appse.ai/"
           >
             Try appse ai now!
           </Link>

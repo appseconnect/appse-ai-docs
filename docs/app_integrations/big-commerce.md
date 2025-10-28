@@ -3,13 +3,15 @@ title: "BigCommerce"
 slug : /app-integrations/bigcommerce
 ---
 
-This guide will help you connect your BigCommerce store to APPSe AI by using your **Store Hash** and **API Token**.
-
-Once connected, you will be able to use BigCommerce within your workflows—for syncing orders, updating inventory, triggering events, and more.
+BigCommerce is a leading e-commerce platform that helps businesses create and manage online stores. appse ai enables you to connect with your BigCommerce account, automate order processing, inventory management, and other e-commerce operations, allowing for smoother and more efficient business management through automated workflows.
 
 ---
 
-## Required Fields
+## Setup Credential
+
+Follow the steps below to quickly set up your credential.
+
+### Required Fields
 
 The following fields are required to authenticate your BigCommerce account:
 
@@ -18,32 +20,28 @@ The following fields are required to authenticate your BigCommerce account:
 | Store Hash   | Unique identifier for your BigCommerce store     |
 | API Token    | Token used to authenticate API requests          |
 
----
+### Step-by-Step Guide
 
-## Step-by-Step Guide
+#### 1. Find Your Store Hash
 
-### 1. Find Your Store Hash
-
-1. Log in to your BigCommerce admin dashboard.  
-2. In your browser's address bar, you will see a URL like:  
+- Log in to your BigCommerce admin dashboard.  
+- In your browser's address bar, you will see a URL like:  
    `https://store-abc123.mybigcommerce.com/manage/dashboard`
 
 <img src="/img/credentials/big-commerce/bigcommerce-cred-store-hash.png" alt="APPSeAI BigCommerce Store Hash" width="700"/>
 
-3. The value after `store-` is your **Store Hash**.  
+- The value after `store-` is your **Store Hash**.  
    Example: `abc123`
 
----
+#### 2. Generate Your Access Token
 
-### 2. Generate Your Access Token
-
-1. Navigate to **Settings** → **Store-level API accounts** → Click **Create API Account**.
+- Navigate to **Settings** → **Store-level API accounts** → Click **Create API Account**.
 
 <img src="/img/credentials/big-commerce/bigcommerce-cred-access-token-1.png" alt="APPSeAI BigCommerce Store Level API Accounts" width="700"/>
 
 <img src="/img/credentials/big-commerce/bigcommerce-cred-access-token-2.png" alt="APPSeAI BigCommerce Store Create API Account" width="700"/>
 
-2. Enter a **Name** and select the required **OAuth scopes**.
+- Enter a **Name** and select the required **OAuth scopes**.
 
 Here is a recommended table for the required OAuth scopes:
 
@@ -77,20 +75,17 @@ Here is a recommended table for the required OAuth scopes:
 | Metafields Access                                | full       |
 
 
-3. Click **Save** to generate the token.
+- Click **Save** to generate the token.
 
 <img src="/img/credentials/big-commerce/bigcommerce-cred-access-token-3.png" alt="APPSeAI BigCommerce Save API" width="700"/>
 
-4. Copy and securely store the **Access Token** — it will not be shown again.
+- Copy and securely store the **Access Token** — it will not be shown again.
 
 <img src="/img/credentials/big-commerce/bigcommerce-cred-access-token-4.png" alt="APPSeAI BigCommerce Access Token" width="700"/>
 
-
 You will now have your **Access Token** for use within the APPSe AI platform.
 
----
-
-## Test Your Credential
+### Test Your Credential
 
 Once both **Store Hash** and **API Token** are entered into the credential form, use the **Save** button to store your configurations.
 
@@ -98,6 +93,42 @@ Once both **Store Hash** and **API Token** are entered into the credential form,
 - If unsuccessful, try the following solutions:
    * Ensure your Store Hash and token are correct and that the scopes are properly set.
    * Ensure that your API token has the required scope for the Customers endpoint. Missing or insufficient permissions may result in authentication or data access errors. Refer to the OAuth scope recommendation table above.
+
+---
+
+## Triggers and Actions
+
+Every application has a pre-defined set of triggers and actions that allow users to perform application specific activities within the platform. Here is a list of all the actions and triggers available:
+
+### Actions
+
+> Customers Actions
+
+- Create Customer
+- Get a list of customers
+- Update an existing customer
+
+> Products Actions
+
+- Create Product
+- Get All Products
+- Update Product
+
+> Order Products Actions
+
+- Get Order Products
+
+> Orders Actions
+
+- Get All Orders
+
+> Categories Actions
+
+- Get List Categories
+
+> Order Shipping Addresses Actions
+
+- Get Order Shipping Addresses
 
 ---
 
