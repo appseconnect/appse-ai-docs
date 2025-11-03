@@ -2,6 +2,7 @@
 slug: /platform/key-concepts/nodes/trigger/manual
 title: Manual Trigger 
 position: 1
+description: Allows a workflow to be started on demand by a user interaction.
 ---
 
 # Trigger Manually
