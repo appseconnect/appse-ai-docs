@@ -1,5 +1,5 @@
 ---
-title: "Add a Credential"
+title: "Delete a Credential"
 sidebar_position: 3
 slug: /platform/key-concepts/credentials/delete-a-credential
 ---
