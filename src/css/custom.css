@@ -28,3 +28,33 @@
   --ifm-color-primary-lightest: #1f2937;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Search Styling */
+.navbarSearchContainer_L_XA {
+  min-width: 300px;
+}
+
+.dsla-search-wrapper {
+  width: 100%;
+}
+
+.aa-DetachedSearchButton {
+  min-width: 300px !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.aa-DetachedSearchButton:hover {
+  box-shadow: 0 0 0 2px rgba(51, 149, 255, 0.1) !important;
+}
+
+@media (max-width: 996px) {
+  .navbarSearchContainer_L_XA {
+    min-width: 200px;
+  }
+
+  .aa-DetachedSearchButton {
+    min-width: 200px !important;
+  }
+}
