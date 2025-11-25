@@ -65,15 +65,45 @@ const config: Config = {
         //   onUntruncatedBlogPosts: "warn",
         // },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: ["./src/css/custom.css"],
         },
       } satisfies Preset.Options,
     ],
   ],
 
+  themes: ["docusaurus-theme-search-typesense"],
+
   themeConfig: {
     // Replace with your project's social card
-    image: "img/social-card.jpg",
+    // image: "img/social-card.jpg",
+    typesense: {
+      typesenseCollectionName: "docs",
+      typesenseServerConfig: {
+        nodes: [
+          {
+            host: "localhost",
+            port: 8108,
+            protocol: "http",
+          },
+        ],
+        apiKey: "xyz123secureapikey",
+      },
+      typesenseSearchParameters: {
+        query_by:
+          "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content,embedding",
+        vector_query:
+          "embedding:([], k: 5, distance_threshold: 1.0, alpha: 0.2)", // Optional vector search fine-tuning
+      },
+      searchPagePath: false,
+      contextualSearch: true,
+    },
+    // algolia: {
+    //   appId: "YOUR_APP_ID",
+    //   apiKey: "YOUR_SEARCH_API_KEY",
+    //   indexName: "YOUR_INDEX_NAME",
+    //   contextualSearch: true,
+    // },
+
     navbar: {
       title: "appse ai docs",
       logo: {
@@ -92,6 +122,10 @@ const config: Config = {
           sidebarId: "app_integrationSidebar",
           position: "left",
           label: "App Integrations",
+        },
+        {
+          type: "search",
+          position: "right",
         },
 
         // { to: "/app-integration", label: "App Integrations", position: "left" },
@@ -152,6 +186,38 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    // [
+    //   "@docusaurus/plugin-sitemap",
+    //   {
+    //     changefreq: "weekly",
+    //     priority: 0.5,
+    //   },
+    // ],
+    [
+      "docusaurus2-dotenv",
+      {
+        path: "./.env",
+        safe: false,
+        systemvars: false,
+        silent: false,
+        expand: false,
+        defaults: false,
+      },
+    ],
+    // [
+    //   require.resolve("@cmfcmf/docusaurus-search-local"),
+    //   {
+    //     indexDocs: true,
+    //     indexDocSidebarParentCategories: 0,
+    //     indexBlog: false,
+    //     indexPages: true,
+    //     language: "en",
+    //     maxSearchResults: 8,
+    //   },
+    // ],
+  ],
 };
 
 export default config;

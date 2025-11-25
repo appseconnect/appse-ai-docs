@@ -1,0 +1,40 @@
+services:
+  typesense-server:
+    image: typesense/typesense:29.0
+    container_name: typesense
+    ports:
+      - "8108:8108"
+    volumes:
+      - ./typesense-data:/data
+    environment:
+      - TZ=UTC
+    command:
+      - "--data-dir=/data"
+      - "--api-key=${TYPESENSE_ADMIN_API_KEY}"
+      - "--enable-cors"
+    restart: unless-stopped
+
+  # docker compose up -d typesense-server
+
+  scraper:
+    image: typesense/docsearch-scraper:latest
+    volumes:
+      - ./docsearch.config.json:/tmp/config.json:ro
+    environment:
+      - CONFIG=/tmp/config.json
+      - TYPESENSE_API_KEY=xyz123secureapikey
+      - TYPESENSE_HOST=typesense-server
+      - TYPESENSE_PORT=8108
+      - TYPESENSE_PROTOCOL=http
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - typesense-server
+    profiles:
+      - scraper
+
+  # docker-compose run --rm scraper
+
+volumes:
+  typesense-data:
+    driver: local
