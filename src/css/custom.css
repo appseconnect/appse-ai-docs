@@ -29,12 +29,76 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Search Styling */
-.navbarSearchContainer_L_XA {
-  min-width: 300px;
+/* Search highlight styling */
+.search-highlight {
+  background-color: #ffeb3b !important;
+  padding: 2px 4px !important;
+  border-radius: 2px !important;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-.dsla-search-wrapper {
+[data-theme="dark"] .search-highlight {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+/* Style the highlight marks in search results dropdown */
+.DocSearch-Hit mark {
+  background-color: #ffeb3b !important;
+  color: #000 !important;
+  font-weight: 600;
+  padding: 0 2px;
+}
+
+/* General mark styling */
+mark {
+  background-color: #3bdeff;
+  color: #000;
+  padding: 0.1em 0.2em;
+  border-radius: 2px;
+}
+
+/* Smooth scroll to anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Highlight the target heading when navigated via anchor */
+:target {
+  animation: highlight-target 2s ease;
+  scroll-margin-top: 80px; /* Account for fixed header */
+}
+
+@keyframes highlight-target {
+  0% {
+    background-color: rgba(255, 235, 59, 0.5);
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Ensure search results are visible */
+.DocSearch-Hit-source {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.DocSearch-Hit-title mark,
+.DocSearch-Hit-content mark {
+  background-color: #ffeb3b;
+  color: #000;
+}
+
+/* Search Styling
+.navbarSearchContainer_L_XA {
+  min-width: 300px;
+} */
+
+/* .dsla-search-wrapper {
   width: 100%;
 }
 
@@ -57,4 +121,4 @@
   .aa-DetachedSearchButton {
     min-width: 200px !important;
   }
-}
+} */

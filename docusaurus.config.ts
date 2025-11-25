@@ -71,9 +71,39 @@ const config: Config = {
     ],
   ],
 
+  themes: ["docusaurus-theme-search-typesense"],
+
   themeConfig: {
     // Replace with your project's social card
-    image: "img/social-card.jpg",
+    // image: "img/social-card.jpg",
+    typesense: {
+      typesenseCollectionName: "docs",
+      typesenseServerConfig: {
+        nodes: [
+          {
+            host: "localhost",
+            port: 8108,
+            protocol: "http",
+          },
+        ],
+        apiKey: "xyz123secureapikey",
+      },
+      typesenseSearchParameters: {
+        query_by:
+          "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content,embedding",
+        vector_query:
+          "embedding:([], k: 5, distance_threshold: 1.0, alpha: 0.2)", // Optional vector search fine-tuning
+      },
+      searchPagePath: false,
+      contextualSearch: true,
+    },
+    // algolia: {
+    //   appId: "YOUR_APP_ID",
+    //   apiKey: "YOUR_SEARCH_API_KEY",
+    //   indexName: "YOUR_INDEX_NAME",
+    //   contextualSearch: true,
+    // },
+
     navbar: {
       title: "appse ai docs",
       logo: {
@@ -158,48 +188,35 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 
   plugins: [
-    [
-      "docusaurus2-dotenv",
-      {
-        path: "./.env", // The path to your environment variables.
-        safe: false, // If false ignore safe-mode, if true load './.env.example', if a string load that file as the sample
-        systemvars: false, // Set to true if you would rather load all system variables as well (useful for CI purposes)
-        silent: false, //  If true, all warnings will be suppressed
-        expand: false, // Allows your variables to be "expanded" for reusability within your .env file
-        defaults: false, //  Adds support for dotenv-defaults. If set to true, uses ./.env.defaults
-      },
-    ],
     // [
-    //   "docusaurus-plugin-chat-page",
+    //   "@docusaurus/plugin-sitemap",
     //   {
-    //     openai: {
-    //       apiKey: process.env.OPENAI_API_KEY || "",
-    //       model: "gpt-4o-mini",
-    //     },
-    //     docsPath: "./docs",
-    //     enableStreaming: true,
+    //     changefreq: "weekly",
+    //     priority: 0.5,
     //   },
     // ],
     [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
+      "docusaurus2-dotenv",
       {
-        indexDocs: true,
-        indexDocSidebarParentCategories: 0,
-        indexBlog: false,
-        indexPages: true,
-        language: "en",
-        maxSearchResults: 8,
-        lunr: {
-          tokenizerSeparator: /[\s\-]+/,
-          b: 0.75,
-          k1: 1.2,
-          titleBoost: 5,
-          contentBoost: 1,
-          tagsBoost: 3,
-          parentCategoriesBoost: 2,
-        },
+        path: "./.env",
+        safe: false,
+        systemvars: false,
+        silent: false,
+        expand: false,
+        defaults: false,
       },
     ],
+    // [
+    //   require.resolve("@cmfcmf/docusaurus-search-local"),
+    //   {
+    //     indexDocs: true,
+    //     indexDocSidebarParentCategories: 0,
+    //     indexBlog: false,
+    //     indexPages: true,
+    //     language: "en",
+    //     maxSearchResults: 8,
+    //   },
+    // ],
   ],
 };
 
