@@ -32,3 +32,9 @@ Enter or map the field containing the Base64-encoded string that you want to dec
 
 6. After execution, the original file content will be available as output for the next node in your workflow.
 <img src="\img\platform\key-concepts\nodes\built-in\base64-decode\output.png" alt="output" width="700"/>
+
+:::note
+
+The Base64 node currently supports only the PDF files that are **NOT** protected by a password.
+
+:::
