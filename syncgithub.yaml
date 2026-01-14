@@ -1,1 +1,62 @@
+# ============================================
+# GitHub:updatefromazuredevops → Azure DevOps:gitsync
+# Daily TEST sync pipeline
+# ============================================
+
+trigger: none   # ❌ Prevent CI loop
+
+schedules:
+  - cron: "50 9 * * *"   # ⏰ 3:10 PM IST (UTC 09:40)
+    displayName: Daily GitHub → DevOps TEST Sync
+    branches:
+      include:
+        - gitsync
+    always: true
+
+pool:
+  vmImage: ubuntu-latest
+
+# 🔐 Variable group containing GITHUB_PAT
+variables:
+- group: github-sync-secrets
+
+steps:
+- checkout: self
+  persistCredentials: true
+
+- script: |
+    set -e
+
+    echo "🔧 Configuring git identity"
+    git config user.name "GitHub Sync Bot"
+    git config user.email "sync-bot@appseconnect.com"
+
+    echo "📥 Fetching Azure DevOps branch: gitsync"
+    git fetch origin gitsync
+
+    echo "🔀 Checking out Azure DevOps branch: gitsync"
+    git checkout -B gitsync origin/gitsync
+
+    echo "🔗 Adding GitHub remote"
+    git remote remove github 2>/dev/null || true
+    git remote add github https://$(GITHUB_PAT)@github.com/appseconnect/appse-ai-docs.git
+
+    echo "📥 Fetching GitHub branch: updatefromazuredevops"
+    git fetch github updatefromazuredevops
+
+    echo "🔍 Checking for changes"
+    if git diff --quiet HEAD github/updatefromazuredevops; then
+      echo "✅ No changes detected. Sync not required."
+      exit 0
+    fi
+
+    echo "🔄 Changes detected. Performing fast-forward merge"
+    git merge github/updatefromazuredevops --ff-only
+
+    echo "🚀 Pushing changes to Azure DevOps branch: gitsync"
+    git push origin gitsync
+
+    echo "✅ TEST sync completed successfully"
+
+  displayName: "Sync GitHub:updatefromazuredevops → DevOps:gitsync"
 
