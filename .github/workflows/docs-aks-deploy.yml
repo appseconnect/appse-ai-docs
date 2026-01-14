@@ -3,7 +3,7 @@ name: Build & Deploy Docs to AKS (latest)
 on:
   push:
     branches:
-      - updatefromazuredevops
+      - main
 
 permissions:
   contents: read
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: updatefromazuredevops
+          ref: main
 
       # 2. Login to Azure using AZURE_CREDENTIALS (Service Principal)
       - name: Login to Azure
