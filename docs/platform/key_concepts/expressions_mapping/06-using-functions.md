@@ -16,6 +16,9 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 ```json
 {
   "orderId": "ORD-001",
+  "invoiceNumber": "INV-2026-00045",
+  "trackingCode": "SHIP-IN-DEL-98765",
+  "created_at": "2026-01-14 12:05:20",
   "customerName": "alice johnson",
   "items": [
     { "name": "Laptop", "price": 1200, "qty": 1 },
@@ -67,6 +70,13 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 | `ceil()` | `{{ ceil(`10.3`) }}` | `11` | Round up |
 | `floor()` | `{{ floor(`10.9`) }}` | `10` | Round down |
 | `round()` | `{{ round(`10.5`) }}` | `11` | Round nearest |
+
+## Datetime Functions
+
+| Function | Expression | Output | Use Case |
+|----------|------------|--------|----------|
+| `now()` | `{{ now() }}` | `2026-01-16T07:29:05.5390268Z` | Get current execution timestamp |
+| `get_unix_timestamp()` | `{{ get_unix_timestamp($payload.created_at) }}` | `1768392320000` | Convert datetime field to Unix epoch (ms) |
 
 ## Real-World Examples
 
@@ -131,6 +141,18 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
   "uniqueTags": "{{ unique($payload.tags) }}"
 }
 ```
+
+### Example 5: Datetime Utility
+
+```js
+{
+  "orderCreatedEpoch": "{{ get_unix_timestamp($payload.created_at) }}",
+  "currentTime": "{{ now() }}",
+  "isOrderPast": "{{ get_unix_timestamp($payload.created_at) < get_unix_timestamp(now()) }}"
+}
+```
+
+
 
 ## Combining Functions
 
