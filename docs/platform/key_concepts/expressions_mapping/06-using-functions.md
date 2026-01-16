@@ -62,6 +62,13 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 | `type()` | `{{ type($payload.items) }}` | `"array"` | Get data type |
 | `not_null()` | `{{ $payload.items[?not_null(discount)] }}` | Items with discount | Filter nulls |
 
+## Datetime Functions
+
+| Function | Expression | Output | Use Case |
+|----------|------------|--------|----------|
+| `now()` | `{{ now() }}` | `2026-01-16T07:29:05.5390268Z` | Get current execution timestamp |
+| `get_unix_timestamp()` | `{{ get_unix_timestamp($payload.created_at) }}` | `1768392320000` | Convert datetime field to Unix epoch (ms) |
+
 ## Math Functions
 
 | Function | Expression | Output | Use Case |
@@ -70,13 +77,6 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 | `ceil()` | `{{ ceil(`10.3`) }}` | `11` | Round up |
 | `floor()` | `{{ floor(`10.9`) }}` | `10` | Round down |
 | `round()` | `{{ round(`10.5`) }}` | `11` | Round nearest |
-
-## Datetime Functions
-
-| Function | Expression | Output | Use Case |
-|----------|------------|--------|----------|
-| `now()` | `{{ now() }}` | `2026-01-16T07:29:05.5390268Z` | Get current execution timestamp |
-| `get_unix_timestamp()` | `{{ get_unix_timestamp($payload.created_at) }}` | `1768392320000` | Convert datetime field to Unix epoch (ms) |
 
 ## Real-World Examples
 
@@ -142,13 +142,24 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 }
 ```
 
-### Example 5: Datetime Utility
+### Example 5: Datetime Operations
 
 ```js
 {
-  "orderCreatedEpoch": "{{ get_unix_timestamp($payload.created_at) }}",
+  "orderCreatedAtEpoch": "{{ get_unix_timestamp($payload.created_at) }}",
   "currentTime": "{{ now() }}",
   "isOrderPast": "{{ get_unix_timestamp($payload.created_at) < get_unix_timestamp(now()) }}"
+  "createdAt": "{{ to_iso_utc($payload.created_at) }}
+}
+```
+
+**Output:**
+```js
+{
+  "orderCreatedAtEpoch": "1768392320000",
+  "currentTime": "2026-01-16T08:13:49.2091871Z",
+  "isOrderPast": "True"
+  "createdAt": "2026-01-14T12:05:20Z"
 }
 ```
 
