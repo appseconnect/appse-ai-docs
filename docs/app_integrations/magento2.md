@@ -5,8 +5,6 @@ slug: /app-integrations/magento2/
 
 Magento 2 is a robust, open-source e-commerce platform that offers flexible shopping cart systems and control over the look, content, and functionality of your online store. With appse ai, you can seamlessly connect your Magento 2 store to automate orders, products, and customer data management, enhancing operational efficiency.
 
----
-
 ## Setup Credential
 
 To setup your Magento 2 credential, you can choose between two authentication methods:
@@ -52,7 +50,7 @@ Before creating an integration, you must enable standalone Bearer tokens.
 
 **3. Configure Integration Details**
 
-- Enter a **Name** (e.g., `AppseAI`) and your **Password** in "Basic Settings".
+- Enter a **Name** (e.g., `appseai`) and your **Password** in "Basic Settings".
 
 <img src="/img/credentials/magento2/magento-new-integration.png" alt="Magento New Integration Form" width="700"/>
 
@@ -69,9 +67,9 @@ Before creating an integration, you must enable standalone Bearer tokens.
 
 <img src="/img/credentials/magento2/magento-access-token.png" alt="Magento Access Tokens" width="700"/>
 
-**6. Connect to Appse AI**
+**6. Connect to appse ai**
 
-- In Appse AI, enter your **Store Domain** and paste the **Access Token**.
+- In appse ai, enter your **Store Domain** and paste the **Access Token**.
 - Click **Save**.
 
 ---
@@ -103,6 +101,37 @@ Select **Session Authentication** in the authentication type selection screen.
 
 ---
 
+## Triggers and Actions
+
+Here is a list of the available actions and triggers for Magento 2:
+
+### Triggers
+
+- **Customers updated** - Trigger when customers are updated in Magento.
+- **New customers created** - Trigger when new customers are created in Magento.
+- **New orders created** - Trigger when new orders are created in Magento.
+- **New products created** - Trigger when new products are created in Magento.
+
+### Actions
+
+> Customer Actions
+
+- **Create a customer** - Create a new customer in Magento.
+- **Get customer by email address** - Get customer by email address.
+- **Update a customer** - Update an existing customer in Magento.
+
+> Product Actions
+
+- **Create a product** - Create a new product in Magento.
+- **Get product by SKU** - Get product by SKU.
+- **Update a product** - Update an existing product in Magento.
+
+> Shipment Actions
+
+- **Create shipment** - This action creates a shipment for a Magento order.
+
+---
+
 ## Need Help?
 
-If you’re unsure about any field or face connection issues, reach out to our support team at hello@appse.ai
+If you’re unsure about any field or face connection issues, reach out to our support team at [hello@appse.ai](mailto:hello@appse.ai)
