@@ -122,7 +122,7 @@ After successful login, you will able to access your Apollo.io account.
 
 <img src="/img/credentials/apollo-io/save_create_new_apikey.png" alt="Create new api key" width="700"/>
 
-- Once, the key is generated, copy the key to use it for your integration.
+- Once the key is generated, copy the key to use it for your integration.
 
 <img src="/img/credentials/apollo-io/copy_api_key.png" alt="Copy Api Key" width="700"/>
 
