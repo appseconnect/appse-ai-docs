@@ -76,7 +76,7 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 
 | Function | Expression | Output | Use Case |
 |----------|------------|--------|----------|
-| `uniqueId()` | `{{ uniqueid() }}` | `"a3f9c8e2-7b4c-4f01-9c6e-92a1e7d10c45"` | Generate unique identifier |
+| `uniqueid()` | `{{ uniqueid() }}` | `"a3f9c8e2-7b4c-4f01-9c6e-92a1e7d10c45"` | Generate unique identifier |
 
 ## Math Functions
 
