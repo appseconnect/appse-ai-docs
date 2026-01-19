@@ -114,7 +114,7 @@ After successful login, you will able to access your Apollo.io account.
 
 <img src="/img/credentials/apollo-io/set_as_master_key.png" alt="Save as master key" width="700"/>
 
-- Or, you can app api endpoints as per you requiremnt by clicking the api dropdown section and clicking check boxes.
+- Or, you can app api endpoints as per you requirement by clicking the api dropdown section and clicking check boxes.
 
 <img src="/img/credentials/apollo-io/apilist_dropdown.png" alt="Apollo.io API settings" width="700"/>
 
