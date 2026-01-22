@@ -184,10 +184,11 @@ After successful creation, Google will display:
 
 - **Client ID**
 - **Client Secret**
+   <img src="\img\credentials\google-sheets\GS27.png" width="700"/>
 
 Copy these values and store them securely  
 Also, you can download the JSON file clicking on the Download JSON button to store the credential
-
+   <img src="\img\credentials\google-sheets\GS28.png" width="700"/>
 ---
 
 ## Step 8: Add Credential in appse ai platform
@@ -201,16 +202,22 @@ Also, you can download the JSON file clicking on the Download JSON button to sto
 6. Provide the Google account email
    <img src="\img\credentials\google-sheets\GS30.png" width="700"/>
 7. Provide the password 
+   <img src="\img\credentials\google-sheets\GS31.png" width="700"/>
 8. Complete the Two-Step-Verification if enabled in your account
 9. Click on Continue to proceed
    <img src="\img\credentials\google-sheets\GS32.png" width="700"/>
 10. To continue using appse.ai with Google Sheets, you must approve this access request
-
+   <img src="\img\credentials\google-sheets\GS33.png" width="700"/>
 11. Verify that credential is successfully validated
-
+   <img src="\img\credentials\google-sheets\GS34.png" width="700"/>
 ---
 
 ## Actions
+1. Get Rows from Google Sheet
+2. Create New Sheet in Spreadsheet
+3. Append Row to Google Sheet
+4. Update Row in Google Sheet
+5. Create new Spreadsheet
 
 ## Common Setup
 
@@ -236,7 +243,7 @@ Copy this value and paste it into the Spreadsheet ID field in the action configu
 
 ---
 
-## Get Rows from Google Sheet
+## 1. Get Rows from Google Sheet
 
 The **Get Rows from Google Sheet** action retrieves data from a specified range in a Google Sheet and returns each row as a structured object.  
 This action is commonly used to **read spreadsheet data**, **fetch records**, or **use Google Sheets as a data source** in workflows.
@@ -254,7 +261,7 @@ This action is commonly used to **read spreadsheet data**, **fetch records**, or
 
 ---
 
-## Create New Sheet in Spreadsheet
+## 2. Create New Sheet in Spreadsheet
 
 The **Create New Sheet in Spreadsheet** action creates a **new sheet (tab)** inside an existing Google Spreadsheet.  
 This action is commonly used to **initialize data structures**, **generate reports**, or **prepare sheets for downstream write operations**.
@@ -272,7 +279,7 @@ This action is commonly used to **initialize data structures**, **generate repor
 
 ---
 
-## Append Row to Google Sheet
+## 3. Append Row to Google Sheet
 
 The **Append Row to Google Sheet** action adds a new row of data to an existing Google Sheet.  
 This action is commonly used to **insert new records**, **log workflow outputs**, or **store transactional data** without affecting existing rows.
@@ -292,7 +299,7 @@ This action is commonly used to **insert new records**, **log workflow outputs**
 
 ---
 
-## Update Row in Google Sheet
+## 4. Update Row in Google Sheet
 
 This action allows you to update an existing row in a Google Sheet by matching a specific value in a chosen column and then updating one or more column values in that row.
 
@@ -304,8 +311,26 @@ This action allows you to update an existing row in a Google Sheet by matching a
 |------|------------|
 | **Spreadsheet ID** | The unique ID of the Google Sheets file that contains the sheet where the row needs to be updated. |
 | **Sheet Name** | The name of the sheet (tab) within the selected Google Spreadsheet where the update operation will be performed. |
-| **Row Match Condition** | Defines the criteria used to identify the exact row that should be updated. **Match Column:** Enter the exact column header name (for example: `Employee ID`, `Name`). This column is used to locate the target row. **Match Value:** Enter the value to match against the selected column. The row containing this value will be identified and updated. |
+| **Row Match Condition** | Defines the criteria used to identify the exact row that should be updated.<br />**Match Column** – Enter the exact column header name (for example: `Employee ID`, `Name`).<br />**Match Value** – Enter the value to match against the selected column. The row containing this value will be identified and updated. |
 | **Updated Column Values** | Clicking **Add Additional Property** displays a key–value pair UI. Each key represents a column header, and the corresponding value represents the new data to be updated in that column. |
+
+---
+
+## 5. Create new Spreadsheet
+
+The **Create New Spreadsheet** action allows you to create a brand-new Google Spreadsheet directly from your workflow.  
+This action is useful when you need to generate spreadsheets dynamically for reports, data collection, exports, or automation use cases.
+
+---
+
+### Configuration Fields
+
+| Field | Description |
+|------|------------|
+| **Spreadsheet Title** | The title (name) of the new Google Spreadsheet that will be created|
+| **Locale** *(Optional)* | Specifies the locale for the spreadsheet (for example: `en_US`). The locale determines default formatting such as date formats, number separators, and currency symbols. |
+| **Recalculation Frequency** *(Optional)* | Determines how frequently spreadsheet formulas are recalculated automatically. Select an appropriate option based on how often your data changes. |
+| **Initial Sheets** *(Optional)* | Allows you to define one or more sheets (tabs) that should be created when the spreadsheet is generated.<br />**Sheet Name** Enter a name for the sheet (for example: `Sheet1`, `Leads`, `Data`)<br />**Hidden Sheet** Enable this option to create the sheet in a hidden state. Hidden sheets will not be visible by default to users opening the spreadsheet (for example: `true`, `false`)|
 
 ---
 
