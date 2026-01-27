@@ -51,7 +51,7 @@ Now configure the credential in appse.ai by adding a new Apify credential and pa
 Once you've filled in the necessary fields, click **"Save"** to store and verify your setup.
 
 - If successful, your Apify credential will show a "✓" icon. Now you can use this application for your integrations.
-- If it fails, you will be displayed a "!" icon. In that case, please recheck your connection name and Apify bearer token (API key), or contact support.
+- If it fails, your Apify credential will show a "!" icon. In that case, please recheck your connection name and Apify bearer token (API key), or contact support.
 
 
 ## Working with Actors
