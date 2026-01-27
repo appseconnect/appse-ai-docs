@@ -52,12 +52,12 @@ In the **Create new token** screen, you'll need to configure:
 
 **b) Choose Access Resources:**
 - You have two options:
-  1. **Specific Base**: Add a specific base if you want the token to access only particular databases
-  2. **All Bases**: Select "All current and future bases in all current and future workspaces" if you want the token to access any database in your account
+  1. **Specific Base (recommended)**: Add only the specific base or bases that appse ai needs to access. This follows the principle of least privilege and limits the impact if the token is ever compromised.
+  2. **All Bases (higher risk)**: Select "All current and future bases in all current and future workspaces" only if you explicitly require the token to access any database in your account and understand the security trade-offs.
 
 :::tip Choosing Access Level
 
-For maximum flexibility, we recommend selecting "All current and future bases in all current and future workspaces". This allows you to use the same credential across different bases without creating multiple tokens.
+For better security, we recommend granting access only to the specific base(s) required for your appse ai workflows. Using "All current and future bases in all current and future workspaces" is more convenient but significantly broadens access if the token is leaked or misused, so treat it as an advanced option and use it only when strictly necessary.
 
 :::
 
