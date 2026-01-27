@@ -44,7 +44,7 @@ You’ll be asked to fill in the following details:
 
 ### Save Your Credential
 
-Now configure the credential in appse.ai by adding a new Apify Credentials and Paste the **API key**
+Now configure the credential in appse.ai by adding a new Apify credential and paste the **API key**.
 
 <img src="/img/credentials/apify/apify-credential-configure.png" alt="Apify Credential Configure" />
 
