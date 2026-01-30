@@ -56,6 +56,8 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 | `substringBefore()` | `{{ substringBefore($payload.orderId, '-') }}` | `"ORD"` | Substring before delimiter |
 | `substringAfter()` | `{{ substringAfter($payload.orderId, '-') }}` | `"001"` | Substring after delimiter |
 | `split()` | `{{ split($payload.orderId, '-') }}` | `["ORD","001"]` | Split string |
+| `substring(value, start, length)` | `{{ substring($payload.invoiceNumber, '0', '8') }}` | `"INV-2026"` | Substring Extract |
+| `substring(value, start)` | `{{ substring($payload.invoiceNumber, '9') }}` | `"00045"` | Substring Extract |
 
 ## Type Functions
 
@@ -73,6 +75,7 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 | `to_iso_utc()` | `{{ to_iso_utc($payload.created_at) }}` | `"2026-01-14T12:05:20Z"` | Convert datetime to UTC |
 | `now()` | `{{ now() }}` | `2026-01-16T07:29:05.5390268Z` | Get current execution timestamp |
 | `get_unix_timestamp()` | `{{ get_unix_timestamp($payload.created_at) }}` | `1768392320000` | Convert datetime field to Unix epoch (ms) |
+| `formatDate()` | `{{ formatDate($payload.created_at, 'yyyy-MM-ddTHH:mm:ssZ') }}` | `2026-01-14T12:05:20Z` | Date Formatter |
 
 ## Utility Functions
 
@@ -142,7 +145,8 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
   "orderType": "{{ split($payload.orderId, '-')[0] }}",
   "orderNumber": "{{ split($payload.orderId, '-')[1] }}",
   "invoiceType": "{{ substringBefore($payload.invoiceNumber, '-') }}",
-  "destinationCode": "{{ substringAfter($payload.trackingCode, 'DEL-') }}"
+  "destinationCode": "{{ substringAfter($payload.trackingCode, 'DEL-') }}",
+  "trackingNumber": "{{ substring($payload.trackingCode, '12', '5') }}"
 }
 ```
 
@@ -156,7 +160,8 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
   "orderType": "ORD",
   "orderNumber": "001",
   "invoiceType": "INV",
-  "destinationCode": "98765"
+  "destinationCode": "98765",
+  "trackingNumber": "98765"
 }
 ```
 
@@ -192,8 +197,9 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 {
   "orderCreatedAtEpoch": "{{ get_unix_timestamp($payload.created_at) }}",
   "currentTime": "{{ now() }}",
-  "isOrderPast": "{{ get_unix_timestamp($payload.created_at) < get_unix_timestamp(now()) }}"
-  "createdAt": "{{ to_iso_utc($payload.created_at) }}
+  "isOrderPast": "{{ get_unix_timestamp($payload.created_at) < get_unix_timestamp(now()) }}",
+  "createdAt": "{{ to_iso_utc($payload.created_at) }}",
+  "updatedAt": "{{ formatDate($payload.created_at, 'yyyy-MM-ddTHH:mm:ssZ') }}"
 }
 ```
 
@@ -202,8 +208,9 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 {
   "orderCreatedAtEpoch": "1768392320000",
   "currentTime": "2026-01-16T08:13:49.2091871Z",
-  "isOrderPast": "True"
-  "createdAt": "2026-01-14T12:05:20Z"
+  "isOrderPast": "True",
+  "createdAt": "2026-01-14T12:05:20Z",
+  "updatedAt": "2026-01-14T12:05:20Z"
 }
 ```
 
@@ -245,6 +252,7 @@ Use functions on filtered data:
 {{ join(' - ', $payload.tags) }}
 {{ to_string($payload.totalAmount) }}
 {{ to_iso_utc($payload.created_at) }}
+{{ formatDate($payload.created_at, 'yyyy-MM-ddTHH:mm:ssZ') }}
 
 ```
 
