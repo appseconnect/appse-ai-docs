@@ -3,8 +3,22 @@
 @import "fumadocs-ui/css/preset.css";
 
 :root {
-  --color-brand-primary: #0066cc;
-  --color-brand-secondary: #004499;
+  --color-brand-primary: #3d5afe;
+  --color-brand-secondary: #2e48e6;
+
+  --color-fd-primary: #3d5afe;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-accent: #eef0ff;
+  --color-fd-accent-foreground: #1a2bb8;
+  --color-fd-ring: #3d5afe;
+}
+
+.dark {
+  --color-fd-primary: #6b82ff;
+  --color-fd-primary-foreground: #0a0f2c;
+  --color-fd-accent: #1a2244;
+  --color-fd-accent-foreground: #c5cdff;
+  --color-fd-ring: #6b82ff;
 }
 
 body {
