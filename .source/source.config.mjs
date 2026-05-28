@@ -10,9 +10,7 @@ var docs = defineDocs({
 });
 var source_config_default = defineConfig({
   mdxOptions: {
-    remarkPlugins: [remarkDirective, remarkDirectiveAdmonition],
-    // rehypeToc cannot compile heading trees inside legacy Docusaurus TabItem blocks (http.md).
-    rehypePlugins: (plugins) => plugins.slice(0, -1)
+    remarkPlugins: [remarkDirective, remarkDirectiveAdmonition]
   }
 });
 export {
