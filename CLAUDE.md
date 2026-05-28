@@ -31,7 +31,7 @@ This is a **content-driven** site: MDX files under `docs/` are the source of tru
 
 ### Content → routes pipeline
 
-1. `source.config.ts` defines a Fumadocs MDX collection rooted at `docs/` (all `*.md` / `*.mdx`). Remark plugins: `remark-directive` + `remarkDirectiveAdmonition` (enables `::note` style admonitions). The default rehype TOC plugin is stripped via `rehypePlugins: (plugins) => plugins.slice(0, -1)` — required because legacy Docusaurus `<TabItem>` blocks (e.g. `docs/app_integrations/http.md`) break the TOC compiler. Don't re-enable it without fixing those files.
+1. `source.config.ts` defines a Fumadocs MDX collection rooted at `docs/` (all `*.md` / `*.mdx`). Remark plugins: `remark-directive` + `remarkDirectiveAdmonition` (enables `::note` style admonitions). Rehype pipeline prepends `rehype-raw` so legacy Docusaurus raw HTML (`<Tabs>`/`<TabItem>` in `.md` files) is normalized to HAST elements; this is what lets the default `rehype-toc` plugin walk the tree and produce the right-rail TOC. MDX-native nodes are passed through unmodified. If you ever need to disable `rehype-raw`, the TOC will silently disappear on every page that mixes raw HTML with markdown.
 2. Fumadocs generates a virtual `.source/` module at build time; `tsconfig.json` aliases `collections/*` → `./.source/*`.
 3. `src/lib/source.ts` wraps the generated collection in a Fumadocs `loader()` with `baseUrl: "/"`.
 4. `src/app/(docs)/[...slug]/page.tsx` is the docs catch-all that renders any doc page via `source.getPage(slug)`. It's a **required** catch-all (`[...slug]`, not `[[...slug]]`) so it does not match `/`.

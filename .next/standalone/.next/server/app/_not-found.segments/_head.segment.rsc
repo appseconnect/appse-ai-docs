@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[963881,["/_next/static/chunks/0wbyls_f-jdnr.js","/_next/static/chunks/15ir9nwaqo244.js"],"ViewportBoundary"]
+3:I[963881,["/_next/static/chunks/0wbyls_f-jdnr.js","/_next/static/chunks/15ir9nwaqo244.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+5:I[653076,["/_next/static/chunks/0wbyls_f-jdnr.js","/_next/static/chunks/15ir9nwaqo244.js"],"IconMark"]
+0:{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"appse ai docs"}],["$","meta","1",{"name":"description","content":"Documentation for the appse ai platform — workflows, integrations, and automation."}],["$","link","2",{"rel":"icon","href":"/img/favicon-appse-ai-docs.png"}],["$","$L5","3",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"UlRDcr8cK77RumLbxDtn7"}

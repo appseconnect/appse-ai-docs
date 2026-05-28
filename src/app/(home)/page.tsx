@@ -6,7 +6,7 @@ const features = [
     title: "Explore the Platform",
     description:
       "Credential management, processflows, execution history, AI agents — everything built to simplify integration.",
-    href: "/platform/what-is-appse-ai",
+    href: "/platform/appse-ai",
     image: "/img/homepage/explore-the-platform.png",
   },
   {
@@ -46,7 +46,7 @@ export default function HomePage() {
             Try appse ai now!
           </a>
           <Link
-            href="/platform/what-is-appse-ai"
+            href="/platform/appse-ai"
             className="rounded-md border border-fd-border px-5 py-2.5 text-sm font-semibold transition hover:bg-fd-accent"
           >
             Read the docs

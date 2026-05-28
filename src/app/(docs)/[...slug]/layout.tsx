@@ -12,7 +12,7 @@ export default function DocsRootLayout({ children }: { children: ReactNode }) {
         tabs: [
           {
             title: "Platform",
-            url: "/platform/what-is-appse-ai",
+            url: "/platform/appse-ai",
           },
           {
             title: "App Integrations",
