@@ -1,8 +1,8 @@
 ---
 title: "MillionVerifier"
-slug : /app-integrations/millionverifier/
 description: Learn how to setup and use MillionVerifier on appse ai.
 ---
+
 
 MillionVerifier is an email verification service that helps businesses maintain clean and accurate email lists by validating email addresses in real-time. With appse ai, you can seamlessly connect your MillionVerifier account to automate email validation workflows and ensure high deliverability rates for your email campaigns.
 
@@ -30,21 +30,13 @@ You'll be asked to fill in the following details:
 
 #### 2. Find Your API Key
 
-- Log in to your **MillionVerifier** account at [https://app.millionverifier.com](https://app.millionverifier.com).
+- Log in to your **MillionVerifier** account at [https://app.millionverifier.com](https://app.millionverifier.com).![MillionVerifier Login](/img/credentials/millionverifier/millionverifier-login.png)
 
-<img src="/img/credentials/millionverifier/millionverifier-login.png" alt="MillionVerifier Login" width="700"/>
+- Click on the **Profile picture menu** and choose **Account settings**.![MillionVerifier Account Settings](/img/credentials/millionverifier/millionverifier-account-settings.png)
 
-- Click on the **Profile picture menu** and choose **Account settings**.
+- Click on the **API keys** tab.![MillionVerifier API Keys Tab](/img/credentials/millionverifier/millionverifier-api-keys-tab.png)
 
-<img src="/img/credentials/millionverifier/millionverifier-account-settings.png" alt="MillionVerifier Account Settings" width="700"/>
-
-- Click on the **API keys** tab.
-
-<img src="/img/credentials/millionverifier/millionverifier-api-keys-tab.png" alt="MillionVerifier API Keys Tab" width="700"/>
-
-- Create an **API key** if you don't have one or copy the existing **API key** and paste it in the API Key field.
-
-<img src="/img/credentials/millionverifier/millionverifier-copy-api-key.png" alt="MillionVerifier Copy API Key" width="700"/>
+- Create an **API key** if you don't have one or copy the existing **API key** and paste it in the API Key field.![MillionVerifier Copy API Key](/img/credentials/millionverifier/millionverifier-copy-api-key.png)
 
 > Note: This API key gives access to your MillionVerifier account. Keep it secure and do not share it publicly.
 

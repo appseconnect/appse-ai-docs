@@ -1,8 +1,8 @@
 ---
 title: "Pipedrive"
-slug: /app-integrations/pipedrive/
 description: Step-by-step guide to connect Pipedrive to appse ai and automate sales workflows.
 ---
+
 
 Pipedrive is a sales CRM tool designed to help teams manage and close deals efficiently. With appse ai, you can connect your Pipedrive account, automate sales processes, and synchronize data between apps to optimize lead management, improve sales pipeline visibility, and enhance team productivity across your workflows.
 By following this step-by-step guide, you’ll have your Pipedrive integration ready to go in no time.
@@ -34,37 +34,38 @@ You’ll be asked to fill in the following details:
 
 - Log in to your **Pipedrive** account.
 - Click your profile icon (top right) → **Personal preferences** → **API**.
-  <img src="/img/credentials/pipedrive/pipedrive-cred-app-preferences.png" alt="Pipedrive profile menu showing Personal Preferences option" width="700"/>
+
+![Pipedrive profile menu showing Personal Preferences option](/img/credentials/pipedrive/pipedrive-cred-app-preferences.png)
 
 - Copy the **API token** provided under the "API" section.
 
-:::tip Example
+::tip[Example]
 API Token: `d5a1234e5678abcde9012345fghij6789klm0n`
-:::
+::
+![Pipedrive Personal Preferences API section displaying the API token](/img/credentials/pipedrive/pipedrive-cred-api-key.png)
 
-<img src="/img/credentials/pipedrive/pipedrive-cred-api-key.png" alt="Pipedrive Personal Preferences API section displaying the API token" width="700"/>
-
-:::tip
+::tip
 Treat your API key like a password. Do not share it publicly.
-:::
+::
 
 #### 3. Find Your Pipedrive Domain
 
 - From the same dashboard. Click your profile icon (top right) → **Company Settings**.
-  <img src="/img/credentials/pipedrive/pipedrive-cred-company-settings.png" alt="Pipedrive profile menu showing Company Settings option" width="700"/>
+
+![Pipedrive profile menu showing Company Settings option](/img/credentials/pipedrive/pipedrive-cred-company-settings.png)
 
 - You will be able to see a field with your **Company Domain** in it.
-  <img src="/img/credentials/pipedrive/pipedrive-cred-company-domain.png" alt="Pipedrive Company Settings page showing the Company Domain field" width="700"/>
 
-:::tip Example
+![Pipedrive Company Settings page showing the Company Domain field](/img/credentials/pipedrive/pipedrive-cred-company-domain.png)
+
+::tip[Example]
 Domain: `nefariusinc`
-:::
+::
 
 ### Save Your Credential
 
 Once you've filled in the necessary fields, click **"Save"** to store and verify your setup.
-
-<img src="/img/credentials/pipedrive/pipedrive-save-credential.png" alt="appse ai Pipedrive credential form with Save button" width="700"/>
+![appse ai Pipedrive credential form with Save button](/img/credentials/pipedrive/pipedrive-save-credential.png)
 
 - If successful, your Pipedrive credential will show a "✓" icon. Now you can use this application for your integrations.
 - If it fails, you will be displayed a "!" icon. In that case, please recheck your API Key and Domain or contact support.

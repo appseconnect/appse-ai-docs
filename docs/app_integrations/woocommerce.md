@@ -1,10 +1,7 @@
 ---
 title: "WooCommerce"
-slug: /app-integrations/woocommerce/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 WooCommerce is a powerful open-source e-commerce platform that transforms WordPress into a fully functional online store. With appse ai, you can connect your WooCommerce store to automate critical operations such as order management, customer synchronization, product updates, and inventory tracking. This integration helps streamline your e-commerce workflows, reduce manual data entry, and ensure seamless synchronization between your WooCommerce store and other business systems.
 
@@ -13,9 +10,7 @@ WooCommerce is a powerful open-source e-commerce platform that transforms WordPr
 To set up your WooCommerce credential, you can choose between two authentication methods:
 
 1. **API Key Authentication**: Authentication is performed using the Consumer Key and Consumer Secret from WooCommerce (Recommended), provided as query parameters in API requests.
-2. **Basic Authentication**: Uses the Consumer Key and Consumer Secret generated from WooCommerce settings, passed as the Basic Auth username and password in API requests.
-
-<img src="/img/credentials/woocommerce/woocommerce_cred_form.png" alt="WooCommerce authentication type selection screen" width="700"/>
+2. **Basic Authentication**: Uses the Consumer Key and Consumer Secret generated from WooCommerce settings, passed as the Basic Auth username and password in API requests.![WooCommerce authentication type selection screen](/img/credentials/woocommerce/woocommerce_cred_form.png)
 
 <Tabs>
 
@@ -32,9 +27,7 @@ Select **API Key Authentication** in the authentication type selection screen.
 | Connection name | A name to help you identify this connection.                                                                              |
 | Store Address   | The store address of your WooCommerce store present in the store url (e.g., 'dev.yourstore' in https://dev.yourstore.com) |
 | Consumer Key    | API consumer key generated from WooCommerce settings                                                                      |
-| Consumer Secret | API consumer secret generated from WooCommerce settings                                                                   |
-
-<img src="/img/credentials/woocommerce/api_key_cred.png" alt="WooCommerce api key" width="700"/>
+| Consumer Secret | API consumer secret generated from WooCommerce settings                                                                   |![WooCommerce api key](/img/credentials/woocommerce/api_key_cred.png)
 
 ### Step-by-Step Guide
 
@@ -50,27 +43,19 @@ Log in to your WordPress admin dashboard where WooCommerce is installed.
 
 **2. Install WooCommerce Plugin**
 
-Navigate to **Plugin** section in the left sidebar menu and search for **WooCommerce**, you can see the required plugin, click to install and activate the plugin.
-
-<img src="/img/credentials/woocommerce/select-woocommerce-plugin.png" alt="appse ai WooCommerce Dashboard" width="700"/>
+Navigate to **Plugin** section in the left sidebar menu and search for **WooCommerce**, you can see the required plugin, click to install and activate the plugin.![appse ai WooCommerce Dashboard](/img/credentials/woocommerce/select-woocommerce-plugin.png)
 
 **3. Access WooCommerce Settings**
 
-Now, navigate to **WooCommerce** in the left sidebar menu and click on **Settings**.
-
-<img src="/img/credentials/woocommerce/settings.png" alt="WooCommerce settings menu" width="700"/>
+Now, navigate to **WooCommerce** in the left sidebar menu and click on **Settings**.![WooCommerce settings menu](/img/credentials/woocommerce/settings.png)
 
 **4. Navigate to REST API Settings**
 
-Click on the **Advanced** tab and then select **REST API**.
-
-<img src="/img/credentials/woocommerce/advanced_settings.png" alt="WooCommerce Advanced Tab" width="700"/>
+Click on the **Advanced** tab and then select **REST API**.![WooCommerce Advanced Tab](/img/credentials/woocommerce/advanced_settings.png)
 
 **5. Create API Key**
 
-On the REST API settings page, click on **Add key** button.
-
-<img src="/img/credentials/woocommerce/add_key.png" alt="WooCommerce add key" width="700"/>
+On the REST API settings page, click on **Add key** button.![WooCommerce add key](/img/credentials/woocommerce/add_key.png)
 
 **6. Configure API Permissions**
 
@@ -81,17 +66,13 @@ Fill in the API key details:
 - **Permissions**: Select the permission level required:
   - **Read**: Allows reading data from your store
   - **Write**: Allows modifying data in your store
-  - **Read/Write**: Allows both reading and modifying data (recommended for full integration)
-
-<img src="/img/credentials/woocommerce/add-api-key.png" alt="Add api key" width="700"/>
+  - **Read/Write**: Allows both reading and modifying data (recommended for full integration)![Add api key](/img/credentials/woocommerce/add-api-key.png)
 
 Click **Generate API key** to proceed.
 
 **7. Copy Credentials**
 
-Once the API key is generated, copy the **Consumer Key** and **Consumer Secret**. Note that the Consumer Secret is shown only once.
-
-<img src="/img/credentials/woocommerce/client-key-secret.png" alt="Client Secret key" width="700"/>
+Once the API key is generated, copy the **Consumer Key** and **Consumer Secret**. Note that the Consumer Secret is shown only once.![Client Secret key](/img/credentials/woocommerce/client-key-secret.png)
 
 > **Note**: The Consumer Secret is shown only once. If you lose it, you will need to regenerate the API key.
 
@@ -99,9 +80,7 @@ Once the API key is generated, copy the **Consumer Key** and **Consumer Secret**
 
 Before connecting, verify that your WordPress permalinks are configured correctly so WooCommerce REST API requests resolve properly.
 
-- Go to **Settings > Permalinks** in your WordPress admin.
-
-<img src="/img/credentials/woocommerce/select-permalink.png" alt="Click permalinks" width="700"/>
+- Go to **Settings > Permalinks** in your WordPress admin.![Click permalinks](/img/credentials/woocommerce/select-permalink.png)
 
 - Select a non-default permalink structure such as **Post name**.
 - Click **Save Changes** even if the current setting is already selected.
@@ -110,9 +89,7 @@ This refreshes your permalink rules and helps ensure the WooCommerce REST API en
 
 **9. Connect to appse ai**
 
-In appse ai, enter your **Store Address**, **Consumer Key**, and **Consumer Secret**.
-
-<img src="/img/credentials/woocommerce/save_authorize.png" alt="Save and Authorize Creds" width="700"/>
+In appse ai, enter your **Store Address**, **Consumer Key**, and **Consumer Secret**.![Save and Authorize Creds](/img/credentials/woocommerce/save_authorize.png)
 
 Click **Save** to establish the connection.
 
@@ -133,9 +110,7 @@ Select **Basic Authentication** in the authentication type selection screen.
 | Connection name | A name to help you identify this connection.                                                                              |
 | Store Address   | The store address of your WooCommerce store present in the store url (e.g., 'dev.yourstore' in https://dev.yourstore.com) |
 | Consumer Key    | API consumer key generated from WooCommerce settings                                                                      |
-| Consumer Secret | API consumer secret generated from WooCommerce settings                                                                   |
-
-<img src="/img/credentials/woocommerce/basic_cred.png" alt="appse ai WooCommerce Basic Cred" width="700"/>
+| Consumer Secret | API consumer secret generated from WooCommerce settings                                                                   |![appse ai WooCommerce Basic Cred](/img/credentials/woocommerce/basic_cred.png)
 
 ### Step-by-Step Guide
 

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+
+:root {
+  --color-brand-primary: #0066cc;
+  --color-brand-secondary: #004499;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Image zoom on click for documentation screenshots */
+.prose img {
+  cursor: zoom-in;
+}

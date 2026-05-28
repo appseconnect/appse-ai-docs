@@ -1,0 +1,8 @@
+{
+  "title": "Nodes",
+  "pagesIndex": "index",
+  "pages": [
+    "built_in_nodes",
+    "trigger_nodes"
+  ]
+}

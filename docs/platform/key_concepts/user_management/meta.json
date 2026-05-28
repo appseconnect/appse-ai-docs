@@ -1,0 +1,8 @@
+{
+  "title": "User Management",
+  "pagesIndex": "index",
+  "pages": [
+    "change_organisation",
+    "invite_users"
+  ]
+}

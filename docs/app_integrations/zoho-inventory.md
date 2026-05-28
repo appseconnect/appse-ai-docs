@@ -1,8 +1,8 @@
 ---
 title: Zoho Inventory
 description: Step-by-step guide to set up Zoho Inventory credentials for appse ai integration
-slug: /app-integrations/zoho-inventory/
 ---
+
 
 Zoho Inventory is an inventory and order management platform that helps businesses manage items, warehouses, sales orders, purchase orders, shipments, and stock adjustments. This guide explains how to configure Zoho Inventory OAuth credentials in appse ai so your workflows can securely connect to your Zoho account.
 
@@ -33,9 +33,9 @@ The following fields are required in the Zoho Inventory credential form.
 | API Access Scope | Enter `ZohoInventory.fullaccess.all` to allow full access to inventory data. |
 | Base API URL | Select the Zoho Inventory API base URL based on your account region. |
 
-:::info
+::info
 All required fields must be configured correctly to complete authorization.
-:::
+::
 
 ### Recommended Region Mapping
 
@@ -51,9 +51,9 @@ Select regional endpoints that match your Zoho account data center.
 | CA | [https://accounts.zohocloud.ca/oauth/v2/auth](https://accounts.zohocloud.ca/oauth/v2/auth) | [https://accounts.zohocloud.ca/oauth/v2/token](https://accounts.zohocloud.ca/oauth/v2/token) | [https://www.zohoapis.ca/inventory/v1](https://www.zohoapis.ca/inventory/v1) |
 | SA | [https://accounts.zoho.sa/oauth/v2/auth](https://accounts.zoho.sa/oauth/v2/auth) | [https://accounts.zoho.sa/oauth/v2/token](https://accounts.zoho.sa/oauth/v2/token) | [https://www.zohoapis.sa/inventory/v1](https://www.zohoapis.sa/inventory/v1) |
 
-:::warning
+::warning
 If region URLs do not match your Zoho account data center, token exchange and API calls will fail.
-:::
+::
 
 ---
 
@@ -66,12 +66,9 @@ If region URLs do not match your Zoho account data center, token exchange and AP
 3. Search and select **Zoho Inventory**.
 
 You can also create the same credential directly while building a workflow by choosing **Create a new credential**.
-
-<img src="/img/credentials/zoho-inventory/appse-ai-cred-page.png" alt="Open appse ai credentials page" width="700"/>
-
-<img src="/img/credentials/zoho-inventory/appse-ai-cred-add.png" alt="Add new Zoho Inventory credential" width="700"/>
-
-<img src="/img/credentials/zoho-inventory/appse-ai-cred-add-form.png" alt="Zoho Inventory credential form" width="700"/>
+![Open appse ai credentials page](/img/credentials/zoho-inventory/appse-ai-cred-page.png)
+![Add new Zoho Inventory credential](/img/credentials/zoho-inventory/appse-ai-cred-add.png)
+![Zoho Inventory credential form](/img/credentials/zoho-inventory/appse-ai-cred-add-form.png)
 
 ### Step 2: Configure Regional URLs
 
@@ -82,12 +79,11 @@ In the credential form, select values for:
 3. **Base API URL**
 
 Use the same region for all three fields.
+![Configure Zoho Inventory regional URLs](/img/credentials/zoho-inventory/appse-ai-cred-form-regional-urls.png)
 
-<img src="/img/credentials/zoho-inventory/appse-ai-cred-form-regional-urls.png" alt="Configure Zoho Inventory regional URLs" width="700"/>
-
-:::note
+::note
 Refer to the [Recommended Region Mapping](#recommended-region-mapping) table in the Setup Credential section above to find the correct URLs for your Zoho data centre.
-:::
+::
 
 ### Step 3: Open Zoho API Console
 
@@ -95,9 +91,8 @@ Refer to the [Recommended Region Mapping](#recommended-region-mapping) table in 
 2. Sign in with the same Zoho account you use for Zoho Inventory.
 3. Click **Get started** if prompted.
 
-<img src="/img/credentials/zoho-inventory/zoho-api-get-started.png" alt="Open Zoho API Console Get Started" width="700"/>
-
-<img src="/img/credentials/zoho-inventory/zoho-api-console.png" alt="Open Zoho API Console" width="700"/>
+![Open Zoho API Console Get Started](/img/credentials/zoho-inventory/zoho-api-get-started.png)
+![Open Zoho API Console](/img/credentials/zoho-inventory/zoho-api-console.png)
 
 ### Step 4: Create OAuth Client
 
@@ -110,21 +105,19 @@ Refer to the [Recommended Region Mapping](#recommended-region-mapping) table in 
 4. Paste the callback URL exactly into **Authorized Redirect URIs**.
 5. Click **Create**.
 
-<img src="/img/credentials/zoho-inventory/zoho-api-select-app.png" alt="Create server-based OAuth client" width="700"/>
+![Create server-based OAuth client](/img/credentials/zoho-inventory/zoho-api-select-app.png)
+![Configure authorized redirect URI](/img/credentials/zoho-inventory/appse-ai-cred-form-callback-url.png)
 
-<img src="/img/credentials/zoho-inventory/appse-ai-cred-form-callback-url.png" alt="Configure authorized redirect URI" width="700"/>
-
-:::warning
+::warning
 The callback URL must match exactly. Any mismatch will cause authorization failure.
-:::
+::
 
 ### Step 5: Enable Multi Data Center Option
 
 In Zoho API Console settings, enable **Use the same OAuth credentials for all data centers**.
 
 This helps prevent region-specific login issues for OAuth flows.
-
-<img src="/img/credentials/zoho-inventory/zoho-api-select-data-center.png" alt="Enable multi data center setting" width="700"/>
+![Enable multi data center setting](/img/credentials/zoho-inventory/zoho-api-select-data-center.png)
 
 ### Step 6: Copy Client Credentials
 
@@ -133,7 +126,7 @@ After client creation, copy:
 1. **Client ID**
 2. **Client Secret**
 
-<img src="/img/credentials/zoho-inventory/zoho-api-client-creds.png" alt="Copy Client ID and Client Secret" width="700"/>
+![Copy Client ID and Client Secret](/img/credentials/zoho-inventory/zoho-api-client-creds.png)
 
 ### Step 7: Paste Credentials in appse ai
 
@@ -143,7 +136,7 @@ Return to appse ai and paste:
 2. **Client Secret**
 3. Confirm **API Access Scope** is set to `ZohoInventory.fullaccess.all`.
 
-<img src="/img/credentials/zoho-inventory/appse-ai-cred-form-paste-cred.png" alt="Paste credentials into appse ai form" width="700"/>
+![Paste credentials into appse ai form](/img/credentials/zoho-inventory/appse-ai-cred-form-paste-cred.png)
 
 ### Step 8: Save and Authorize
 
@@ -152,9 +145,8 @@ Return to appse ai and paste:
 3. Review requested permissions.
 4. Click **Accept**.
 
-<img src="/img/credentials/zoho-inventory/appse-ai-cred-save-authorize.png" alt="Save and authorize Zoho Inventory credential" width="700"/>
-
-<img src="/img/credentials/zoho-inventory/zoho-api-grant-permission.png" alt="Grant Zoho OAuth permissions" width="700"/>
+![Save and authorize Zoho Inventory credential](/img/credentials/zoho-inventory/appse-ai-cred-save-authorize.png)
+![Grant Zoho OAuth permissions](/img/credentials/zoho-inventory/zoho-api-grant-permission.png)
 
 If successful, appse ai stores the credential and the Zoho Inventory connection becomes available for workflows.
 

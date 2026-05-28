@@ -1,7 +1,7 @@
 ---
 title: "Magento 2"
-slug: /app-integrations/magento2/
 ---
+
 
 Magento 2 is a robust, open-source e-commerce platform that offers flexible shopping cart systems and control over the look, content, and functionality of your online store. With appse ai, you can seamlessly connect your Magento 2 store to automate orders, products, and customer data management, enhancing operational efficiency.
 
@@ -10,9 +10,7 @@ Magento 2 is a robust, open-source e-commerce platform that offers flexible shop
 To setup your Magento 2 credential, you can choose between two authentication methods:
 
 1.  **Integration Token**: Uses an Access Token generated via Magento Integrations (Recommended).
-2.  **Session Authentication**: Uses your Magento Admin username and password.
-
-<img src="/img/credentials/magento2/magento-auth-selection.png" alt="Magento Authentication Selection" width="700"/>
+2.  **Session Authentication**: Uses your Magento Admin username and password.![Magento Authentication Selection](/img/credentials/magento2/magento-auth-selection.png)
 
 ### Method 1: Integration Token
 
@@ -24,9 +22,7 @@ Select **Integration Token** in the authentication type selection screen.
 | --------------- | ---------------------------------------------------------------- |
 | Connection name | A name to help you identify this connection.                     |
 | Store Domain    | The domain of your Magento store (e.g., `test.templatebar.com`). |
-| Access Token    | The API access token generated from Magento Admin.               |
-
-<img src="/img/credentials/magento2/magento-credential-modal.png" alt="Magento Integration Token Fields" width="700"/>
+| Access Token    | The API access token generated from Magento Admin.               |![Magento Integration Token Fields](/img/credentials/magento2/magento-credential-modal.png)
 
 #### Step-by-Step Guide
 
@@ -38,34 +34,24 @@ Before creating an integration, you must enable standalone Bearer tokens.
 - Navigate to **Stores > Settings > Configuration > Services > OAuth**.
 - Expand **Consumer Settings**.
 - Set **Allow OAuth Access Tokens to be used as standalone Bearer tokens** to **Yes**.
-- Click **Save Config**.
-
-<img src="/img/credentials/magento2/magento-oauth-config.png" alt="Magento OAuth Configuration" width="700"/>
+- Click **Save Config**.![Magento OAuth Configuration](/img/credentials/magento2/magento-oauth-config.png)
 
 **2. Create an Integration**
 
-- Navigate to **System > Extensions > Integrations** and click **Add New Integration**.
-
-<img src="/img/credentials/magento2/magento-integrations-grid.png" alt="Magento Integrations Grid" width="700"/>
+- Navigate to **System > Extensions > Integrations** and click **Add New Integration**.![Magento Integrations Grid](/img/credentials/magento2/magento-integrations-grid.png)
 
 **3. Configure Integration Details**
 
-- Enter a **Name** (e.g., `appseai`) and your **Password** in "Basic Settings".
-
-<img src="/img/credentials/magento2/magento-new-integration.png" alt="Magento New Integration Form" width="700"/>
+- Enter a **Name** (e.g., `appseai`) and your **Password** in "Basic Settings".![Magento New Integration Form](/img/credentials/magento2/magento-new-integration.png)
 
 **4. Set API Permissions**
 
-- Switch to the **API** tab, set **Resource Access** to **All**, and click **Save**.
-
-<img src="/img/credentials/magento2/magento-api-permissions.png" alt="Magento API Permissions" width="700"/>
+- Switch to the **API** tab, set **Resource Access** to **All**, and click **Save**.![Magento API Permissions](/img/credentials/magento2/magento-api-permissions.png)
 
 **5. Get Access Token**
 
 - Click **Activate** on the new integration, then **Allow**.
-- Copy the **Access Token**.
-
-<img src="/img/credentials/magento2/magento-access-token.png" alt="Magento Access Tokens" width="700"/>
+- Copy the **Access Token**.![Magento Access Tokens](/img/credentials/magento2/magento-access-token.png)
 
 **6. Connect to appse ai**
 
@@ -85,9 +71,7 @@ Select **Session Authentication** in the authentication type selection screen.
 | Connection name | A name to help you identify this connection.                     |
 | Store Domain    | The domain of your Magento store (e.g., `test.templatebar.com`). |
 | Admin Username  | Your Magento Admin panel username.                               |
-| Admin Password  | Your Magento Admin panel password.                               |
-
-<img src="/img/credentials/magento2/magento-session-auth-modal.png" alt="Magento Session Authentication Fields" width="700"/>
+| Admin Password  | Your Magento Admin panel password.                               |![Magento Session Authentication Fields](/img/credentials/magento2/magento-session-auth-modal.png)
 
 #### Step-by-Step Guide
 

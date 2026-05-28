@@ -1,11 +1,8 @@
 ---
 title: "Square POS"
 description: Step-by-step guide to set up Square POS credentials and automate sales, payments, and catalog workflows in appse ai
-slug: /app-integrations/square-pos/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 Square POS is a point-of-sale platform that helps businesses manage in-person sales, payments, catalog items, customers, and store operations. With appse ai, you can connect your Square account to automate workflows that use Square business data and keep your sales, customer, and operational processes connected across systems.
 
@@ -30,11 +27,11 @@ You'll be asked to fill in the following details:
 | OAuth Scopes      | Space-separated Square permissions. Use the scopes required by your workflows configured for the app. See the [Square OAuth Permissions Reference](https://developer.squareup.com/docs/oauth-api/square-permissions) for the full list of available scopes and what each one allows. |
 | Callback URL      | The appse ai OAuth redirect URL that must be added to your Square app OAuth configuration.                 |
 
-:::info
+::info
 
 Use **Production** for live Square accounts and **Sandbox** for test data. The Authorization URL, Token URL, and Base API URL must all use the same environment.
 
-:::
+::
 
 ### Square Environment URLs
 
@@ -64,11 +61,11 @@ Use this path when you already have a Square application configured and only nee
 
 1. Navigate to the [Square Developer Dashboard](https://developer.squareup.com/apps) → **Applications** page.
 
-<img src="/img/credentials/square-pos/SP01.png" alt="Applications page" width="700"/>
+![Applications page](/img/credentials/square-pos/SP01.png)
 
 2. Click on the open button for the respective application.
 
-<img src="/img/credentials/square-pos/SP02.png" alt="Open existing application" width="700"/>
+![Open existing application](/img/credentials/square-pos/SP02.png)
 
 You will use this application’s OAuth settings and credentials in the following steps.
 
@@ -79,21 +76,20 @@ Use this path when you need a new Square application for appse ai.
 
 1. Navigate to the [Square Developer Dashboard](https://developer.squareup.com/apps) → **Applications** page
 
-<img src="/img/credentials/square-pos/SP01.png" alt="Applications page" width="700"/>
+![Applications page](/img/credentials/square-pos/SP01.png)
 
 2. Start creating an application by clicking on the Plus (+) icon displayed.
 
-<img src="/img/credentials/square-pos/SP06.png" alt="Add new app" width="700"/>
+![Add new app](/img/credentials/square-pos/SP06.png)
 
 3. Enter an **Application name** you will recognize later.
 
-<img src="/img/credentials/square-pos/SP07.png" alt="Enter app name" width="700"/>
+![Enter app name](/img/credentials/square-pos/SP07.png)
 
 4. Complete next steps - `What will you build first?`, `Find your audience` then finish creating the application.
 
-<img src="/img/credentials/square-pos/SP08.png" alt="Choose product use case" width="700"/>
-
-<img src="/img/credentials/square-pos/SP09.png" alt="Choose audience" width="700"/>
+![Choose product use case](/img/credentials/square-pos/SP08.png)
+![Choose audience](/img/credentials/square-pos/SP09.png)
 
 After the application is created, continue with **Configure OAuth** below.
 
@@ -103,18 +99,15 @@ After the application is created, continue with **Configure OAuth** below.
 ### 3. Configure OAuth
 
 In your Square application, go to the **OAuth** section and configure the redirect URL.
-
-<img src="/img/credentials/square-pos/SP03.png" alt="Navigate to Oauth" width="700"/>
-
-<img src="/img/credentials/square-pos/SP04.png" alt="Configure redirect URL" width="700"/>
+![Navigate to Oauth](/img/credentials/square-pos/SP03.png)
+![Configure redirect URL](/img/credentials/square-pos/SP04.png)
 
 Add the callback URL displayed in the appse ai configure credential form. For example:
 
 ```text
 https://embedded-ui.appse.ai/oauth-callback.html
 ```
-
-<img src="/img/credentials/square-pos/SP05.png" alt="Redirect URL popup" width="700"/>
+![Redirect URL popup](/img/credentials/square-pos/SP05.png)
 
 This URL must match the **Callback URL** shown in the appse ai Square POS credential form.
 
@@ -125,7 +118,7 @@ From the Square application's OAuth settings, copy the following values:
 - **Application ID**
 - **Application Secret**
 
-<img src="/img/credentials/square-pos/SPOS10.png" alt="Application credentials" width="700"/>
+![Application credentials](/img/credentials/square-pos/SPOS10.png)
 
 Keep the Application Secret secure and do not share it publicly.
 

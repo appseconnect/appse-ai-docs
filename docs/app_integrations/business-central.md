@@ -1,11 +1,9 @@
 ---
 title: "Dynamics 365 Business Central"
-slug: /app-integrations/dynamics-365-business-central
 description: Step-by-step guide to set up Dynamics 365 Business Central credentials and automate business workflows in appse ai.
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 import EnableImagePreview from '@site/src/components/EnableImagePreview';
 
 <EnableImagePreview />
@@ -41,11 +39,9 @@ You’ll need to provide:
 
 ##### 2. Locate Your Tenant ID
 
-- Go to the [Azure Portal](https://portal.azure.com).
-  <img src="/img/credentials/business-central/business-central-cred-azure-dashboard.png" alt="appse ai Business Central Azure Dashboard" width="700"/>
+- Go to the [Azure Portal](https://portal.azure.com).![appse ai Business Central Azure Dashboard](/img/credentials/business-central/business-central-cred-azure-dashboard.png)
 
-- Search for **Microsoft Entra ID** → **Overview**.
-  <img src="/img/credentials/business-central/business-central-cred-tenant-id.png" alt="appse ai Business Central Tenant ID" width="700"/>
+- Search for **Microsoft Entra ID** → **Overview**.![appse ai Business Central Tenant ID](/img/credentials/business-central/business-central-cred-tenant-id.png)
 
 - Copy the **Tenant ID** from the overview page.
 
@@ -57,24 +53,19 @@ You’ll need to provide:
 
 - Log in to your [Business Central](https://www.microsoft.com/en-in/dynamics-365/products/business-central/sign-in) account.
 
-- Click on the **Search** icon → Search "Companies" → Click on Companies.
-  <img src="/img/credentials/business-central/business-central-company-id-1.png" alt="appse ai Business Central Companies Search" width="700"/>
+- Click on the **Search** icon → Search "Companies" → Click on Companies.![appse ai Business Central Companies Search](/img/credentials/business-central/business-central-company-id-1.png)
 
-- Select Your Company Name from the list.
-  <img src="/img/credentials/business-central/business-central-company-id-2.png" alt="appse ai Business Central Select Company name" width="700"/>
+- Select Your Company Name from the list.![appse ai Business Central Select Company name](/img/credentials/business-central/business-central-company-id-2.png)
 
 > **Example**: `CRONUS USA, Inc.`
 
-- Press Ctrl+Alt+F1 → A Side Panel titled **Page Inspection** will open → Click on Table Fields → Under **Id (8000, GUID)** field, you will find the **Company ID** → Copy this and paste it in the credential form → Click on Save and Authorize.
-  <img src="/img/credentials/business-central/business-central-company-id-3.png" alt="appse ai Business Central Find Company ID" width="700"/>
+- Press Ctrl+Alt+F1 → A Side Panel titled **Page Inspection** will open → Click on Table Fields → Under **Id (8000, GUID)** field, you will find the **Company ID** → Copy this and paste it in the credential form → Click on Save and Authorize.![appse ai Business Central Find Company ID](/img/credentials/business-central/business-central-company-id-3.png)
 
 ---
 
 ##### 4. Log in to your Business Central Account
 
-- You will be showcased a pop-up that prompts you to login to your Business Central account using your Microsoft account credentials.
-
-<img src="/img/credentials/business-central/business-central-cred-microsoft-login.png" alt="appse ai Business Central Microsoft Login" width="700"/>
+- You will be showcased a pop-up that prompts you to login to your Business Central account using your Microsoft account credentials.![appse ai Business Central Microsoft Login](/img/credentials/business-central/business-central-cred-microsoft-login.png)
 
 - If you followed all the steps correctly, your Business Central credential should be connected to our platform.
 
@@ -102,8 +93,7 @@ Every application has a pre-defined set of triggers and actions that allow users
 
 New Customer Created trigger is used to fetch newly created customer records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-NWCSTMRCRTD1.jpg" alt="Business Central New Customer Created - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central New Customer Created - Select Credentials and Action Events](/img/credentials/business-central/C-NWCSTMRCRTD1.jpg)
 
 Click on **Continue** button.
 
@@ -122,8 +112,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="Business Central New Customer Created - Example Configuration" width="700" />
+##### Example Configuration![Business Central New Customer Created - Example Configuration](/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg)
 
 -------------------------
 
@@ -169,8 +158,7 @@ Click on **Continue**, then **Run** node.
 
 Customer Update trigger is used to fetch updated customer records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-CSTMRUPDT3.jpg" alt="Business Central Customer Update - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Customer Update - Select Credentials and Action Events](/img/credentials/business-central/C-CSTMRUPDT3.jpg)
 
 Click on **Continue** button.
 
@@ -236,8 +224,7 @@ Click on **Continue**, then **Run** node.
 
 New Contacts Created trigger is used to fetch newly created contact records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-NWCNTCTCRTD4.jpg" alt="Business Central New Contacts Created - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central New Contacts Created - Select Credentials and Action Events](/img/credentials/business-central/C-NWCNTCTCRTD4.jpg)
 
 Click on **Continue** button.
 
@@ -299,8 +286,7 @@ Click on **Continue**, then **Run** node.
 
 Contacts Updated trigger is used to fetch updated contact records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-CONTCTUPDT5.jpg" alt="Business Central Contacts Updated - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Contacts Updated - Select Credentials and Action Events](/img/credentials/business-central/C-CONTCTUPDT5.jpg)
 
 Click on **Continue** button.
 
@@ -362,8 +348,7 @@ Click on **Continue**, then **Run** node.
 
 New Items Created trigger is used to fetch newly created item records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-NWITMCRTD6.jpg" alt="Business Central New Items Created - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central New Items Created - Select Credentials and Action Events](/img/credentials/business-central/C-NWITMCRTD6.jpg)
 
 Click on **Continue** button.
 
@@ -424,8 +409,7 @@ Click on **Continue**, then **Run** node.
 
 Items Updated trigger is used to fetch updated item records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-ITMSUPDT7.jpg" alt="Business Central Items Updated - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Items Updated - Select Credentials and Action Events](/img/credentials/business-central/C-ITMSUPDT7.jpg)
 
 Click on **Continue** button.
 
@@ -486,8 +470,7 @@ Click on **Continue**, then **Run** node.
 
 Opportunities Created trigger is used to fetch newly created opportunity records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-OPPRTNTCRTD8.jpg" alt="Business Central Opportunities Created - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Opportunities Created - Select Credentials and Action Events](/img/credentials/business-central/C-OPPRTNTCRTD8.jpg)
 
 Click on **Continue** button.
 
@@ -544,8 +527,7 @@ Click on **Continue**, then **Run** node.
 
 New SalesOrders Created trigger is used to fetch newly created sales order records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-NWSLSORDRCRTD9.jpg" alt="Business Central New SalesOrders Created - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central New SalesOrders Created - Select Credentials and Action Events](/img/credentials/business-central/C-NWSLSORDRCRTD9.jpg)
 
 Click on **Continue** button.
 
@@ -742,8 +724,7 @@ Click on **Continue**, then **Run** node.
 
 New Sales Invoices Created trigger is used to fetch newly created sales invoice records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/NWSLSINVCCRTD10.jpg" alt="Business Central New Sales Invoices Created - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central New Sales Invoices Created - Select Credentials and Action Events](/img/credentials/business-central/NWSLSINVCCRTD10.jpg)
 
 Click on **Continue** button.
 
@@ -871,8 +852,7 @@ Click on **Continue**, then **Run** node.
 
 New Sales Shipment Created trigger is used to fetch newly created sales shipment records from Shopify based on a specified time and limit.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-NWSLSSHPMNTCRTD11.jpg" alt="Business Central New Sales Shipment Created - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central New Sales Shipment Created - Select Credentials and Action Events](/img/credentials/business-central/C-NWSLSSHPMNTCRTD11.jpg)
 
 Click on **Continue** button.
 
@@ -1010,8 +990,7 @@ Click on **Continue**, then **Run** node.
 
 Create a New Customer action is used to create a new customer record with personal and contact details.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-CRTNWCSTMR1.jpg" alt="Business Central Create a New Customer - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Create a New Customer - Select Credentials and Action Events](/img/credentials/business-central/C-AC-CRTNWCSTMR1.jpg)
 
 Click on **Continue** button.
 
@@ -1041,9 +1020,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/C-AC-CRTNWCSTMR2.jpg" alt="Business Central Create a New Customer - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/C-AC-CRTNWCSTMR3.jpg" alt="Business Central Create a New Customer - Example Configuration" width="700" />
+##### Example Configuration![Business Central Create a New Customer - Example Configuration](/img/credentials/business-central/C-AC-CRTNWCSTMR2.jpg)![Business Central Create a New Customer - Example Configuration](/img/credentials/business-central/C-AC-CRTNWCSTMR3.jpg)
 
 -------------------------
 
@@ -1090,8 +1067,7 @@ Click on **Continue**, then **Run** node.
 
 Update a Customer action is used to modify an existing customer record with updated personal and contact details.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-UPDTCSTMR4.jpg" alt="Business Central Update a Customer - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Update a Customer - Select Credentials and Action Events](/img/credentials/business-central/C-AC-UPDTCSTMR4.jpg)
 
 Click on **Continue** button.
 
@@ -1117,8 +1093,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-UPDTCSTMR5.jpg" alt="Business Central Update a Customer - Example Configuration" width="700" />
+##### Example Configuration![Business Central Update a Customer - Example Configuration](/img/credentials/business-central/AC-UPDTCSTMR5.jpg)
 
 -------------------------
 
@@ -1165,8 +1140,7 @@ Click on **Continue**, then **Run** node.
 
 Get Customer by Email action is used to retrieve customer details using the customer's email address.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-GTCSTMRbyEML6.jpg" alt="Business Central Get Customer by Email - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Get Customer by Email - Select Credentials and Action Events](/img/credentials/business-central/C-AC-GTCSTMRbyEML6.jpg)
 
 Click on **Continue** button.
 
@@ -1184,8 +1158,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-GTCSTMRbyEML7.jpg" alt="Business Central Get Customer by Email - Example Configuration" width="700" />
+##### Example Configuration![Business Central Get Customer by Email - Example Configuration](/img/credentials/business-central/AC-GTCSTMRbyEML7.jpg)
 
 -------------------------
 
@@ -1233,8 +1206,7 @@ Click on **Continue**, then **Run** node.
 
 Create a New Contact action is used to create a new contact record with personal, company, and communication details.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-NWCMPNYCRTD9.jpg" alt="Business Central Create a New Contact - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Create a New Contact - Select Credentials and Action Events](/img/credentials/business-central/C-AC-NWCMPNYCRTD9.jpg)
 
 Click on **Continue** button.
 
@@ -1267,9 +1239,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-NWCMPNYCRTD10.jpg" alt="Business Central Create a New Contact - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-NWCMPNYCRTD11.jpg" alt="Business Central Create a New Contact - Example Configuration" width="700" />
+##### Example Configuration![Business Central Create a New Contact - Example Configuration](/img/credentials/business-central/AC-NWCMPNYCRTD10.jpg)![Business Central Create a New Contact - Example Configuration](/img/credentials/business-central/AC-NWCMPNYCRTD11.jpg)
 
 -------------------------
 
@@ -1312,8 +1282,7 @@ Click on **Continue**, then **Run** node.
 
 Update a Contact action is used to modify an existing contact record with updated personal, company, and communication details.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-UPDTCONTCT21.jpg" alt="Business Central Update a Contact - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Update a Contact - Select Credentials and Action Events](/img/credentials/business-central/C-AC-UPDTCONTCT21.jpg)
 
 Click on **Continue** button.
 
@@ -1341,9 +1310,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-UPDTCONTCT22.jpg" alt="Business Central Update a Contact - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-UPDTCONTCT23.jpg" alt="Business Central Update a Contact - Example Configuration" width="700" />
+##### Example Configuration![Business Central Update a Contact - Example Configuration](/img/credentials/business-central/AC-UPDTCONTCT22.jpg)![Business Central Update a Contact - Example Configuration](/img/credentials/business-central/AC-UPDTCONTCT23.jpg)
 
 -------------------------
 
@@ -1386,8 +1353,7 @@ Click on **Continue**, then **Run** node.
 
 Get Contacts by Company Number action is used to retrieve contact records associated with a specific company using the company number.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-GTCMPNYbyCMPNYID23.jpg" alt="Business Central Get Contacts by Company Number - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Get Contacts by Company Number - Select Credentials and Action Events](/img/credentials/business-central/C-AC-GTCMPNYbyCMPNYID23.jpg)
 
 Click on **Continue** button.
 
@@ -1405,8 +1371,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-GTCMPNYbyCMPNYID24.jpg" alt="Business Central Get Contacts by Company Number - Example Configuration" width="700" />
+##### Example Configuration![Business Central Get Contacts by Company Number - Example Configuration](/img/credentials/business-central/AC-GTCMPNYbyCMPNYID24.jpg)
 
 -------------------------
 
@@ -1448,8 +1413,7 @@ Click on **Continue**, then **Run** node.
 
 Get Contacts by Contact Type action is used to retrieve contact records based on the specified contact type.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-GTCOMPANYbyCMPNYTYPE25.jpg" alt="Business Central Get Contacts by Contact Type - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Get Contacts by Contact Type - Select Credentials and Action Events](/img/credentials/business-central/C-AC-GTCOMPANYbyCMPNYTYPE25.jpg)
 
 Click on **Continue** button.
 
@@ -1469,8 +1433,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-GTCOMPANYbyCMPNYTYPE26.jpg" alt="Business Central Get Contacts by Contact Type - Example Configuration" width="700" />
+##### Example Configuration![Business Central Get Contacts by Contact Type - Example Configuration](/img/credentials/business-central/AC-GTCOMPANYbyCMPNYTYPE26.jpg)
 
 -------------------------
 
@@ -1512,8 +1475,7 @@ Click on **Continue**, then **Run** node.
 
 Get Company Number by Company Name action is used to retrieve the company number using the company name.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-GTCMPNYNUMbyCMPNYNAM26.jpg" alt="Business Central Get Company Number by Company Name - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Get Company Number by Company Name - Select Credentials and Action Events](/img/credentials/business-central/C-AC-GTCMPNYNUMbyCMPNYNAM26.jpg)
 
 Click on **Continue** button.
 
@@ -1531,8 +1493,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-GTCMPNYbyCMPNYNME27.jpg" alt="Business Central Get Company Number by Company Name - Example Configuration" width="700" />
+##### Example Configuration![Business Central Get Company Number by Company Name - Example Configuration](/img/credentials/business-central/AC-GTCMPNYbyCMPNYNME27.jpg)
 
 -------------------------
 
@@ -1576,8 +1537,7 @@ Click on **Continue**, then **Run** node.
 
 Create a New Item action is used to create a new inventory item with pricing, unit, and posting group details.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-CRTNWITM28.jpg" alt="Business Central Create a New Item - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Create a New Item - Select Credentials and Action Events](/img/credentials/business-central/C-AC-CRTNWITM28.jpg)
 
 Click on **Continue** button.
 
@@ -1603,9 +1563,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-CRTNWITM29.jpg" alt="Business Central Create a New Item - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTNWITM30.jpg" alt="Business Central Create a New Item - Example Configuration" width="700" />
+##### Example Configuration![Business Central Create a New Item - Example Configuration](/img/credentials/business-central/AC-CRTNWITM29.jpg)![Business Central Create a New Item - Example Configuration](/img/credentials/business-central/AC-CRTNWITM30.jpg)
 
 -------------------------
 
@@ -1647,8 +1605,7 @@ Click on **Continue**, then **Run** node.
 
 Update an Existing Item action is used to modify an existing inventory item with updated details such as name, type, pricing, and tax configuration.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-UPDTITM31.jpg" alt="Business Central Update an Existing Item - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Update an Existing Item - Select Credentials and Action Events](/img/credentials/business-central/C-AC-UPDTITM31.jpg)
 
 Click on **Continue** button.
 
@@ -1672,8 +1629,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-UPDTITM32.jpg" alt="Business Central Update an Existing Item - Example Configuration" width="700" />
+##### Example Configuration![Business Central Update an Existing Item - Example Configuration](/img/credentials/business-central/AC-UPDTITM32.jpg)
 
 -------------------------
 
@@ -1717,8 +1673,7 @@ Click on **Continue**, then **Run** node.
 
 Create a New Opportunity action is used to create a new sales opportunity with contact, description, and salesperson details.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-CRTNWOPP33.jpg" alt="Business Central Create a New Opportunity - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Create a New Opportunity - Select Credentials and Action Events](/img/credentials/business-central/C-AC-CRTNWOPP33.jpg)
 
 Click on **Continue** button.
 
@@ -1740,8 +1695,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-CRTNWOPP34.jpg" alt="Business Central Create a New Opportunity - Example Configuration" width="700" />
+##### Example Configuration![Business Central Create a New Opportunity - Example Configuration](/img/credentials/business-central/AC-CRTNWOPP34.jpg)
 
 -------------------------
 
@@ -1781,8 +1735,7 @@ Click on **Continue**, then **Run** node.
 
 Create a New Sales Quote action is used to create a sales quotation for a customer with item details, pricing, and shipping information.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-CRTNWSLSQUTE35.jpg" alt="Business Central Create a New Sales Quote - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Create a New Sales Quote - Select Credentials and Action Events](/img/credentials/business-central/C-AC-CRTNWSLSQUTE35.jpg)
 
 Click on **Continue** button.
 
@@ -1820,11 +1773,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-CRTNWSLSQUTE36.jpg" alt="Business Central Create a New Sales Quote - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTNWSLSQUTE37.jpg" alt="Business Central Create a New Sales Quote - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTNWSLSQUTE38.jpg" alt="Business Central Create a New Sales Quote - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTNWSLSQUTE39.jpg" alt="Business Central Create a New Sales Quote - Example Configuration" width="700" />
+##### Example Configuration![Business Central Create a New Sales Quote - Example Configuration](/img/credentials/business-central/AC-CRTNWSLSQUTE36.jpg)![Business Central Create a New Sales Quote - Example Configuration](/img/credentials/business-central/AC-CRTNWSLSQUTE37.jpg)![Business Central Create a New Sales Quote - Example Configuration](/img/credentials/business-central/AC-CRTNWSLSQUTE38.jpg)![Business Central Create a New Sales Quote - Example Configuration](/img/credentials/business-central/AC-CRTNWSLSQUTE39.jpg)
 
 -------------------------
 
@@ -1896,8 +1845,7 @@ Click on **Continue**, then **Run** node.
 
 Create a New Sales Order action is used to create a sales order for a customer with item details, pricing, discounts, and shipping information.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-CRTNWSLSORD40.jpg" alt="Business Central Create a New Sales Order - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Create a New Sales Order - Select Credentials and Action Events](/img/credentials/business-central/C-AC-CRTNWSLSORD40.jpg)
 
 Click on **Continue** button.
 
@@ -1942,12 +1890,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-CRTNWSLSORD41.jpg" alt="Business Central Create a New Sales Order - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTNWSLSORD42.jpg" alt="Business Central Create a New Sales Order - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTNWSLSORD43.jpg" alt="Business Central Create a New Sales Order - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTNWSLSORD44.jpg" alt="Business Central Create a New Sales Order - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTNWSLSORD45.jpg" alt="Business Central Create a New Sales Order - Example Configuration" width="700" />
+##### Example Configuration![Business Central Create a New Sales Order - Example Configuration](/img/credentials/business-central/AC-CRTNWSLSORD41.jpg)![Business Central Create a New Sales Order - Example Configuration](/img/credentials/business-central/AC-CRTNWSLSORD42.jpg)![Business Central Create a New Sales Order - Example Configuration](/img/credentials/business-central/AC-CRTNWSLSORD43.jpg)![Business Central Create a New Sales Order - Example Configuration](/img/credentials/business-central/AC-CRTNWSLSORD44.jpg)![Business Central Create a New Sales Order - Example Configuration](/img/credentials/business-central/AC-CRTNWSLSORD45.jpg)
 
 -------------------------
 
@@ -2020,8 +1963,7 @@ Click on **Continue**, then **Run** node.
 
 Create a New Sales Invoice action is used to generate a sales invoice for a customer with item details, pricing, and shipping information.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-CRTSLSINVC46.jpg" alt="Business Central Create a New Sales Invoice - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Create a New Sales Invoice - Select Credentials and Action Events](/img/credentials/business-central/C-AC-CRTSLSINVC46.jpg)
 
 Click on **Continue** button.
 
@@ -2068,12 +2010,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-CRTSLSINVC47.jpg" alt="Business Central Create a New Sales Invoice - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTSLSINVC48.jpg" alt="Business Central Create a New Sales Invoice - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTSLSINVC49.jpg" alt="Business Central Create a New Sales Invoice - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTSLSINVC50.jpg" alt="Business Central Create a New Sales Invoice - Example Configuration" width="700" />
-<img src="/img/credentials/business-central/AC-CRTSLSINVC51.jpg" alt="Business Central Create a New Sales Invoice - Example Configuration" width="700" />
+##### Example Configuration![Business Central Create a New Sales Invoice - Example Configuration](/img/credentials/business-central/AC-CRTSLSINVC47.jpg)![Business Central Create a New Sales Invoice - Example Configuration](/img/credentials/business-central/AC-CRTSLSINVC48.jpg)![Business Central Create a New Sales Invoice - Example Configuration](/img/credentials/business-central/AC-CRTSLSINVC49.jpg)![Business Central Create a New Sales Invoice - Example Configuration](/img/credentials/business-central/AC-CRTSLSINVC50.jpg)![Business Central Create a New Sales Invoice - Example Configuration](/img/credentials/business-central/AC-CRTSLSINVC51.jpg)
 
 -------------------------
 
@@ -2151,8 +2088,7 @@ Click on **Continue**, then **Run** node.
 
 Get Sales Invoice Lines by SalesInvoice ID action is used to retrieve line item details associated with a specific sales invoice.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-GTSLSINVCLINbySLSINVID52.jpg" alt="Business Central Get Sales Invoice Lines by SalesInvoice ID - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Get Sales Invoice Lines by SalesInvoice ID - Select Credentials and Action Events](/img/credentials/business-central/C-AC-GTSLSINVCLINbySLSINVID52.jpg)
 
 Click on **Continue** button.
 
@@ -2172,8 +2108,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-GTSLSINVCLINbySLSINVID53.jpg" alt="Business Central Get Sales Invoice Lines by SalesInvoice ID - Example Configuration" width="700" />
+##### Example Configuration![Business Central Get Sales Invoice Lines by SalesInvoice ID - Example Configuration](/img/credentials/business-central/AC-GTSLSINVCLINbySLSINVID53.jpg)
 
 -------------------------
 
@@ -2222,8 +2157,7 @@ Click on **Continue**, then **Run** node.
 
 **Search Records** action is used to retrieve records from a selected object based on specified filter conditions.
 
-##### Select Credentials and Action Events
-<img src="/img/credentials/business-central/C-AC-SRCHRCRDS54.jpg" alt="Business Central Search Records - Select Credentials and Action Events" width="700" />
+##### Select Credentials and Action Events![Business Central Search Records - Select Credentials and Action Events](/img/credentials/business-central/C-AC-SRCHRCRDS54.jpg)
 
 Click on **Continue** button.
 
@@ -2243,8 +2177,7 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-##### Example Configuration
-<img src="/img/credentials/business-central/AC-SRCHRCRDS55.jpg" alt="Business Central Search Records - Example Configuration" width="700" />
+##### Example Configuration![Business Central Search Records - Example Configuration](/img/credentials/business-central/AC-SRCHRCRDS55.jpg)
 
 -------------------------
 

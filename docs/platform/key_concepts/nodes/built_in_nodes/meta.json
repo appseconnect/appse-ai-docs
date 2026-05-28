@@ -1,0 +1,17 @@
+{
+  "title": "Built-in Nodes",
+  "pagesIndex": "index",
+  "pages": [
+    "agent_node",
+    "aggregator_node",
+    "ai_processor_node",
+    "base64-decode",
+    "code",
+    "decision_node",
+    "filter_node",
+    "html_to_json",
+    "json-converter",
+    "merge_node",
+    "splitter"
+  ]
+}

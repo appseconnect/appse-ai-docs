@@ -1,30 +1,31 @@
-# Stage 1: Build the Docusaurus site
-FROM node:18-alpine AS builder
+# syntax=docker/dockerfile:1
 
-# Install pnpm globally
-RUN npm install -g pnpm
-
-# Set working directory
+FROM node:20-alpine AS base
+RUN corepack enable && corepack prepare pnpm@9.15.2 --activate
 WORKDIR /app
 
-# Copy only package manager files
-COPY pnpm-lock.yaml package.json ./
-
-# Install dependencies (using frozen lockfile)
+FROM base AS deps
+COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 
-# Copy rest of the project
+FROM base AS builder
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Build the static site
 RUN pnpm build
 
-# Stage 2: Serve with nginx
-FROM nginx:alpine
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
 
-# Copy the built site
-COPY --from=builder /app/build /usr/share/nginx/html
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
 
-EXPOSE 80
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-CMD ["nginx", "-g", "daemon off;"]
+USER nextjs
+EXPOSE 3000
+CMD ["node", "server.js"]

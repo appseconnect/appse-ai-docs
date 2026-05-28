@@ -1,8 +1,8 @@
 ---
 title: "Factors"
-slug : /app-integrations/factors/
 description: Learn how to setup and use Factors on appse ai.
 ---
+
 
 Factors is a B2B marketing analytics and attribution platform that helps businesses understand their customer journey, track account engagement, and optimize marketing performance. With appse ai, you can seamlessly connect your Factors account to automate data workflows and integrate marketing insights into your business processes.
 
@@ -31,21 +31,13 @@ You'll be asked to fill in the following details:
 #### 2. Find Your Bearer Token
 
 - Log in to your **Factors** account.
-- Click on the **Settings** icon on the top navigation bar.
+- Click on the **Settings** icon on the top navigation bar.![Factors Settings](/img/credentials/factors/factors-settings.png)
 
-<img src="/img/credentials/factors/factors-settings.png" alt="Factors Settings" width="700"/>
+- Select **Integration** from the left sidebar menu.![Factors Integration Menu](/img/credentials/factors/factors-integration.png)
 
-- Select **Integration** from the left sidebar menu.
+- Click on **Factors API**.![Factors API](/img/credentials/factors/factors-api.png)
 
-<img src="/img/credentials/factors/factors-integration.png" alt="Factors Integration Menu" width="700"/>
-
-- Click on **Factors API**.
-
-<img src="/img/credentials/factors/factors-api.png" alt="Factors API" width="700"/>
-
-- Create or Copy the **API key** and paste it in the Bearer Token field.
-
-<img src="/img/credentials/factors/factors-api-key.png" alt="Factors API Key" width="700"/>
+- Create or Copy the **API key** and paste it in the Bearer Token field.![Factors API Key](/img/credentials/factors/factors-api-key.png)
 
 > Note: This token gives access to your Factors account. Keep it secure and do not share it publicly.
 

@@ -1,7 +1,7 @@
 ---
 title: "Qdrant"
-slug : /app-integrations/qdrant
 ---
+
 
 Qdrant is a vector search engine designed to handle high-dimensional data and machine learning models efficiently. By integrating Qdrant with appse ai, you can automate vector data processing, connect AI-driven workflows, and perform advanced search operations, allowing you to leverage powerful machine learning capabilities in your automated processes.
 
@@ -31,24 +31,17 @@ You’ll be asked to fill in the following details:
 #### 2. Find Your Qdrant Endpoint
 
 - Log in to your **Qdrant** account.
-- In the sidebar, click on Clusters → Select the Cluster Name
+- In the sidebar, click on Clusters → Select the Cluster Name![APPSeAI Qdrant clusters](/img/credentials/qdrant/qdrant-cred-clusters.png)
 
-<img src="/img/credentials/qdrant/qdrant-cred-clusters.png" alt="APPSeAI Qdrant clusters" width="700"/>
-
-- In the Overview tab, you will find the Endpoint.
-<img src="/img/credentials/qdrant/qdrant-cred-endpoint.png" alt="APPSeAI Qdrant Endpoint" width="700"/>
+- In the Overview tab, you will find the Endpoint.![APPSeAI Qdrant Endpoint](/img/credentials/qdrant/qdrant-cred-endpoint.png)
 
 #### 3. Find Your Qdrant API Key
 
-- From the same dashboard. Click on API Keys → Create.
-<img src="/img/credentials/qdrant/qdrant-cred-api-keys-1.png" alt="APPSeAI Qdrant Create API Key" width="700"/>
+- From the same dashboard. Click on API Keys → Create.![APPSeAI Qdrant Create API Key](/img/credentials/qdrant/qdrant-cred-api-keys-1.png)
 
-- You can give a name to your API Key. Make sure the allowed operations is set to *Read, Write and Manage Operations*. Once completed click on `Create`
-<img src="/img/credentials/qdrant/qdrant-cred-api-keys-2.png" alt="APPSeAI Qdrant API Key Setup" width="700"/>
+- You can give a name to your API Key. Make sure the allowed operations is set to *Read, Write and Manage Operations*. Once completed click on `Create`![APPSeAI Qdrant API Key Setup](/img/credentials/qdrant/qdrant-cred-api-keys-2.png)
 
-- You will see a new window called *API Key Created*, the **API key** will be shown in the highlighted field below. Make sure you copy and store it somewhere, this is shown to you only once. Once you have your **API Key**, add it to the credentials form.
-
-<img src="/img/credentials/qdrant/qdrant-cred-api-keys-3.png" alt="APPSeAI Qdrant API Key Copy" width="700"/>
+- You will see a new window called *API Key Created*, the **API key** will be shown in the highlighted field below. Make sure you copy and store it somewhere, this is shown to you only once. Once you have your **API Key**, add it to the credentials form.![APPSeAI Qdrant API Key Copy](/img/credentials/qdrant/qdrant-cred-api-keys-3.png)
 
 `Note`: Treat your API key like a password. Do not share it publicly.
 

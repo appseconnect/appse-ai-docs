@@ -1,10 +1,7 @@
 ---
 title: "FTP SFTP"
-slug: /app-integrations/ftp-sftp/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 FTP (File Transfer Protocol) and SFTP (Secure File Transfer Protocol) are standard protocols used to transfer files between systems over a network. With **appse ai**, you can securely connect to FTP/SFTP servers, automate file operations, and seamlessly integrate file management into your workflows.
 
@@ -91,11 +88,9 @@ Lists all files and folders in a specified remote directory.
 |------|------------|
 | Remote Path | Full remote directory path (e.g. `/uploads`, `/home/user/files`) |
 
-### Example Input
-<img src="\img\credentials\ftp-sftp\ftp1.png"  width="700"/>
+### Example Input![](/img/credentials/ftp-sftp/ftp1.png)
 
-### Example Output
-<img src="\img\credentials\ftp-sftp\ftp2.png"  width="700"/>
+### Example Output![](/img/credentials/ftp-sftp/ftp2.png)
 
 ---
 
@@ -109,11 +104,9 @@ Creates a new directory at the specified remote path.
 |------|------------|
 | Remote Path | Full remote path where directory should be created |
 
-### Example Input
-<img src="\img\credentials\ftp-sftp\ftp3.png"  width="700"/>
+### Example Input![](/img/credentials/ftp-sftp/ftp3.png)
 
-### Example Output
-<img src="\img\credentials\ftp-sftp\ftp4.png"  width="700"/>
+### Example Output![](/img/credentials/ftp-sftp/ftp4.png)
 
 ---
 
@@ -128,11 +121,9 @@ Moves a folder from one location to another.
 | Source Path | Full path of the folder to move |
 | Destination Path | Full path where the folder should be moved |
 
-### Example Input
-<img src="\img\credentials\ftp-sftp\ftp5.png"  width="700"/>
+### Example Input![](/img/credentials/ftp-sftp/ftp5.png)
 
-### Example Output
-<img src="\img\credentials\ftp-sftp\ftp6.png"  width="700"/>
+### Example Output![](/img/credentials/ftp-sftp/ftp6.png)
 
 ---
 
@@ -154,11 +145,9 @@ Downloads a file from the remote server.
 &nbsp;&nbsp;&nbsp;&nbsp;– **Binary files** (e.g., `.pdf`, `.jpg`, `.png`, `.jpeg`, `.xls`, `.xlsx`, `.doc`, `.docx`) → Returned as Base64-encoded string<br />
 • **Base64** → Forces the system to return file content as a Base64-encoded string regardless of file type 
 
-### Example Input
-<img src="\img\credentials\ftp-sftp\ftp7.png"  width="700"/>
+### Example Input![](/img/credentials/ftp-sftp/ftp7.png)
 
-### Example Output
-<img src="\img\credentials\ftp-sftp\ftp8.png"  width="700"/>
+### Example Output![](/img/credentials/ftp-sftp/ftp8.png)
 
 ---
 
@@ -174,11 +163,9 @@ Uploads a file to the remote server.
 | File Content | File content as Base64 encoded string |
 | Overwrite | True to replace an existing file |
 
-### Example Input
-<img src="\img\credentials\ftp-sftp\ftp9.png"  width="700"/>
+### Example Input![](/img/credentials/ftp-sftp/ftp9.png)
 
-### Example Output
-<img src="\img\credentials\ftp-sftp\ftp10.png"  width="700"/>
+### Example Output![](/img/credentials/ftp-sftp/ftp10.png)
 
 ---
 
@@ -194,11 +181,9 @@ Moves a file from one location to another.
 | Destination Path | Full destination path |
 | Overwrite | True to replace existing file |
 
-### Example Input
-<img src="\img\credentials\ftp-sftp\ftp11.png"  width="700"/>
+### Example Input![](/img/credentials/ftp-sftp/ftp11.png)
 
-### Example Output
-<img src="\img\credentials\ftp-sftp\ftp12.png"  width="700"/>
+### Example Output![](/img/credentials/ftp-sftp/ftp12.png)
 
 ---
 
@@ -212,11 +197,9 @@ Retrieves metadata for a file or folder.
 |------|------------|
 | Remote Path | Full path of the file or folder |
 
-### Example Input
-<img src="\img\credentials\ftp-sftp\ftp13.png"  width="700"/>
+### Example Input![](/img/credentials/ftp-sftp/ftp13.png)
 
-### Example Output
-<img src="\img\credentials\ftp-sftp\ftp14.png"  width="700"/>
+### Example Output![](/img/credentials/ftp-sftp/ftp14.png)
 
 ---
 
@@ -230,11 +213,9 @@ Checks if a file or folder exists at a given path.
 |------|------------|
 | Remote Path | Full path to check |
 
-### Example Input
-<img src="\img\credentials\ftp-sftp\ftp15.png"  width="700"/>
+### Example Input![](/img/credentials/ftp-sftp/ftp15.png)
 
-### Example Output
-<img src="\img\credentials\ftp-sftp\ftp16.png"  width="700"/>
+### Example Output![](/img/credentials/ftp-sftp/ftp16.png)
 
 ---
 
@@ -248,11 +229,9 @@ Deletes a file or folder from the remote server.
 |------|------------|
 | Remote Path | Full path of file or folder to delete |
 
-### Example Input
-<img src="\img\credentials\ftp-sftp\ftp17.png"  width="700"/>
+### Example Input![](/img/credentials/ftp-sftp/ftp17.png)
 
-### Example Output
-<img src="\img\credentials\ftp-sftp\ftp18.png"  width="700"/>
+### Example Output![](/img/credentials/ftp-sftp/ftp18.png)
 
 ---
 

@@ -1,0 +1,10 @@
+{
+  "title": "Trigger Nodes",
+  "pagesIndex": "index",
+  "pages": [
+    "app_trigger",
+    "manual_trigger",
+    "on_schedule",
+    "on_webhook"
+  ]
+}

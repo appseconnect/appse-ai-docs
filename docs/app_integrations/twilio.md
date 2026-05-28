@@ -1,17 +1,17 @@
 ---
 title: "Twilio"
-slug: /app-integrations/twilio/
 ---
+
 
 Twilio is a cloud communications platform that enables businesses to send SMS, WhatsApp messages, and make phone calls programmatically. Integrating Twilio allows you to automate notifications and communication flows across multiple channels.
 
 ## Set Up Credential
 
-:::info
+::info
 
 To create credentials for Twilio, you must have a Twilio account.
 
-:::
+::
 
 ### Required Fields
 
@@ -32,22 +32,20 @@ Go to [twilio.com](https://www.twilio.com/) and log in to your account.
 #### 2. Locate Your Account SID and Auth Token
 
 After logging in, you will land on the **Twilio Console Dashboard**. Your **Account SID** and **Auth Token** are displayed on the main dashboard page.
-
-<img src="\img\credentials\twilio\account-sid-auth-token.png" alt="APPSeAI Twilio Account SID and Auth Token" width="700"/>
+![APPSeAI Twilio Account SID and Auth Token](/img/credentials/twilio/account-sid-auth-token.png)
 <br/>
 
 #### 3. Copy Your Credentials
 
 Click the **copy** icon next to the **Account SID** and **Auth Token** fields to copy them. Paste these values into the corresponding fields in the appse ai credential form.
-
-<img src="\img\credentials\twilio\copy-credentials.png" alt="APPSeAI Twilio Copy Credentials" width="700"/>
+![APPSeAI Twilio Copy Credentials](/img/credentials/twilio/copy-credentials.png)
 <br/>
 
-:::warning
+::warning
 
 Keep your Auth Token secure. Do not share it publicly, as it grants full access to your Twilio account.
 
-:::
+::
 
 ### Set Up a Twilio Phone Number
 
@@ -57,7 +55,7 @@ Before you can send SMS, WhatsApp messages, or make phone calls, you need a Twil
 2. Search for a number with the capabilities you need (SMS, Voice, WhatsApp).
 3. Click **Buy** to purchase the number.
 
-<img src="\img\credentials\twilio\buy-phone-number.png" alt="APPSeAI Twilio Buy Phone Number" width="700"/>
+![APPSeAI Twilio Buy Phone Number](/img/credentials/twilio/buy-phone-number.png)
 <br/>
 
 ### Enable WhatsApp (Optional)
@@ -67,7 +65,7 @@ To send WhatsApp messages, you need to set up a WhatsApp-enabled sender.
 1. In the Twilio Console, navigate to **Messaging** > **Try it out** > **Send a WhatsApp message**.
 2. Follow the instructions to connect your Twilio number with WhatsApp or use the Twilio Sandbox for testing.
 
-<img src="\img\credentials\twilio\whatsapp-setup.png" alt="APPSeAI Twilio WhatsApp Setup" width="700"/>
+![APPSeAI Twilio WhatsApp Setup](/img/credentials/twilio/whatsapp-setup.png)
 
 ### Create a New Connection in appse ai
 
@@ -76,22 +74,19 @@ Once you have your Twilio credentials ready, follow these steps to create a conn
 #### 1. Open the Credentials Page
 
 In the appse ai platform, navigate to the **Credentials** section and click on **Create New Credential**.
-
-<img src="\img\credentials\twilio\create-new-credential.png" alt="APPSeAI Twilio Create New Credential" width="700"/>
+![APPSeAI Twilio Create New Credential](/img/credentials/twilio/create-new-credential.png)
 <br/>
 
 #### 2. Enter Your Twilio Credentials
 
 Select **Twilio** from the list of available integrations. Fill in the **Connection Name**, **Account SID**, and **Auth Token** fields with the values you copied from the Twilio Console. Click **Save** to create the connection.
-
-<img src="\img\credentials\twilio\add-credentials.png" alt="APPSeAI Twilio Add Credentials" width="700"/>
+![APPSeAI Twilio Add Credentials](/img/credentials/twilio/add-credentials.png)
 <br/>
 
 #### 3. Use the Connection in a Workflow
 
 Once the credential is saved, you can use it in your workflows. For example, add a Twilio node to your flow and select the credential you just created to send an SMS.
-
-<img src="\img\credentials\twilio\send-sms.png" alt="APPSeAI Twilio Send SMS" width="700"/>
+![APPSeAI Twilio Send SMS](/img/credentials/twilio/send-sms.png)
 <br/>
 
 ---

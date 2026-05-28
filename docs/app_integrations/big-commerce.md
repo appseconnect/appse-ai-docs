@@ -1,7 +1,7 @@
 ---
 title: "BigCommerce"
-slug : /app-integrations/bigcommerce
 ---
+
 
 BigCommerce is a leading e-commerce platform that helps businesses create and manage online stores. appse ai enables you to connect with your BigCommerce account, automate order processing, inventory management, and other e-commerce operations, allowing for smoother and more efficient business management through automated workflows.
 
@@ -26,20 +26,14 @@ The following fields are required to authenticate your BigCommerce account:
 
 - Log in to your BigCommerce admin dashboard.  
 - In your browser's address bar, you will see a URL like:  
-   `https://store-abc123.mybigcommerce.com/manage/dashboard`
-
-<img src="/img/credentials/big-commerce/bigcommerce-cred-store-hash.png" alt="APPSeAI BigCommerce Store Hash" width="700"/>
+   `https://store-abc123.mybigcommerce.com/manage/dashboard`![APPSeAI BigCommerce Store Hash](/img/credentials/big-commerce/bigcommerce-cred-store-hash.png)
 
 - The value after `store-` is your **Store Hash**.  
    Example: `abc123`
 
 #### 2. Generate Your Access Token
 
-- Navigate to **Settings** → **Store-level API accounts** → Click **Create API Account**.
-
-<img src="/img/credentials/big-commerce/bigcommerce-cred-access-token-1.png" alt="APPSeAI BigCommerce Store Level API Accounts" width="700"/>
-
-<img src="/img/credentials/big-commerce/bigcommerce-cred-access-token-2.png" alt="APPSeAI BigCommerce Store Create API Account" width="700"/>
+- Navigate to **Settings** → **Store-level API accounts** → Click **Create API Account**.![APPSeAI BigCommerce Store Level API Accounts](/img/credentials/big-commerce/bigcommerce-cred-access-token-1.png)![APPSeAI BigCommerce Store Create API Account](/img/credentials/big-commerce/bigcommerce-cred-access-token-2.png)
 
 - Enter a **Name** and select the required **OAuth scopes**.
 
@@ -75,13 +69,9 @@ Here is a recommended table for the required OAuth scopes:
 | Metafields Access                                | full       |
 
 
-- Click **Save** to generate the token.
+- Click **Save** to generate the token.![APPSeAI BigCommerce Save API](/img/credentials/big-commerce/bigcommerce-cred-access-token-3.png)
 
-<img src="/img/credentials/big-commerce/bigcommerce-cred-access-token-3.png" alt="APPSeAI BigCommerce Save API" width="700"/>
-
-- Copy and securely store the **Access Token** — it will not be shown again.
-
-<img src="/img/credentials/big-commerce/bigcommerce-cred-access-token-4.png" alt="APPSeAI BigCommerce Access Token" width="700"/>
+- Copy and securely store the **Access Token** — it will not be shown again.![APPSeAI BigCommerce Access Token](/img/credentials/big-commerce/bigcommerce-cred-access-token-4.png)
 
 You will now have your **Access Token** for use within the APPSe AI platform.
 

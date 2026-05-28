@@ -1,8 +1,7 @@
 ---
 title: "Profile"
-slug : /platform/settings/profile
-sidebar_position: 3
 ---
+
 
 This guide explains the features of the **Profile Settings** page in APPSe AI and how users can interact with them to update their personal information.
 

@@ -1,11 +1,10 @@
 ---
 id: transforming-data
 title: Transforming Data
-sidebar_position: 5
 description: Reshape and transform data structures using projections and mappings.
 keywords: [transformation, projection, mapping, reshape]
-slug: /platform/key-concepts/expressions/transforming-data
 ---
+
 
 # Transforming Data
 

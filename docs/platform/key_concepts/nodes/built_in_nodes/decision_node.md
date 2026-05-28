@@ -1,7 +1,7 @@
 ---
-slug: /platform/key-concepts/nodes/built-in/decision
 title: Decision Node
 ---
+
 
 The Decision Node in appse ai allows you to evaluate incoming data based on one or more conditions and route each record into either the True or False output path.
 
@@ -15,18 +15,13 @@ This is useful when you want to:
 
 ## IF Condition
 
-The IF section is where you define the rules that determine whether an item is considered True or False.
-
-<img src="\img\platform\key-concepts\nodes\built-in\decision\if.png" alt="if" width="700"/>
+The IF section is where you define the rules that determine whether an item is considered True or False.![if](/img/platform/key-concepts/nodes/built-in/decision/if.png)
 
 Each condition has three parts:
 
-1.  **Field** → the data attribute to evaluate
-    <img src="\img\platform\key-concepts\nodes\built-in\decision\field-if-condition.png" alt="field if condition" width="700"/>
-2.  **Condition** → the comparison operator
-    <img src="\img\platform\key-concepts\nodes\built-in\decision\if-conditions.png" alt="if conditions" width="700"/>
-3.  **Value** → the expected value
-    <img src="\img\platform\key-concepts\nodes\built-in\decision\value-if-condition.png" alt="value if conditions" width="700"/>
+1.  **Field** → the data attribute to evaluate![field if condition](/img/platform/key-concepts/nodes/built-in/decision/field-if-condition.png)
+2.  **Condition** → the comparison operator![if conditions](/img/platform/key-concepts/nodes/built-in/decision/if-conditions.png)
+3.  **Value** → the expected value![value if conditions](/img/platform/key-concepts/nodes/built-in/decision/value-if-condition.png)
 
 ### Conditions
 
@@ -63,29 +58,23 @@ Each condition has three parts:
 | **Time** | Greater than or Equal to | Allow same or later time | Time | "ShiftStart" greater than or equal to "06:00" |
 | **Time** | Less than or Equal to | Allow same or earlier time | Time | "CutoffTime" less than or equal to "17:00" |
 
-## AND Conditions
-
-<img src="\img\platform\key-concepts\nodes\built-in\decision\and.png" alt="and" width="700"/>
+## AND Conditions![and](/img/platform/key-concepts/nodes/built-in/decision/and.png)
 
 The AND button adds another condition inside the same rule group.
 
 **Example meaning:**
-Condition A **AND** Condition B
-<img src="\img\platform\key-concepts\nodes\built-in\decision\and-condition.png" alt="and-condition" width="700"/>
+Condition A **AND** Condition B![and-condition](/img/platform/key-concepts/nodes/built-in/decision/and-condition.png)
 
 For the item to be marked True, both conditions must be satisfied.
 
 Use AND when all conditions must be true at the same time.
 
-## OR Conditions
-
-<img src="\img\platform\key-concepts\nodes\built-in\decision\or.png" alt="or" width="700"/>
+## OR Conditions![or](/img/platform/key-concepts/nodes/built-in/decision/or.png)
 
 The OR button creates a separate rule block.
 
 **Example meaning:**
-**(Group 1: ConditionA AND ConditionB)** OR **(Group 2: ConditionC AND ConditionD)**
-<img src="\img\platform\key-concepts\nodes\built-in\decision\or-condition.png" alt="or condition" width="700"/>
+**(Group 1: ConditionA AND ConditionB)** OR **(Group 2: ConditionC AND ConditionD)**![or condition](/img/platform/key-concepts/nodes/built-in/decision/or-condition.png)
 
 If any one group evaluates to true, the item is routed to the True output.
 
@@ -100,14 +89,10 @@ Use OR when you want multiple possible criteria to qualify.
 
 ## Steps to Use the Decision Node
 
-1.  Select the Decision node from the selection screen.
-    <img src="\img\platform\key-concepts\nodes\built-in\decision\select-decision-node.png" alt="select-decision-node" width="700"/>
-2.  Drag the `order.amount` field from the Schema panel on the left into the Field box of the IF section. Confirm that the field appears as `{{$payload.order.amount}}` in the IF box.
-    <img src="\img\platform\key-concepts\nodes\built-in\decision\drag-param.png" alt="drag param" width="700"/>
-3.  Open the Condition dropdown and select **Equal to** from the Number options.
-    <img src="\img\platform\key-concepts\nodes\built-in\decision\select-condition.png" alt="select condition" width="700"/>
-4.  In the Value box, type `50000` so the rule checks: `order.amount = 50000`.
-    <img src="\img\platform\key-concepts\nodes\built-in\decision\write-value.png" alt="write value" width="700"/>
+1.  Select the Decision node from the selection screen.![select-decision-node](/img/platform/key-concepts/nodes/built-in/decision/select-decision-node.png)
+2.  Drag the `order.amount` field from the Schema panel on the left into the Field box of the IF section. Confirm that the field appears as `{{$payload.order.amount}}` in the IF box.![drag param](/img/platform/key-concepts/nodes/built-in/decision/drag-param.png)
+3.  Open the Condition dropdown and select **Equal to** from the Number options.![select condition](/img/platform/key-concepts/nodes/built-in/decision/select-condition.png)
+4.  In the Value box, type `50000` so the rule checks: `order.amount = 50000`.![write value](/img/platform/key-concepts/nodes/built-in/decision/write-value.png)
 
 ### Example with AND and OR
 
@@ -123,9 +108,7 @@ Then we clicked **OR +** to create a second group, where `dates.orderDate` is **
 ### Output (True and False Division)
 
 1.  Click Continue, go to the Run tab, and click Run again.
-2.  In the **False branch** of the output, you will see all records that do not satisfy any of the configured groups (for example, an order with an amount of 75000 and status Delivered).
-    <img src="\img\platform\key-concepts\nodes\built-in\decision\false-branch.png" alt="false branch" width="700"/>
-3.  In the **True branch** of the output, you will see all records that satisfy at least one group (for example, Alice Wonderland’s order with an amount of 50000).
-    <img src="\img\platform\key-concepts\nodes\built-in\decision\true-branch.png" alt="true branch" width="700"/>
+2.  In the **False branch** of the output, you will see all records that do not satisfy any of the configured groups (for example, an order with an amount of 75000 and status Delivered).![false branch](/img/platform/key-concepts/nodes/built-in/decision/false-branch.png)
+3.  In the **True branch** of the output, you will see all records that satisfy at least one group (for example, Alice Wonderland’s order with an amount of 50000).![true branch](/img/platform/key-concepts/nodes/built-in/decision/true-branch.png)
 
 Use these True and False outputs to connect different downstream nodes, depending on how you want to process matching vs non-matching records.

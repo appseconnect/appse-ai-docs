@@ -1,11 +1,8 @@
 ---
 title: Apollo.io
 description: Step-by-step guide to set up Apollo.io credentials for Appse.ai integration
-slug: /app-integrations/apollo-io/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 ## Introduction
 
@@ -37,19 +34,17 @@ The following fields are required to configure Apollo credentials in Appse.ai.
 | Connection Name | A name to help you identify this Apollo.io connection within Appse.ai       |
 | API Key        | Your personal Apollo.io API key used to authenticate API requests           |
 
-:::info
+::info
 All required fields must be filled correctly to successfully authorize Apollo with Appse.ai.
-:::
+::
 
 ## Step-by-Step Guide
 
 To get started with Apollo.io, click **Select a Credential** and choose **Apollo.io** from the application list.
-
-<img src="/img/credentials/apollo-io/add_credential.png" alt="Create Apollo.io credential" width="700"/>
+![Create Apollo.io credential](/img/credentials/apollo-io/add_credential.png)
 
 This opens the Apollo.io credential form.
-
-<img src="/img/credentials/apollo-io/configure_credential.png" alt="Apollo.io credential form" width="700"/>
+![Apollo.io credential form](/img/credentials/apollo-io/configure_credential.png)
 
 ---
 
@@ -58,7 +53,7 @@ This opens the Apollo.io credential form.
 - Enter a meaningful **Connection Name**.
 - This is for identification purposes only inside Appse.ai and does not affect your Apollo.io account.
 
-<img src="/img/credentials/apollo-io/connection_key.png" alt="Apollo.io connection name field" width="600"/>
+![Apollo.io connection name field](/img/credentials/apollo-io/connection_key.png)
 
 ---
 
@@ -66,21 +61,19 @@ This opens the Apollo.io credential form.
 
 - Open a new tab and log in to your **Apollo.io** account.
 
-<img src="/img/credentials/apollo-io/login_page.png" alt="Apollo.io login page" width="700"/>
+![Apollo.io login page](/img/credentials/apollo-io/login_page.png)
 
 Sign in to your **Apollo.io** account.
 
 Or create an account if you don’t already have one:
+![Apollo.io login page](/img/credentials/apollo-io/signup_page.png)
 
-<img src="/img/credentials/apollo-io/signup_page.png" alt="Apollo.io login page" width="700"/>
-
-:::note
+::note
 You must have an active Apollo.io account in order to use Apollo.io for integration in the APPSe AI.
-:::
+::
 
 After successful login, you will able to access your Apollo.io account.
-
-<img src="/img/credentials/apollo-io/apollo_dashboard.png" alt="Apollo.io login page" width="700"/>
+![Apollo.io login page](/img/credentials/apollo-io/apollo_dashboard.png)
 
 ---
 
@@ -90,13 +83,12 @@ After successful login, you will able to access your Apollo.io account.
 - Select **Admin Settings** from the dropdown menu.
 - In the Settings menu, navigate to **Integrations** → **API**.
 
-<img src="/img/credentials/apollo-io/admin_settings.png" alt="Apollo.io login page" width="700"/>
-
-<img src="/img/credentials/apollo-io/apisection.png" alt="Apollo.io API settings" width="700"/>
+![Apollo.io login page](/img/credentials/apollo-io/admin_settings.png)
+![Apollo.io API settings](/img/credentials/apollo-io/apisection.png)
 
 - Click on API Key section.
 
-<img src="/img/credentials/apollo-io/Api_key.png" alt="Apollo.io API key" width="700"/>
+![Apollo.io API key](/img/credentials/apollo-io/Api_key.png)
 
 ---
 
@@ -104,31 +96,31 @@ After successful login, you will able to access your Apollo.io account.
 
 - Click on **Create New Key**.
 
-<img src="/img/credentials/apollo-io/create_new_key.png" alt="Apollo.io API key" width="700"/>
+![Apollo.io API key](/img/credentials/apollo-io/create_new_key.png)
 
 - A form will open, where you need to add key name and other details.
 
-<img src="/img/credentials/apollo-io/enter_key_name.png" alt="Enter Api key name" width="700"/>
+![Enter Api key name](/img/credentials/apollo-io/enter_key_name.png)
 
 - You can add the key as master key by enabling **Set as master key**, which automatically gives you access to all apollo api endpoint.
 
-<img src="/img/credentials/apollo-io/set_as_master_key.png" alt="Save as master key" width="700"/>
+![Save as master key](/img/credentials/apollo-io/set_as_master_key.png)
 
 - Or, you can add api endpoints as per you requirement by clicking the api dropdown section and clicking check boxes.
 
-<img src="/img/credentials/apollo-io/apilist_dropdown.png" alt="Apollo.io API settings" width="700"/>
+![Apollo.io API settings](/img/credentials/apollo-io/apilist_dropdown.png)
 
 - After filling the details, click on the **Create API Key** button to create the api key.
 
-<img src="/img/credentials/apollo-io/save_create_new_apikey.png" alt="Create new api key" width="700"/>
+![Create new api key](/img/credentials/apollo-io/save_create_new_apikey.png)
 
 - Once the key is generated, copy the key to use it for your integration.
 
-<img src="/img/credentials/apollo-io/copy_api_key.png" alt="Copy Api Key" width="700"/>
+![Copy Api Key](/img/credentials/apollo-io/copy_api_key.png)
 
-:::warning
+::warning
 Treat your API key like a password. Do not share it publicly or commit it to source control.
-:::
+::
 
 ---
 
@@ -137,7 +129,7 @@ Treat your API key like a password. Do not share it publicly or commit it to sou
 - Return to the Appse.ai credential form.
 - Paste the copied **API Key** into the **API Key** field.
 
-<img src="/img/credentials/apollo-io/appseai_apikey.png" alt="Paste Apollo.io API key" width="700"/>
+![Paste Apollo.io API key](/img/credentials/apollo-io/appseai_apikey.png)
 
 ---
 
@@ -145,7 +137,7 @@ Treat your API key like a password. Do not share it publicly or commit it to sou
 
 - Click **Save** to store and validate your credential.
 
-<img src="/img/credentials/apollo-io/save_credential.png" alt="Save Apollo.io credential" width="600"/>
+![Save Apollo.io credential](/img/credentials/apollo-io/save_credential.png)
 
 ---
 

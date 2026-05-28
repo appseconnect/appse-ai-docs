@@ -1,9 +1,9 @@
 ---
-slug: /platform/key-concepts/nodes/trigger/app-trigger
 title: App Trigger
 position: 2
 description: Starts a workflow based on an event occurring within a specified application.
 ---
+
 # App Trigger
 
 An App Trigger automatically executes a workflow when a specific event happens in a connected app. It continuously monitors the app for the defined action, and when that action occurs on the application, the workflow is automatically triggered.
@@ -16,25 +16,19 @@ The App Trigger helps automate workflows that respond instantly to events happen
 
 ### 1. Select any app
 
-   Select any app from the selection screen  
-  
-  <img src="\img\platform\key-concepts\nodes\triggers\app-trigger\select-any-app.png" alt="select any app screen" width="700"/>   
+   Select any app from the selection screen  ![select any app screen](/img/platform/key-concepts/nodes/triggers/app-trigger/select-any-app.png)   
 
 ### 2. Credential screen
 
    After selecting an app, the credential screen will appear, where you can select your credential  and choose one of the **trigger action events** from the **Action Event** dropdown.  
 
-> Note: App triggers can be identified by a **trigger icon** displayed beside the action event, as shown in the image below.   
-   
-<img src="\img\platform\key-concepts\nodes\triggers\app-trigger\select-a-trigger-action-event.png" alt="select a trigger action event screen" width="700"/>   
+> Note: App triggers can be identified by a **trigger icon** displayed beside the action event, as shown in the image below.   ![select a trigger action event screen](/img/platform/key-concepts/nodes/triggers/app-trigger/select-a-trigger-action-event.png)   
 
 ### 3. Configure
 
    After selecting the **trigger action event**, you can continue to configure the App trigger  
 
-   In an App Trigger, you’ll see these two fields. Fill them out based on the requirements of your selected trigger action event.  
-
-<img src="\img\platform\key-concepts\nodes\triggers\app-trigger\configure-fields.png" alt="configure fields screen" width="700"/>
+   In an App Trigger, you’ll see these two fields. Fill them out based on the requirements of your selected trigger action event.  ![configure fields screen](/img/platform/key-concepts/nodes/triggers/app-trigger/configure-fields.png)
 
    - **Fetch Data Since –** This field lets you set the starting date and time from which data should be fetched. It’s used to pull records that were created or updated after the specified date.  
 
@@ -46,9 +40,7 @@ The App Trigger helps automate workflows that respond instantly to events happen
 ### 4. Run
 
 
-Running the node will fetch the relavant items based on the `date` and `limit` configuration.
-
-<img src="\img\platform\key-concepts\nodes\triggers\app-trigger\app-trigger-output.png" alt="app trigger output" width="700"/>
+Running the node will fetch the relavant items based on the `date` and `limit` configuration.![app trigger output](/img/platform/key-concepts/nodes/triggers/app-trigger/app-trigger-output.png)
 
 
 In case you configure a trigger node to fetch data since a date where the number of incoming data exceeds the limit set. The workflow will execute multiple times to make sure all the data is processed.

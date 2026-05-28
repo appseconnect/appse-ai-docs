@@ -1,11 +1,8 @@
 ---
 title: "Dynamics 365 Finance and Operations"
 description: "Step-by-step guide to set up Dynamics 365 Finance and Operations credentials for Appse.ai integration"
-slug: /app-integrations/d365fo/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 Microsoft Dynamics 365 Finance and Operations helps organizations manage finance, supply chain, and core business processes in one integrated system. It provides real-time visibility, stronger control, and scalable operations across business functions. This guide explains how to configure credentials in Appse.ai using the available authentication options.
 
@@ -27,7 +24,7 @@ You’ll be asked to fill in the following details:
 <TabItem value="envchoice" label="Environment Choice">
 
 #### Step 1: Choose Environment Type
-<img src="\img\credentials\dynamics-365-finance-and-operations\credentialchoice.png" alt="choice" width="500"/>
+![choice](/img/credentials/dynamics-365-finance-and-operations/credentialchoice.png)
 #### Step 2: Add Connection Name
 Enter a **Connection Name** to help you identify this Dynamics 365 Finance and Operations Production or Sandbox credential within Appse.ai.
 
@@ -43,9 +40,9 @@ If your D365FO login URL is, for example:
 
 The prefix `https://` and suffix `.operations.dynamics.com` are automatically applied by Appse.ai.
 
-:::note
+::note
 The base URL and API access scope are automatically generated using the environment name you provide.
-:::
+::
 
 </TabItem>
 
@@ -60,11 +57,10 @@ Enter the **Environment Name** portion of your Dynamics 365 Finance and Operatio
 If your D365FO login URL is, for example:  
 `https://testenv.operations.dynamics.com/data`, enter `testenv`.
 
-:::note
+::note
 The base URL and API access scope are automatically generated using the environment name you provide.
-:::
-
-<img src="\img\credentials\dynamics-365-finance-and-operations\credential.png" alt="credential" width="500"/>
+::
+![credential](/img/credentials/dynamics-365-finance-and-operations/credential.png)
 
 #### Save Your Credential
 Click **Save & Authorize** to complete the setup.

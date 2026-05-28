@@ -1,8 +1,8 @@
 ---
 title: Microsoft Dynamics 365 Customer Insights - Journeys
 description: Step-by-step guide to set up Microsoft Dynamics 365 Customer Insights - Journeys credentials for appse ai integration
-slug: /app-integrations/microsoft-dynamics-365-ci-journeys/
 ---
+
 
 
 **Microsoft Dynamics 365 Customer Insights - Journeys** is a powerful marketing automation platform from Microsoft that helps organizations orchestrate real-time, personalized customer journeys across all touchpoints. It enables businesses to manage contacts, leads, segments, email campaigns, and customer interactions within the Microsoft ecosystem.
@@ -36,17 +36,14 @@ This guide walks you through the process of adding **Microsoft Dynamics 365 Cust
 To get started with Microsoft Dynamics 365 Customer Insights - Journeys, you need to set credentials for it. Go to the credential page of appse ai.
 
 Click on **Add credentials**, search for Microsoft Dynamics 365 Customer Insights - Journeys.
-
-<img src="/img/credentials/dynamics-365-customer-insights/add-credentials-365-customer-journey.png" alt="Create a new credential" width="700"/>
+![Create a new credential](/img/credentials/dynamics-365-customer-insights/add-credentials-365-customer-journey.png)
 
 Select it to create a new credential.
-
-<img src="/img/credentials/dynamics-365-customer-insights/click-365-customer-journey.png" alt="search for Microsoft Dynamics 365 Customer Insights - Journeys" width="700"/>
+![search for Microsoft Dynamics 365 Customer Insights - Journeys](/img/credentials/dynamics-365-customer-insights/click-365-customer-journey.png)
 
 
 Which leads to a pop-up:
-
-<img src="/img/credentials/dynamics-365-customer-insights/click-save-authorize-appseai-365-customer-journey.png" alt="Enter credential details to add credential" width="700"/>
+![Enter credential details to add credential](/img/credentials/dynamics-365-customer-insights/click-save-authorize-appseai-365-customer-journey.png)
 
 ---
 
@@ -66,34 +63,32 @@ Environment URL: https://orgXXXXX.crm8.dynamics.com
 
 6. **Copy this URL** — you will need it in the next step.
 
-<img src="/img/credentials/dynamics-365-customer-insights/copy-url-365-journey.png" alt="Copy Environment URL from Power Platform Admin Center" width="700"/>
+![Copy Environment URL from Power Platform Admin Center](/img/credentials/dynamics-365-customer-insights/copy-url-365-journey.png)
 
-:::note
+::note
 The Environment URL format is always: `https://orgXXXXX.crm8.dynamics.com`
-:::
+::
 
 
 ### Step 2. Authorize Our App & Connect
 
 1. Paste the copied **Environment URL** in the field labeled:
    **"Dynamics 365 CI Journeys Environment URL"**
-   <img src="/img/credentials/dynamics-365-customer-insights/enter-env-url-365-customer-journey-appseai.png" alt="Enter Environment URL and connection name" width="700"/>
+![Enter Environment URL and connection name](/img/credentials/dynamics-365-customer-insights/enter-env-url-365-customer-journey-appseai.png)
 
 2. Click the **Save and Authorize** button
 
-<img src="/img/credentials/dynamics-365-customer-insights/click-save-authorize-appseai-365-customer-journey.png" alt="Click Save and Authorize" width="700"/>
+![Click Save and Authorize](/img/credentials/dynamics-365-customer-insights/click-save-authorize-appseai-365-customer-journey.png)
 
 This will open a pop-up window displaying a list of your Microsoft accounts, from which you can select the account you want to use.
 
 If the required account is not already added, click **Use another account**. This will redirect you to the Microsoft sign-in page to authenticate using a different account.
 
 Enter your Microsoft work or school email and click **Next** to continue.
-
-<img src="/img/credentials/dynamics-365-customer-insights/enter-email-365-customer-journey.png" alt="Microsoft sign in page" width="700"/>
+![Microsoft sign in page](/img/credentials/dynamics-365-customer-insights/enter-email-365-customer-journey.png)
 
 Enter your password and click **Sign In** to continue.
-
-<img src="/img/credentials/dynamics-365-customer-insights/click-sign-in-365-business-central.png" alt="Enter password" width="700"/>
+![Enter password](/img/credentials/dynamics-365-customer-insights/click-sign-in-365-business-central.png)
 
 
 

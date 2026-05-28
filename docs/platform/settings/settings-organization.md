@@ -1,8 +1,7 @@
 ---
 title: "Organization"
-slug : /platform/settings/organization
-sidebar_position: 4
 ---
+
 
 This guide explains the features of the **Organization Settings** page in APPSeCONNECT and how users can manage organization members, roles, and statuses.
 

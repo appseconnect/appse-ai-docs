@@ -1,8 +1,8 @@
 ---
 title: "Zoho POS"
 description: Step-by-step guide to set up Zoho POS credentials and automate retail workflows in appse ai.
-slug: /app-integrations/zoho-pos/
 ---
+
 
 Zoho POS is a cloud-based Point of Sale solution designed to manage in-store and multi-channel retail operations. It enables businesses to process transactions, manage contacts, track inventory, handle purchase and sales orders, and oversee warehouse operations from a centralized platform. Integrating Zoho POS into appse ai allows you to automate your retail workflows, synchronize POS data with your broader business systems, and eliminate manual data entry across your operations.
 
@@ -10,11 +10,11 @@ Zoho POS is a cloud-based Point of Sale solution designed to manage in-store and
 
 ## Set Up Credential
 
-:::info
+::info
 
 Before you create a credential for Zoho POS using appse ai, ensure you have an active Zoho POS account and have registered an application in the Zoho Developer Console to obtain your OAuth 2.0 credentials.
 
-:::
+::
 
 ### Required Fields
 
@@ -33,18 +33,15 @@ You'll be asked to fill in the following details:
 #### 1. Open the Credential Form
 
 Click **Select a Credential** and choose **Zoho POS** from the application list.
-
-<img src="/img/credentials/zohopos/click-select-credential-zohoPos.png" alt="appse ai Zoho POS Select Credential" width="700"/>
+![appse ai Zoho POS Select Credential](/img/credentials/zohopos/click-select-credential-zohoPos.png)
 
 <br/>
 
 This opens the Zoho POS credential form. Add your **Connection Name**.
-
-<img src="/img/credentials/zohopos/enter-connection-name-zohoPos.png" alt="appse ai Zoho POS Connection Name" width="700"/>
+![appse ai Zoho POS Connection Name](/img/credentials/zohopos/enter-connection-name-zohoPos.png)
 
 Select the correct **Base URL** (US, IN).
-
-<img src="/img/credentials/zohopos/select-base-url-appseai.png" alt="appse ai Zoho POS select data center" width="700"/>
+![appse ai Zoho POS select data center](/img/credentials/zohopos/select-base-url-appseai.png)
 
 #### 2. Sign In to the Zoho Developer Console
 
@@ -54,31 +51,29 @@ Go to the [Zoho Developer Console](https://api-console.zoho.com) and sign in wit
 
 1. Click **Add Client**.
 
-<img src="/img/credentials/zohopos/add-client-zoho-pos.png" alt="appse ai Zoho POS Add Client" width="700"/>
+![appse ai Zoho POS Add Client](/img/credentials/zohopos/add-client-zoho-pos.png)
 
 2. Select **Server-based Application** as the client type and fill in the required application details.
 
-<img src="/img/credentials/zohopos/create-server-based-app-zohopos.png" alt="appse ai Zoho POS serverbased app create" width="700"/>
+![appse ai Zoho POS serverbased app create](/img/credentials/zohopos/create-server-based-app-zohopos.png)
 
 3. Upon creation, your **Client ID** and **Client Secret** will be displayed on the application details page. Copy both values.
 
-<img src="/img/credentials/zohopos/click-client-secret.png" alt="appse ai Zoho POS Client Details" width="700"/>
-
-<img src="/img/credentials/zohopos/copy-client-id-client-secret-zohopos.png" alt="appse ai Zoho POS Client Credentials" width="700"/>
+![appse ai Zoho POS Client Details](/img/credentials/zohopos/click-client-secret.png)
+![appse ai Zoho POS Client Credentials](/img/credentials/zohopos/copy-client-id-client-secret-zohopos.png)
 
 #### 4. Paste Your Credentials in appse ai
 
 Return to the appse ai credential form. Fill in all the required fields — **Client ID**, **Client Secret** then click **Save** to store and validate your credential.
-
-<img src="/img/credentials/zohopos/paste-secret-zohopos.png" alt="appse ai Zoho POS Save Credential" width="700"/>
+![appse ai Zoho POS Save Credential](/img/credentials/zohopos/paste-secret-zohopos.png)
 
 <br/>
 
-:::warning
+::warning
 
 Keep your credentials secure. Do not share your Client Secret publicly. If you believe your credentials have been compromised, revoke access from the Zoho Developer Console immediately and generate new tokens.
 
-:::
+::
 
 ---
 

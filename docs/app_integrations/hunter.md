@@ -1,8 +1,8 @@
 ---
 title: "Hunter"
-slug : /app-integrations/hunter/
 description: Learn how to setup and use Hunter on appse ai.
 ---
+
 
 Hunter is a powerful email finding and verification tool that helps businesses discover professional email addresses and verify their authenticity. With appse ai, you can seamlessly connect your Hunter account to automate email discovery workflows and integrate contact data into your business processes.
 
@@ -30,17 +30,11 @@ You'll be asked to fill in the following details:
 
 #### 2. Find Your API Key
 
-- Log in to your **Hunter** account at [https://hunter.io](https://hunter.io).
+- Log in to your **Hunter** account at [https://hunter.io](https://hunter.io).![Hunter Login](/img/credentials/hunter/hunter-login.png)
 
-<img src="/img/credentials/hunter/hunter-login.png" alt="Hunter Login" width="700"/>
+- Click on **API** on the left sidebar.![Hunter API Sidebar](/img/credentials/hunter/hunter-api-sidebar.png)
 
-- Click on **API** on the left sidebar.
-
-<img src="/img/credentials/hunter/hunter-api-sidebar.png" alt="Hunter API Sidebar" width="700"/>
-
-- Copy the **API key** and paste it in the API Key field.
-
-<img src="/img/credentials/hunter/hunter-copy-api-key.png" alt="Hunter Copy API Key" width="700"/>
+- Copy the **API key** and paste it in the API Key field.![Hunter Copy API Key](/img/credentials/hunter/hunter-copy-api-key.png)
 
 > Note: This API key gives access to your Hunter account. Keep it secure and do not share it publicly.
 

@@ -1,7 +1,7 @@
 ---
-slug: /platform/key-concepts/nodes/built-in/filter
 title: Filter Node
 ---
+
 
 The Filter Node in appse ai allows you to selectively pass through only the data records that meet one or more defined conditions.
 
@@ -17,18 +17,13 @@ This is useful when you want to:
 
 ## IF Condition
 
-The IF section is where you define the rules that determine whether an item is considered True or False.
-
-<img src="\img\platform\key-concepts\nodes\built-in\filter\if.png" alt="if" width="700"/>
+The IF section is where you define the rules that determine whether an item is considered True or False.![if](/img/platform/key-concepts/nodes/built-in/filter/if.png)
 
 Each condition has three parts:
 
-1. **Field** → the data attribute to evaluate
-   <img src="\img\platform\key-concepts\nodes\built-in\filter\field-if-condition.png" alt="if field" width="700"/>
-2. **Condition** → the comparison operator
-   <img src="\img\platform\key-concepts\nodes\built-in\filter\if-conditions.png" alt="if condition" width="700"/>
-3. **Value** → the expected value
-   <img src="\img\platform\key-concepts\nodes\built-in\filter\value-if-condition.png" alt="value if condition" width="700"/>
+1. **Field** → the data attribute to evaluate![if field](/img/platform/key-concepts/nodes/built-in/filter/field-if-condition.png)
+2. **Condition** → the comparison operator![if condition](/img/platform/key-concepts/nodes/built-in/filter/if-conditions.png)
+3. **Value** → the expected value![value if condition](/img/platform/key-concepts/nodes/built-in/filter/value-if-condition.png)
 
 ### Conditions
 
@@ -65,9 +60,7 @@ Each condition has three parts:
 | **Time** | Greater than or Equal to | Allow same or later time | Time | "ShiftStart" greater than or equal to "06:00" |
 | **Time** | Less than or Equal to | Allow same or earlier time | Time | "CutoffTime" less than or equal to "17:00" |
 
-## AND Conditions
-
-<img src="\img\platform\key-concepts\nodes\built-in\filter\and.png" alt="and" width="700"/>
+## AND Conditions![and](/img/platform/key-concepts/nodes/built-in/filter/and.png)
 
 The AND button adds another condition inside the same rule group.
 
@@ -77,9 +70,7 @@ For a record to pass the filter, all AND conditions must be satisfied.
 
 Use AND when every condition must be true at the same time.
 
-## OR Conditions
-
-<img src="\img\platform\key-concepts\nodes\built-in\filter\or.png" alt="or" width="700"/>
+## OR Conditions![or](/img/platform/key-concepts/nodes/built-in/filter/or.png)
 
 The OR button creates a separate rule group.
 
@@ -99,14 +90,10 @@ Use OR when multiple alternative criteria should qualify.
 
 ## Steps to Use the Filter Node
 
-1. Select the Filter node from the node selection screen.
-   <img src="\img\platform\key-concepts\nodes\built-in\filter\select-filter-node.png" alt="select filter node" width="700"/>
-2. Drag `order.status` from the Schema panel into the Field box. Confirm it appears as `{{$payload.order.status}}`.
-   <img src="\img\platform\key-concepts\nodes\built-in\filter\drag-param.png" alt="drag parameter" width="700"/>
-3. From the Condition dropdown (Text), select **Equal to**.
-   <img src="\img\platform\key-concepts\nodes\built-in\filter\select-condition.png" alt="select condition" width="700"/>
-4. In the Value box, enter `Shipped`.
-   <img src="\img\platform\key-concepts\nodes\built-in\filter\write-value.png" alt="set value" width="700"/>
+1. Select the Filter node from the node selection screen.![select filter node](/img/platform/key-concepts/nodes/built-in/filter/select-filter-node.png)
+2. Drag `order.status` from the Schema panel into the Field box. Confirm it appears as `{{$payload.order.status}}`.![drag parameter](/img/platform/key-concepts/nodes/built-in/filter/drag-param.png)
+3. From the Condition dropdown (Text), select **Equal to**.![select condition](/img/platform/key-concepts/nodes/built-in/filter/select-condition.png)
+4. In the Value box, enter `Shipped`.![set value](/img/platform/key-concepts/nodes/built-in/filter/write-value.png)
 
 ### Example with AND and OR
 
@@ -117,13 +104,9 @@ First, we clicked **AND +** and added another rule where `order.status` is **Equ
 Then, we clicked **OR +** to create a second group, where `dates.orderDate` is **Later than** `01/02/2025 14:00`.
 
 **Together, this means a record will pass the filter if it matches:**
-`(order.status = Shipped AND customer.segment = Premium) OR (orderDate > 01/02/2025 14:00)`.
+`(order.status = Shipped AND customer.segment = Premium) OR (orderDate > 01/02/2025 14:00)`.![and or condition](/img/platform/key-concepts/nodes/built-in/filter/or-condition.png)
 
-<img src="\img\platform\key-concepts\nodes\built-in\filter\or-condition.png" alt="and or condition" width="700"/>
-
-## Output Behavior
-
-<img src="\img\platform\key-concepts\nodes\built-in\filter\filtered-branch.png" alt="filtered branch" width="700"/>
+## Output Behavior![filtered branch](/img/platform/key-concepts/nodes/built-in/filter/filtered-branch.png)
 
 * All records that satisfy at least one of the above rule groups are passed to the next connected node (for example, a shipped order from a premium customer, or any order placed after the specified date).
 * Records that do not satisfy any of the configured groups are filtered out and will not be processed further.

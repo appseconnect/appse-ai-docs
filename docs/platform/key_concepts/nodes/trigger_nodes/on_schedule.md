@@ -1,9 +1,9 @@
 ---
-slug: /platform/key-concepts/nodes/trigger/on-schedule
 title: On Schedule Trigger
 position: 3
 description: Initiates a workflow at a predefined time or recurring interval.
 ---
+
 # On Schedule Trigger
 
 The **On-Schedule** node helps you automate when your workflow runs — whether it’s every few minutes, daily, weekly, or on a specific date and time.  
@@ -19,9 +19,7 @@ When you open the **On-Schedule** node, under **Trigger Frequency**, you’ll se
 
 Each mode defines how frequently your workflow should run. When you select a mode, **appse ai** automatically updates the available fields to match your scheduling needs.
 
-#### 1. Minutes
-
-<img src="\img\platform\key-concepts\nodes\triggers\on-schedule\minutes.png" alt="appse ai on schedule minutes" width="500"/>
+#### 1. Minutes![appse ai on schedule minutes](/img/platform/key-concepts/nodes/triggers/on-schedule/minutes.png)
 
 Use this when you want your workflow to run every few minutes.  
 You’ll specify:
@@ -30,9 +28,7 @@ You’ll specify:
 > This option is ideal for frequent syncs or monitoring tasks.
 
 
-#### 2. Hours
-
-<img src="\img\platform\key-concepts\nodes\triggers\on-schedule\hours.png" alt="appse ai on schedule hours" width="500"/>
+#### 2. Hours![appse ai on schedule hours](/img/platform/key-concepts/nodes/triggers/on-schedule/hours.png)
 
 Use this to run your workflow at regular hourly intervals.  
 You’ll specify:
@@ -42,9 +38,7 @@ You’ll specify:
 > Perfect for hourly reports, updates, or data refreshes.
 
 
-#### 3. Days
-
-<img src="\img\platform\key-concepts\nodes\triggers\on-schedule\days.png" alt="appse ai on schedule days" width="500"/>
+#### 3. Days![appse ai on schedule days](/img/platform/key-concepts/nodes/triggers/on-schedule/days.png)
 
 Choose this to schedule daily or multi-day intervals.  
 You’ll specify:
@@ -53,9 +47,7 @@ You’ll specify:
 
 > Best suited for daily summaries, cleanup routines, or scheduled notifications.
 
-#### 4. Weeks
-
-<img src="\img\platform\key-concepts\nodes\triggers\on-schedule\weeks.png" alt="appse ai on schedule weeks" width="500"/>
+#### 4. Weeks![appse ai on schedule weeks](/img/platform/key-concepts/nodes/triggers/on-schedule/weeks.png)
 
 Use this to schedule workflows on specific weekdays.  
 You’ll specify:
@@ -64,9 +56,7 @@ You’ll specify:
 
 > Ideal for weekly maintenance or reporting tasks.
 
-#### 5. Months
-
-<img src="\img\platform\key-concepts\nodes\triggers\on-schedule\months.png" alt="appse ai on schedule months" width="500"/>
+#### 5. Months![appse ai on schedule months](/img/platform/key-concepts/nodes/triggers/on-schedule/months.png)
 
 This option runs your workflow monthly or at specific month intervals.
 
@@ -80,9 +70,7 @@ You’ll specify:
 Useful for monthly billing, statements, or reports.
 
 
-#### 6. Custom CRON Expression
-
-<img src="\img\platform\key-concepts\nodes\triggers\on-schedule\cron.png" alt="appse ai on schedule cron" width="500"/>
+#### 6. Custom CRON Expression![appse ai on schedule cron](/img/platform/key-concepts/nodes/triggers/on-schedule/cron.png)
 
 For advanced scheduling, select this mode to define exact timing using a **CRON expression**.  
 You’ll specify:
@@ -102,9 +90,7 @@ Once configured, open the **Output** tab to check your setup.
 
 Click **Run once** to manually execute the node — this helps confirm that your workflow runs as expected.
 
-When triggered (manually or automatically), the node produces a **payload with a timestamp** that can be used by the next node.
-
-<img src="\img\platform\key-concepts\nodes\triggers\on-schedule\output.png" alt="appse ai on schedule output" width="700"/>
+When triggered (manually or automatically), the node produces a **payload with a timestamp** that can be used by the next node.![appse ai on schedule output](/img/platform/key-concepts/nodes/triggers/on-schedule/output.png)
 
 ---
 

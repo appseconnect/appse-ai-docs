@@ -1,11 +1,10 @@
 ---
 id: common-patterns
 title: Common Patterns
-sidebar_position: 8
 description: Real-world patterns and examples for APPSeAI workflow expressions.
 keywords: [patterns, examples, real-world, workflows]
-slug: /platform/key-concepts/expressions/common-patterns
 ---
+
 
 Real-world patterns and examples for common workflow scenarios.
 

@@ -1,11 +1,8 @@
 ---
 title: Zoho Books
 description: Step-by-step guide to set up Zoho Books credentials for appse.ai integration
-slug: /app-integrations/zoho-books/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 ## Introduction
 
@@ -39,75 +36,65 @@ The following fields are required to configure Zoho Books credentials in appse.a
 | API Access Scope  | Set required Zoho Books scopes like ZohoBooks.modules.ALL in your developer console APP. |
 | Base API URL      | Select your Zoho Books base api url based on your Zoho account region.                   |
 
-:::info
+::info
 All required fields must be filled correctly to successfully authorize Zoho Books with appse.ai.
-:::
+::
 
 ## Step-by-Step Guide
 
 To get started with Zoho Books, you need to set credentials for it. Go to the credential page of appse.ai.
-
-<img src="/img/credentials/zoho-books/home_page.png" alt="Create a new credential" width="700"/>
+![Create a new credential](/img/credentials/zoho-books/home_page.png)
 
 Click on **Add credentials**, search for Zoho Books and select it to create a new credential.
-
-<img src="/img/credentials/zoho-books/add_new_cred.png" alt="Create a new credential" width="700"/>
+![Create a new credential](/img/credentials/zoho-books/add_new_cred.png)
 
 Or you can also do it while creating workflow by clicking on **Create a new credential**.
-
-<img src="/img/credentials/zoho-books/new_credpage.png" alt="Create a new credential" width="700"/>
+![Create a new credential](/img/credentials/zoho-books/new_credpage.png)
 
 Which leads to a pop-up:
+![Enter credential details to add credential](/img/credentials/zoho-books/credential_form.png)
 
-<img src="/img/credentials/zoho-books/credential_form.png" alt="Enter credential details to add credential" width="700"/>
-
-:::note
+::note
 The credential form is where you will provide OAuth and regional configuration details.
-:::
+::
 
 ### Regional Configuration
 
 You must select the correct regional URLs based on your **Zoho Books account region**.
 
-:::warning
+::warning
 Selecting an incorrect region may cause authentication failures or API request errors.
-:::
+::
 
 ### Authorization URL
 
 Select the **Authorization URL** based on your Zoho account region.
+![Zoho Books auth url](/img/credentials/zoho-books/auth_url.png)
+![Zoho Books auth url dropdown](/img/credentials/zoho-books/authurl_dropdown.png)
 
-<img src="/img/credentials/zoho-books/auth_url.png" alt="Zoho Books auth url" width="700"/>
-
-<img src="/img/credentials/zoho-books/authurl_dropdown.png" alt="Zoho Books auth url dropdown" width="700"/>
-
-:::info
+::info
 The Authorization URL determines where users are redirected for OAuth consent.
-:::
+::
 
 ### Token URL
 
 Select the **Token URL** based on your Zoho account region.
+![Zoho Books token url](/img/credentials/zoho-books/token_url.png)
+![Zoho Books token url dropdown](/img/credentials/zoho-books/tokenurl_dropdown.png)
 
-<img src="/img/credentials/zoho-books/token_url.png" alt="Zoho Books token url" width="700"/>
-
-<img src="/img/credentials/zoho-books/tokenurl_dropdown.png" alt="Zoho Books token url dropdown" width="700"/>
-
-:::info
+::info
 The Token URL is used by appse.ai to exchange the authorization code for access and refresh tokens.
-:::
+::
 
 ### Base API URL
 
 Select the **Base API URL** based on your Zoho account region.
+![Zoho Books base url](/img/credentials/zoho-books/base_url.png)
+![Zoho books base url dropdown](/img/credentials/zoho-books/baseurl_dropdown.png)
 
-<img src="/img/credentials/zoho-books/base_url.png" alt="Zoho Books base url" width="700"/>
-
-<img src="/img/credentials/zoho-books/baseurl_dropdown.png" alt="Zoho books base url dropdown" width="700"/>
-
-:::note
+::note
 The Base API URL ensures all API calls are routed to the correct Zoho data center.
-:::
+::
 
 ## How to Get Client ID and Client Secret
 
@@ -117,16 +104,14 @@ The Base API URL ensures all API calls are routed to the correct Zoho data cente
 ### Step 1: Access Zoho books
 
 Sign in to your **Zoho books** account.
-
-<img src="/img/credentials/zoho-books/login_page.png" alt="Sign in to Zoho books" width="700"/>
+![Sign in to Zoho books](/img/credentials/zoho-books/login_page.png)
 
 Or create an account if you don’t already have one:
+![Sign Up to create a new zoho books account](/img/credentials/zoho-books/sign_up_page.png)
 
-<img src="/img/credentials/zoho-books/sign_up_page.png" alt="Sign Up to create a new zoho books account" width="700"/>
-
-:::note
+::note
 You must have an active Zoho books account before creating OAuth credentials.
-:::
+::
 
 ---
 
@@ -136,9 +121,9 @@ You need to create a new client application to obtain OAuth credentials for Zoho
 
 Click on the [Zoho Developer Console](https://api-console.zoho.com/).
 
-:::info
+::info
 The Zoho Developer Console is used to register OAuth clients and manage credentials.
-:::
+::
 
 Alternatively, you can:
 
@@ -147,35 +132,32 @@ Alternatively, you can:
 - Navigate to Step 1: Registering New Client
 - Click the Zoho Developer Console link
 
-<img src="/img/credentials/zoho-books/zoho-books_apidoc.png" alt="Zoho books api documentation" width="700"/>
+![Zoho books api documentation](/img/credentials/zoho-books/zoho-books_apidoc.png)
 
 ---
 
 ### Step 3: Sign in to Zoho Developer Console
 
 Sign in with the same account details you used to create a Zoho books account:
-
-<img src="/img/credentials/zoho-books/sign_in_page.png" alt="Zoho books api console sign in page" width="700"/>
+![Zoho books api console sign in page](/img/credentials/zoho-books/sign_in_page.png)
 
 ---
 
 ### Step 4: Get Started
 
 Click on **Get started**:
-
-<img src="/img/credentials/zoho-books/get_started.png" alt="Get Started" width="700"/>
+![Get Started](/img/credentials/zoho-books/get_started.png)
 
 ---
 
 ### Step 5: Choose Client Type
 
 Select **Server-based applications**:
+![Choose the client type](/img/credentials/zoho-books/client_based_app.png)
 
-<img src="/img/credentials/zoho-books/client_based_app.png" alt="Choose the client type" width="700"/>
-
-:::tip
+::tip
 Server-based applications are recommended for backend integrations like appse.ai.
-:::
+::
 
 ---
 
@@ -186,47 +168,43 @@ Server-based applications are recommended for backend integrations like appse.ai
 3. Paste it into **Authorized Redirect URIs**
 4. Click **Create**
 
-<img src="/img/credentials/zoho-books/createnewclient.png" alt="Create new client" width="700"/>
+![Create new client](/img/credentials/zoho-books/createnewclient.png)
 
-:::warning
+::warning
 The Callback API URL must exactly match the value provided by appse.ai, otherwise authorization will fail.
-:::
+::
 
 ---
 
 ### Step 7: Configure Multi-Data Center Settings
 
 Go to **Settings** and enable **Use the same OAuth credentials for all data centers**:
-
-<img src="/img/credentials/zoho-books/data_center_settings.png" alt="data_center_settings" width="700"/>
+![data_center_settings](/img/credentials/zoho-books/data_center_settings.png)
 
 Click **OK** to confirm:
+![save_data_center_settings](/img/credentials/zoho-books/save_data_center_settings.png)
 
-<img src="/img/credentials/zoho-books/save_data_center_settings.png" alt="save_data_center_settings" width="700"/>
-
-:::info
+::info
 This setting allows the same OAuth credentials to work across Zoho data centers.
-:::
+::
 
 ---
 
 ### Step 8: Copy Credentials
 
 Copy the generated **Client ID** and **Client Secret**:
+![client_credentials](/img/credentials/zoho-books/client_credential.png)
 
-<img src="/img/credentials/zoho-books/client_credential.png" alt="client_credentials" width="700"/>
-
-:::warning
+::warning
 Keep your Client Secret secure and do not share it publicly.
-:::
+::
 
 ---
 
 ### Step 9: Paste Credentials
 
 Paste the **Client ID** and **Client Secret** into appse.ai’s Zoho Books credential form:
-
-<img src="/img/credentials/zoho-books/paste_clientid_clientsecret.png" alt="Paste client id and client secret" width="700"/>
+![Paste client id and client secret](/img/credentials/zoho-books/paste_clientid_clientsecret.png)
 
 ---
 
@@ -235,20 +213,18 @@ Paste the **Client ID** and **Client Secret** into appse.ai’s Zoho Books crede
 ### Step 10: Save and Authorize
 
 Click **Save and Authorize** to continue.
-
-<img src="/img/credentials/zoho-books/save_authorise.png" alt="Save and authorize" width="700"/>
+![Save and authorize](/img/credentials/zoho-books/save_authorise.png)
 
 ---
 
 ### Step 11: Grant Permissions
 
 Select the checkbox to grant access and click **Accept**.
+![Grant Permissions](/img/credentials/zoho-books/grant_permissions.png)
 
-<img src="/img/credentials/zoho-books/grant_permissions.png" alt="Grant Permissions" width="700"/>
-
-:::info
+::info
 Granting permissions allows appse.ai to access Zoho Books data based on the configured scope.
-:::
+::
 
 If the details are valid, appse.ai will complete the OAuth authorization flow and save the credential successfully.
 

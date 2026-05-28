@@ -1,7 +1,7 @@
 ---
-slug: /platform/key-concepts/nodes/built-in/aggregator
 title: Aggregator Node
 ---
+
 
 # Aggregator Node
 
@@ -44,25 +44,19 @@ This mode aggregates entire records into a single array wrapped inside a defined
 ### All Item Data – Example
 
 #### Fields to Include - All Fields:
-**Configuration**
-<img src="\img\platform\key-concepts\nodes\built-in\aggregator\Agg1.png" width="700"/>
+**Configuration**![](/img/platform/key-concepts/nodes/built-in/aggregator/Agg1.png)
 
-**Output**
-<img src="\img\platform\key-concepts\nodes\built-in\aggregator\Agg2.png" width="700"/>
+**Output**![](/img/platform/key-concepts/nodes/built-in/aggregator/Agg2.png)
 
 #### Fields to Include - Specified Fields:
-**Configuration**
-<img src="\img\platform\key-concepts\nodes\built-in\aggregator\Agg3.png" width="700"/>
+**Configuration**![](/img/platform/key-concepts/nodes/built-in/aggregator/Agg3.png)
 
-**Output**
-<img src="\img\platform\key-concepts\nodes\built-in\aggregator\Agg4.png" width="700"/>
+**Output**![](/img/platform/key-concepts/nodes/built-in/aggregator/Agg4.png)
 
 #### Fields to Include - All Fields Except:
-**Configuration**
-<img src="\img\platform\key-concepts\nodes\built-in\aggregator\Agg5.png" width="700"/>
+**Configuration**![](/img/platform/key-concepts/nodes/built-in/aggregator/Agg5.png)
 
-**Output**
-<img src="\img\platform\key-concepts\nodes\built-in\aggregator\Agg6.png" width="700"/>
+**Output**![](/img/platform/key-concepts/nodes/built-in/aggregator/Agg6.png)
 
 ---
 

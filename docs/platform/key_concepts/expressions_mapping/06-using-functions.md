@@ -1,7 +1,6 @@
 ---
 id: using-functions
 title: Using Functions
-sidebar_position: 6
 description: Built-in functions for arrays, strings, math, and data manipulation.
 keywords:
   [
@@ -15,8 +14,8 @@ keywords:
     utility functions,
     math,
   ]
-slug: /platform/key-concepts/expressions/using-functions
 ---
+
 
 # Using Functions
 
@@ -62,7 +61,7 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 
 **Sample Payload**
 
-```JSON
+```json
 {
  "items": {
             "qty": 1,
@@ -109,14 +108,14 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 
 **_Scenario 1_**
 
-```JSON
+```json
 "created_at": "2026-01-14 12:05:20",
 "updated_at": "2026-02-01 12:31:27",
 ```
 
 **_Scenario 2_**
 
-```JSON
+```json
 "created_At": "2025-01-04T14:30:00"
 ```
 
@@ -148,7 +147,7 @@ Built-in functions for common data manipulation tasks in APPSeAI expressions.
 
 **Sample Payload**
 
-```JSON
+```json
 {
  "price": 200,
 "quantity": 5,

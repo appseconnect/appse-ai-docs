@@ -1,17 +1,17 @@
 ---
 title: "Notion"
-slug: /app-integrations/notion/
 ---
+
 
 Notion is an all-in-one workspace platform for notes, documents, wikis, and project management. Integrating Notion into appse ai enables you to automate page creation, database management, content updates, and more — directly within your workflows.
 
 ## Set Up Credential
 
-:::info
+::info
 
 You will generate the required Integration Token during the steps below — no prior setup required.
 
-:::
+::
 
 ### Required Fields
 
@@ -29,7 +29,7 @@ Fill in the following fields:
 #### 1. Open the Credential Form
 
 Click **Select a Credential** and choose **Notion** from the application list. Add your **Connection Name**.
-<img src="/img/credentials/notion/create-new-cred.png" alt="appse ai Notion select credential screen" width="700"/>
+![appse ai Notion select credential screen](/img/credentials/notion/create-new-cred.png)
 
 #### 2. Go to Notion Integrations
 
@@ -38,8 +38,7 @@ Navigate to [Notion Integrations](https://www.notion.so/profile/integrations) (l
 #### 3. Set Integration Type to Internal
 
 Under integration type, select **"Internal"** — this provides a Bearer Token that can be used directly to authenticate API requests. Click **"Create a new integration"** to proceed.
-
-<img src="/img/credentials/notion/create-new-cred-notion.png" alt="appse ai Notion integration type selection screen" width="700"/>
+![appse ai Notion integration type selection screen](/img/credentials/notion/create-new-cred-notion.png)
 
 #### 4. Fill in Integration Details
 
@@ -51,34 +50,33 @@ Fill in the following:
 Click **"Create"** once done.
 
 The form to fill in your integration name and workspace is shown below:
-<img src="/img/credentials/notion/click-save-cred-notion.png" alt="appse ai Notion integration name and workspace form" width="700"/>
+![appse ai Notion integration name and workspace form](/img/credentials/notion/click-save-cred-notion.png)
 
 After clicking Create, your integration will be saved and you will be taken to its settings:
-<img src="/img/credentials/notion/configure-cred-notion.png" alt="appse ai Notion integration settings page after creation" width="700"/>
+![appse ai Notion integration settings page after creation](/img/credentials/notion/configure-cred-notion.png)
 
 #### 5. Copy Your Integration Token
 
 After saving, copy the **Internal Integration Token** (shown as "Secret" on the Notion settings page) from the Integration Settings page.
-
-<img src="/img/credentials/notion/copy-integration-key.png" alt="appse ai Notion copy integration token from settings" width="700"/>
+![appse ai Notion copy integration token from settings](/img/credentials/notion/copy-integration-key.png)
 
 #### 6. Paste the Token in appse ai
 
 Return to the appse ai credential form. Paste the **Integration Token** into the respective field and click **"Save"** to store and validate your credential.
 
 Paste your token into the Integration Token field as shown:
-<img src="/img/credentials/notion/enter-your-integration-token.png" alt="appse ai Notion paste integration token into credential form" width="700"/>
+![appse ai Notion paste integration token into credential form](/img/credentials/notion/enter-your-integration-token.png)
 
 Once saved, your credential will appear as connected in appse ai:
-<img src="/img/credentials/notion/create-credentials-notion-appseai.png" alt="appse ai Notion credential successfully created" width="700"/>
+![appse ai Notion credential successfully created](/img/credentials/notion/create-credentials-notion-appseai.png)
 
-:::info
+::info
  
 If the connection fails, verify your Integration Token is correct and has not been deactivated in Notion.
  
-:::
+::
 
-:::warning
+::warning
 
 After connecting in appse ai, go back to Notion and grant your integration access to the specific pages or databases you want to work with:
 
@@ -89,7 +87,7 @@ After connecting in appse ai, go back to Notion and grant your integration acces
 
 Without this step, your integration will have no data to access.
 
-:::
+::
 
 ---
 
@@ -99,11 +97,11 @@ Here is a list of the available triggers and actions for Notion:
 
 ### Triggers
 
-:::info
+::info
  
 Both triggers require a **Database ID** — you can find this in the Notion database URL.
  
-:::
+::
 
 - **On Page Added to Database** — Triggers whenever a new page is added to a specified Notion database. Use this trigger to start a workflow automatically when a new database entry is created.
 

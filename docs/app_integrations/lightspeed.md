@@ -1,8 +1,8 @@
 ---
 title: "Lightspeed (X-Series)"
 description: Step-by-step guide to set up Lightspeed X-Series credentials and automate retail, POS, and inventory workflows in appse ai.
-slug: /app-integrations/lightspeed/
 ---
+
 
 Lightspeed X-Series (formerly Vend) is a cloud-based POS and retail management platform for managing products, customers, sales, and inventory across physical and online stores. With appse ai, you can connect your Lightspeed account to automate retail workflows, synchronize sales and product data with your broader business systems, and eliminate manual data entry across your operations.
 
@@ -10,11 +10,11 @@ Lightspeed X-Series (formerly Vend) is a cloud-based POS and retail management p
 
 ## Set Up Credential
 
-:::info
+::info
 
 Before you create a credential for Lightspeed X-Series using appse ai, ensure you have a Lightspeed Developer Account and have created an application to obtain your OAuth 2.0 Client ID and Client Secret.
 
-:::
+::
 
 ### Required Fields
 
@@ -32,96 +32,85 @@ You'll be asked to fill in the following details:
 #### 1. Create a Developer Account
 
 Sign up for a Lightspeed Developer account at [https://developers.retail.lightspeed.app/register](https://developers.retail.lightspeed.app/register).
+![appse ai Lightspeed Developer Registration](/img/credentials/lightspeed/create-account-lightspeed.png)
 
-<img src="/img/credentials/lightspeed/create-account-lightspeed.png" alt="appse ai Lightspeed Developer Registration" width="700"/>
-
-:::note
+::note
 
 Developer credentials are separate from your Lightspeed Retail store account.
 
-:::
+::
 
 #### 2. Sign In to the Developer Portal
 
 Sign in to the [Lightspeed Developer Portal](https://developers.retail.lightspeed.app).
-
-<img src="/img/credentials/lightspeed/lightspeed-login.png" alt="appse ai Lightspeed Developer Portal Sign In" width="700"/>
+![appse ai Lightspeed Developer Portal Sign In](/img/credentials/lightspeed/lightspeed-login.png)
 
 #### 3. Navigate to Applications
 
 Go to the **Applications** section in your developer dashboard at [https://developers.retail.lightspeed.app/applications](https://developers.retail.lightspeed.app/applications).
-
-<img src="/img/credentials/lightspeed/click-add-application-lightspeed.png" alt="appse ai Lightspeed Create Application" width="700"/>
+![appse ai Lightspeed Create Application](/img/credentials/lightspeed/click-add-application-lightspeed.png)
 
 #### 4. Create a New Application
 
 Click **Create Application** and provide a name for your app.
-
-<img src="/img/credentials/lightspeed/create-new-cred-appseai-lightspeed.png" alt="appse ai Lightspeed Create a New Application" width="700"/>
+![appse ai Lightspeed Create a New Application](/img/credentials/lightspeed/create-new-cred-appseai-lightspeed.png)
 
 #### 5. Add the Redirect URL
 
 Add the **Redirect URL** from the appse ai credential form to the application settings in the Lightspeed Developer Portal.
+![appse ai Lightspeed Redirect URL](/img/credentials/lightspeed/add-redirect-url-lightspeed.png)
 
-<img src="/img/credentials/lightspeed/add-redirect-url-lightspeed.png" alt="appse ai Lightspeed Redirect URL" width="700"/>
-
-:::note
+::note
 
 The redirect URI must exactly match what is registered in your developer dashboard.
 
-:::
+::
 
 #### 6. Configure Scopes
 
 Ensure the following scopes are added to your application:
 
 `products:read` `products:write` `customers:read` `customers:write` `sales:read` `sales:write` `inventory:read` `inventory:write` `registers:read` `outlets:read` `suppliers:read` `suppliers:write` `payment_types:read` `retailers:read` `products:read:price_books`
+![appse ai Lightspeed Scopes](/img/credentials/lightspeed/scopes-lightspeed.png)
 
-<img src="/img/credentials/lightspeed/scopes-lightspeed.png" alt="appse ai Lightspeed Scopes" width="700"/>
-
-:::note
+::note
 
 These scopes are added by default when setting up the credential in appse ai. You can adjust them based on your integration needs.
 
-:::
+::
 
 #### 7. Copy Client ID and Client Secret
 
 After creating the application, copy the **Client ID** and **Client Secret** from the application settings page.
-
-<img src="/img/credentials/lightspeed/client-id-client-secret-lightspeed.png" alt="appse ai Lightspeed Client ID and Client Secret" width="700"/>
+![appse ai Lightspeed Client ID and Client Secret](/img/credentials/lightspeed/client-id-client-secret-lightspeed.png)
 
 #### 8. Copy Store Domain Prefix
 
 In the appse ai credential form, copy your **Store Domain Prefix** — the subdomain part of your Lightspeed store URL.
 
 For example, if your store URL is `mystore.retail.lightspeed.app`, enter `mystore`.
-
-<img src="/img/credentials/lightspeed/copy-domain-lightspeed.png" alt="appse ai Lightspeed Copy Store Domain" width="700"/>
+![appse ai Lightspeed Copy Store Domain](/img/credentials/lightspeed/copy-domain-lightspeed.png)
 
 #### 9. Paste Credentials in appse ai
 
 Open the Credentials page in appse ai. Paste the **Client ID** and **Client Secret** into the respective fields.
-
-<img src="/img/credentials/lightspeed/enter-domain-appseai-lightspeed.png" alt="appse ai Lightspeed Store Domain Prefix" width="700"/>
+![appse ai Lightspeed Store Domain Prefix](/img/credentials/lightspeed/enter-domain-appseai-lightspeed.png)
 
 #### 10. Save & Authorize
 
 Click **Save & Authorize** to initiate the OAuth 2.0 connection.
-
-<img src="/img/credentials/lightspeed/click-save-authorize-lightspeed.png" alt="appse ai Lightspeed Save and Authorize" width="700"/>
+![appse ai Lightspeed Save and Authorize](/img/credentials/lightspeed/click-save-authorize-lightspeed.png)
 
 #### 11. Authorize Access
 
 You will be redirected to the Lightspeed authorization page. Sign in with your **Lightspeed Retail store account** (not your developer account) and authorize the application.
+![appse ai Lightspeed Authorize Access](/img/credentials/lightspeed/authorize-access-lightspeed.png)
 
-<img src="/img/credentials/lightspeed/authorize-access-lightspeed.png" alt="appse ai Lightspeed Authorize Access" width="700"/>
-
-:::warning
+::warning
 
 Unapproved apps can connect to a maximum of 30 stores. Submit your app for approval in the Developer Portal for production use.
 
-:::
+::
 
 ---
 

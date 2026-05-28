@@ -1,7 +1,7 @@
 ---
 title: "BigCommerce B2B"
-slug: /app-integrations/bigcommerceb2b
 ---
+
 
 BigCommerce is a powerful e-commerce solution which also offers a dedicated B2B Edition with advanced features tailored for wholesale and business-to-business operations, enabling companies to manage complex pricing structures, customer groups, company accounts, and bulk ordering efficiently. appse ai lets you seamlessly connect with your BigCommerce B2B account to automate key processes such as order management, company management, quote synchronization, and invoice updates—helping streamline operations and enhance efficiency through intelligent, automated workflows.
 
@@ -27,8 +27,7 @@ The following fields are required to authenticate your BigCommerce account:
 - Log in to your BigCommerce admin dashboard.
 - In your browser's address bar, you will see a URL like:  
    `https://store-abc123.mybigcommerce.com/manage/dashboard`
-
-<img src="/img/credentials/bigcommerce-b2b/bigcommerce-cred-store-hash.png" alt="APPSeAI BigCommerce Store Hash" width="700"/>
+![APPSeAI BigCommerce Store Hash](/img/credentials/bigcommerce-b2b/bigcommerce-cred-store-hash.png)
 
 - The value after `store-` is your **Store Hash**.  
    Example: `abc123`
@@ -37,9 +36,8 @@ The following fields are required to authenticate your BigCommerce account:
 
 - Navigate to **Settings** → **Store-level API accounts** → Click **Create API Account**.
 
-<img src="/img/credentials/bigcommerce-b2b/bigcommerce-cred-access-token-1.png" alt="APPSeAI BigCommerce Store Level API Accounts" width="700"/>
-
-<img src="/img/credentials/bigcommerce-b2b/bigcommerce-cred-access-token-2.png" alt="APPSeAI BigCommerce Store Create API Account" width="700"/>
+![APPSeAI BigCommerce Store Level API Accounts](/img/credentials/bigcommerce-b2b/bigcommerce-cred-access-token-1.png)
+![APPSeAI BigCommerce Store Create API Account](/img/credentials/bigcommerce-b2b/bigcommerce-cred-access-token-2.png)
 
 - Enter a **Name** and select the required **OAuth scopes**.
 
@@ -75,27 +73,25 @@ Here is a recommended table for the required OAuth scopes:
 | Metafields Access                            | full      |
 | B2B Edition                                  | modify    |
 
-:::info
+::info
 Make sure the B2B Edition scope is checked. It is mandatory for accessing B2B features of BigCommerce.
-:::
-
-<img src="/img/credentials/bigcommerce-b2b/scope.png" alt="APPSeAI BigCommerce B2B Api Scope" width="700"/>
+::
+![APPSeAI BigCommerce B2B Api Scope](/img/credentials/bigcommerce-b2b/scope.png)
 
 - Click **Save** to generate the token.
 
-<img src="/img/credentials/bigcommerce-b2b/bigcommerce-cred-access-token-3.png" alt="APPSeAI BigCommerce B2B Save API" width="700"/>
+![APPSeAI BigCommerce B2B Save API](/img/credentials/bigcommerce-b2b/bigcommerce-cred-access-token-3.png)
 
 - Copy and securely store the **Access Token** — it will not be shown again.
 
-<img src="/img/credentials/bigcommerce-b2b/bigcommerce-cred-access-token-4.png" alt="APPSeAI BigCommerce B2B Access Token" width="700"/>
+![APPSeAI BigCommerce B2B Access Token](/img/credentials/bigcommerce-b2b/bigcommerce-cred-access-token-4.png)
 
 You will now have your **Access Token** for use within the APPSe AI platform.
 
 ### Test Your Credential
 
 Once both **Store Hash** and **API Token** are entered into the credential form, use the **Save** button to store your configurations.
-
-<img src="/img/credentials/bigcommerce-b2b/save-cred.png" alt="APPSeAI BigCommerce B2B Save Credentails" width="700"/>
+![APPSeAI BigCommerce B2B Save Credentails](/img/credentials/bigcommerce-b2b/save-cred.png)
 
 - If successful, your BigCommerce B2B integration will be ready to use.
 - If unsuccessful, try the following solutions:

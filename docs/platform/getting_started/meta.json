@@ -1,0 +1,9 @@
+{
+  "title": "Get Started",
+  "pagesIndex": "index",
+  "pages": [
+    "create-flow-overview",
+    "create-ai-agent",
+    "create-flow"
+  ]
+}

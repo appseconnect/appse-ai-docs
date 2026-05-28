@@ -1,8 +1,7 @@
 ---
 title: "Invite Users"
-sidebar_position: 1
-slug: /platform/key-concepts/user_management/invite_users
 ---
+
 
 # Invite Users
 
@@ -21,26 +20,14 @@ As an admin, you can:
 
 ## How to Invite a User
 
-1. From the sidebar, go to the user panel at the bottom-left. Click the three-dot (⋮) menu next to your profile name and select **Settings**.
+1. From the sidebar, go to the user panel at the bottom-left. Click the three-dot (⋮) menu next to your profile name and select **Settings**.![Choose settings](/img/credentials/user-management/choose-settings.png)
 
-<img src="/img/credentials/user-management/choose-settings.png" alt="Choose settings" width="700"/>
+2. On the Settings page, select **Organization** from the left panel.![Choose organisation](/img/credentials/user-management/choose-organisation.png)
 
-2. On the Settings page, select **Organization** from the left panel.
+3. On the right side of the page, click **Invite Members**.![Invite members](/img/credentials/user-management/invite-members.png)
 
-<img src="/img/credentials/user-management/choose-organisation.png" alt="Choose organisation" width="700"/>
+4. In the dialog box that appears, enter the email address of the person you want to invite and choose their role (Viewer or Editor).![invite team member](/img/credentials/user-management/invite-team-member.png)
 
-3. On the right side of the page, click **Invite Members**.
+5. Send the invitation. The invited user will receive an email with an invitation link.![invite email](/img/credentials/user-management/invite-email.png)
 
-<img src="/img/credentials/user-management/invite-members.png" alt="Invite members" width="700"/>
-
-4. In the dialog box that appears, enter the email address of the person you want to invite and choose their role (Viewer or Editor).
-
-<img src="/img/credentials/user-management/invite-team-member.png" alt="invite team member" width="700"/>
-
-5. Send the invitation. The invited user will receive an email with an invitation link.
-
-<img src="/img/credentials/user-management/invite-email.png" alt="invite email" width="700"/>
-
-6. Once the user accepts the invitation, they will be added to the selected organization and can start working based on the assigned role.
-
-<img src="/img/credentials/user-management/new-user-added.png" alt="new user added" width="700"/>
+6. Once the user accepts the invitation, they will be added to the selected organization and can start working based on the assigned role.![new user added](/img/credentials/user-management/new-user-added.png)

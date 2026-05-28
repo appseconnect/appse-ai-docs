@@ -1,8 +1,8 @@
 ---
 title: "On-Prem Connector Setup"
-slug: /platform/key-concepts/on-premise-agent/on-premise-agent-setup
 description: Step-by-step guide to create, download, and install an On-Prem Connector in appse ai for securely connecting on-premise systems and applications.
 ---
+
 
 ## Setup and install an On-Prem Connector
 
@@ -31,11 +31,11 @@ Before creating an On-Prem Connector, ensure that:
 
 - Click the three-dot menu from the bottom-left profile section
 
-<img src="/img/platform/key-concepts/on-premise-agent/three-dot-menu.png" alt="Open On-Prem Connectors Menu" width="700"/>
+![Open On-Prem Connectors Menu](/img/platform/key-concepts/on-premise-agent/three-dot-menu.png)
 
 - Select **On-Prem Connectors**
 
-<img src="/img/platform/key-concepts/on-premise-agent/navigate-on-prem-connectors.png" alt="Navigate to On-Prem Connectors" width="700"/>
+![Navigate to On-Prem Connectors](/img/platform/key-concepts/on-premise-agent/navigate-on-prem-connectors.png)
 
 ---
 
@@ -47,7 +47,7 @@ If no connectors are available, the empty state screen is displayed.
 
 - Click **Create First Connector** or **Create Connector**
 
-<img src="/img/platform/key-concepts/on-premise-agent/create-on-prem-connectors.png" alt="Create On-Prem Connector" width="700"/>
+![Create On-Prem Connector](/img/platform/key-concepts/on-premise-agent/create-on-prem-connectors.png)
 
 ---
 
@@ -57,7 +57,6 @@ In the **Create On-Prem Connector** popup:
 
 - Enter a unique **Connector Name**
 - Click **Create Connector**
-
 <img src="/img/platform/key-concepts/on-premise-agent/click-on-create-connector.png" alt="Create On-Prem Connector Popup" width="700" height="450"/>
 
 ### Required Fields
@@ -72,9 +71,9 @@ In the **Create On-Prem Connector** popup:
 onprem-connector
 ```
 
-:::info
+::info
 All available on-prem plugins are automatically included in the downloaded bundle.
-:::
+::
 
 ---
 
@@ -84,7 +83,6 @@ Once the agent is created successfully:
 
 - The agent is registered in your organization
 - A success confirmation popup is displayed
-
 <img src="/img/platform/key-concepts/on-premise-agent/on-prem-success-popup.png" alt="Connector Created Successfully" width="700" height="450"/>
 
 - Click **Done** to continue
@@ -97,7 +95,7 @@ After closing the popup, the newly created agent is displayed in the On-Site Con
 
 - The agent status is displayed as **Offline**
 
-<img src="/img/platform/key-concepts/on-premise-agent/offline-status.png" alt="Offline Agent Status" width="700"/>
+![Offline Agent Status](/img/platform/key-concepts/on-premise-agent/offline-status.png)
 
 ---
 
@@ -107,15 +105,14 @@ Once the agent is created, the **Download Bundle** option becomes available.
 
 - Click **Download Bundle**
 
-<img src="/img/platform/key-concepts/on-premise-agent/download-bundle.png" alt="Download Agent Bundle" width="700"/>
+![Download Agent Bundle](/img/platform/key-concepts/on-premise-agent/download-bundle.png)
 
 The bundle status is displayed as **Preparing...**
+![Preparing Agent Bundle](/img/platform/key-concepts/on-premise-agent/preparing-state.png)
 
-<img src="/img/platform/key-concepts/on-premise-agent/preparing-state.png" alt="Preparing Agent Bundle" width="700"/>
-
-:::info
+::info
 Bundle generation may take a few moments depending on plugin configuration and package size.
-:::
+::
 
 The ZIP package is downloaded to your local machine.
 
@@ -125,7 +122,7 @@ The ZIP package is downloaded to your local machine.
 
 - Navigate to the folder where the ZIP package was downloaded
 
-<img src="/img/platform/key-concepts/on-premise-agent/zip-folder.png" alt="Downloaded ZIP Package" width="700"/>
+![Downloaded ZIP Package](/img/platform/key-concepts/on-premise-agent/zip-folder.png)
 
 ---
 
@@ -134,11 +131,10 @@ The ZIP package is downloaded to your local machine.
 - Right-click the ZIP package
 - Click **Extract All**
 
-<img src="/img/platform/key-concepts/on-premise-agent/extract.png" alt="Extract ZIP Package" width="700"/>
+![Extract ZIP Package](/img/platform/key-concepts/on-premise-agent/extract.png)
 
 - Choose the extraction location
 - Click **Extract**
-
 <img src="/img/platform/key-concepts/on-premise-agent/extract-file-to-destination.png" alt="Select Extraction Location" width="700" height="400"/>
 
 ---
@@ -147,7 +143,6 @@ The ZIP package is downloaded to your local machine.
 
 - Open the extracted folder
 - Navigate to the **installer** directory
-
 <img src="/img/platform/key-concepts/on-premise-agent/installer.png" alt="Installer Directory" width="700" height="400"/>
 
 ---
@@ -157,7 +152,6 @@ The ZIP package is downloaded to your local machine.
 - Locate the **appseai** application file inside the installer folder
 - Right-click the file
 - Select **Run as administrator**
-
 <img src="/img/platform/key-concepts/on-premise-agent/run-as-admin.png" alt="Run Installer as Administrator" width="700" height="400"/>
 
 #### Windows Security Prompt
@@ -165,16 +159,14 @@ The ZIP package is downloaded to your local machine.
 After selecting **Run as administrator**, Windows Defender SmartScreen may display a security warning for the installer.
 
 - Click **More info**
-
 <img src="/img/platform/key-concepts/on-premise-agent/windows-protected-your-pc.png" alt="Windows Protected Your PC Warning" width="700" height="400"/>
 
 - Click **Run anyway** to continue the installation
-
 <img src="/img/platform/key-concepts/on-premise-agent/run-anyway.png" alt="Run Anyway Option" width="700" height="400"/>
 
-:::info
+::info
 This prompt may appear because the installer is being executed from a locally downloaded package.
-:::
+::
 
 #### Windows User Account Control
 
@@ -182,20 +174,18 @@ Windows may display a **User Account Control (UAC)** prompt asking for permissio
 
 - Click **Yes** to continue the installation
 
-:::info
+::info
 Administrator permission is required to install and configure the On-Prem Agent services on the machine.
-:::
+::
 
 ---
 
 ### Step 11: Accept License Terms
 
 - Enable **I agree to the license terms and conditions**
-
 <img src="/img/platform/key-concepts/on-premise-agent/terms-and-condition.png" alt="Accept License Terms" width="700" height="400"/>
 
 - Click **Install**
-
 <img src="/img/platform/key-concepts/on-premise-agent/install.png" alt="Install On-Prem Agent" width="700" height="400"/>
 
 ---
@@ -207,12 +197,11 @@ During installation:
 - The Windows service is created
 - Required plugins are configured automatically
 - Installation progress is displayed on the screen
-
 <img src="/img/platform/key-concepts/on-premise-agent/processing.png" alt="Installing On-Prem Agent" width="700" height="400"/>
 
-:::info
+::info
 Installation duration may vary depending on machine configuration and plugin setup.
-:::
+::
 
 ---
 
@@ -221,7 +210,6 @@ Installation duration may vary depending on machine configuration and plugin set
 After the installation is completed successfully:
 
 - Click **Close** to finish the installation process
-
 <img src="/img/platform/key-concepts/on-premise-agent/installed.png" alt="Installation Completed Successfully" width="700" height="400"/>
 
 ---
@@ -231,12 +219,11 @@ After the installation is completed successfully:
 - Return to the **On-Prem Connectors** page in appse ai
 
 Once the installed connector successfully connects to the platform, the status automatically changes from **Offline** to **Online**.
+![Online Agent Status](/img/platform/key-concepts/on-premise-agent/agent-online-status.png)
 
-<img src="/img/platform/key-concepts/on-premise-agent/agent-online-status.png" alt="Online Agent Status" width="700"/>
-
-:::info
+::info
 The Online status is reflected automatically after successful agent registration and connectivity.
-:::
+::
 
 ---
 

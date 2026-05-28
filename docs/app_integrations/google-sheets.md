@@ -1,7 +1,7 @@
 ---
 title: "Google Sheets"
-slug: /app-integrations/googlesheets
 ---
+
 
 Google Sheets is a powerful cloud-based spreadsheet application that allows users to create, edit, and collaborate on spreadsheets in real time. With **appse ai**, you can securely connect your Google Sheets account, automate data operations, and seamlessly integrate spreadsheet data into your workflows.
 
@@ -36,24 +36,18 @@ You’ll need to provide the following details while creating the credential:
 ## Step 2: Create a Google Cloud Project
 
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
-2. Click the **Project selector** (top-left).
-   <img src="\img\credentials\google-sheets\GS1.png"  width="700"/>
-3. Click **New Project**.
-   <img src="\img\credentials\google-sheets\GS2.png"  width="700"/>
+2. Click the **Project selector** (top-left).![](/img/credentials/google-sheets/GS1.png)
+3. Click **New Project**.![](/img/credentials/google-sheets/GS2.png)
 4. Enter:
    - **Project name**
    - **Location**
-5. Click **Create**.
-   <img src="\img\credentials\google-sheets\GS3.png"  width="700"/>
+5. Click **Create**.![](/img/credentials/google-sheets/GS3.png)
 
 ---
 
-<a id="navigate-to-apis-services"></a>
-
 ## Step 3: Navigate to APIs & Services section in Google Cloud Console
 
-1. In the Google Cloud Console header, click the **Google Cloud** text/logo (top-left).
-      <img src="\img\credentials\google-sheets\GS36.png" width="700"/>
+1. In the Google Cloud Console header, click the **Google Cloud** text/logo (top-left).![](/img/credentials/google-sheets/GS36.png)
 2. From the **Quick access** panel, click **APIs & Services**.
 3. You will now be on the **APIs & Services** dashboard.
 
@@ -63,19 +57,14 @@ You’ll need to provide the following details while creating the credential:
 
 ### Enable Google Sheets API
 
-1. Go to **[APIs & Services](#navigate-to-apis-services) → Library**.
-   <img src="\img\credentials\google-sheets\GS4.png"  width="700"/>
-   <img src="\img\credentials\google-sheets\GS5.png"  width="700"/>
-2. Search for **Google Sheets API**.
-   <img src="\img\credentials\google-sheets\GS6.png"  width="700"/>
-3. Click **Enable**.
-   <img src="\img\credentials\google-sheets\GS7.png"  width="700"/>
+1. Go to **[APIs & Services](#navigate-to-apis-services) → Library**.![](/img/credentials/google-sheets/GS4.png)![](/img/credentials/google-sheets/GS5.png)
+2. Search for **Google Sheets API**.![](/img/credentials/google-sheets/GS6.png)
+3. Click **Enable**.![](/img/credentials/google-sheets/GS7.png)
 
 ### Enable Google Drive API
 
 1. In the API Library, search for **Google Drive API**.
-2. Click **Enable**.
-   <img src="\img\credentials\google-sheets\GS8.png"  width="700"/>
+2. Click **Enable**.![](/img/credentials/google-sheets/GS8.png)
 
 > **Note:** Enabling the Google Drive API is mandatory to automatically fetch and display all spreadsheets linked to your Google Drive in the Select Spreadsheet dropdown during action configuration.
 
@@ -83,11 +72,9 @@ You’ll need to provide the following details while creating the credential:
 
 ## Step 5: Configure OAuth Consent Screen
 
-1. Go to **[APIs & Services](#navigate-to-apis-services) → OAuth consent screen**.
-   <img src="\img\credentials\google-sheets\GS9.png"  width="700"/>
+1. Go to **[APIs & Services](#navigate-to-apis-services) → OAuth consent screen**.![](/img/credentials/google-sheets/GS9.png)
 2. You will see the message: **“Google Auth Platform not configured yet”**
-3. Click **Get started**.
-   <img src="\img\credentials\google-sheets\GS10.png"  width="700"/>
+3. Click **Get started**.![](/img/credentials/google-sheets/GS10.png)
 
 ---
 
@@ -96,8 +83,7 @@ You’ll need to provide the following details while creating the credential:
 Fill in the following details:
 
 - **App name**
-- **User support email**
-   <img src="\img\credentials\google-sheets\GS11.png"  width="700"/>
+- **User support email**![](/img/credentials/google-sheets/GS11.png)
 
 Click **Next**.
 
@@ -107,8 +93,7 @@ Click **Next**.
 
 Select:
 
-- **External:** Selecting External allows your Google Sheets integration to be authorized by any Google account, not just users within a single Google Workspace organization.
-   <img src="\img\credentials\google-sheets\GS12.png"  width="700"/>
+- **External:** Selecting External allows your Google Sheets integration to be authorized by any Google account, not just users within a single Google Workspace organization.![](/img/credentials/google-sheets/GS12.png)
 
 Click **Next**.
 
@@ -116,8 +101,7 @@ Click **Next**.
 
 ### Step 5.3: Contact Information
 
-- Enter **Contact email**
-   <img src="\img\credentials\google-sheets\GS13.png"  width="700"/>
+- Enter **Contact email**![](/img/credentials/google-sheets/GS13.png)
 
 Click **Next**.
 
@@ -127,71 +111,57 @@ Click **Next**.
 
 - Make sure to check the box “I agree to the Google API Services: User Data Policy” to proceed. This confirms that your application complies with Google’s data usage and privacy requirements and is mandatory to continue the OAuth setup.
 - Click **Continue**
-- Click **Create**
-   <img src="\img\credentials\google-sheets\GS14.png"  width="700"/>
+- Click **Create**![](/img/credentials/google-sheets/GS14.png)
 
 ---
 
 ## Step 6: Add Test Users
 
 1. Go to **[APIs & Services](#navigate-to-apis-services)** → OAuth consent screen.
-2. Open the Audience section.
-   <img src="\img\credentials\google-sheets\GS38.png" width="700"/>
+2. Open the Audience section.![](/img/credentials/google-sheets/GS38.png)
 3. Under Test users, click Add users.
 4. Add one or more Google email addresses
 5. Only users added here will be able to successfully authorize and validate the credential.
-6. Click Save to apply the changes.
-   <img src="\img\credentials\google-sheets\GS16.png" width="700"/>
+6. Click Save to apply the changes.![](/img/credentials/google-sheets/GS16.png)
 
 ---
 
 ## Step 7: Configure OAuth Scopes
 
 1. Go to **[APIs & Services](#navigate-to-apis-services) → OAuth consent screen**
-2. Open **Data Access**
-   <img src="\img\credentials\google-sheets\GS17.png" width="700"/>
-3. Click **Add or remove scopes**
-   <img src="\img\credentials\google-sheets\GS18.png" width="700"/>
+2. Open **Data Access**![](/img/credentials/google-sheets/GS17.png)
+3. Click **Add or remove scopes**![](/img/credentials/google-sheets/GS18.png)
 
    ### Select the following scopes:
 
-   - https://www.googleapis.com/auth/spreadsheets
-      <img src="\img\credentials\google-sheets\GS19.png" width="700"/>
+   - https://www.googleapis.com/auth/spreadsheets![](/img/credentials/google-sheets/GS19.png)
 
-   - https://www.googleapis.com/auth/drive
-      <img src="\img\credentials\google-sheets\GS20.png" width="700"/>
+   - https://www.googleapis.com/auth/drive![](/img/credentials/google-sheets/GS20.png)
 
       
    > **Note:** Selecting the required scopes ensures that linked Google Sheets are properly fetched and displayed during configuration.   
 
-4. Click **Update**
-   <img src="\img\credentials\google-sheets\GS21.png" width="700"/>
-5. Click **Save**
-   <img src="\img\credentials\google-sheets\GS22.png" width="700"/>
+4. Click **Update**![](/img/credentials/google-sheets/GS21.png)
+5. Click **Save**![](/img/credentials/google-sheets/GS22.png)
 ---
 
 ## Step 8: Create OAuth Client ID & Client Secret
 
-1. Go to **[APIs & Services](#navigate-to-apis-services) → Credentials**
-   <img src="\img\credentials\google-sheets\GS23.png" width="700"/>
+1. Go to **[APIs & Services](#navigate-to-apis-services) → Credentials**![](/img/credentials/google-sheets/GS23.png)
 2. Click **Create Credentials**
-3. Select **OAuth client ID**
-   <img src="\img\credentials\google-sheets\GS39.png" width="700"/>
+3. Select **OAuth client ID**![](/img/credentials/google-sheets/GS39.png)
 
 ### Application Type
 
 - Select **Web application**
-- Add **Name**
-   <img src="\img\credentials\google-sheets\GS25.png" width="700"/>
+- Add **Name**![](/img/credentials/google-sheets/GS25.png)
 
 ### Configure Authorized Redirect URI
 
 Add our application’s callback URL:
 
 > This **must exactly match** the Callback API URL used in our platform.
-> Get this from the Google Sheets credential form as mentioned in Step 1.
-   <img src="\img\credentials\google-sheets\GS_credform.png" width="700"/>
-   <img src="\img\credentials\google-sheets\GS37.png" width="700"/>
+> Get this from the Google Sheets credential form as mentioned in Step 1.![](/img/credentials/google-sheets/GS_credform.png)![](/img/credentials/google-sheets/GS37.png)
 
 4. Click **Create**
 
@@ -202,12 +172,10 @@ Add our application’s callback URL:
 After successful creation, Google will display:
 
 - **Client ID**
-- **Client Secret**
-   <img src="\img\credentials\google-sheets\GS27.png" width="700"/>
+- **Client Secret**![](/img/credentials/google-sheets/GS27.png)
 
 Copy these values and store them securely  
-Also, you can download the JSON file clicking on the Download JSON button to store the credential
-   <img src="\img\credentials\google-sheets\GS28.png" width="700"/>
+Also, you can download the JSON file clicking on the Download JSON button to store the credential![](/img/credentials/google-sheets/GS28.png)
 ---
 
 ## Step 10: Add Credential in appse ai platform
@@ -216,19 +184,13 @@ Also, you can download the JSON file clicking on the Download JSON button to sto
 2. Use the Default Connection name or customize as required
 3. Paste the Client ID in the Client ID field
 4. Paste the Client Secret in the Client Secret field
-5. Click on Save & Authorize button
-   <img src="\img\credentials\google-sheets\GS29.png" width="700"/>
-6. Provide the Google account email (Added as test user in Step 6)
-   <img src="\img\credentials\google-sheets\GS30.png" width="700"/>
-7. Provide the password 
-   <img src="\img\credentials\google-sheets\GS31.png" width="700"/>
+5. Click on Save & Authorize button![](/img/credentials/google-sheets/GS29.png)
+6. Provide the Google account email (Added as test user in Step 6)![](/img/credentials/google-sheets/GS30.png)
+7. Provide the password ![](/img/credentials/google-sheets/GS31.png)
 8. Complete the Two-Step-Verification if enabled in your account
-9. Click on Continue to proceed
-   <img src="\img\credentials\google-sheets\GS32.png" width="700"/>
-10. To continue using appse.ai with Google Sheets, you must approve this access request
-   <img src="\img\credentials\google-sheets\GS33.png" width="700"/>
-11. Verify that credential is successfully validated
-   <img src="\img\credentials\google-sheets\GS34.png" width="700"/>
+9. Click on Continue to proceed![](/img/credentials/google-sheets/GS32.png)
+10. To continue using appse.ai with Google Sheets, you must approve this access request![](/img/credentials/google-sheets/GS33.png)
+11. Verify that credential is successfully validated![](/img/credentials/google-sheets/GS34.png)
 ---
 
 ## Google Sheet Actions
@@ -242,8 +204,7 @@ Also, you can download the JSON file clicking on the Download JSON button to sto
 
 ### Sample Spreadsheet
 
-For all examples in this documentation, assume the following Google Sheet:
-   <img src="\img\credentials\google-sheets\GS35.png" width="700"/>
+For all examples in this documentation, assume the following Google Sheet:![](/img/credentials/google-sheets/GS35.png)
 
 ---
 
@@ -281,13 +242,11 @@ This action is commonly used to **read spreadsheet data**, **fetch records**, or
 
 ---
 
-### Example Configuration
-   <img src="\img\credentials\google-sheets\GS40.png" width="700"/>
+### Example Configuration![](/img/credentials/google-sheets/GS40.png)
 
 ---
 
-### Result
-   <img src="\img\credentials\google-sheets\GS50.png" width="700"/>
+### Result![](/img/credentials/google-sheets/GS50.png)
 
 ---
 
@@ -309,13 +268,11 @@ This action is commonly used to **initialize data structures**, **generate repor
 
 ---
 
-### Example Configuration
-   <img src="\img\credentials\google-sheets\GS41.png" width="700"/>
+### Example Configuration![](/img/credentials/google-sheets/GS41.png)
 
 ---
 
-### Result
-   <img src="\img\credentials\google-sheets\GS42.png" width="700"/>
+### Result![](/img/credentials/google-sheets/GS42.png)
 
 ---
 
@@ -339,15 +296,11 @@ This action is commonly used to **insert new records**, **log workflow outputs**
 
 ---
 
-### Example Configuration
-   <img src="\img\credentials\google-sheets\GS43.png" width="700"/>
-
-   <img src="\img\credentials\google-sheets\GS44.png" width="700"/>
+### Example Configuration![](/img/credentials/google-sheets/GS43.png)![](/img/credentials/google-sheets/GS44.png)
 
 ---
 
-### Result
-   <img src="\img\credentials\google-sheets\GS45.png" width="700"/>
+### Result![](/img/credentials/google-sheets/GS45.png)
 
 ---
 
@@ -368,13 +321,11 @@ This action allows you to update an existing row in a Google Sheet by matching a
 
 ---
 
-### Example Configuration
-   <img src="\img\credentials\google-sheets\GS46.png" width="700"/>
+### Example Configuration![](/img/credentials/google-sheets/GS46.png)
 
 ---
 
-### Result
-   <img src="\img\credentials\google-sheets\GS47.png" width="700"/>
+### Result![](/img/credentials/google-sheets/GS47.png)
 
 ---
 
@@ -396,13 +347,11 @@ This action is useful when you need to generate spreadsheets dynamically for rep
 
 ---
 
-### Example Configuration
-   <img src="\img\credentials\google-sheets\GS48.png" width="700"/>
+### Example Configuration![](/img/credentials/google-sheets/GS48.png)
 
 ---
 
-### Result
-   <img src="\img\credentials\google-sheets\GS49.png" width="700"/>
+### Result![](/img/credentials/google-sheets/GS49.png)
 
 ---
 

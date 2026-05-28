@@ -1,7 +1,7 @@
 ---
 title: Triggers
-slug: /platform/workflow-designer/triggers
 ---
+
 
 # Triggers
 

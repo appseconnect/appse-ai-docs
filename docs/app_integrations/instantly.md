@@ -1,7 +1,7 @@
 ---
 title: "Instantly"
-slug: /app-integrations/instantly/
 ---
+
 
 Instantly is a cold email outreach tool that helps you scale your outreach campaigns. With appse ai, you can receive data from Instantly in real-time using Webhooks.
 
@@ -13,39 +13,27 @@ To receive data from Instantly, you must use **Webhooks**. This is required beca
 
 **1. Get Webhook URL from appse ai**
 
-- In your appse ai flow, add a Webhook Node. [**Learn more about Webhook Node**](/platform/key-concepts/nodes/trigger/webhook).
+- In your appse ai flow, add a Webhook Node. [**Learn more about Webhook Node**](/platform/key-concepts/nodes/trigger/webhook).![appse ai Webhook Node](/img/credentials/instantly/appse-webhook-node.png)
 
-<img src="/img/credentials/instantly/appse-webhook-node.png" alt="appse ai Webhook Node" width="300"/>
-
-- Copy the **Webhook URL** provided in the node configuration.
-
-<img src="/img/credentials/instantly/appse-webhook-config.png" alt="appse ai Webhook Configuration" width="700"/>
+- Copy the **Webhook URL** provided in the node configuration.![appse ai Webhook Configuration](/img/credentials/instantly/appse-webhook-config.png)
 
 **2. Navigate to Instantly Integrations**
 
 - Log in to your Instantly account.
-- Go to **Settings** and click on the **Integrations** tab.
-
-<img src="/img/credentials/instantly/instantly-settings-integrations.png" alt="Instantly Settings Integrations" width="700"/>
+- Go to **Settings** and click on the **Integrations** tab.![Instantly Settings Integrations](/img/credentials/instantly/instantly-settings-integrations.png)
 
 **3. Open Webhooks Section**
 
 - Switch to the **Webhooks** tab.
-- Click **Add Webhook**.
-
-<img src="/img/credentials/instantly/instantly-webhooks-list.png" alt="Instantly Webhooks List" width="700"/>
+- Click **Add Webhook**.![Instantly Webhooks List](/img/credentials/instantly/instantly-webhooks-list.png)
 
 **4. Configure Webhook Details**
 
-- **Webhook URL**: Paste the URL you copied from the appse ai Webhook Node.
-
-<img src="/img/credentials/instantly/instantly-add-webhook-modal.png" alt="Instantly Add Webhook Modal" width="700"/>
+- **Webhook URL**: Paste the URL you copied from the appse ai Webhook Node.![Instantly Add Webhook Modal](/img/credentials/instantly/instantly-add-webhook-modal.png)
 
 - **Event Type**: Select the event you want to trigger the flow (e.g., _Lead is marked as interested_, _Email Sent_, etc.).
 - **Campaign**: Select the specific campaign or "All Campaigns".
-- Click **Add Webhook**.
-
-<img src="/img/credentials/instantly/instantly-webhook-configuration.png" alt="Instantly Webhook Configuration" width="700"/>
+- Click **Add Webhook**.![Instantly Webhook Configuration](/img/credentials/instantly/instantly-webhook-configuration.png)
 
 **5. Receive Data**
 

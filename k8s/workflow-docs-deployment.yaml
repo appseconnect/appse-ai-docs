@@ -17,11 +17,23 @@ spec:
         - name: appseai-docs
           image: appseaiacr.azurecr.io/appseai-doc:latest  # <-- your image here
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           resources:
             limits:
-              memory: "512Mi"
+              memory: "768Mi"
               cpu: "759m"
             requests:
-              memory: "256Mi"
+              memory: "384Mi"
               cpu: "256m"
+          readinessProbe:
+            httpGet:
+              path: /platform/appse-ai
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /platform/appse-ai
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 30

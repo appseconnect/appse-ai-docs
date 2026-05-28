@@ -1,8 +1,8 @@
 ---
 title: "Heyreach"
-slug : /app-integrations/heyreach/
 description: Learn how to setup and use Heyreach on appse ai.
 ---
+
 
 Heyreach is a LinkedIn automation platform that helps businesses streamline their outreach campaigns, automate connection requests, and manage lead generation effectively. With appse ai, you can seamlessly connect your Heyreach account to automate LinkedIn workflows and integrate outreach data into your business processes.
 
@@ -32,13 +32,9 @@ You'll be asked to fill in the following details:
 
 - Log in to your **Heyreach** account.
 
-- Click on **Integrations** menu on the left sidebar.
+- Click on **Integrations** menu on the left sidebar.![Heyreach API Sidebar](/img/credentials/heyreach/heyreach-api-sidebar.png)
 
-<img src="/img/credentials/heyreach/heyreach-api-sidebar.png" alt="Heyreach API Sidebar" width="700"/>
-
-- Copy the **API key** and paste it in the API Key field.
-
-<img src="/img/credentials/heyreach/heyreach-copy-api-key.png" alt="Heyreach Copy API Key" width="700"/>
+- Copy the **API key** and paste it in the API Key field.![Heyreach Copy API Key](/img/credentials/heyreach/heyreach-copy-api-key.png)
 
 > Note: This API key gives access to your Heyreach account. Keep it secure and do not share it publicly.
 

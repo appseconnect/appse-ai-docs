@@ -1,9 +1,9 @@
 ---
 title: Configure a Node
-sidebar_position: 4
 description: Step-by-step guide to creating your first workflow in the APPSeAI platform.
 keywords: [getting started, create flow, workflow, APPSeAI]
 ---
+
 
 The best way to understand APPSeAI is to try it out yourself. This guide walks you through creating your first workflow from scratch.
 

@@ -1,17 +1,17 @@
 ---
 title: "SAP Business One DIS"
 description: Step-by-step guide to set up SAP Business One DIS credentials for appse ai integration
-slug: /app-integrations/sap-business-one-dis
 ---
+
 
 SAP Business One DIS is an on-premise integration for SAP Business One that connects your local SAP instance to appse ai through a dedicated On-Prem agent.
 
-:::info
+::info
 
 - The **On-Prem agent** must be active and reachable for the remaining fields to load and for the credential to connect successfully.
 - Make sure the selected agent has access to the SAP Business One environment and the license server.
 
-:::
+::
 
 ## Setup Credential
 
@@ -49,32 +49,32 @@ Fill in the following required fields once the agent is selected:
 - The hostname or IP of the machine running the SAP Business One server components.
 - Navigate to choose company, select your company and find the SAP Server Address in the Current Server section. Example: `sapserver.company.local` or `192.0.2.10`.
 
-<img src="/img/credentials/sap-business-one-dis/serveraddress.png" alt="find server address" width="700"/>
+![find server address](/img/credentials/sap-business-one-dis/serveraddress.png)
 
 ### Company Database
 
 - The company database in your DBMS (for example, `SBODemoUS`).
 - Navigate to choose company, select your company and find Company Database in the Database section.
 
-<img src="/img/credentials/sap-business-one-dis/database.png" alt="find company database" width="700"/>
+![find company database](/img/credentials/sap-business-one-dis/database.png)
 
 ### Username
 
 - This is the SAP Business One user account with access to the target company.
 
-<img src="/img/credentials/sap-business-one-dis/username.png" alt="username" width="700"/>
+![username](/img/credentials/sap-business-one-dis/username.png)
 
 ### Password
 
 - The password for the SAP Business One user account used.
 
-<img src="/img/credentials/sap-business-one-dis/password.png" alt="password" width="700"/>
+![password](/img/credentials/sap-business-one-dis/password.png)
 
 ### License Server
 
 - The address (and port) of the SAP License Server that issue licenses to SAP Business One clients. Confirm this by respective SAP admin.
 
-<img src="/img/credentials/sap-business-one-dis/serveraddress.png" alt="licenseserver" width="700"/>
+![licenseserver](/img/credentials/sap-business-one-dis/serveraddress.png)
 
 ### Database Type
 
@@ -83,8 +83,7 @@ Fill in the following required fields once the agent is selected:
 - Supported options (select the one matching your installation):
 
 `Microsoft SQL (Legacy)`,`Microsoft SQL 2012`,`Microsoft SQL 2014`,`Microsoft SQL 2016`,`Microsoft SQL 2017`,`Microsoft SQL 2019`,`SAP HANA`
-
-<img src="/img/credentials/sap-business-one-dis/databasetype.png" alt="SAP Business One database type dropdown showing available SQL options" width="700"/>
+![SAP Business One database type dropdown showing available SQL options](/img/credentials/sap-business-one-dis/databasetype.png)
 
 ## Actions
 
@@ -116,12 +115,12 @@ The SAP Business One DIS integration currently supports the following triggers. 
 
 If the following error is displayed for SAP DIS:
 
-:::warning
-<img src="/img/credentials/sap-business-one-dis/quickfix.png" alt="SAP DIS SM_OBS_DLL error 
-screenshot" width="700"/>
+::warning
+![SAP DIS SM_OBS_DLL error 
+screenshot](/img/credentials/sap-business-one-dis/quickfix.png)
 
 Delete the file at location `C:\Windows\Temp\SM_OBS_DLL\1000120` from your local system and try again.
-:::
+::
 
 ## Support
 

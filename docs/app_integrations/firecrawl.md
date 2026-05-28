@@ -1,7 +1,7 @@
 ---
 title: "Firecrawl"
-slug: /app-integrations/firecrawl/
 ---
+
 
 Firecrawl is a powerful web data API built for AI agents and workflows. It turns entire websites into clean, LLM-ready markdown or structured data. Integrating Firecrawl into appse ai enables you to scrape, crawl, search, extract, and map websites at scale with a single API.
 
@@ -9,11 +9,11 @@ Firecrawl is a powerful web data API built for AI agents and workflows. It turns
 
 ## Set Up Credential
 
-:::info
+::info
 
 Before you create a credential for Firecrawl using appse ai, ensure you have a Firecrawl account and have generated an API key from the Firecrawl dashboard.
 
-:::
+::
 
 ### Required Fields
 
@@ -31,14 +31,12 @@ You'll be asked to fill in the following details:
 #### 1. Open the Credential Form
 
 Click **Select a Credential** and choose **Firecrawl** from the application list.
-
-<img src="/img/credentials/firecrawl/firecrawl-create-new-connection.png" alt="appse ai Firecrawl Select Credential" width="700"/>
+![appse ai Firecrawl Select Credential](/img/credentials/firecrawl/firecrawl-create-new-connection.png)
 
 <br/>
 
 This opens the Firecrawl credential form. Add your **Connection Name**.
-
-<img src="/img/credentials/firecrawl/firecrawl-connection-name.png" alt="appse ai Firecrawl Connection Name" width="700"/>
+![appse ai Firecrawl Connection Name](/img/credentials/firecrawl/firecrawl-connection-name.png)
 
 #### 2. Sign In to the Firecrawl Dashboard
 
@@ -47,24 +45,22 @@ Go to [Firecrawl](https://www.firecrawl.dev/app) and sign in with your account. 
 #### 3. Get Your API Key
 
 After logging in, navigate to **API Keys** from the left sidebar of your dashboard.
-
-<img src="/img/credentials/firecrawl/firecrawl-api-key-create.png" alt="appse ai Firecrawl Get API Key" width="700"/>
+![appse ai Firecrawl Get API Key](/img/credentials/firecrawl/firecrawl-api-key-create.png)
 Generate a new API key and copy it. Your key will start with `fc-`.
-<img src="/img/credentials/firecrawl/firecrawl-api-key-name.png" alt="appse ai Firecrawl API Key Name" width="700"/>
+![appse ai Firecrawl API Key Name](/img/credentials/firecrawl/firecrawl-api-key-name.png)
 
 #### 4. Paste API Key in appse ai
 
 Return to the appse ai credential form. Paste the copied API key into the **API Key** field and click **"Save"** to store and validate your credential.
-
-<img src="/img/credentials/firecrawl/firecrawl-paste-api-key.png" alt="appse ai Firecrawl Save Credential" width="700"/>
+![appse ai Firecrawl Save Credential](/img/credentials/firecrawl/firecrawl-paste-api-key.png)
 
 <br/>
 
-:::warning
+::warning
 
 Keep your API key secure. Do not share it publicly. If you suspect your key has been compromised, you can regenerate or delete it from the Firecrawl dashboard at any time.
 
-:::
+::
 
 ---
 

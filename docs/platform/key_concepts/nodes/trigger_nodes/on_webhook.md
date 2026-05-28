@@ -1,9 +1,9 @@
 ---
-slug: /platform/key-concepts/nodes/trigger/webhook
 title: On Webhook Trigger
 position: 4
 dscription: Launches a workflow when an external system sends an HTTP request to a specific URL.
 ---
+
 
 # On Webhook Node
 
@@ -24,9 +24,7 @@ Currently, no authentication options are available to set up the Webhook node.
 
 ## 3. Configuration
 
-The configuration screen includes the following fields:
-
-<img src="\img\platform\key-concepts\nodes\triggers\webhook\webhook-configuration.png" alt="appse ai webhook configuration" width="700"/>
+The configuration screen includes the following fields:![appse ai webhook configuration](/img/platform/key-concepts/nodes/triggers/webhook/webhook-configuration.png)
 
 
 ### a. HTTP Method
@@ -35,9 +33,7 @@ Defines which HTTP method your webhook will accept. Commonly used: `POST` for se
 
 ### b. Set Webhook Path
 
-A unique identifier automatically generated for your webhook endpoint. You can edit this path to create a meaningful URL.
-
-<img src="\img\platform\key-concepts\nodes\triggers\webhook\webhook-set-path.png" alt="appse ai webhook set path" width="700"/>
+A unique identifier automatically generated for your webhook endpoint. You can edit this path to create a meaningful URL.![appse ai webhook set path](/img/platform/key-concepts/nodes/triggers/webhook/webhook-set-path.png)
 
 > Example: `order-created`
 
@@ -54,9 +50,7 @@ Based on the “Webhook path” field, the URLs will dynamically change. Once se
 
 ## 4. Listening for Events
 
-When you **run** the webhook node, **appse ai** starts “listening” for incoming HTTP requests on the defined URL.
-
-<img src="\img\platform\key-concepts\nodes\triggers\webhook\webhook-listening.png" alt="appse ai webhook listening" width="700"/>
+When you **run** the webhook node, **appse ai** starts “listening” for incoming HTTP requests on the defined URL.![appse ai webhook listening](/img/platform/key-concepts/nodes/triggers/webhook/webhook-listening.png)
 
 
 ---
@@ -69,15 +63,11 @@ After a successful request is received, the On Webhook node provides the body se
 
 ### Sending Request via Postman
 
-Here is a postman sample where the previously configured URL is used: `https://webhook.insync.pro/webhooks/test/order-created`
-
-<img src="\img\platform\key-concepts\nodes\triggers\webhook\webhook-postman.png" alt="appse ai webhook postman" width="700"/>
+Here is a postman sample where the previously configured URL is used: `https://webhook.insync.pro/webhooks/test/order-created`![appse ai webhook postman](/img/platform/key-concepts/nodes/triggers/webhook/webhook-postman.png)
 
 
 ### Generated Output
 
-Calling this URL will generate the following output:
-
-<img src="\img\platform\key-concepts\nodes\triggers\webhook\webhook-output.png" alt="appse ai webhook output" width="700"/>
+Calling this URL will generate the following output:![appse ai webhook output](/img/platform/key-concepts/nodes/triggers/webhook/webhook-output.png)
 
 ---

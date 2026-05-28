@@ -1,0 +1,14 @@
+{
+  "title": "Key Concepts",
+  "pagesIndex": "index",
+  "pages": [
+    "configure_a_node",
+    "run_a_node",
+    "workflow",
+    "nodes",
+    "credentials",
+    "expressions_mapping",
+    "on-premise-agent",
+    "user_management"
+  ]
+}

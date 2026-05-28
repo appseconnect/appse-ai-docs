@@ -1,7 +1,7 @@
 ---
 title: "Teamwork"
-slug: /app-integrations/teamwork/
 ---
+
 
 Teamwork is a powerful project management platform built for teams to plan, track, and deliver work efficiently. Integrating Teamwork into appse ai enables you to build powerful agents and workflows with real-time project management capabilities including task creation, milestone tracking, people management, and much more.
 
@@ -9,11 +9,11 @@ Teamwork is a powerful project management platform built for teams to plan, trac
 
 ## Set Up Credential
 
-:::info
+::info
 
 Before you create a credential for Teamwork using appse ai, ensure you have a Teamwork account and have registered an app in the Teamwork Developer Portal to obtain your Client ID and Client Secret.
 
-:::
+::
 
 ### Required Fields
 
@@ -32,14 +32,12 @@ You'll be asked to fill in the following details:
 #### 1. Open the Credential Form
 
 Click **Select a Credential** and choose **Teamwork** from the application list.
-
-<img src="/img/credentials/teamwork/create-new-cred-teamwork.png" alt="appse ai Teamwork Select Credential" width="700"/>
+![appse ai Teamwork Select Credential](/img/credentials/teamwork/create-new-cred-teamwork.png)
 
 <br/>
 
 This opens the Teamwork credential form. Add your **Connection Name**.
-
-<img src="/img/credentials/teamwork/configure-credientials.png" alt="appse ai Teamwork Connection Name" width="700"/>
+![appse ai Teamwork Connection Name](/img/credentials/teamwork/configure-credientials.png)
 
 #### 2. Navigate to the Teamwork Developer Portal
 
@@ -50,9 +48,7 @@ https://{yourSiteName}.teamwork.com/developer
 
 
 Sign in with your Teamwork account credentials.
-
-
-<img src="/img/credentials/teamwork/teamwork-login.png" alt="appse ai Teamwork Connection Name" width="700"/>
+![appse ai Teamwork Connection Name](/img/credentials/teamwork/teamwork-login.png)
 
 #### 3. Create a New App
 
@@ -65,34 +61,30 @@ Fill in the required details:
 - **Product(s)** — Select **Teamwork Projects**.
 
 Click **Save** to create the app.
-
-<img src="/img/credentials/teamwork/click-create-app-teamwork.png" alt="appse ai Teamwork Create App" width="700"/>
-
-<img src="/img/credentials/teamwork/click-create-app-teamwork-redirect-url.png" alt="appse ai Teamwork Create App" width="700"/>
+![appse ai Teamwork Create App](/img/credentials/teamwork/click-create-app-teamwork.png)
+![appse ai Teamwork Create App](/img/credentials/teamwork/click-create-app-teamwork-redirect-url.png)
 
 #### 4. Copy Your Client ID and Client Secret
 
 Once your app is created, open it and go to the **Credentials** tab. You will find your **Client ID** and **Client Secret** here.
 
 Copy both values.
-
-<img src="/img/credentials/teamwork/client-id-client-secret.png" alt="appse ai Teamwork Copy Credentials" width="700"/>
+![appse ai Teamwork Copy Credentials](/img/credentials/teamwork/client-id-client-secret.png)
 
 #### 5. Paste Credentials in appse ai
 
 Return to the appse ai credential form. Paste the copied **Client ID** and **Client Secret** into their respective fields and click **"Save"**.
 
 appse ai will redirect you to the Teamwork consent screen. Review the requested permissions and click **Authorize** to complete the connection.
-
-<img src="/img/credentials/teamwork/configure-credientials.png" alt="appse ai Teamwork Save Credential" width="700"/>
+![appse ai Teamwork Save Credential](/img/credentials/teamwork/configure-credientials.png)
 
 <br/>
 
-:::warning
+::warning
 
 Keep your Client ID and Client Secret secure. Do not share them publicly. If you suspect your credentials have been compromised, you can regenerate them from the Teamwork Developer Portal at any time.
 
-:::
+::
 
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: working-with-arrays
 title: Working with Arrays
-sidebar_position: 3
 description: Master array operations including indexing, projections, and aggregations.
 keywords: [arrays, indexing, projection, wildcard, APPSeAI]
-slug: /platform/key-concepts/expressions/working-with-arrays
 ---
+
 
 # Working with Arrays
 

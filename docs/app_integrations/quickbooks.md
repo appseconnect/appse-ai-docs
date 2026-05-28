@@ -1,11 +1,8 @@
 ---
 title: "QuickBooks"
 description: Step-by-step guide to set up QuickBooks credentials and automate financial workflows in appse ai.
-slug: /app-integrations/quickbooks/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 **QuickBooks Online** is a cloud accounting platform for small and medium-sized businesses, designed to simplify accounting, invoicing, payroll, and financial reporting. It provides real-time visibility into cash flow, expenses, and profitability — all from a single dashboard. With **appse ai**, you can connect QuickBooks Online to your existing business tools and automate end-to-end financial workflows.
 
@@ -28,8 +25,7 @@ import TabItem from '@theme/TabItem';
 To get started with QuickBooks Online integration, you need to set up credentials.
 
 Log in to **appse ai** and navigate to **Credentials** → **Add credentials**. Search for **QuickBooks** and select it to open the credential form. You can also do this while creating a workflow by clicking **Create a new credential**.
-
-<img src="/img/credentials/quickbooks/new-credential.png" alt="QuickBooks credential form in appse ai" width="700"/>
+![QuickBooks credential form in appse ai](/img/credentials/quickbooks/new-credential.png)
 
 <br/>
 
@@ -49,22 +45,19 @@ Follow the steps below to quickly set up your QuickBooks credential.
 Open the [Intuit Developer portal](https://developer.intuit.com/).
 
 Sign in with your Intuit account.
-
-<img src="/img/credentials/quickbooks/sign-in.png" alt="Intuit Developer sign-in page" width="700"/>
+![Intuit Developer sign-in page](/img/credentials/quickbooks/sign-in.png)
 
 <br/>
 
 If you don't have a registered account, you can create one.
-
-<img src="/img/credentials/quickbooks/create_an_account.png" alt="Intuit Developer create account page" width="700"/>
+![Intuit Developer create account page](/img/credentials/quickbooks/create_an_account.png)
 
 <br/>
 
 ### Step 2. Create a new QuickBooks app
 
 After logging in successfully, you will see the **Intuit Developer** dashboard.
-
-<img src="/img/credentials/quickbooks/workspace.png" alt="Intuit Developer workspace dashboard" width="700"/>
+![Intuit Developer workspace dashboard](/img/credentials/quickbooks/workspace.png)
 
 <br/>
 
@@ -74,13 +67,13 @@ After logging in successfully, you will see the **Intuit Developer** dashboard.
 
 3. Click `+` to begin creating a new app, then click **Get Started** to proceed to the next stage.
 
-<img src="/img/credentials/quickbooks/get_started.png" alt="Get Started page for new app creation in Intuit Developer" width="700"/>
+![Get Started page for new app creation in Intuit Developer](/img/credentials/quickbooks/get_started.png)
 
 <br/>
 
 4. Enter a name for your app and click **Next**.
 
-<img src="/img/credentials/quickbooks/add_app_name.png" alt="Entering app name in Intuit Developer app creation form" width="700"/>
+![Entering app name in Intuit Developer app creation form](/img/credentials/quickbooks/add_app_name.png)
 
 <br/>
 
@@ -89,19 +82,18 @@ After logging in successfully, you will see the **Intuit Developer** dashboard.
 - `com.intuit.quickbooks.accounting`
 - `com.intuit.quickbooks.payment`
 
-<img src="/img/credentials/quickbooks/add_permissions.png" alt="Selecting QuickBooks API scopes in Intuit Developer" width="700"/>
+![Selecting QuickBooks API scopes in Intuit Developer](/img/credentials/quickbooks/add_permissions.png)
 
 <br/>
 
 6. After ticking the checkboxes, click **Done** in the top-right corner. This will open a pop-up where you need to click **Confirm** to proceed.
 
-<img src="/img/credentials/quickbooks/confirm_permissions.png" alt="Confirm QuickBooks scopes permissions dialog in Intuit Developer" width="700"/>
+![Confirm QuickBooks scopes permissions dialog in Intuit Developer](/img/credentials/quickbooks/confirm_permissions.png)
 
 <br/>
 
 After confirmation, your credentials will be displayed. Copy and securely store these credentials for use during authorization.
-
-<img src="/img/credentials/quickbooks/client-credentials.png" alt="Client ID and Client Secret displayed in Intuit Developer after app creation" width="700"/>
+![Client ID and Client Secret displayed in Intuit Developer after app creation](/img/credentials/quickbooks/client-credentials.png)
 
 <br/>
 
@@ -110,31 +102,31 @@ After confirmation, your credentials will be displayed. Copy and securely store 
 1. Open the QuickBooks credential form in appse ai.
 2. Copy the **Callback API URL** value from the credential form.
 
-<img src="/img/credentials/quickbooks/copy-callback-url.png" alt="Copying Callback API URL from appse ai QuickBooks credential form" width="700"/>
+![Copying Callback API URL from appse ai QuickBooks credential form](/img/credentials/quickbooks/copy-callback-url.png)
 
 <br/>
 
 3. In the Intuit Developer app settings, locate **Redirect URIs** settings.
 
-<img src="/img/credentials/quickbooks/redirect-url.png" alt="Redirect URIs settings in Intuit Developer app settings" width="700"/>
+![Redirect URIs settings in Intuit Developer app settings](/img/credentials/quickbooks/redirect-url.png)
 
 <br/>
 
 4. Click **Redirect URIs**, then click **Add URI**.
 
-<img src="/img/credentials/quickbooks/add-redirect-url.png" alt="Adding a new redirect URI in Intuit Developer" width="700"/>
+![Adding a new redirect URI in Intuit Developer](/img/credentials/quickbooks/add-redirect-url.png)
 
 <br/>
 
 5. Copy and paste the exact Callback URL from the appse ai credential form and click **Save**.
 
-<img src="/img/credentials/quickbooks/save-redirect-url.png" alt="Saving the pasted Callback URL as redirect URI in Intuit Developer" width="700"/>
+![Saving the pasted Callback URL as redirect URI in Intuit Developer](/img/credentials/quickbooks/save-redirect-url.png)
 
 <br/>
 
-:::note
+::note
 The redirect URL must match exactly. Any mismatch will prevent OAuth authorization.
-:::
+::
 
 ### Step 4. Enter credentials
 
@@ -142,7 +134,7 @@ The redirect URL must match exactly. Any mismatch will prevent OAuth authorizati
 
 2. Choose **Production** or **Sandbox** from the **Environment** dropdown.
 
-<img src="/img/credentials/quickbooks/quickbook_env_dropdown.png" alt="QuickBooks credential form with environment selection in appse ai" width="700"/>
+![QuickBooks credential form with environment selection in appse ai](/img/credentials/quickbooks/quickbook_env_dropdown.png)
 
 <br/>
 
@@ -154,7 +146,7 @@ The redirect URL must match exactly. Any mismatch will prevent OAuth authorizati
 - Click on **My Hub** in your Intuit Developer dashboard.
 - Then click on **Sandboxes**.
 
-<img src="/img/credentials/quickbooks/sandboxes.png" alt="Sandbox companies list in Intuit Developer My Hub showing Realm IDs" width="700"/>
+![Sandbox companies list in Intuit Developer My Hub showing Realm IDs](/img/credentials/quickbooks/sandboxes.png)
 
 <br/>
 
@@ -162,7 +154,7 @@ The redirect URL must match exactly. Any mismatch will prevent OAuth authorizati
 - Click **Add** and select the **QuickBooks Online SKU** that fits your needs.
 - The Realm ID is displayed next to each sandbox company in the list.
 
-<img src="/img/credentials/quickbooks/realm-id.png" alt="Finding the Realm ID from Sandbox companies in Intuit Developer My Hub" width="700"/>
+![Finding the Realm ID from Sandbox companies in Intuit Developer My Hub](/img/credentials/quickbooks/realm-id.png)
 
 <br/>
 
@@ -173,16 +165,16 @@ The redirect URL must match exactly. Any mismatch will prevent OAuth authorizati
 - After logging in, the Realm ID appears in the browser URL as the `realmId` query parameter — for example: `https://app.qbo.intuit.com/app/homepage?realmId=123456789`.
 - Alternatively, click the **Settings** (gear icon) in the top-right corner, go to **Account and Settings** → **Billing & Subscription**, and copy the **Company ID** — that is your Realm ID.
 
-:::note
+::note
 The Realm ID is unique to each QuickBooks Online company. Make sure you copy it from the correct production company account.
-:::
+::
 
 </TabItem>
 </Tabs>
 
 4. Paste the copied **Client ID** and **Client Secret** values into the corresponding fields.
 
-<img src="/img/credentials/quickbooks/add-credentials.png" alt="Pasting Client ID and Client Secret into appse ai QuickBooks credential form" width="700"/>
+![Pasting Client ID and Client Secret into appse ai QuickBooks credential form](/img/credentials/quickbooks/add-credentials.png)
 
 <br/>
 
@@ -190,35 +182,35 @@ The Realm ID is unique to each QuickBooks Online company. Make sure you copy it 
 
 1. Click **Save & Authorize** in appse ai.
 
-<img src="/img/credentials/quickbooks/save-and-authorize.png" alt="Save and Authorize button in appse ai QuickBooks credential form" width="700"/>
+![Save and Authorize button in appse ai QuickBooks credential form](/img/credentials/quickbooks/save-and-authorize.png)
 
 <br/>
 
 2. This will open a new page where you need to sign in to the QuickBooks company you want to connect.
 
-<img src="/img/credentials/quickbooks/quickbooks-company-connect.png" alt="QuickBooks company sign-in page during OAuth authorization" width="300"/>
+![QuickBooks company sign-in page during OAuth authorization](/img/credentials/quickbooks/quickbooks-company-connect.png)
 
 <br/>
 
 3. Upon clicking your account, a new page opens for password verification. Enter your password and click **Continue**.
 
-<img src="/img/credentials/quickbooks/password.png" alt="Password verification page during QuickBooks OAuth authorization" width="300"/>
+![Password verification page during QuickBooks OAuth authorization](/img/credentials/quickbooks/password.png)
 
 <br/>
 
 4. Select a company from the company dropdown and click **Next**.
 
-<img src="/img/credentials/quickbooks/click-next.png" alt="Selecting QuickBooks company from dropdown and clicking Next during OAuth authorization" width="300"/>
+![Selecting QuickBooks company from dropdown and clicking Next during OAuth authorization](/img/credentials/quickbooks/click-next.png)
 
 <br/>
 
-:::warning
+::warning
 Make sure you authorize the correct QuickBooks Online company. If you connect the wrong company, disconnect and reauthorize with the correct account.
-:::
+::
 
-:::tip
+::tip
 Upon successful authorization, your credentials will be saved in the appse ai platform.
-:::
+::
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Best Buy
 description: Step-by-step guide to set up Best Buy credentials for Appse.ai integration
-slug: /app-integrations/best-buy/
 ---
+
 
 ## Introduction
 
@@ -34,9 +34,9 @@ The following fields are required to configure Best Buy credentials in Appse.ai.
 | Connection Name | A name to help you identify this Best Buy connection within Appse.ai       |
 | API Key        | Your Best Buy API key used to authenticate API requests                     |
 
-:::info
+::info
 All required fields must be filled correctly to successfully authorize Best Buy with Appse.ai.
-:::
+::
 
 ## Step-by-Step Guide
 
@@ -58,17 +58,16 @@ This opens the Best Buy credential form where you'll configure your connection.
 - Open a new tab and navigate to the [Best Buy Developer Portal](https://developer.bestbuy.com/).
 - If you don't have an account, you'll need to create one.
 
-:::note
+::note
 You must have a Best Buy Developer account in order to obtain an API key for integration with Appse.ai.
-:::
+::
 
 ---
 
 ### Step 3: Access Your Personal Settings
 
 Once logged in to the Best Buy Developer Portal, navigate to your personal settings or account dashboard.
-
-<img src="/img/credentials/best-buy/best_buy_personal_settings.png" alt="Best Buy personal settings" width="700"/>
+![Best Buy personal settings](/img/credentials/best-buy/best_buy_personal_settings.png)
 
 In your account settings, you'll find your API key information.
 
@@ -77,14 +76,13 @@ In your account settings, you'll find your API key information.
 ### Step 4: Locate Your API Key
 
 In the personal settings section, you'll find your **API Key** displayed.
-
-<img src="/img/credentials/best-buy/credential_api_key.png" alt="Best Buy API key" width="700"/>
+![Best Buy API key](/img/credentials/best-buy/credential_api_key.png)
 
 - Copy your **API Key** from the developer portal.
 
-:::warning
+::warning
 Keep your API key secure and never share it publicly. Anyone with your API key can make requests on your behalf.
-:::
+::
 
 ---
 
@@ -97,7 +95,7 @@ Return to the Appse ai credential form and:
 2. Paste your **API Key** in the API Key field
 3. Click the **Save** button
 
-<img src="/img/credentials/best-buy/best_buy_credential_configuration.png" alt="Best Buy credential configuration" width="700"/>
+![Best Buy credential configuration](/img/credentials/best-buy/best_buy_credential_configuration.png)
 ---
 
 ## Testing Your Connection
@@ -126,9 +124,9 @@ Best Buy API has rate limits to ensure fair usage:
 - **Rate Limit**: 5 requests per second per API key
 - **Daily Limit**: 50,000 requests per day
 
-:::tip
+::tip
 Plan your workflows to stay within these limits. Consider implementing caching strategies for frequently accessed data.
-:::
+::
 
 ---
 

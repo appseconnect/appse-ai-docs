@@ -1,11 +1,10 @@
 ---
 id: intro
 title: Expression Language Overview
-sidebar_position: 0
 description: Transform and query workflow data using expressions in APPSeAI nodes.
 keywords: [expressions, JMESPath, APPSeAI, workflow, data transformation]
-slug: /platform/key-concepts/expressions/overview
 ---
+
 
 # Expression Language in APPSeAI
 
@@ -44,7 +43,7 @@ Expressions use JMESPath syntax inside double curly braces to access and transfo
 > 
 > In actual workflows, these come from different nodes, but are shown together here for easier understanding.
 
-```JSON{
+```json
   "orderId": "ORD-001",
   "items": [
     { "name": "Laptop", "price": 1000 },

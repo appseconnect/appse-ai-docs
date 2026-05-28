@@ -1,0 +1,11 @@
+{
+  "title": "Workflow",
+  "pagesIndex": "index",
+  "pages": [
+    "introduction",
+    "node_setup_and_configuration",
+    "inter_node_link_management",
+    "run_and_activate_workflows",
+    "save_workflows"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Settings",
+  "pagesIndex": "index",
+  "pages": [
+    "settings-profile",
+    "settings-organization"
+  ]
+}

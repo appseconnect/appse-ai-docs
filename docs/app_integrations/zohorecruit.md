@@ -1,11 +1,8 @@
 ---
 title: Zoho Recruit
 description: Step-by-step guide to set up Zoho Recruit credentials for Appse.ai integration
-slug: /app-integrations/zohorecruit/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 ## Introduction
 
@@ -38,67 +35,59 @@ The following fields are required to configure Zoho Recruit credentials in Appse
 | API Access Scope | Set required Zoho Recruit scopes like ZohoRecruit.modules.ALL in your developer console APP. |
 | Base API URL | Select your Zoho Recruit base api url based on where your Zoho account region. |
 
-:::info
+::info
 All required fields must be filled correctly to successfully authorize Zoho Recruit with Appse.ai.
-:::
+::
 
 ## Step-by-Step Guide
 
 To get started with Zoho Recruit, you need to set credentials for it. Click on **Select a credential** to create a new credential.
-
-<img src="/img/credentials/zohorecruit/new_credpage.png" alt="Create a new credential" width="700"/>
+![Create a new credential](/img/credentials/zohorecruit/new_credpage.png)
 
 Which leads to a pop-up:
+![Enter credential details to add credential](/img/credentials/zohorecruit/credential_form.png)
 
-<img src="/img/credentials/zohorecruit/credential_form.png" alt="Enter credential details to add credential" width="700"/>
-
-:::note
+::note
 The credential form is where you will provide OAuth and regional configuration details.
-:::
+::
 
 ### Regional Configuration
 
 You must select the correct regional URLs based on your **Zoho Recruit account region**.
 
-:::warning
+::warning
 Selecting an incorrect region may cause authentication failures or API request errors.
-:::
+::
 
 ### Authorization URL
 
 Select the **Authorization URL** based on your Zoho account region.
+![Zoho Recruit auth url](/img/credentials/zohorecruit/auth_url.png)
+![Zoho Recruit auth url dropdown](/img/credentials/zohorecruit/authurl_dropdown.png)
 
-<img src="/img/credentials/zohorecruit/auth_url.png" alt="Zoho Recruit auth url" width="700"/>
-
-<img src="/img/credentials/zohorecruit/authurl_dropdown.png" alt="Zoho Recruit auth url dropdown" width="700"/>
-
-:::info
+::info
 The Authorization URL determines where users are redirected for OAuth consent.
-:::
+::
 
 ### Token URL
 
 Select the **Token URL** based on your Zoho account region.
+![Zoho Recruit token url](/img/credentials/zohorecruit/token_url.png)
+![Zoho Recruit token url dropdown](/img/credentials/zohorecruit/tokenurl_dropdown.png)
 
-<img src="/img/credentials/zohorecruit/token_url.png" alt="Zoho Recruit token url" width="700"/>
-
-<img src="/img/credentials/zohorecruit/tokenurl_dropdown.png" alt="Zoho Recruit token url dropdown" width="700"/>
-
-:::info
+::info
 The Token URL is used by Appse.ai to exchange the authorization code for access and refresh tokens.
-:::
+::
 
 ### Base API URL
 
 Select the **Base API URL** based on your Zoho account region.
+![Zoho Recruit base url](/img/credentials/zohorecruit/base_url.png)
+![Zoho Recruit base url dropdown](/img/credentials/zohorecruit/baseurl_dropdown.png)
 
-<img src="/img/credentials/zohorecruit/base_url.png" alt="Zoho Recruit base url" width="700"/>
-
-<img src="/img/credentials/zohorecruit/baseurl_dropdown.png" alt="Zoho Recruit base url dropdown" width="700"/>
-
-:::note
+::note
 The Base API URL ensures all API calls are routed to the correct Zoho data center.
-:::
+::
 
 ## How to Get Client ID and Client Secret
 
@@ -108,16 +97,14 @@ The Base API URL ensures all API calls are routed to the correct Zoho data cente
 ### Step 1: Access Zoho Recruit
 
 Sign in to your **Zoho Recruit** account.
-
-<img src="/img/credentials/zohorecruit/login_page.png" alt="Sign in to Zoho Recruit" width="700"/>
+![Sign in to Zoho Recruit](/img/credentials/zohorecruit/login_page.png)
 
 Or create an account if you don’t already have one:
+![Sign Up to create a new zoho recruit account](/img/credentials/zohorecruit/sign_up_page.png)
 
-<img src="/img/credentials/zohorecruit/sign_up_page.png" alt="Sign Up to create a new zoho recruit account" width="700"/>
-
-:::note
+::note
 You must have an active Zoho Recruit account before creating OAuth credentials.
-:::
+::
 
 ---
 
@@ -127,9 +114,9 @@ You need to create a new client application to obtain OAuth credentials for Zoho
 
 Click on the [Zoho Developer Console](https://api-console.zoho.com/).
 
-:::info
+::info
 The Zoho Developer Console is used to register OAuth clients and manage credentials.
-:::
+::
 
 Alternatively, you can:
 
@@ -138,35 +125,32 @@ Alternatively, you can:
 - Navigate to Step 1: Registering a Client
 - Click the Zoho Developer Console link
 
-<img src="/img/credentials/zohorecruit/zohorecruit_apidoc.png" alt="Zoho Recruit api documentation" width="700"/>
+![Zoho Recruit api documentation](/img/credentials/zohorecruit/zohorecruit_apidoc.png)
 
 ---
 
 ### Step 3: Sign in to Zoho Developer Console
 
 Sign in with the same account details you used to create a Zoho Recruit account:
-
-<img src="/img/credentials/zohorecruit/sign_in_page.png" alt="Zoho Recruit api console sign in page" width="700"/>
+![Zoho Recruit api console sign in page](/img/credentials/zohorecruit/sign_in_page.png)
 
 ---
 
 ### Step 4: Get Started
 
 Click on **Get started**:
-
-<img src="/img/credentials/zohorecruit/get_started.png" alt="Get Started" width="700"/>
+![Get Started](/img/credentials/zohorecruit/get_started.png)
 
 ---
 
 ### Step 5: Choose Client Type
 
 Select **Server-based applications**:
+![Choose the client type](/img/credentials/zohorecruit/client_based_app.png)
 
-<img src="/img/credentials/zohorecruit/client_based_app.png" alt="Choose the client type" width="700"/>
-
-:::tip
+::tip
 Server-based applications are recommended for backend integrations like Appse.ai.
-:::
+::
 
 ---
 
@@ -177,47 +161,43 @@ Server-based applications are recommended for backend integrations like Appse.ai
 3. Paste it into **Authorized Redirect URIs**
 4. Click **Create**
 
-<img src="/img/credentials/zohorecruit/createnewclient.png" alt="Create new client" width="700"/>
+![Create new client](/img/credentials/zohorecruit/createnewclient.png)
 
-:::warning
+::warning
 The Callback API URL must exactly match the value provided by Appse.ai, otherwise authorization will fail.
-:::
+::
 
 ---
 
 ### Step 7: Configure Multi-Data Center Settings
 
 Go to **Settings** and enable **Use the same OAuth credentials for all data centers**:
-
-<img src="/img/credentials/zohorecruit/data_center_settings.png" alt="data_center_settings" width="700"/>
+![data_center_settings](/img/credentials/zohorecruit/data_center_settings.png)
 
 Click **OK** to confirm:
+![save_data_center_settings](/img/credentials/zohorecruit/save_data_center_settings.png)
 
-<img src="/img/credentials/zohorecruit/save_data_center_settings.png" alt="save_data_center_settings" width="700"/>
-
-:::info
+::info
 This setting allows the same OAuth credentials to work across Zoho data centers.
-:::
+::
 
 ---
 
 ### Step 8: Copy Credentials
 
 Copy the generated **Client ID** and **Client Secret**:
+![client_credentials](/img/credentials/zohorecruit/client_credential.png)
 
-<img src="/img/credentials/zohorecruit/client_credential.png" alt="client_credentials" width="700"/>
-
-:::warning
+::warning
 Keep your Client Secret secure and do not share it publicly.
-:::
+::
 
 ---
 
 ### Step 9: Paste Credentials
 
 Paste the **Client ID** and **Client Secret** into Appse.ai’s Zoho Recruit credential form:
-
-<img src="/img/credentials/zohorecruit/paste_clientid_clientsecret.png" alt="Paste client id and client secret" width="700"/>
+![Paste client id and client secret](/img/credentials/zohorecruit/paste_clientid_clientsecret.png)
 
 ---
 
@@ -226,20 +206,18 @@ Paste the **Client ID** and **Client Secret** into Appse.ai’s Zoho Recruit cre
 ### Step 10: Save and Authorize
 
 Click **Save and Authorize** to continue.
-
-<img src="/img/credentials/zohorecruit/save_authorise.png" alt="Save and authorize" width="700"/>
+![Save and authorize](/img/credentials/zohorecruit/save_authorise.png)
 
 ---
 
 ### Step 11: Grant Permissions
 
 Select the checkbox to grant access and click **Accept**.
+![Grant Permissions](/img/credentials/zohorecruit/grant_permissions.png)
 
-<img src="/img/credentials/zohorecruit/grant_permissions.png" alt="Grant Permissions" width="700"/>
-
-:::info
+::info
 Granting permissions allows Appse.ai to access Zoho Recruit data based on the configured scope.
-:::
+::
 
 If the details are valid, Appse.ai will complete the OAuth authorization flow and save the credential successfully.  
 

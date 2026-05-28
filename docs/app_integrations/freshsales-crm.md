@@ -1,7 +1,7 @@
 ---
 title: "Freshsales"
-slug: /app-integrations/freshsales/
 ---
+
 
 Freshsales is an AI-powered CRM platform by Freshworks that helps businesses manage contacts, accounts, deals, tasks, and products in one place. Integrating Freshsales into appse ai enables you to automate your sales workflows — from triggering actions when new contacts, accounts, or deals are created, to managing tasks and products directly from your workflows and agents.
 
@@ -9,11 +9,11 @@ Freshsales is an AI-powered CRM platform by Freshworks that helps businesses man
 
 ## Set Up Credential
 
-:::info
+::info
 
 Before you create a credential for Freshsales using appse ai, make sure you have access to your Freshsales account and that your API key has been generated from your Profile Settings.
 
-:::
+::
 
 ### Required Fields
 
@@ -32,14 +32,12 @@ You'll be asked to fill in the following details:
 #### 1. Open the Credential Form
 
 Click **Select a Credential** and choose **Freshsales** from the application list.
-
-<img src="\img\credentials\freshsales-crm\freshsales-create-new-connection.png" alt="APPSeAI Freshsales Select Credential" width="700"/>
+![APPSeAI Freshsales Select Credential](/img/credentials/freshsales-crm/freshsales-create-new-connection.png)
 
 <br/>
 
 This opens the Freshsales credential form. Add your **Connection Name**.
-
-<img src="\img\credentials\freshsales-crm\freshsales-connection-name.png" alt="APPSeAI Freshsales Connection Name" width="700"/>
+![APPSeAI Freshsales Connection Name](/img/credentials/freshsales-crm/freshsales-connection-name.png)
 
 #### 2. Sign In / Create an account in Freshsales
 
@@ -51,40 +49,40 @@ Once logged in, follow these steps to find your API key:
 
 1. Click on your **profile avatar** in the top-right corner of the Freshsales dashboard.
 2. Select **Personal Settings** from the dropdown.
-<img src="\img\credentials\freshsales-crm\dashboard.png" alt="APPSeAI Freshsales dashboard" width="700"/>
+
+![APPSeAI Freshsales dashboard](/img/credentials/freshsales-crm/dashboard.png)
 
 3. Scroll down to the **API Settings** section. 
-<img src="\img\credentials\freshsales-crm\api-setting.png" alt="APPSeAI Freshsales api-setting" width="700"/>
+
+![APPSeAI Freshsales api-setting](/img/credentials/freshsales-crm/api-setting.png)
 
 And authenticate the captcha.
 
 4. Your **API Key** will be displayed. Click **Copy** to copy it.
 
-:::info
+::info
 
 API keys in Freshsales are created at the user level. Your key can only access data within your Freshsales account based on your user permissions.
 
-:::
+::
 
 5. Find your Domain
 
 Your Freshsales domain is the subdomain in your Freshsales URL. For example, if your Freshsales URL is `https://yourcompany.myfreshworks.com`, your domain is `yourcompany`.
-
-<img src="\img\credentials\freshsales-crm\api-key.png" alt="APPSeAI Freshsales API Key" width="700"/>
+![APPSeAI Freshsales API Key](/img/credentials/freshsales-crm/api-key.png)
 
 #### 5. Paste Credentials in appse ai
 
 Return to the appse ai credential form. Paste the copied API key into the **API Key** field, enter your **Domain**, and click **"Save"** to store and validate your credential.
-
-<img src="\img\credentials\freshsales-crm\credential-form.png" alt="APPSeAI Freshsales Credential Form" width="700"/>
+![APPSeAI Freshsales Credential Form](/img/credentials/freshsales-crm/credential-form.png)
 
 <br/>
 
-:::warning
+::warning
 
 Make sure you save your **API key** somewhere safe. Treat it like a password — do not share it publicly or commit it to version control.
 
-:::
+::
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Workflow designer
-slug: /platform/workflow-designer
 ---
+
 
 # Workflow Designer
 
