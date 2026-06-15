@@ -16,59 +16,36 @@ Pipedrive is a sales CRM tool designed to help teams manage and close deals effi
   <TabItem value="Public App" label="Public App (Recommended)">
 
   :::note
-  Apps installed through the Pipedrive Marketplace use OAuth 2.0 authentication only. Marketplace users should install and connect the app directly through the Pipedrive OAuth flow. Users do not need to manually enter an API token. Only the Pipedrive Domain is required to identify and connect your Pipedrive account.
+  Apps installed through the Pipedrive Marketplace use OAuth 2.0 authentication only. Marketplace users should install and connect the app directly through the Pipedrive OAuth flow. Users do not need to manually enter an API token.
   :::
 
+  
+
+  
+  ### Add Credential in appse ai
   <ConnectAccountButton
     appName="Pipedrive"
-    authorizeUrl="http://localhost:3000/credentials?appCode=pipedrive&credentialTypeCode=pipedrive_oauth2_public"
+    authorizeUrl="https://workflow.appse.ai/credentials?appCode=pipedrive&credentialTypeCode=pipedrive_oauth2_public"
   />
 
   Click **Connect your Pipedrive Account** above to open the Public App authorization page and start the OAuth 2.0 flow  connection. If you are not signed in to appse ai, you will be prompted to log in or register first.
 
-  ### Required Fields
-
-  The following fields are required to authenticate your Pipedrive account:
-
-  | Field            | Description                                              |
-  | ---------------- | -------------------------------------------------------- |
-  | Connection Name  | A name to help you identify this connection              |
-  | Pipedrive Domain | Your unique Pipedrive domain (e.g. `acme`.pipedrive.com) |
-
-  ### Find Your Pipedrive Domain
-
-  - Log in to your **Pipedrive** account.
-  - Click your profile icon (top right) → **Company Settings**.
-
-  <img src="/img/credentials/pipedrive/pipedrive-cred-company-settings.png" alt="Pipedrive profile menu showing Company Settings option" width="700"/>
-
-  - You will be able to see a field with your **Company Domain** in it.
-
-  <img src="/img/credentials/pipedrive/pipedrive-cred-company-domain.png" alt="Pipedrive Company Settings page showing the Company Domain field" width="700"/>
-
-  :::tip Example
-  Domain: `nefariusinc`
-  :::
-
-  ### Add Credential in appse ai
-
-  - Navigate to: https://workflow.appse.ai/
-  - Log in to your existing account or register for a new account if needed.
-  - From the dashboard, go to the **Credentials** section.
-  - Click on **Add Credentials**.
-  - Select **Pipedrive** from the list of available applications.
-  - Choose authentication type **Public App (Recommended)**.
-  - Enter a **Connection Name** and your **Pipedrive Domain**.
+  - Enter a **Connection Name**.
   - Click **Save & Authorize**.
-  - You will be redirected to the Pipedrive sign-in page. Enter your Pipedrive-registered email address and password, then click **Log in**.
-  - Complete any required verification steps if prompted.
-  - Review the requested permissions and click **Allow and install** (or equivalent) to complete the authorization process.
+
+  <img src="/img/credentials/pipedrive/public/click_save_authorize.png" alt="Save Authorize screen" width="700"/>
+
+  - You will be redirected to the Pipedrive Log-in page. Enter your Pipedrive registered email address and password, then click **Log in**.
+
+  <img src="/img/credentials/pipedrive/public/enter_email_password.png" alt="Pipedrive email and password login screen" width="700"/>
+
+  - Review the requested permissions and click **Allow and install** to complete the authorization process.
+
+  <img src="/img/credentials/pipedrive/public/review_requested_permissions.png" alt="permission screen" width="700"/>
+
+  <img src="/img/credentials/pipedrive/public/click_allow_install.png" alt="Pipedrive app install screen" width="700"/>
+
   - Once connected, you will be automatically redirected back to the appse ai platform and the Pipedrive credential will be saved.
-
-  ### Verify Your Connection
-
-  - If successful, your Pipedrive credential will show a "✓" icon. You can now use this application for your integrations.
-  - If it fails, you will see a "!" icon. In that case, recheck your Pipedrive Domain or contact support.
 
   </TabItem>
 
