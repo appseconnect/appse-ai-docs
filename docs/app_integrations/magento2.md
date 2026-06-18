@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 
 Magento 2 is a robust, open-source e-commerce platform that offers flexible shopping cart systems and control over the look, content, and functionality of your online store. With appse ai, you can seamlessly connect your Magento 2 store to automate orders, products, and customer data management, enhancing operational efficiency.
 
-## Setup Credential
+## Setup Credentials
 
 To setup your Magento 2 credential, you can choose between two authentication methods:
 
