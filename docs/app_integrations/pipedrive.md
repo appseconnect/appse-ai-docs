@@ -25,7 +25,7 @@ Pipedrive is a sales CRM tool designed to help teams manage and close deals effi
   ### Add Credential in appse ai
   <ConnectAccountButton
     appName="Pipedrive"
-    authorizeUrl="https://workflow.appse.ai/credentials?appCode=pipedrive&credentialTypeCode=pipedrive_oauth2_public"
+    authorizeUrl="https://reimagine.insync.pro/credentials?appCode=pipedrive&credentialTypeCode=pipedrive_oauth2_public"
   />
 
   Click **Connect your Pipedrive Account** above to open the Public App authorization page and start the OAuth 2.0 flow  connection. If you are not signed in to appse ai, you will be prompted to log in or register first.
