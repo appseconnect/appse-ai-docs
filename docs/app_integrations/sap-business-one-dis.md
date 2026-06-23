@@ -6,7 +6,7 @@ slug: /app-integrations/sap-business-one-dis
 
 SAP Business One DIS is an on-premise integration for SAP Business One that connects your local SAP instance to appse ai through a dedicated On-Prem agent.
 
-:::info
+:::note
 
 - The **On-Prem agent** must be active and reachable for the remaining fields to load and for the credential to connect successfully.
 - Make sure the selected agent has access to the SAP Business One environment and the license server.
@@ -96,8 +96,20 @@ The SAP Business One DIS integration currently supports the following actions. U
 | **Update business partner** | Updates an existing business partner record with the latest details such as contact information, address, or classification. |
 | **Create item** | Creates a new item in the SAP Business One inventory catalog. Useful for adding products or materials. |
 | **Update item** | Updates an existing item record with new pricing, stock levels, descriptions, or other metadata. |
-| **Create order** | Creates a new order document in SAP Business One, such as a sales order or purchase order depending on the configured document type. |
-| **Execute query** | Runs a custom DIS query against SAP Business One data and returns the results for use in workflow logic or validation. |
+| **Create sales quotation** | Creates a new sales quotation document in SAP Business One. |
+| **Update sales quotation** | Updates an existing sales quotation with revised line items, pricing, or customer details. |
+| **Create sales order** | Creates a new sales order document in SAP Business One. |
+| **Update sales order** | Updates an existing sales order with revised quantities, pricing, dates, or other order details. |
+| **Create delivery note** | Creates a new delivery note document in SAP Business One to record goods shipped to a customer. |
+| **Update delivery note** | Updates an existing delivery note with changes such as delivery date, quantities, or shipping details. |
+| **Create returns** | Creates a returns document in SAP Business One to process customer returns. |
+| **Create an A/R credit note** | Creates a new accounts receivable (A/R) credit note in SAP Business One. |
+| **Update an A/R credit note** | Updates an existing A/R credit note with revised amounts, line items, or reference details. |
+| **Create draft incoming payment** | Creates a draft incoming payment record in SAP Business One for customer payments. |
+| **Create a purchase order** | Creates a new purchase order document in SAP Business One. |
+| **Create equipment card** | Creates a new equipment card record in SAP Business One for tracking assets or installed equipment. |
+| **Update equipment card** | Updates an existing equipment card with revised details such as status, location, or maintenance information. |
+| **Execute a select query** | Runs a custom select query against SAP Business One data and returns the results for use in workflow logic or validation. |
 | **Get record by key** | Retrieves a single SAP Business One record by its primary key for lookup, validation, or conditional workflow decisions. Supported modules: `oBusinessPartners` (Business Partner), `oItems` (Item), `oOrders` (Sales Order), `oInvoices` (Invoice A/R), `oDeliveryNotes` (Delivery Note), `oQuotations` (Quotation), `oCreditNotes` (Credit Note), `oPurchaseOrders` (Purchase Order), `oJournalEntries` (Journal Entry), `oIncomingPayments` (Incoming Payment). |
 
 ## Triggers
@@ -108,21 +120,28 @@ The SAP Business One DIS integration currently supports the following triggers. 
 | --- | --- |
 | **Item inventory updated (OnHand)** | Fetches data records when an item on-hand quantity changes in SAP Business One. |
 | **Item price updated** | Fetches data records when an item price is updated. |
+| **Items updated** | Fetches data records when existing items are updated. |
+| **New A/R invoices created** | Fetches data records when new accounts receivable invoices are created. |
 | **New business partners created** | Fetches data records when new business partners are created. |
+| **Business partners updated** | Fetches data records when existing business partners are updated. |
 | **New delivery notes created** | Fetches data records when new delivery notes are created. |
 | **New items created** | Fetches data records when new items are created. |
+| **Credit notes created** | Fetches data records when credit notes are created. |
 
 ## Troubleshoot
 
 If the following error is displayed for SAP DIS:
 
-:::warning
-<img src="/img/credentials/sap-business-one-dis/quickfix.png" alt="SAP DIS SM_OBS_DLL error 
-screenshot" width="700"/>
+<img src="/img/credentials/sap-business-one-dis/quickfix.png" alt="SAP DIS SM_OBS_DLL error screenshot" width="700"/>
 
-Delete the file at location `C:\Windows\Temp\SM_OBS_DLL\1000120` from your local system and try again.
+:::caution
+To resolve this error:
+
+- Stop the SAP-related service from Services.
+- Delete the folder at `C:\Windows\Temp\SM_OBS_DLL\1000120` (Note: The folder name may vary depending on your environment).
+- Start the SAP service again, verify it is running, and try the connection once more.
 :::
 
 ## Support
 
-Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
+Need help? Contact the support team at [support@appse.ai](mailto:support@appse.ai)

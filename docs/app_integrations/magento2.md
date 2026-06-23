@@ -1,5 +1,6 @@
 ---
 title: "Magento 2"
+description: "Connect your Magento 2 store to appse ai to automate orders, products, and customer data management."
 slug: /app-integrations/magento2/
 ---
 
@@ -7,7 +8,7 @@ Magento 2 is a robust, open-source e-commerce platform that offers flexible shop
 
 ## Setup Credential
 
-To setup your Magento 2 credential, you can choose between two authentication methods:
+To set up your Magento 2 credential, you can choose between two authentication methods:
 
 1.  **Integration Token**: Uses an Access Token generated via Magento Integrations (Recommended).
 2.  **Session Authentication**: Uses your Magento Admin username and password.
@@ -103,35 +104,97 @@ Select **Session Authentication** in the authentication type selection screen.
 
 ## Triggers and Actions
 
-Here is a list of the available actions and triggers for Magento 2:
+Every application has a pre-defined set of triggers and actions that allow users to perform application-specific activities within the platform. Here is a list of all the actions and triggers available:
 
 ### Triggers
 
-- **Customers updated** - Trigger when customers are updated in Magento.
-- **New customers created** - Trigger when new customers are created in Magento.
-- **New orders created** - Trigger when new orders are created in Magento.
-- **New products created** - Trigger when new products are created in Magento.
+| Trigger | Description |
+| ------- | ----------- |
+| **Customers updated** | Trigger when customers are updated in Magento. |
+| **New customers created** | Trigger when new customers are created in Magento. |
+| **New orders created** | Trigger when new orders are created in Magento. |
+| **New products created** | Trigger when new products are created in Magento. |
 
 ### Actions
 
-> Customer Actions
+#### Customer Actions
 
-- **Create a customer** - Create a new customer in Magento.
-- **Get customer by email address** - Get customer by email address.
-- **Update a customer** - Update an existing customer in Magento.
+| Action | Description |
+| ------ | ----------- |
+| **Create a customer** | Create a new customer in Magento. |
+| **Get customer by email address** | Get customer details by email address. |
+| **Update a customer** | Update an existing customer in Magento. |
 
-> Product Actions
+#### Product Actions
 
-- **Create a product** - Create a new product in Magento.
-- **Get product by SKU** - Get product by SKU.
-- **Update a product** - Update an existing product in Magento.
+| Action | Description |
+| ------ | ----------- |
+| **Create a product** | Create a new product in Magento. |
+| **Get product by SKU** | Get product details by SKU. |
+| **Update a product** | Update an existing product in Magento. |
 
-> Shipment Actions
+#### Shipment Actions
 
-- **Create shipment** - This action creates a shipment for a Magento order.
+| Action | Description |
+| ------ | ----------- |
+| **Create shipment** | Create a shipment for a Magento order. |
 
 ---
 
-## Need Help?
+## Action Configuration
 
-If you’re unsure about any field or face connection issues, reach out to our support team at [hello@appse.ai](mailto:hello@appse.ai)
+### Update a Customer
+
+**Update a Customer** action modifies the details of an existing customer in Magento using their customer ID. It allows updating personal details, email, and address information.
+
+This action is commonly used to **keep customer records up to date**, **sync address changes from external systems**, and **manage customer data across integrations**.
+
+For a full list of supported fields, refer to the [Magento 2 REST API documentation](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-add-items/).
+
+---
+
+#### Scenario 1: Create a New Address While Updating a Customer
+
+:::note
+Use this configuration when you want to **add a new shipping or billing address** to an existing customer record during the update.
+:::
+
+##### Mandatory Configuration Fields
+
+| Field | Description |
+| ----- | ----------- |
+| firstname | First name of the customer for the new address. (e.g., `"Jane"`) |
+| lastname | Last name of the customer for the new address. (e.g., `"Doe"`) |
+| street | Street line(s) for the new address. (e.g., `"123 Main Street"`) |
+| city | City for the new address. (e.g., `"Austin"`) |
+| postcode | ZIP or postal code for the address. (e.g., `"78701"`) |
+| countryId | Two-letter ISO country code for the address. (e.g., `"US"`) |
+| telephone | Contact phone number for the address. (e.g., `"5121234567"`) |
+
+
+
+---
+
+#### Scenario 2: Update an Existing Address While Updating a Customer
+
+:::note
+Use this configuration when you want to **modify an address that already exists** on the customer record.
+:::
+
+##### Mandatory Configuration Fields
+
+| Field | Description |
+| ----- | ----------- |
+| id | The unique ID of the existing address to update. (e.g., `15`) |
+
+:::note
+The **Address ID (`id`)** is mandatory and must match an address already associated with the customer. Providing an incorrect or non-existent Address ID will result in an error.
+
+Apart from the Address ID, users can provide any other fields they wish to update.
+:::
+
+---
+
+## Support
+
+If you’re unsure about any field or face connection issues, reach out to our support team at [support@appse.ai](mailto:support@appse.ai)
