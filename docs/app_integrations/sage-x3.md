@@ -602,7 +602,6 @@ Select your configured Sage X3 credential from the dropdown and click **Continue
 | Field | X3 Code | Required | Notes |
 |-------|---------|----------|-------|
 | Price List Code | `YPLI` | ✅ | Sage X3 price list code, for example `T10` (default). |
-| Price List Date | `YPLIDAT` | ✅ | Sage X3 compact date, `YYYYMMDD`. The date the price is effective on. |
 | Criterion 1 | `YPLICRI1` | ✅ | First price list criterion — usually the product reference, for example `ITM00006`. Which field this maps to depends on how the price list is set up in Sage X3. |
 | Limit | `YNBR` | — | Maximum rows to return. Defaults to `5`. Leave blank for the price list default. |
 
