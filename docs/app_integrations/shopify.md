@@ -5657,6 +5657,285 @@ Click on **Continue**, then click **Run** node.
 ```
 -----------------
 
+### Payouts Actions
+
+#### Get Payout
+
+Get Payout action retrieves Shopify Payments payout details for the connected store. Use it to reconcile the amounts Shopify deposits into your bank account against the charges, refunds, and fees that make up each payout.
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Payout ID | Unique identifier of the payout to retrieve. (e.g., "gid://shopify/ShopifyPaymentsPayout/1234567890") |
+
+:::note
+This action requires Shopify Payments to be enabled on the store and the `read_shopify_payments_payouts` scope on the credential.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+------------
+
+##### Result
+
+```json
+[
+  {
+    "id": "gid://shopify/ShopifyPaymentsPayout/1234567890",
+    "legacyResourceId": "1234567890",
+    "status": "PAID",
+    "transactionType": "DEPOSIT",
+    "issuedAt": "2026-04-24T00:00:00Z",
+    "net": {
+      "amount": "842.35",
+      "currencyCode": "USD"
+    },
+    "summary": {
+      "chargesGross": {
+        "amount": "900.00",
+        "currencyCode": "USD"
+      },
+      "chargesFee": {
+        "amount": "-27.65",
+        "currencyCode": "USD"
+      },
+      "refundsFeeGross": {
+        "amount": "-30.00",
+        "currencyCode": "USD"
+      },
+      "refundsFee": {
+        "amount": "0.00",
+        "currencyCode": "USD"
+      },
+      "adjustmentsGross": {
+        "amount": "0.00",
+        "currencyCode": "USD"
+      },
+      "adjustmentsFee": {
+        "amount": "0.00",
+        "currencyCode": "USD"
+      },
+      "reservedFundsGross": {
+        "amount": "0.00",
+        "currencyCode": "USD"
+      },
+      "reservedFundsFee": {
+        "amount": "0.00",
+        "currencyCode": "USD"
+      },
+      "retriedPayoutsGross": {
+        "amount": "0.00",
+        "currencyCode": "USD"
+      },
+      "retriedPayoutsFee": {
+        "amount": "0.00",
+        "currencyCode": "USD"
+      }
+    }
+  }
+]
+```
+-----------------
+
+#### Get Payout Balance Transactions
+
+Get Payout Balance Transactions action retrieves the individual Shopify Payments balance transactions — charges, refunds, disputes, adjustments, and reserves — that make up a payout. Use it to break a single payout down to the order level for finance reconciliation.
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Payout ID | Unique identifier of the payout whose transactions you want to retrieve. (e.g., "gid://shopify/ShopifyPaymentsPayout/1234567890") |
+
+:::note
+This action requires Shopify Payments to be enabled on the store and the `read_shopify_payments_payouts` scope on the credential.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+------------
+
+##### Result
+
+```json
+[
+  {
+    "id": "gid://shopify/ShopifyPaymentsBalanceTransaction/9876543210",
+    "type": "CHARGE",
+    "test": false,
+    "transactionDate": "2026-04-22T11:18:04Z",
+    "amount": {
+      "amount": "150.00",
+      "currencyCode": "USD"
+    },
+    "fee": {
+      "amount": "-4.65",
+      "currencyCode": "USD"
+    },
+    "net": {
+      "amount": "145.35",
+      "currencyCode": "USD"
+    },
+    "sourceType": "CHARGE",
+    "sourceId": "7240844705964",
+    "sourceOrderTransactionId": "6712344567890",
+    "associatedOrder": {
+      "id": "gid://shopify/Order/7240844705964",
+      "name": "#1768"
+    },
+    "associatedPayout": {
+      "id": "gid://shopify/ShopifyPaymentsPayout/1234567890",
+      "status": "PAID"
+    }
+  }
+]
+```
+-----------------
+
+### Draft Orders Actions
+
+#### Complete Draft Order
+
+Complete Draft Order action converts an existing draft order into a real order in Shopify. Use it to finalize quotes and manually created carts, either as a paid order or with payment left pending so the customer can be invoiced.
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Draft Order ID | Unique identifier of the draft order to complete. (e.g., "gid://shopify/DraftOrder/1157317255212") |
+
+:::note
+The draft order must be in `OPEN` or `INVOICE_SENT` status. A draft order that is already `COMPLETED` cannot be completed again, and inventory must be available for the line items unless the draft order reserves it.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+------------
+
+##### Result
+
+```json
+[
+  {
+    "data": {
+      "draftOrderComplete": {
+        "userErrors": [],
+        "draftOrder": {
+          "id": "gid://shopify/DraftOrder/1157317255212",
+          "name": "#D12",
+          "status": "COMPLETED",
+          "totalPrice": "150.00",
+          "currencyCode": "USD",
+          "completedAt": "2026-04-24T17:44:48Z",
+          "order": {
+            "id": "gid://shopify/Order/7240844705964",
+            "name": "#1768",
+            "displayFinancialStatus": "PENDING",
+            "createdAt": "2026-04-24T17:44:48Z"
+          }
+        }
+      }
+    }
+  }
+]
+```
+-----------------
+
+</TabItem>
+
+<TabItem value="tools" label="Tools">
+
+### Tools
+
+Tools expose Shopify operations to the AI layer so an agent can call them directly while reasoning over a task. Each tool takes a small, natural input and returns the matching Shopify records.
+
+#### Get Customer by Phone
+
+`get_customer_by_phone_tool` looks up a customer in Shopify using their phone number. Use it when an agent has a caller's or messaging contact's number and needs the matching customer record.
+
+##### Input Fields
+
+| Field | Description |
+|------|-------------|
+| Phone | Customer phone number to search for, including the country code where available. (e.g., "+919876543210") |
+
+:::note
+If no customer matches the phone number, the tool returns an empty result. Numbers are matched against the customer's phone and default phone number in Shopify, so formatting differences (spaces, dashes, missing country code) can prevent a match.
+:::
+
+##### Result
+
+```json
+[
+  {
+    "id": "gid://shopify/Customer/9304242225324",
+    "firstName": "John",
+    "lastName": "Doe",
+    "displayName": "John Doe",
+    "defaultEmailAddress": {
+      "emailAddress": "john.doe@example.com"
+    },
+    "defaultPhoneNumber": {
+      "phoneNumber": "+919876543210"
+    },
+    "numberOfOrders": "3",
+    "state": "ENABLED",
+    "amountSpent": {
+      "amount": "450.00",
+      "currencyCode": "USD"
+    },
+    "createdAt": "2026-04-23T10:02:28Z",
+    "updatedAt": "2026-04-23T10:02:28Z"
+  }
+]
+```
+-----------------
+
+#### Get Product by Name
+
+`get_product_by_name_tool` finds products in Shopify by their title. Use it when an agent knows what a customer asked for by name and needs the product, its variants, and pricing.
+
+##### Input Fields
+
+| Field | Description |
+|------|-------------|
+| Product Name | Full or partial product title to search for. (e.g., "Wireless Headphones") |
+
+:::note
+The search matches on the product title, so a partial name can return multiple products. Use a more specific name when the agent needs a single, unambiguous match.
+:::
+
+##### Result
+
+```json
+[
+  {
+    "id": "gid://shopify/Product/8536686002348",
+    "title": "Wireless Headphones",
+    "handle": "wireless-headphones",
+    "status": "ACTIVE",
+    "productType": "Audio",
+    "vendor": "appse ai Store",
+    "totalInventory": 42,
+    "createdAt": "2026-04-20T09:11:02Z",
+    "updatedAt": "2026-04-24T06:35:17Z",
+    "variants": {
+      "nodes": [
+        {
+          "id": "gid://shopify/ProductVariant/46203847561324",
+          "title": "Black",
+          "sku": "WH-BLK-01",
+          "price": "150.00",
+          "inventoryQuantity": 20
+        }
+      ]
+    }
+  }
+]
+```
+-----------------
+
 </TabItem>
 
 </Tabs>
