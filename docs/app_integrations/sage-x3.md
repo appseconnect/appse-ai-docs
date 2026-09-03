@@ -506,13 +506,13 @@ Select your configured Sage X3 credential from the dropdown and click **Continue
 
 | Field | X3 Code | Required | Notes |
 |-------|---------|----------|-------|
-| Tax Rule | `VACBPR` | — | Business partner tax rule, for example `NTX`. |
+| Tax Rule | `VACBPR` | ✅ | Business partner tax rule, for example `NTX`. |
 
 **Stock Site (SOH2_1) — Group**
 
 | Field | X3 Code | Required | Notes |
 |-------|---------|----------|-------|
-| Storage Site | `STOFCY` | — | Site the order ships from, for example `NA011`. |
+| Storage Site | `STOFCY` | ✅ | Site the order ships from, for example `NA011`. |
 
 **Delivery (SOH2_2) — Group**
 
@@ -526,7 +526,7 @@ Select your configured Sage X3 credential from the dropdown and click **Continue
 
 | Field | X3 Code | Required | Notes |
 |-------|---------|----------|-------|
-| Payment Term | `PTE` | — | Payment term code as configured in Sage X3, for example `CH30NET`. |
+| Payment Term | `PTE` | ✅ | Payment term code as configured in Sage X3, for example `CH30NET`. |
 
 **Order Lines (SOH4_1) — Repeatable Table**
 
@@ -540,7 +540,7 @@ Select your configured Sage X3 credential from the dropdown and click **Continue
 | Gross Price | `GROPRI` | — | Unit gross price. Leave blank to let Sage X3 apply its own price list. |
 
 :::note
-**Sales Site**, **Order Date**, **Ordering Customer**, **Currency**, **Product**, and **Quantity** are mandatory. Sage X3 dates use the compact `YYYYMMDD` format — when mapping an upstream ISO date, strip the dashes from the date-only portion first.
+**Sales Site**, **Order Date**, **Ordering Customer**, **Currency**, **Tax Rule**, **Storage Site**, **Payment Term**, **Product**, and **Quantity** are mandatory. Sage X3 dates use the compact `YYYYMMDD` format — when mapping an upstream ISO date, strip the dashes from the date-only portion first.
 :::
 
 Click on **Continue**, then **Run** node.
@@ -635,6 +635,199 @@ Click on **Continue**, then **Run** node.
 
 ---
 
+#### Get Record By Key
+
+The **Get Record By Key** action fetches a single record from Sage X3 by key. Choose the object first — this determines which web service is called and which field names are valid as keys.
+
+##### Select Credentials and Action Events
+
+<img src="/img/credentials/sage-x3/sage-x3-action-get-record-by-key-select-credential.jpg" alt="appse ai Sage X3 Get Record By Key - Select Credentials and Action Events" width="700" />
+
+Select your configured Sage X3 credential from the dropdown and click **Continue**.
+
+---
+
+##### Configuration Fields
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Object | `objectName` | ✅ | Select the Sage X3 object to fetch: **Customer** (`YAPPSEBPC`) or **Order** (`YAPPSESOH`). |
+
+**Record Keys (objectKeys) — Repeatable Table**
+
+| Field | Required | Notes |
+|-------|----------|-------|
+| Key Field | ✅ | Sage X3 field name that identifies the record, for example `BPCNUM` or `SOHNUM`. |
+| Value | ✅ | The record's value for that field. |
+
+:::note
+Add one row per key field — order matters. **Customer** is usually keyed by `BPCNUM` alone, for example `BPC-000001`. **Order** is usually keyed by `SOHNUM`, for example `SONNA0110152`.
+:::
+
+Click on **Continue**, then **Run** node.
+
+---
+
+##### Example Configuration
+
+<img src="/img/credentials/sage-x3/sage-x3-action-get-record-by-key-config.jpg" alt="Sage X3 Get Record By Key - Example Configuration" width="700" />
+
+---
+
+##### Output
+
+The response shape mirrors the selected object's record structure. Example below is a **Customer** lookup:
+
+```json
+[
+  {
+    "BPCNUM": "BPC-000001",
+    "BPCNAM": "Acme Corp",
+    "BCGCOD": "ECOM",
+    "BPCSTA": "2"
+  }
+]
+```
+
+---
+
+#### Update Customer
+
+The **Update Customer** action updates an existing customer in Sage X3, using the `YAPPSEBPC` web service. Every field is optional — only fields you fill in are sent, so anything left blank keeps its current value in Sage X3.
+
+##### Select Credentials and Action Events
+
+<img src="/img/credentials/sage-x3/sage-x3-action-update-customer-select-credential.jpg" alt="appse ai Sage X3 Update Customer - Select Credentials and Action Events" width="700" />
+
+Select your configured Sage X3 credential from the dropdown and click **Continue**.
+
+---
+
+##### Configuration Fields
+
+**Record Keys (objectKeys) — Repeatable Table**
+
+| Field | Required | Notes |
+|-------|----------|-------|
+| Key Field | ✅ | Sage X3 field name that identifies the record, for example `BPCNUM`. |
+| Value | ✅ | The record's value for that field, for example `AE002`. |
+
+**Customer (BPC0_1) — Group**
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Customer Code | `BPCNUM` | — | Usually the same value as the record key above. |
+| Customer Name | `BPCNAM` | — | |
+| Customer Category | `BCGCOD` | — | Changing the category can reset category-driven defaults in Sage X3. |
+| Status | `BPCSTA` | — | Leave blank to keep the current status. |
+
+**Business Partner (BPRC_1) — Group**
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Company Name | `BPRNAM` | — | Company name across up to two lines. Positions matter — leave the second entry blank rather than omitting it. |
+| Short Description | `BPRSHO` | — | |
+| Country | `CRY` | — | |
+| Language | `LAN` | — | Sage X3 language code, for example `ENG`. |
+| Currency | `CUR` | — | Currency code, for example `AED`. |
+| Company Registration Number | `CRN` | — | |
+| Activity Code | `NAF` | — | |
+| EU VAT Number | `EECNUM` | — | |
+
+**Order Management (BPC1_1) — Group**
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Minimum Order Amount | `WORDMINAMT` | — | |
+
+**Sales Representatives (BPC1_3) — Group**
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Representatives | `REP` | — | Up to two representative codes. Positions matter — leave an entry blank rather than omitting it. |
+
+**Credit Control (BPC2_2) — Group**
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Authorised Credit | `WOSTAUZ` | — | |
+
+**Accounting Links (BPC3_1) — Group**
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Bill-To Customer | `BPCINV` | — | |
+| Bill-To Address | `BPAINV` | — | |
+| Pay-By Customer | `BPCPYR` | — | |
+| Pay-By Address | `BPAPYR` | — | |
+| Group Customer | `BPCGRU` | — | |
+| Risk Customer | `BPCRSK` | — | |
+| Accounting Code | `ACCCOD` | — | |
+
+**Tax (BPC3_2) — Group**
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Tax Rule | `VACBPR` | — | |
+| Tax Exemption Number | `VATEXN` | — | |
+
+**Payment (BPC3_3) — Group**
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Payment Term | `PTE` | — | |
+
+**Addresses (BPAC_1) — Repeatable Table**
+
+| Field | X3 Code | Required | Notes |
+|-------|---------|----------|-------|
+| Address Code | `CODADR` | ✅ | Identifies which address to change, for example `AD1`. Required on every row. |
+| Address Description | `BPADES` | — | |
+| Address Line 1 | `ADDLIG1` | — | |
+| Address Line 2 | `ADDLIG2` | — | |
+| Address Line 3 | `ADDLIG3` | — | |
+| Postal Code | `POSCOD` | — | |
+| City | `CTY` | — | |
+| State / Province | `SAT` | — | |
+| Country Code | `BPACRY` | — | ISO country code as configured in Sage X3. |
+| Country Name | `CRYNAM` | — | |
+| Telephone 1 | `TEL1` | — | |
+| Telephone 2 | `TEL2` | — | |
+| Email 1 | `WEB1` | — | |
+| Email 2 | `WEB2` | — | |
+| Website | `FCYWEB` | — | |
+| Default Address | `BPAADDFLG` | — | |
+
+:::note
+Every field is optional — only what you fill in is sent to Sage X3; everything else keeps its current value. Add a row to **Addresses** only for addresses you want to change, identified by `CODADR`. Leave the section empty to leave addresses untouched.
+:::
+
+Click on **Continue**, then **Run** node.
+
+---
+
+##### Example Configuration
+
+<img src="/img/credentials/sage-x3/sage-x3-action-update-customer-config.jpg" alt="Sage X3 Update Customer - Example Configuration" width="700" />
+
+---
+
+##### Output
+
+```json
+[
+  {
+    "messages": [
+      {
+        "message": "Customer updated BPC-000001"
+      }
+    ]
+  }
+]
+```
+
+---
+
   </TabItem>
 </Tabs>
 
@@ -675,7 +868,7 @@ A failed Sage X3 call can originate from four different layers, each with its ow
 ## Known Limitations
 
 - **No cursor pagination.** `YGETITM`, `YGETSTO`, and `YGETSPL` offer a row limit only. If more records share one `UPDDATTIM` than the limit allows, the watermark cannot advance past them. Set **Limit** comfortably above the number of records your system updates within the same second.
-- **Supported operations only.** This connector currently reads items, inventory, and price lists, creates customers and sales orders, and looks up product prices. Other X3 objects and update/delete operations are not yet implemented.
+- **Supported operations only.** This connector currently reads items, inventory, and price lists; creates, reads, and updates customers; creates sales orders; reads customers and orders by key (generic); and looks up product prices. Delete operations and other X3 objects are not yet implemented.
 - **Published X3 programs.** `YGETITM`, `YGETSTO`, `YGETSPL`, `YAPPSEBPC`, and `YAPPSESOH` must exist on your tenant. If your instance uses different names, contact support to update the operation URLs.
 
 ---
