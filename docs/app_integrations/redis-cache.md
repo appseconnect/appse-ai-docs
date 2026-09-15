@@ -1,6 +1,6 @@
 ---
 title: "Redis Cache"
-slug: /app-integrations/redis-cache/
+slug: /app-integrations/rediscache/
 description: Step-by-step guide to set up Redis Cache credentials and use available actions in workflows within appse ai.
 ---
 
