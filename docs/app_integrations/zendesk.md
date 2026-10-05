@@ -10,7 +10,7 @@ Zendesk is a cloud-based customer service and support ticketing platform that he
 
 ## Setup Credential
 
-Zendesk uses **API Token** authentication (Basic Auth). Follow the steps below to generate a token and connect your account.
+Zendesk uses **OAuth 2.0** authentication. Follow the steps below to create an OAuth client in Zendesk and connect your account.
 
 ### Required Fields
 
@@ -20,54 +20,78 @@ You'll be asked to fill in the following details:
 |------------|--------------------------------------------------------------------------------------------------------|
 | Connection Name | A name to identify the connection                                                                 |
 | Subdomain  | The subdomain portion of your Zendesk account URL (e.g. if your URL is `https://yourcompany.zendesk.com`, enter `yourcompany`) |
-| Username   | Your Zendesk agent email address |
-| API Token  | The API token generated from your Zendesk Admin Center                                                |
+| Client ID  | The **Identifier** you set when creating the OAuth client in Zendesk Admin Center |
+| Client Secret | The secret generated when the OAuth client is created — shown only once |
 
 ### Step-by-Step Guide
 
-#### 1. Generate an API Token in Zendesk
+#### 1. Open Admin Center
 
-1. Log in to your Zendesk account and open **Admin Center**.
+Log in to your Zendesk account and switch to **Admin Center**.
 
 <img src="/img/credentials/zendesk/credential-admin.png" alt="Zendesk Admin Center navigation" width="700"/>
 
-2. Go to **Apps and integrations** > **APIs** > **API configuration**, then enable **Allow API token access** if it isn't already enabled.
+#### 2. Create a new OAuth client
 
-<img src="/img/credentials/zendesk/api-token-enable.png" alt="Zendesk enable API token access" width="700"/>
+Go to **Apps and integrations** > **APIs** > **OAuth clients**, then click **Add OAuth client**.
 
-3. Go to the **API tokens** tab and click **Add API token**.
+<img src="/img/credentials/zendesk/oauth-client-create.png" alt="Zendesk OAuth clients page with Add OAuth client button" width="700"/>
 
-<img src="/img/credentials/zendesk/api-token-generate.png" alt="Zendesk add API token button" width="700"/>
+#### 3. Name the client
 
-4. Give the token a description, click **Save**, and copy the generated token immediately — Zendesk only shows it once.
+Give it a **Name**, **Description**, and **Company** (these are shown to users when they authorize the app — any recognizable values work).
 
-<img src="/img/credentials/zendesk/api-token-generate-2.png" alt="Zendesk generate and save API token" width="700"/>
+<img src="/img/credentials/zendesk/oauth-client-details1.png" alt="Zendesk Add OAuth client form with Name, Description, and Company fields" width="500"/>
+
+#### 4. Set Client Kind and Redirect URL
+
+Scroll down and configure:
+
+- **Identifier** — a unique name for the client (this becomes your **Client ID**).
+- **Client kind** — set this to **Confidential**, not Public. appse ai stores the client secret securely on the backend, and Zendesk only allows a client secret to be issued to a Confidential client — a Public client cannot use one.
+- **Redirect URLs** — add exactly:
+  ```
+  https://embedded-ui.appse.ai/oauth-callback.html
+  ```
+
+<img src="/img/credentials/zendesk/oauth-client-details2.png" alt="Zendesk OAuth client form showing Client kind set to Confidential and Redirect URLs field" width="500"/>
 
 :::caution
-The API token is displayed only once. If you lose it, you will have to generate a new one.
+**Client kind must be Confidential.** If it's left as Public, Zendesk won't issue a client secret and the credential in appse ai will fail to authorize. The Redirect URL must also match `https://embedded-ui.appse.ai/oauth-callback.html` exactly — this is the address appse ai uses to receive the authorization result after you approve access on Zendesk.
 :::
 
-#### 2. Configure the Credential in appse ai
+#### 5. Set scopes and save
+
+Under **Scopes**, add `read` and `write` (this covers every action, trigger, and tool this integration ships). Click **Save**, and immediately copy the **Secret** shown — Zendesk displays it only once.
+
+<img src="/img/credentials/zendesk/oauth-client-details3.png" alt="Zendesk OAuth client form showing Scopes, generated Secret, and Save button" width="500"/>
+
+:::caution
+The client secret is displayed only once. If you lose it, you'll need to regenerate it from the client's Edit page.
+:::
+
+#### 6. Configure the Credential in appse ai
 
 1. Click **Select a Credential** and choose **Zendesk**, then add a **Connection Name**.
 2. Enter your **Subdomain** — the part of your Zendesk URL before `.zendesk.com`.
-3. In **User Email**, enter the email address of the agent account.
-4. Paste the generated token into the **API Token** field.
+3. Paste the **Identifier** you set in Step 4 into **Client ID**.
+4. Paste the **Secret** you copied in Step 5 into **Client Secret**.
+5. Click **Save & Authorize** — you'll be redirected to Zendesk to approve access, then returned to appse ai automatically.
 
-<img src="/img/credentials/zendesk/credential-1.png" alt="appse ai Zendesk credential form" width="700"/>
+<img src="/img/credentials/zendesk/credential-1.png" alt="appse ai Zendesk credential form with Subdomain, Client ID, and Client Secret fields" width="700"/>
 
 :::warning
 
-Keep your API token secure. Anyone with the token and a valid agent email can access your Zendesk account via the API.
+Keep your Client Secret secure. Anyone with the Client ID and Client Secret can request access tokens for your Zendesk account.
 
 :::
 
 ### Save Your Credential
 
-Once you've filled in the necessary fields, click **"Save"** to store and verify your setup.
+Once you've filled in the necessary fields and clicked **Save & Authorize**, appse ai verifies the connection.
 
 - If successful, your Zendesk credential will show a "✓" icon. Now you can use this application for your integrations.
-- If it fails, you will be displayed a "!" icon. In that case, please recheck your Subdomain, Username, or API Token, or contact support.
+- If it fails, you will be displayed a "!" icon. In that case, recheck your Subdomain, Client ID, and Client Secret, confirm the OAuth client's **Client kind** is set to **Confidential**, and confirm the **Redirect URL** matches `https://embedded-ui.appse.ai/oauth-callback.html` exactly — or contact support.
 
 ---
 
