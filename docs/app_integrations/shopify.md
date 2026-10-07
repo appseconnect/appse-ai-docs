@@ -5433,13 +5433,13 @@ Search Records by Metafield action finds Shopify records whose metafield matches
 | Field | Description |
 |------|-------------|
 | Record Type | The kind of Shopify record to search. Supported values: `Orders`, `Products`, `Companies`, `Company Locations`. (e.g., "Orders") |
-| Metafield Namespace | Namespace of the metafield definition. Custom fields created in the Shopify admin use `custom`; app-owned metafields use their own namespace, for example `$app:my-namespace`. (e.g., "custom") |
+| Metafield Namespace | Namespace of the metafield definition. Custom fields created in the Shopify admin use `custom`; app-owned metafields use `$app`. (e.g., "custom") |
 | Metafield Key | Key of the metafield definition, without the namespace. Together with the namespace this builds the filter `metafields.custom.erp_reference_id`. (e.g., "erp_reference_id") |
 | Metafield Value | The exact value stored in the metafield. (e.g., "123456789") |
 | Limit | Maximum number of matching records to return, up to Shopify's connection maximum of 250. When looking up a single record by an external ID, set this to 1. (e.g., 1) |
 
 :::note
-The metafield definition must have the **Admin filterable** capability enabled on the same record type, otherwise Shopify ignores the filter and returns unfiltered records. Matching is exact and case-sensitive — end the value with `*` for a prefix match, or pass just `*` to find every record where the metafield has any value. Do not wrap the value in double quotes; the action adds them.
+The metafield definition must have the **Admin filterable** capability enabled on the same record type, otherwise Shopify ignores the filter and returns unfiltered records. Matching is exact and case-sensitive, so the value must match what is stored in Shopify exactly. Enter the value on its own — the action wraps it in the double quotes Shopify's filter syntax expects.
 :::
 
 Click on **Continue**, then click **Run** node.
@@ -5742,7 +5742,7 @@ Close Return action closes an existing return in Shopify. Use it to finalise a r
 | Return ID | Unique identifier of the return to close. (e.g., "gid://shopify/Return/9628778560") |
 
 :::note
-The return must have no unprocessed line items left — run **Process Return** first, otherwise Shopify rejects the close and returns the reason in `userErrors`. On success, `status` becomes `CLOSED` and `closedAt` carries the timestamp.
+A return can be closed at any point, whether or not its line items have been processed. Shopify also closes a return automatically once every item has been processed and given a disposition, so use this action when you need to close a return early — for example one the customer never shipped back. On success, `status` becomes `CLOSED` and `closedAt` carries the timestamp. A closed return can be reopened in Shopify if needed.
 :::
 
 Click on **Continue**, then click **Run** node.
