@@ -21,7 +21,7 @@ You'll be asked to fill in the following details:
 | Field               | Description                                                                                          |
 | ------------------- | ---------------------------------------------------------------------------------------------------- |
 | Connection Name     | A name to help you identify this connection                                                          |
-| ByDesign Tenant URL | Your ByD tenant URL with no path after the host (e.g. `https://my123456.businessbydesign.cloud.sap`) |
+| ByDesign Tenant URL | Your ByD tenant URL with no path after the host (e.g. `https://mycomp234.sapbydesign.com`)            |
 | Communication User  | The user ID of the communication user created in ByD (these IDs often start with `_`)                |
 | Password            | The password of the communication user                                                               |
 
@@ -33,7 +33,11 @@ Open your SAP Business ByDesign tenant in a browser and log in with an administr
 
 <img src="/img/credentials/sap-bydesign/byd-login.png" alt="SAP Business ByDesign login page" width="700"/>
 
-> **Tip:** Note the tenant URL in the browser's address bar (for example `https://mycomp234.sapbydesign.com`). You'll enter it in appse ai later—without any path after the host.
+:::tip
+
+Note the tenant URL in the browser's address bar (for example `https://mycomp234.sapbydesign.com`). You'll enter it in appse ai later—without any path after the host.
+
+:::
 
 #### 2. Create a Communication System
 
@@ -52,7 +56,7 @@ Click **New** to open the **New Communication System** form.
 Fill in the form using the following steps and format:
 
 1. In **ID**, enter a name for this system, for example `APPSEAI`.
-2. Add the **Host Name**.
+2. Add a **Host Name**. SAP allows any name for this setup, so use one that identifies the system, for example `appse.ai`. See [SAP's guide](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/sap-business-bydesign-side-by-side-extensions-on-sap-cloud-platform/ba-p/13416911).
 3. Set **System Access Type** to **Internet**.
 4. Optionally, under **Technical Contact**, enter the name and email of the person who owns this system.
 5. Under **System Instances**, click **Add Row** and enter a **System Instance ID**, for example `APPSEAI_01`.
@@ -72,21 +76,35 @@ Go back to **Application and User Management** and, under **Input and Output Man
 
 Click **New** to start the **New Communication Arrangement** wizard. In **Select Scenario**, choose the communication scenario that contains the web services you need, then click **Next**.
 
+The web services appse ai uses come from several standard ByD scenarios. The simplest approach is to create one custom communication scenario that includes every service in the [Web Services Used](#web-services-used) table. Go to **Application and User Management → Communication Scenarios**, click **New**, add the inbound services you need, and save it. Then select that scenario here.
+
 <img src="/img/credentials/sap-bydesign/byd-new-communication-arrangement.png" alt="SAP Business ByDesign New Communication Arrangement wizard, Select Scenario step" width="700"/>
 
 Continue through the wizard:
 
 - **Define Business Data:** select the communication system you created in Step 2.
-- **Define Technical Data:** select **User ID and Password** as the authentication method.
+- **Define Technical Data:** select **User ID and Password** as the authentication method, then set the communication user's password (see Step 4).
 - **Review**, then click **Finish**.
 
 In the arrangement, enable every web service your workflows will use. See [Web Services Used](#web-services-used) below for the full list.
 
-> **Note:** A communication user alone is not enough. Each web service must also be published to that user through a **communication arrangement**. If a service is missing from the arrangement, ByD returns `401 Unauthorized` even when the host, user, and password are all correct.
+:::important
+
+Always enable the **Query Materials** service (`querymaterialin`), even if your workflows don't use it. appse ai calls it to validate the credential when you save it, so without it the credential can't be saved.
+
+:::
+
+:::note
+
+A communication user alone is not enough. Each web service must also be published to that user through a **communication arrangement**. If a service is missing from the arrangement, ByD returns `401 Unauthorized` even when the host, user, and password are all correct.
+
+:::
 
 #### 4. Note the Communication User and Password
 
-The communication arrangement generates a **communication user**. Copy the user ID and set a password for it. You'll need both in appse ai.
+In the **Define Technical Data** step of the communication arrangement wizard, the generated communication user appears in the **User ID** field. Copy the user ID, then click **Edit Credentials** next to the **User ID** field and set a password. Do this before you click **Finish**. You'll need both the user ID and the password in appse ai.
+
+For more detail, see SAP's [Set Up SAP Business ByDesign](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/setup-managed-services/setup-byd.html) guide and the [Security Guide for SAP Business ByDesign](https://help.sap.com/doc/e9674bba2e9f423da76f05c02c4a8554/2305/en-US/05dbf9dfe2be49e29f4ebf4c1557177a.pdf).
 
 #### 5. Add the Credential in appse ai
 
@@ -124,7 +142,17 @@ Here is the list of available actions for SAP Business ByDesign:
 | **Query service products**            | Finds service products by search text, ID, or any other ByD selection field.                                                                |
 | **Query site logistics tasks**        | Finds site logistics tasks (pick, putaway, and similar warehouse tasks) by ID, process type, or any other ByD selection field.              |
 
-> **Note:** **Release** and **Update** on an outbound delivery both need the delivery's current `ChangeStateID`, and ByD rejects a stale one. Run **Query outbound deliveries** first, then pass the returned `UUID` and `ChangeStateID` to **Manage outbound delivery**.
+:::note
+
+**Release** and **Update** on an outbound delivery both need the delivery's current `ChangeStateID`, and ByD rejects a stale one. Run **Query outbound deliveries** first, then pass the returned `UUID` and `ChangeStateID` to **Manage outbound delivery**.
+
+:::
+
+:::note
+
+**Call ByD SOAP service (advanced)** sends your service path and payload to ByD as written, and can call any service the communication user has access to, including custom ones. Restrict who can configure this action to trusted workflow builders.
+
+:::
 
 ---
 
