@@ -4,70 +4,118 @@ slug: /app-integrations/pipedrive/
 description: Step-by-step guide to connect Pipedrive to appse ai and automate sales workflows.
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ConnectAccountButton from '@site/src/components/ConnectAccountButton';
+
 Pipedrive is a sales CRM tool designed to help teams manage and close deals efficiently. With appse ai, you can connect your Pipedrive account, automate sales processes, and synchronize data between apps to optimize lead management, improve sales pipeline visibility, and enhance team productivity across your workflows.
-By following this step-by-step guide, you’ll have your Pipedrive integration ready to go in no time.
 
 ---
 
-## Setup Credential
+<Tabs>
+  <TabItem value="Public App" label="Public App (Recommended)">
 
-Follow the steps below to quickly set up your credential.
+  :::note
+  Apps installed through the Pipedrive Marketplace use OAuth 2.0 authentication only. Marketplace users should install and connect the app directly through the Pipedrive OAuth flow. Users do not need to manually enter an API token.
+  :::
 
-### Required Fields
+  
 
-You’ll be asked to fill in the following details:
+  
+  ### Add Credential in appse ai
+  <ConnectAccountButton
+    appName="Pipedrive"
+    authorizeUrl="https://reimagine.insync.pro/credentials?appCode=pipedrive&credentialTypeCode=pipedrive_oauth2_public"
+  />
 
-| Field            | Description                                              |
-| ---------------- | -------------------------------------------------------- |
-| Connection Name  | A name to help you identify this connection              |
-| API Token        | Your personal API token from Pipedrive                   |
-| Pipedrive Domain | Your unique Pipedrive domain (e.g. `acme`.pipedrive.com) |
+  Click **Connect your Pipedrive Account** above to open the Public App authorization page and start the OAuth 2.0 flow  connection. If you are not signed in to appse ai, you will be prompted to log in or register first.
 
-### Step-by-Step Guide
+  - Enter a **Connection Name**.
+  - Click **Save & Authorize**.
 
-#### 1. Add Connection Name
+  <img src="/img/credentials/pipedrive/public/click_save_authorize.png" alt="Save Authorize screen" width="700"/>
 
-- Think of a meaningful name to identify this connection.
-- This name is used purely for display purposes within our platform and does not affect your Pipedrive account.
+  - You will be redirected to the Pipedrive Log-in page. Enter your Pipedrive registered email address and password, then click **Log in**.
 
-#### 2. Find Your API Token
+  <img src="/img/credentials/pipedrive/public/enter_email_password.png" alt="Pipedrive email and password login screen" width="700"/>
 
-- Log in to your **Pipedrive** account.
-- Click your profile icon (top right) → **Personal preferences** → **API**.
+  - Review the requested permissions and click **Allow and install** to complete the authorization process.
+
+  <img src="/img/credentials/pipedrive/public/review_requested_permissions.png" alt="permission screen" width="700"/>
+
+  <img src="/img/credentials/pipedrive/public/click_allow_install.png" alt="Pipedrive app install screen" width="700"/>
+
+  - Once connected, you will be automatically redirected back to the appse ai platform and the Pipedrive credential will be saved.
+
+  </TabItem>
+
+  <TabItem value="Private App" label="Private App">
+
+  ## Setup Credential
+
+  Follow the steps below to quickly set up your credential.
+
+  ### Required Fields
+
+  You'll be asked to fill in the following details:
+
+  | Field            | Description                                              |
+  | ---------------- | -------------------------------------------------------- |
+  | Connection Name  | A name to help you identify this connection              |
+  | API Token        | Your personal API token from Pipedrive                   |
+  | Pipedrive Domain | Your unique Pipedrive domain (e.g. `acme`.pipedrive.com) |
+
+  ### Step-by-Step Guide
+
+  #### 1. Add Connection Name
+
+  - Think of a meaningful name to identify this connection.
+  - This name is used purely for display purposes within our platform and does not affect your Pipedrive account.
+
+  #### 2. Find Your API Token
+
+  - Log in to your **Pipedrive** account.
+  - Click your profile icon (top right) → **Personal preferences** → **API**.
+
   <img src="/img/credentials/pipedrive/pipedrive-cred-app-preferences.png" alt="Pipedrive profile menu showing Personal Preferences option" width="700"/>
 
-- Copy the **API token** provided under the "API" section.
+  - Copy the **API token** provided under the "API" section.
 
-:::tip Example
-API Token: `d5a1234e5678abcde9012345fghij6789klm0n`
-:::
+  :::tip Example
+  API Token: `d5a1234e5678abcde9012345fghij6789klm0n`
+  :::
 
-<img src="/img/credentials/pipedrive/pipedrive-cred-api-key.png" alt="Pipedrive Personal Preferences API section displaying the API token" width="700"/>
+  <img src="/img/credentials/pipedrive/pipedrive-cred-api-key.png" alt="Pipedrive Personal Preferences API section displaying the API token" width="700"/>
 
-:::tip
-Treat your API key like a password. Do not share it publicly.
-:::
+  :::tip
+  Treat your API key like a password. Do not share it publicly.
+  :::
 
-#### 3. Find Your Pipedrive Domain
+  #### 3. Find Your Pipedrive Domain
 
-- From the same dashboard. Click your profile icon (top right) → **Company Settings**.
+  - From the same dashboard, click your profile icon (top right) → **Company Settings**.
+
   <img src="/img/credentials/pipedrive/pipedrive-cred-company-settings.png" alt="Pipedrive profile menu showing Company Settings option" width="700"/>
 
-- You will be able to see a field with your **Company Domain** in it.
+  - You will be able to see a field with your **Company Domain** in it.
+
   <img src="/img/credentials/pipedrive/pipedrive-cred-company-domain.png" alt="Pipedrive Company Settings page showing the Company Domain field" width="700"/>
 
-:::tip Example
-Domain: `nefariusinc`
-:::
+  :::tip Example
+  Domain: `nefariusinc`
+  :::
 
-### Save Your Credential
+  ### Save Your Credential
 
-Once you've filled in the necessary fields, click **"Save"** to store and verify your setup.
+  Once you've filled in the necessary fields, click **"Save"** to store and verify your setup.
 
-<img src="/img/credentials/pipedrive/pipedrive-save-credential.png" alt="appse ai Pipedrive credential form with Save button" width="700"/>
+  <img src="/img/credentials/pipedrive/pipedrive-save-credential.png" alt="appse ai Pipedrive credential form with Save button" width="700"/>
 
-- If successful, your Pipedrive credential will show a "✓" icon. Now you can use this application for your integrations.
-- If it fails, you will be displayed a "!" icon. In that case, please recheck your API Key and Domain or contact support.
+  - If successful, your Pipedrive credential will show a "✓" icon. Now you can use this application for your integrations.
+  - If it fails, you will be displayed a "!" icon. In that case, please recheck your API Key and Domain or contact support.
+
+  </TabItem>
+</Tabs>
 
 ---
 
