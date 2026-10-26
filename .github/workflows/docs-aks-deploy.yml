@@ -3,14 +3,14 @@ name: Build & Deploy Docs to AKS (latest)
 on:
   push:
     branches:
-      - main
+      - stage26
 
 permissions:
   contents: read
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, local-k8s]          # CHANGED: cloud runner can't reach wfa1
 
     env:
       IMAGE_NAME: appseai-doc
@@ -21,13 +21,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: stage26
 
-      # 2. Login to Azure using AZURE_CREDENTIALS (Service Principal)
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      # 2. Login to Azure: REMOVED (only needed for AKS)
 
       # 3. Login to Azure Container Registry
       - name: Login to ACR
@@ -37,25 +33,19 @@ jobs:
             -u ${{ secrets.ACR_NAME }} \
             --password-stdin
 
-      # 4. Build & Push Docker Image (latest)
+      # 4. Build & Push Docker Image
       - name: Build & Push Docker Image
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:latest .
-          docker push ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:latest
+          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }} .   # CHANGED: not :latest (prod's tag)
+          docker push ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }}         # CHANGED
 
-      # 5. Get AKS credentials
-      - name: Get AKS credentials
-        run: |
-          az aks get-credentials \
-            --resource-group ${{ secrets.RESOURCE_GROUP }} \
-            --name ${{ secrets.AKS_CLUSTER_NAME }} \
-            --overwrite-existing
+      # 5. Get AKS credentials: REMOVED (would point kubectl at PROD AKS)
 
-      # 6. Deploy to AKS
+      # 6. Deploy to local K8s
       - name: Deploy to AKS
         run: |
-          kubectl apply -f k8s/workflow-docs-deployment.yaml
-          kubectl apply -f k8s/workflow-docs-services.yaml
+          sed "s|__IMAGE__|${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }}|g" \
+            k8s-top/docs-top.yaml | kubectl apply -f -                                              # CHANGED: local manifests, not prod's
 
       # 7. Restart deployment to force image pull
       - name: Restart deployment
