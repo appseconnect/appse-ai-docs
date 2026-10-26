@@ -3,27 +3,33 @@ name: Build & Deploy Docs to AKS (latest)
 on:
   push:
     branches:
-      - stage26
+      - stage26                                  # CHANGED
 
 permissions:
   contents: read
 
 jobs:
   deploy:
-    runs-on: [self-hosted, local-k8s]          # CHANGED
+    runs-on: ubuntu-latest
 
     env:
       IMAGE_NAME: appseai-doc
       NAMESPACE: appseai-wfa
 
     steps:
-      # 1. Checkout code
+      # 1. Checkout code updated
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: stage26
+          ref: stage26                           # CHANGED
 
-      # 2. Login to Azure Container Registry
+      # 2. Login to Azure using AZURE_CREDENTIALS (Service Principal)
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # 3. Login to Azure Container Registry
       - name: Login to ACR
         run: |
           echo "${{ secrets.ACR_PASSWORD }}" | docker login \
@@ -31,20 +37,13 @@ jobs:
             -u ${{ secrets.ACR_NAME }} \
             --password-stdin
 
-      # 3. Build & Push Docker Image
+      # 4. Build & Push Docker Image (top)          # CHANGED: never :latest (prod's tag)
       - name: Build & Push Docker Image
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }} .   # CHANGED
-          docker push ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }}         # CHANGED
+          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }} \
+                       -t ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-latest .
+          docker push ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }}
+          docker push ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-latest
 
-      # 4. Deploy to local K8s
-      - name: Deploy to local K8s
-        run: |
-          sed "s|__IMAGE__|${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }}|g" \
-            k8s-top/docs-top.yaml | kubectl apply -f -                                              # CHANGED
-
-      # 5. Verify rollout
-      - name: Verify rollout
-        run: |
-          kubectl rollout status deployment/appseai-docs -n $NAMESPACE --timeout=180s
-          kubectl get svc appseai-docs -n $NAMESPACE
+      # 5–8 REMOVED: AKS credentials / deploy / restart / verify
+      # (would deploy to PROD AKS; the Azure DevOps release deploys to local instead)
