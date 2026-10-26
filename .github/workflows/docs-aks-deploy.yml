@@ -10,22 +10,20 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, local-k8s]          # CHANGED: cloud runner can't reach wfa1
+    runs-on: [self-hosted, local-k8s]          # CHANGED
 
     env:
       IMAGE_NAME: appseai-doc
       NAMESPACE: appseai-wfa
 
     steps:
-      # 1. Checkout code updated
+      # 1. Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           ref: stage26
 
-      # 2. Login to Azure: REMOVED (only needed for AKS)
-
-      # 3. Login to Azure Container Registry
+      # 2. Login to Azure Container Registry
       - name: Login to ACR
         run: |
           echo "${{ secrets.ACR_PASSWORD }}" | docker login \
@@ -33,27 +31,20 @@ jobs:
             -u ${{ secrets.ACR_NAME }} \
             --password-stdin
 
-      # 4. Build & Push Docker Image
+      # 3. Build & Push Docker Image
       - name: Build & Push Docker Image
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }} .   # CHANGED: not :latest (prod's tag)
+          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }} .   # CHANGED
           docker push ${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }}         # CHANGED
 
-      # 5. Get AKS credentials: REMOVED (would point kubectl at PROD AKS)
-
-      # 6. Deploy to local K8s
-      - name: Deploy to AKS
+      # 4. Deploy to local K8s
+      - name: Deploy to local K8s
         run: |
           sed "s|__IMAGE__|${{ secrets.ACR_NAME }}.azurecr.io/$IMAGE_NAME:top-${{ github.sha }}|g" \
-            k8s-top/docs-top.yaml | kubectl apply -f -                                              # CHANGED: local manifests, not prod's
+            k8s-top/docs-top.yaml | kubectl apply -f -                                              # CHANGED
 
-      # 7. Restart deployment to force image pull
-      - name: Restart deployment
-        run: |
-          kubectl rollout restart deployment/appseai-docs -n $NAMESPACE
-
-      # 8. Verify rollout
+      # 5. Verify rollout
       - name: Verify rollout
         run: |
-          kubectl rollout status deployment/appseai-docs -n $NAMESPACE
+          kubectl rollout status deployment/appseai-docs -n $NAMESPACE --timeout=180s
           kubectl get svc appseai-docs -n $NAMESPACE
