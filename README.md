@@ -184,4 +184,4 @@ For support and questions, please contact the APPSeCONNECT team or open an issue
 
 ---
 
-Built with ❤️ by the APPSeCONNECT team
+Built with lots of ❤️ by the APPSeCONNECT team
