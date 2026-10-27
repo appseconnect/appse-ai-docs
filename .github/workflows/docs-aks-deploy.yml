@@ -3,7 +3,7 @@ name: Build & Deploy Docs to AKS (latest)
 on:
   push:
     branches:
-      - stage26                                  # CHANGED
+      - insync-top                                  # CHANGED
 
 permissions:
   contents: read
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: stage26                           # CHANGED
+          ref: insync-top                           # CHANGED
 
       # 2. Login to Azure using AZURE_CREDENTIALS (Service Principal)
       - name: Login to Azure
