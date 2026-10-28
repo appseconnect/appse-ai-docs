@@ -148,7 +148,10 @@ Here is the list of available actions in Lightspeed:
 
 | Action | Description |
 | ------ | ----------- |
+| **Create Product** | Creates a new product in the Lightspeed store. Only the product name is required. Supply **Variants** to create a variant family in a single call, or **Composite Components** to create a composite product. Returns the ID of the created product. |
 | **Get Product** | Retrieves a single product by its product ID. |
+| **Get Product by SKU** | Retrieves a product by its exact SKU. Use **Page Size** to return more than one match when multiple product variants share the same SKU. |
+| **Get Product Family** | Retrieves the variant family a product belongs to. Returns the shared family attributes — name, description, brand, category, variant attributes and tags — together with every variant in the family, each with its own SKU, prices, suppliers, codes and outlet taxes. |
 | **Update Product** | Updates an existing product by product ID. Only the fields provided are updated; family-level fields apply to every variant in the product family, while detail-level fields apply only to the product ID supplied. |
 | **Create Customer** | Creates a new customer record in Lightspeed. |
 | **Get Customer** | Retrieves a single customer by their customer ID. |
@@ -163,6 +166,9 @@ Here is the list of available actions in Lightspeed:
 | **Fulfill Sale** | Completes every fulfillment on a sale in a single call, marking all its items as fulfilled. Fulfillments are created automatically when a sale carries a delivery or pickup attribute. The call is idempotent and safe to retry. |
 | **Get Quote** | Retrieves a single quote by its ID, including its customer, outlet and register references, product line items, pricing totals, status, timestamps and any note. |
 | **Create Gift Card** | Creates and activates a gift card with an initial balance. The card is returned in the `ACTIVE` state with a single `ACTIVATION` transaction recorded against it. The gift card number must be unique across the store. |
+| **Get Gift Card** | Retrieves a single gift card by its gift card number, gift card ID or the ID of one of its transactions. Returns the balance, status and full transaction history. |
+| **List Gift Cards** | Retrieves a paginated list of gift cards, ordered from newest to oldest. Can optionally be filtered by gift card number or status — `ACTIVE`, `INACTIVE`, `REDEEMED`, `VOIDED` or `EXPIRED`. |
+| **Create Gift Card Transaction** | Records a `REDEEMING` or `RELOADING` transaction against an existing gift card and updates its balance. The amount must be negative for a redemption and positive for a reload. A unique **Client ID** prevents the same transaction from being applied twice. |
 | **Get Inventory by Product ID** | Retrieves the inventory records for a product across all outlets, including current stock level, average cost and reorder figures. Can optionally cover every variant of the product. |
 | **Get Inventory Levels by Product ID** | Retrieves the aggregated inventory levels for a product across all outlets, including stock count, costs and reorder figures. |
 | **Search Records** | Searches records in a Lightspeed module. Choose **Search (Products, Customers or Sales)** to query those record types by attribute — SKU, email, invoice number, date range and more — or select **Product Categories**, **Variant Attributes**, **Gift Cards**, **Outlets**, **Registers**, **Payment Types**, **Taxes**, **Users** or **Channels** to list that module's records. |
