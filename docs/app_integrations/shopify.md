@@ -5074,6 +5074,508 @@ Click on **Continue**, then click **Run** node.
 ```
 ---------------------------------------
 
+### Order Edit Actions
+
+Order Edit actions let you change an existing Shopify order — add products, change quantities, remove items, and adjust shipping — without cancelling and recreating the order.
+
+These actions always run as a sequence:
+
+1. **Begin Order Edit** — opens an edit session for the order and returns a **Calculated Order ID**.
+2. **Add Variant to Order Edit**, **Set Order Edit Line Item Quantity**, **Add Shipping Line to Order Edit**, **Remove Shipping Line from Order Edit** — stage the changes using that Calculated Order ID.
+3. **Commit Order Edit** — saves every staged change to the live order.
+
+:::note
+Nothing on the order changes until **Commit Order Edit** runs. Pass the **Calculated Order ID** returned by Begin Order Edit to every action in between, and use the **Calculated Line Item IDs** returned by Begin Order Edit — not the order's original line item IDs.
+:::
+
+#### Begin Order Edit
+
+Begin Order Edit action starts an order edit session for an existing Shopify order. It returns a calculated order containing the current line items and shipping lines, which you pass to every subsequent order edit action.
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Order ID | The GID of the order to edit. (e.g., "gid://shopify/Order/7245694337196") |
+
+:::note
+The order must not be cancelled or fully refunded.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+-----------------
+
+##### Result
+
+```json
+[
+  {
+    "calculatedOrder": {
+      "id": "gid://shopify/CalculatedOrder/1033341730",
+      "subtotalLineItemsQuantity": 2,
+      "originalOrder": {
+        "id": "gid://shopify/Order/7245694337196",
+        "name": "#1769"
+      },
+      "subtotalPriceSet": {
+        "shopMoney": {
+          "amount": "90.00",
+          "currencyCode": "USD"
+        }
+      },
+      "cartDiscountAmountSet": {
+        "shopMoney": {
+          "amount": "0.00",
+          "currencyCode": "USD"
+        }
+      },
+      "totalPriceSet": {
+        "shopMoney": {
+          "amount": "100.00",
+          "currencyCode": "USD"
+        }
+      },
+      "totalOutstandingSet": {
+        "shopMoney": {
+          "amount": "100.00",
+          "currencyCode": "USD"
+        }
+      },
+      "lineItems": {
+        "nodes": [
+          {
+            "id": "gid://shopify/CalculatedLineItem/17054211965100",
+            "title": "Water Bottle",
+            "sku": "RE021",
+            "variantTitle": "Default Title",
+            "quantity": 2,
+            "editableQuantity": 2,
+            "editableQuantityBeforeChanges": 2,
+            "restockable": true,
+            "hasStagedLineItemDiscount": false,
+            "variant": {
+              "id": "gid://shopify/ProductVariant/45377173029036"
+            },
+            "originalUnitPriceSet": {
+              "shopMoney": {
+                "amount": "45.00",
+                "currencyCode": "USD"
+              }
+            },
+            "discountedUnitPriceSet": {
+              "shopMoney": {
+                "amount": "45.00",
+                "currencyCode": "USD"
+              }
+            }
+          }
+        ]
+      },
+      "shippingLines": [
+        {
+          "id": "gid://shopify/CalculatedShippingLine/5512344260",
+          "title": "Standard Shipping",
+          "stagedStatus": "NONE",
+          "price": {
+            "shopMoney": {
+              "amount": "10.00",
+              "currencyCode": "USD"
+            }
+          }
+        }
+      ]
+    },
+    "userErrors": []
+  }
+]
+```
+-----------------
+
+#### Add Variant to Order Edit
+
+Add Variant to Order Edit action adds a product variant as a new line item to an open order edit session. The change is staged only — run Commit Order Edit to apply it to the order.
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Calculated Order ID | The GID of the calculated order returned by Begin Order Edit. (e.g., "gid://shopify/CalculatedOrder/1033341730") |
+| Product Variant ID | The GID of the product variant to add to the order. (e.g., "gid://shopify/ProductVariant/45377205796908") |
+| Quantity | The number of units of the variant to add. Must be greater than zero. (e.g., 1) |
+| Optional Fields
+Location ID | The GID of the location the item is allocated from, used for inventory checks and tax calculation. Shopify picks a default location when left blank. (e.g., "gid://shopify/Location/71027851436") |
+| Allow Duplicates | Whether to add a second line item for a variant already on the order. Defaults to false. (e.g., false) |
+
+:::note
+When **Allow Duplicates** is false, adding a variant that already exists on the order returns a user error instead of creating a duplicate line.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+-----------------
+
+##### Result
+
+```json
+[
+  {
+    "calculatedLineItem": {
+      "id": "gid://shopify/CalculatedLineItem/17054244733868",
+      "title": "Travel Mug",
+      "sku": "RE022",
+      "variantTitle": "Default Title",
+      "quantity": 1,
+      "editableQuantity": 1,
+      "restockable": true,
+      "variant": {
+        "id": "gid://shopify/ProductVariant/45377205796908"
+      },
+      "originalUnitPriceSet": {
+        "shopMoney": {
+          "amount": "60.00",
+          "currencyCode": "USD"
+        }
+      },
+      "discountedUnitPriceSet": {
+        "shopMoney": {
+          "amount": "60.00",
+          "currencyCode": "USD"
+        }
+      }
+    },
+    "calculatedOrder": {
+      "id": "gid://shopify/CalculatedOrder/1033341730",
+      "subtotalLineItemsQuantity": 3,
+      "subtotalPriceSet": {
+        "shopMoney": {
+          "amount": "150.00",
+          "currencyCode": "USD"
+        }
+      },
+      "totalPriceSet": {
+        "shopMoney": {
+          "amount": "160.00",
+          "currencyCode": "USD"
+        }
+      },
+      "totalOutstandingSet": {
+        "shopMoney": {
+          "amount": "160.00",
+          "currencyCode": "USD"
+        }
+      }
+    },
+    "userErrors": []
+  }
+]
+```
+-----------------
+
+#### Set Order Edit Line Item Quantity
+
+Set Order Edit Line Item Quantity action changes the quantity of a line item in an open order edit session. Set the quantity to 0 to remove the line item from the order, and optionally restock the removed units.
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Calculated Order ID | The GID of the calculated order returned by Begin Order Edit. (e.g., "gid://shopify/CalculatedOrder/1033341730") |
+| Calculated Line Item ID | The GID of the calculated line item whose quantity is being changed. (e.g., "gid://shopify/CalculatedLineItem/17054211965100") |
+| Quantity | The new quantity for the line item. Must be 0 or greater. (e.g., 1) |
+| Optional Fields
+Restock Removed Units | Whether to return removed units to inventory when the quantity is reduced. Defaults to false. (e.g., true) |
+
+:::note
+Use the line item IDs returned by Begin Order Edit, not the order's original line item IDs. Set the quantity to 0 to remove the line item. Fulfilled units cannot be removed.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+-----------------
+
+##### Result
+
+```json
+[
+  {
+    "calculatedLineItem": {
+      "id": "gid://shopify/CalculatedLineItem/17054211965100",
+      "title": "Water Bottle",
+      "sku": "RE021",
+      "variantTitle": "Default Title",
+      "quantity": 1,
+      "editableQuantity": 1,
+      "editableQuantityBeforeChanges": 2,
+      "restockable": true,
+      "restocking": true,
+      "discountedUnitPriceSet": {
+        "shopMoney": {
+          "amount": "45.00",
+          "currencyCode": "USD"
+        }
+      }
+    },
+    "calculatedOrder": {
+      "id": "gid://shopify/CalculatedOrder/1033341730",
+      "subtotalLineItemsQuantity": 2,
+      "subtotalPriceSet": {
+        "shopMoney": {
+          "amount": "105.00",
+          "currencyCode": "USD"
+        }
+      },
+      "totalPriceSet": {
+        "shopMoney": {
+          "amount": "115.00",
+          "currencyCode": "USD"
+        }
+      },
+      "totalOutstandingSet": {
+        "shopMoney": {
+          "amount": "115.00",
+          "currencyCode": "USD"
+        }
+      }
+    },
+    "userErrors": []
+  }
+]
+```
+-----------------
+
+#### Add Shipping Line to Order Edit
+
+Add Shipping Line to Order Edit action adds a shipping line to an open order edit session. Use it to charge for shipping added as part of an edit.
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Calculated Order ID | The GID of the calculated order returned by Begin Order Edit. (e.g., "gid://shopify/CalculatedOrder/1033341730") |
+| Shipping Line Title | The name of the shipping rate shown on the order. (e.g., "Standard Shipping") |
+| Shipping Price | The amount charged for this shipping line. Enter 0 for free shipping. (e.g., 9.95) |
+| Currency Code | The ISO 4217 currency code for the shipping price. Must match the order's currency. (e.g., "USD") |
+
+:::note
+Avoid double quotes (") in the Shipping Line Title. The shipping price must be a non-negative decimal amount.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+-----------------
+
+##### Result
+
+```json
+[
+  {
+    "calculatedShippingLine": {
+      "id": "gid://shopify/CalculatedShippingLine/5512377028",
+      "title": "Standard Shipping",
+      "stagedStatus": "ADDED",
+      "price": {
+        "shopMoney": {
+          "amount": "9.95",
+          "currencyCode": "USD"
+        }
+      }
+    },
+    "calculatedOrder": {
+      "id": "gid://shopify/CalculatedOrder/1033341730",
+      "subtotalPriceSet": {
+        "shopMoney": {
+          "amount": "105.00",
+          "currencyCode": "USD"
+        }
+      },
+      "totalPriceSet": {
+        "shopMoney": {
+          "amount": "114.95",
+          "currencyCode": "USD"
+        }
+      },
+      "totalOutstandingSet": {
+        "shopMoney": {
+          "amount": "114.95",
+          "currencyCode": "USD"
+        }
+      },
+      "shippingLines": [
+        {
+          "id": "gid://shopify/CalculatedShippingLine/5512377028",
+          "title": "Standard Shipping",
+          "stagedStatus": "ADDED",
+          "price": {
+            "shopMoney": {
+              "amount": "9.95",
+              "currencyCode": "USD"
+            }
+          }
+        }
+      ]
+    },
+    "userErrors": []
+  }
+]
+```
+-----------------
+
+#### Remove Shipping Line from Order Edit
+
+Remove Shipping Line from Order Edit action removes a shipping line from an open order edit session. It works for both staged and already committed shipping lines.
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Calculated Order ID | The GID of the calculated order returned by Begin Order Edit. (e.g., "gid://shopify/CalculatedOrder/1033341730") |
+| Calculated Shipping Line ID | The GID of the shipping line to remove. (e.g., "gid://shopify/CalculatedShippingLine/5512344260") |
+
+:::note
+Read the Calculated Shipping Line ID from the calculated order's shipping lines returned by Begin Order Edit.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+-----------------
+
+##### Result
+
+```json
+[
+  {
+    "calculatedOrder": {
+      "id": "gid://shopify/CalculatedOrder/1033341730",
+      "subtotalPriceSet": {
+        "shopMoney": {
+          "amount": "105.00",
+          "currencyCode": "USD"
+        }
+      },
+      "totalPriceSet": {
+        "shopMoney": {
+          "amount": "105.00",
+          "currencyCode": "USD"
+        }
+      },
+      "totalOutstandingSet": {
+        "shopMoney": {
+          "amount": "105.00",
+          "currencyCode": "USD"
+        }
+      },
+      "shippingLines": []
+    },
+    "userErrors": []
+  }
+]
+```
+-----------------
+
+#### Commit Order Edit
+
+Commit Order Edit action saves all staged changes from an order edit session. It applies added or removed items, quantity changes, discounts, and shipping lines to the live order, and optionally emails the customer. Run this as the final step of the order edit sequence.
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Calculated Order ID | The GID of the calculated order to commit. (e.g., "gid://shopify/CalculatedOrder/1033341730") |
+| Optional Fields
+Notify Customer | Whether to email the customer about the edited order. Defaults to false. (e.g., true) |
+| Staff Note | An internal note describing the edit, shown on the order timeline in Shopify admin. Not visible to the customer. (e.g., "Added travel mug, reduced bottle quantity") |
+
+:::note
+Avoid double quotes (") in the Staff Note. Once committed, the edit session is closed — start a new Begin Order Edit for any further changes.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+-----------------
+
+##### Result
+
+```json
+[
+  {
+    "order": {
+      "id": "gid://shopify/Order/7245694337196",
+      "name": "#1769",
+      "updatedAt": "2026-04-27T10:12:44Z",
+      "note": null,
+      "displayFinancialStatus": "PENDING",
+      "displayFulfillmentStatus": "UNFULFILLED",
+      "totalOutstandingSet": {
+        "shopMoney": {
+          "amount": "105.00",
+          "currencyCode": "USD"
+        }
+      },
+      "currentSubtotalPriceSet": {
+        "shopMoney": {
+          "amount": "105.00",
+          "currencyCode": "USD"
+        }
+      },
+      "currentTotalPriceSet": {
+        "shopMoney": {
+          "amount": "105.00",
+          "currencyCode": "USD"
+        }
+      },
+      "lineItems": {
+        "nodes": [
+          {
+            "id": "gid://shopify/LineItem/17054211965100",
+            "name": "Water Bottle",
+            "sku": "RE021",
+            "quantity": 2,
+            "currentQuantity": 1,
+            "originalUnitPriceSet": {
+              "shopMoney": {
+                "amount": "45.00",
+                "currencyCode": "USD"
+              }
+            },
+            "discountedUnitPriceSet": {
+              "shopMoney": {
+                "amount": "45.00",
+                "currencyCode": "USD"
+              }
+            }
+          },
+          {
+            "id": "gid://shopify/LineItem/17054244733868",
+            "name": "Travel Mug",
+            "sku": "RE022",
+            "quantity": 1,
+            "currentQuantity": 1,
+            "originalUnitPriceSet": {
+              "shopMoney": {
+                "amount": "60.00",
+                "currencyCode": "USD"
+              }
+            },
+            "discountedUnitPriceSet": {
+              "shopMoney": {
+                "amount": "60.00",
+                "currencyCode": "USD"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "successMessages": [
+      "Order edit committed successfully."
+    ],
+    "userErrors": []
+  }
+]
+```
+---------------------------------------
+
 ### Fulfillment Actions
 
 #### Create Order Fulfillment
