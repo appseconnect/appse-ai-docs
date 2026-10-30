@@ -94,7 +94,7 @@ Scroll down and expand the **OAuth Policies** section. Under **OAuth Flows and E
 
 <img src="/img/credentials/salesforce/policy-run-as-username.png" alt="Salesforce enable client credentials flow" width="700"/>
 
-> **Note:** The username entered in **Run As** must belong to the Salesforce **execution (integration) user** for this integration. This user must have the **`API Enabled`** permission enabled and the required **object- and field-level** permissions configured through their assigned Profile and/or Permission Sets for the Salesforce data that Appse AI needs to read or write.
+> **Note:** The username entered in **Run As** must belong to the Salesforce **execution (integration) user** for this integration. This user must have the **`API Enabled`** permission enabled and the required **object- and field-level** permissions configured through their assigned Profile and/or Permission Sets for the Salesforce data that appse ai needs to read or write.
 
 #### 11. Save your changes
 
