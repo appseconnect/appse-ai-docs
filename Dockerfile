@@ -10,6 +10,9 @@ WORKDIR /app
 # Copy only package manager files
 COPY pnpm-lock.yaml package.json ./
 
+# Allow postinstall build scripts (core-js etc.) in CI - no interactive approval needed
+RUN pnpm config set dangerouslyAllowAllBuilds true
+
 # Install dependencies (using frozen lockfile)
 RUN pnpm install --frozen-lockfile
 

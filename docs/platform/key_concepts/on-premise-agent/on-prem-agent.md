@@ -10,9 +10,9 @@ The On-Prem Connector in appse ai enables secure communication between your on-p
 
 With the On-Prem Connector, you can:
 
-- Securely connect on-premise applications
-- Execute workflows against on-premise environments
-- Monitor and manage agent connectivity directly from appse ai
+- Securely connect on-premise applications.
+- Execute workflows against on-premise environments.
+- Monitor and manage agent connectivity directly from appse ai.
 
 ---
 
@@ -20,10 +20,68 @@ With the On-Prem Connector, you can:
 
 Before creating an On-Prem Connector, ensure that:
 
-- You have access to the appse ai portal
-- Your organization has permission to create On-Prem Connectors
-- Required on-prem plugins are available for your organization
-- The target machine has internet connectivity
+- You have access to the appse ai portal.
+- Your organization has permission to create On-Prem Connectors.
+- Required on-prem plugins are available for your organization.
+- The target machine has internet connectivity.
+
+---
+
+### System Prerequisites
+
+Confirm each item below on the target machine before running the installer.
+
+#### Operating System
+
+##### Server OS
+
+| Item | Requirement |
+|---|---|
+| Recommended | Windows Server 2019 or Windows Server 2022 |
+| Minimum supported | Windows Server 2016 |
+| Not supported | Windows Server 2008 / 2008 R2 / 2012 / 2012 R2 |
+
+##### Client OS
+
+| Item | Requirement |
+|---|---|
+| Recommended | Windows 11 |
+| Minimum supported | Windows 10 (version 1703 or later) |
+| Not supported | Windows 7 / 8 / 8.1 / 10 (builds prior to 1703) |
+
+---
+
+#### Hardware
+
+| Item | Requirement |
+|---|---|
+| CPU | 2 vCPU minimum · 4 vCPU recommended for high-volume sync |
+| RAM | 4 GB minimum · 8 GB recommended |
+| Disk space | 10 GB free minimum (installer ~55 MB; remaining space for logs, temp cache, and queued transaction data) |
+
+---
+
+#### Software Dependencies
+
+- .NET Framework 4.8 or later.
+- TLS 1.2 enabled at the OS level (TLS 1.0 / 1.1 disabled per security baseline).
+- Local administrator rights for installation.
+- Dedicated service account with the required database and network permissions for runtime operation.
+- System clock synchronized via NTP.
+
+---
+
+#### Network
+
+- Outbound HTTPS (port 443) access to the appse ai gateway endpoint (*.appse.ai)
+- Firewall allowlist entry for the gateway domain or IP if outbound traffic is restricted.
+
+---
+
+#### Compliance and Security
+
+- Antivirus exclusion recommended for the agent install directory.
+- If corporate SSL inspection or proxy is in use, the appse ai gateway certificate must be trusted or excluded from inspection.
 
 ---
 
@@ -39,26 +97,26 @@ Before creating an On-Prem Connector, ensure that:
 
 ---
 
-### Step 2: Open the On-Prem Connectors Creation Screen
+### Step 2: Open the On-premise connectors Creation Screen
 
-The **On-Prem Connectors** page displays all available connectors for your organization.
+The **On-premise connectors** page displays all available connectors for your organization.
 
 If no connectors are available, the empty state screen is displayed.
 
-- Click **Create First Connector** or **Create Connector**
+- Click **Create connector**
 
 <img src="/img/platform/key-concepts/on-premise-agent/create-on-prem-connectors.png" alt="Create On-Prem Connector" width="700"/>
 
 ---
 
-### Step 3: Configure the On-Prem Connector
+### Step 3: Configure the On-premise connector
 
-In the **Create On-Prem Connector** popup:
+In the **Create on-premise connector** popup:
 
 - Enter a unique **Connector Name**
-- Click **Create Connector**
+- Click **Create**
 
-<img src="/img/platform/key-concepts/on-premise-agent/click-on-create-connector.png" alt="Create On-Prem Connector Popup" width="700" height="450"/>
+<img src="/img/platform/key-concepts/on-premise-agent/click-on-create-connector.png" alt="Create On-Prem Connector Popup" width="700"/>
 
 ### Required Fields
 
@@ -85,7 +143,7 @@ Once the agent is created successfully:
 - The agent is registered in your organization
 - A success confirmation popup is displayed
 
-<img src="/img/platform/key-concepts/on-premise-agent/on-prem-success-popup.png" alt="Connector Created Successfully" width="700" height="450"/>
+<img src="/img/platform/key-concepts/on-premise-agent/on-prem-success-popup.png" alt="Connector Created Successfully" width="700"/>
 
 - Click **Done** to continue
 
@@ -93,7 +151,7 @@ Once the agent is created successfully:
 
 ### Step 5: View the Created On-Prem Connector
 
-After closing the popup, the newly created agent is displayed in the On-Site Connector page.
+After closing the popup, the newly created agent is displayed in the On-premise connectors page.
 
 - The agent status is displayed as **Offline**
 
@@ -139,7 +197,7 @@ The ZIP package is downloaded to your local machine.
 - Choose the extraction location
 - Click **Extract**
 
-<img src="/img/platform/key-concepts/on-premise-agent/extract-file-to-destination.png" alt="Select Extraction Location" width="700" height="400"/>
+<img src="/img/platform/key-concepts/on-premise-agent/extract-file-to-destination.png" alt="Select Extraction Location" width="700"/>
 
 ---
 
@@ -148,7 +206,7 @@ The ZIP package is downloaded to your local machine.
 - Open the extracted folder
 - Navigate to the **installer** directory
 
-<img src="/img/platform/key-concepts/on-premise-agent/installer.png" alt="Installer Directory" width="700" height="400"/>
+<img src="/img/platform/key-concepts/on-premise-agent/installer.png" alt="Installer Directory" width="700"/>
 
 ---
 
@@ -158,7 +216,7 @@ The ZIP package is downloaded to your local machine.
 - Right-click the file
 - Select **Run as administrator**
 
-<img src="/img/platform/key-concepts/on-premise-agent/run-as-admin.png" alt="Run Installer as Administrator" width="700" height="400"/>
+<img src="/img/platform/key-concepts/on-premise-agent/run-as-admin.png" alt="Run Installer as Administrator" width="700"/>
 
 #### Windows Security Prompt
 
@@ -166,11 +224,11 @@ After selecting **Run as administrator**, Windows Defender SmartScreen may displ
 
 - Click **More info**
 
-<img src="/img/platform/key-concepts/on-premise-agent/windows-protected-your-pc.png" alt="Windows Protected Your PC Warning" width="700" height="400"/>
+<img src="/img/platform/key-concepts/on-premise-agent/windows-protected-your-pc.png" alt="Windows Protected Your PC Warning" width="700"/>
 
 - Click **Run anyway** to continue the installation
 
-<img src="/img/platform/key-concepts/on-premise-agent/run-anyway.png" alt="Run Anyway Option" width="700" height="400"/>
+<img src="/img/platform/key-concepts/on-premise-agent/run-anyway.png" alt="Run Anyway Option" width="700"/>
 
 :::info
 This prompt may appear because the installer is being executed from a locally downloaded package.
@@ -192,11 +250,11 @@ Administrator permission is required to install and configure the On-Prem Agent 
 
 - Enable **I agree to the license terms and conditions**
 
-<img src="/img/platform/key-concepts/on-premise-agent/terms-and-condition.png" alt="Accept License Terms" width="700" height="400"/>
+<img src="/img/platform/key-concepts/on-premise-agent/terms-and-condition.png" alt="Accept License Terms" width="700"/>
 
 - Click **Install**
 
-<img src="/img/platform/key-concepts/on-premise-agent/install.png" alt="Install On-Prem Agent" width="700" height="400"/>
+<img src="/img/platform/key-concepts/on-premise-agent/install.png" alt="Install On-Prem Agent" width="700"/>
 
 ---
 
@@ -208,7 +266,7 @@ During installation:
 - Required plugins are configured automatically
 - Installation progress is displayed on the screen
 
-<img src="/img/platform/key-concepts/on-premise-agent/processing.png" alt="Installing On-Prem Agent" width="700" height="400"/>
+<img src="/img/platform/key-concepts/on-premise-agent/processing.png" alt="Installing On-Prem Agent" width="700"/>
 
 :::info
 Installation duration may vary depending on machine configuration and plugin setup.
@@ -222,7 +280,7 @@ After the installation is completed successfully:
 
 - Click **Close** to finish the installation process
 
-<img src="/img/platform/key-concepts/on-premise-agent/installed.png" alt="Installation Completed Successfully" width="700" height="400"/>
+<img src="/img/platform/key-concepts/on-premise-agent/installed.png" alt="Installation Completed Successfully" width="700"/>
 
 ---
 
@@ -271,4 +329,4 @@ The On-Prem Agent supports connectivity for the following applications and syste
 
 ## Support
 
-Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
+Need help? Contact our support team at [support@appse.ai](mailto:support@appse.ai)

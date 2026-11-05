@@ -825,6 +825,153 @@ Click on **Continue**, then **Run** node.
 
 ### Customer Actions
 
+#### Create Customer
+
+Create Customer action is used to create a new customer record in Business Central with address, contact, and sales information.
+
+:::note
+This action uses the **Customers** endpoint. Make sure the `Customers` page is published as a web service (see [Web Services to Publish](#web-services-to-publish)).
+:::
+
+-----------------------------
+
+##### Select Credentials and Action Events
+
+Select your Business Central oData Rest credential, choose the **Create Customer** action event, then click on **Continue** button.
+
+-----------------------------
+
+##### Configuration
+
+| Field | Description |
+|------|-------------|
+| Customer Name | Enter the customer name. (e.g., `"Mercy Joe"`) |
+| Customer No | Specify the customer number. Leave blank to let Business Central assign it from the number series. (e.g., `"C-10045"`) |
+| Address | Primary address line. (e.g., `"ICP Awfis"`) |
+| Address 2 | Secondary address line. (e.g., `"Road. No.36, Jubille"`) |
+| City | City name. (e.g., `"Hyderabad"`) |
+| State / County | Specify the state or county code. (e.g., `"TS"`) |
+| Postal Code | ZIP / Postal code. (e.g., `"500039"`) |
+| Country / Region Code | Specify the country or region code. (e.g., `"IN"`) |
+| Phone Number | Customer contact number. (e.g., `"8909876545"`) |
+| Email | Customer email address. (e.g., `"mercy.joe3@yopmail.com"`) |
+| Salesperson Code | Specify the salesperson code. (e.g., `"BC"`) |
+| Blocked | Select the blocked status from available options: `All`, `Invoice`, `Ship`, or `None`. (e.g., `"None"`) |
+
+:::note
+`Customer Name` is mandatory field. All other fields are optional and can be configured based on business requirements.
+:::
+
+Click on **Continue**, then **Run** node.
+
+-----------------------------
+
+##### Result
+
+```json
+[
+  {
+    "@odata.context": "https://api.businesscentral.dynamics.com/v2.0/{Tenant_Id}/Production/ODataV4/$metadata#Company('CRONUS%20IN')/Customers/$entity",
+    "@odata.etag": "W/\"JzIwOzE0OTQ2NjA0MjgzNzQ4MjI4ODk3MTswMDsn\"",
+    "No": "C-10045",
+    "Name": "Mercy Joe",
+    "Name_2": "",
+    "Search_Name": "MERCY JOE",
+    "IC_Partner_Code": "",
+    "Balance_LCY": 0,
+    "BalanceAsVendor": 0,
+    "Balance_Due_LCY": 0,
+    "Credit_Limit_LCY": 0,
+    "Blocked": " ",
+    "Privacy_Blocked": false,
+    "Salesperson_Code": "BC",
+    "Responsibility_Center": "",
+    "Service_Zone_Code": "",
+    "Document_Sending_Profile": "",
+    "Last_Date_Modified": "2026-05-07",
+    "WebId": "",
+    "Disable_Search_by_Name": false,
+    "Priority": 0,
+    "Statistics_Group": 0,
+    "State_Code": "",
+    "Address": "ICP Awfis",
+    "Address_2": "Road. No.36, Jubille",
+    "Country_Region_Code": "IN",
+    "City": "Hyderabad",
+    "County": "TS",
+    "Post_Code": "500039",
+    "ShowMap": "Show on Map",
+    "Phone_No": "8909876545",
+    "MobilePhoneNo": "",
+    "E_Mail": "mercy.joe3@yopmail.com",
+    "Fax_No": "",
+    "Home_Page": "",
+    "Language_Code": "",
+    "Format_Region": "",
+    "Primary_Contact_No": "",
+    "ContactName": "",
+    "Bill_to_Customer_No": "",
+    "VAT_Registration_No": "",
+    "EORI_Number": "",
+    "GLN": "",
+    "Use_GLN_in_Electronic_Document": false,
+    "Copy_Sell_to_Addr_to_Qte_From": "Company",
+    "Tax_Liable": false,
+    "Tax_Area_Code": "",
+    "Registration_Number": "",
+    "Gen_Bus_Posting_Group": "",
+    "VAT_Bus_Posting_Group": "",
+    "Customer_Posting_Group": "",
+    "Allow_Multiple_Posting_Groups": false,
+    "Currency_Code": "",
+    "Price_Calculation_Method": " ",
+    "Customer_Price_Group": "",
+    "Customer_Disc_Group": "",
+    "Allow_Line_Disc": false,
+    "Invoice_Disc_Code": "C-10045",
+    "Prices_Including_VAT": false,
+    "Prepayment_Percent": 0,
+    "Application_Method": "Manual",
+    "Partner_Type": " ",
+    "Intrastat_Partner_Type": " ",
+    "Payment_Terms_Code": "",
+    "Payment_Method_Code": "",
+    "Reminder_Terms_Code": "",
+    "Fin_Charge_Terms_Code": "",
+    "Cash_Flow_Payment_Terms_Code": "",
+    "Print_Statements": false,
+    "Last_Statement_No": 0,
+    "Block_Payment_Tolerance": false,
+    "Preferred_Bank_Account_Code": "",
+    "Exclude_from_Pmt_Practices": false,
+    "Ship_to_Code": "",
+    "Location_Code": "",
+    "Combine_Shipments": false,
+    "Combine_Service_Shipments": false,
+    "Reserve": "Optional",
+    "Shipping_Advice": "Partial",
+    "Shipment_Method_Code": "",
+    "Shipping_Agent_Code": "",
+    "Shipping_Agent_Service_Code": "",
+    "Shipping_Time": "",
+    "Base_Calendar_Code": "",
+    "Customized_Calendar": "No",
+    "Assessee_Code": "",
+    "P_A_N_No": "",
+    "P_A_N_Status": " ",
+    "P_A_N_Reference_No": "",
+    "Aggregate_Turnover": "Less than 10 Crores",
+    "Govt_Undertaking": false,
+    "GST_customer_Type": " ",
+    "GST_Registration_Type": " ",
+    "GST_Registration_No": "",
+    "E_Commerce_Operator": false,
+    "ARN_No": ""
+  }
+]
+```
+--------------------
+
 #### Update Customer
 
 Update Customer action is used to modify existing customer details including address, contact, and sales information.
@@ -1657,6 +1804,161 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 ---
+
+### Sales Return Order Actions
+
+#### Create Sales Return Order
+
+Create Sales Return Order action is used to create a new sales return order for a customer with document, shipping, and billing details.
+
+-----------------------------
+
+##### Configuration
+
+| Field | Description |
+|------|-------------|
+| Sell-to Customer No | Specify the customer number the return order is created for. (e.g., `"10000"`) |
+| Posting Date | Enter the date the return order is posted. (e.g., `"2026-07-29"`) |
+| Document Date | Enter the document date. (e.g., `"2026-07-29"`) |
+| Order Date | Enter the order date. (e.g., `"2026-07-29"`) |
+| External Document No | Enter the customer's own order or reference number. (e.g., `"RMA-1001"`) |
+| Your Reference | Enter the customer's own reference number or note for this return order. |
+| Salesperson Code | Select the salesperson responsible for the return order from the dropdown. (e.g., `"BC"`) |
+| Location Code | Select the inventory location for the return order from the dropdown. (e.g., `"BLUE"`) |
+| Payment Terms Code | Select the payment terms for the return order from the dropdown. (e.g., `"1M(8D)"`) |
+| Currency Code | Specify the currency code. Leave blank for local currency. |
+| Shortcut Dimension 1 Code | Specify the first shortcut dimension code. |
+| Shortcut Dimension 2 Code | Specify the second shortcut dimension code. (e.g., `"MEDIUM"`) |
+| Ship-to Name | Enter the name for the shipping address. (e.g., `"Blue Warehouse"`) |
+| Ship-to Address | Enter the primary street address for the return shipment. |
+| Ship-to City | Enter the city for the shipping address. |
+| Ship-to Post Code | Enter the postal / ZIP code for the shipping address. |
+| Ship-to Country / Region Code | Specify the ISO country/region code for the shipping address. (e.g., `"IN"`) |
+| Bill-to Name | Enter the name of the customer to bill to, if different from the sell-to customer. |
+| Bill-to Address | Enter the primary street address of the bill-to customer. |
+| Bill-to City | Enter the city of the bill-to customer. |
+| Bill-to Post Code | Enter the postal / ZIP code for the bill-to address. |
+| Bill-to Country / Region Code | Specify the ISO country/region code for the bill-to address. |
+
+:::note
+`Sell-to Customer No` is a mandatory field. All other fields are optional and can be configured based on business requirements.
+:::
+
+:::info
+`Salesperson Code`, `Location Code`, and `Payment Terms Code` are dynamic dropdown fields — their options are fetched live from your connected Business Central company, so the list always reflects what is currently set up there.
+:::
+
+To populate these dropdowns, publish the following pages as web services in Business Central using the exact **Service Name** shown below:
+
+| Field | Object Name | Service Name |
+|-------|-------------|--------------|
+| Salesperson Code | Salespersons/Purchasers | `SalesPeoplePurchasers` |
+| Location Code | Locations | `Locations` |
+| Payment Terms Code | Payment Terms | `PaymentTerms` |
+
+Click on **Continue**, then **Run** node.
+
+-----------------------------
+
+##### Result
+
+```json
+[
+  {
+    "@odata.context": "https://api.businesscentral.dynamics.com/v2.0/{Tenant_Id}/Production/ODataV4/$metadata#Company('CRONUS%20IN')/SalesReturnOrder/$entity",
+    "@odata.etag": "W/\"JzIwOzE3MjE1NDY5Mzc5NTk1NjgwNTY0NTswMDsn\"",
+    "Document_Type": "Return Order",
+    "No": "1004",
+    "Sell_to_Customer_No": "10000",
+    "Sell_to_Customer_Name": "The Cannon Group PLC",
+    "Posting_Date": "2026-07-29",
+    "Document_Date": "2026-07-29",
+    "Order_Date": "2026-07-29",
+    "External_Document_No": "RMA-1001",
+    "Your_Reference": "",
+    "Salesperson_Code": "BC",
+    "Location_Code": "BLUE",
+    "Payment_Terms_Code": "1M(8D)",
+    "Currency_Code": "",
+    "Shortcut_Dimension_1_Code": "",
+    "Shortcut_Dimension_2_Code": "",
+    "Ship_to_Name": "Blue Warehouse",
+    "Ship_to_Address": "",
+    "Ship_to_City": "",
+    "Ship_to_Post_Code": "",
+    "Ship_to_Country_Region_Code": "IN",
+    "Bill_to_Name": "The Cannon Group PLC",
+    "Bill_to_Address": "Station Road, 21",
+    "Bill_to_City": "New Delhi",
+    "Bill_to_Post_Code": "110002",
+    "Bill_to_Country_Region_Code": "IN",
+    "Status": "Open"
+  }
+]
+```
+-----------------------------
+
+#### Create Sales Return Order Line
+
+Create Sales Return Order Line action is used to add a new line to an existing sales return order with item, quantity, and pricing details.
+
+-----------------------------
+
+##### Configuration
+
+| Field | Description |
+|------|-------------|
+| Document No | Specify the document number of the parent sales return order this line belongs to. (e.g., `"1004"`) |
+| Type | Select the line type based on the nature of the product or service being returned. Options: `Item`, `G/L Account`, `Resource`, `Fixed Asset`, `Charge (Item)`, `Comment`. (e.g., `"Item"`) |
+| No | Specify the item, G/L account, resource, or fixed asset number for this line, depending on Type. (e.g., `"03WTDR"`) |
+| Description | Enter the description of the line item. |
+| Description 2 | Enter an additional description line for the item. |
+| Location Code | Select the inventory location for the line from the dropdown. (e.g., `"BLUE"`) |
+| Quantity | Enter the quantity being returned for the line. (e.g., `"5"`) |
+| Unit of Measure Code | Specify the unit of measure code. (e.g., `"PCS"`) |
+| Unit Price | Enter the price per unit of the item. |
+| Line Discount Percent | Enter the discount percentage applied to this line. (e.g., `"10"` for 10%) |
+| Return Reason Code | Specify the reason code explaining why the item is being returned. |
+| Shortcut Dimension 1 Code | Specify the first shortcut dimension code. |
+| Shortcut Dimension 2 Code | Specify the second shortcut dimension code. (e.g., `"MEDIUM"`) |
+
+:::note
+`Document No`, `Type`, `No`, and `Quantity` are mandatory fields. All other fields are optional and can be configured based on business requirements.
+:::
+
+:::info
+`Location Code` is a dynamic dropdown field — its options are fetched live from your connected Business Central company. Publish the **Locations** page as a web service with the Service Name `Locations` to populate this field.
+:::
+
+Click on **Continue**, then **Run** node.
+
+-----------------------------
+
+##### Result
+
+```json
+[
+  {
+    "@odata.context": "https://api.businesscentral.dynamics.com/v2.0/{Tenant_Id}/Production/ODataV4/$metadata#Company('CRONUS%20IN')/SalesReturnLines/$entity",
+    "@odata.etag": "W/\"JzIwOzE3MjE1NDY5Mzc5NTk1NjgwNTY0NTswMDsn\"",
+    "Document_No": "1004",
+    "Line_No": 10000,
+    "Type": "Item",
+    "No": "03WTDR",
+    "Description": "",
+    "Description_2": "",
+    "Location_Code": "BLUE",
+    "Quantity": 5,
+    "Unit_of_Measure_Code": "PCS",
+    "Unit_Price": 0,
+    "Line_Discount_Percent": 0,
+    "Return_Reason_Code": "",
+    "Shortcut_Dimension_1_Code": "",
+    "Shortcut_Dimension_2_Code": ""
+  }
+]
+```
+-----------------------------
 
 ## Support
 
