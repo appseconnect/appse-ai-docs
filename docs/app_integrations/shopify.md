@@ -4639,34 +4639,99 @@ Click on **Continue** button
 
 #### Update Order
 
-Update Order action is used to modify an existing Shopify order by updating purchase order details and shipping address information.
+Update Order action updates an existing Shopify order to match the line items and shipping you send. It compares your input against the order's current state and changes only what differs — adding new lines, changing quantities, removing lines, and replacing shipping. Line items are the full set the order should end with: any line still on the order that is not in your input is removed. The whole change is saved as one all-or-nothing Shopify order edit, so if any part is rejected, nothing is committed and the order stays as it was.
 
 ##### Select Credentials and Action Events
 
-<img src="/img/credentials/shopify/C-UPDTORD93.jpg" alt="Shopify Update Order action configuration" width="700"  />
+<img src="/img/credentials/shopify/C-UPDTORDLINE.jpg" alt="Shopify Update Order action configuration" width="700" />
 
 Click on **Continue** button
 
 --------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
-| Order ID | Enter the unique identifier of the order. (e.g., "gid://shopify/Order/7245694337196") |
-| Optional Fields
-PO Number | Update the purchase order/reference number. (e.g., "PO 2026") |
-| Shipping Address (Optional)
-First Name | Recipient first name. (e.g., "Antony") |
-| Last Name | Recipient last name. (e.g., "Mathew") |
-| Company | Company name. (e.g., "GAP STORE") |
-| Address Line 1 | Primary street address. (e.g., "Lake district") |
-| Address Line 2 | Secondary address line. (e.g., "Geetak Line") |
-| City | City name. (e.g., "Hyderabad") |
-| State / Province Code | State or province code. (e.g., "TS") |
-| Country Code | Country code. (e.g., "IN") |
-| ZIP / Postal Code | Postal code. (e.g., "500039") |
-| Phone | Contact phone number. (e.g., "+919878094511") |
+| Order ID | The order to update. Accepts just the number (e.g., 18992586358933) or the full GID (e.g., gid://shopify/Order/18992586358933). |
+| Line items | The full set of line items the order should end with. Any line already on the order that is not listed here is removed. |
+| Line items → Variant ID | The product variant for the line. Just the number (e.g., 47326334648469) or the full GID. Used to match the line; takes precedence over SKU. |
+| Line items → SKU | The variant SKU. Used to match the line when no Variant ID is given, and to look up the variant when adding a new line. Must match exactly one variant in the store. |
+| Line items → Quantity | The quantity this line should have. Whole number, 0 or more. Setting 0 removes the line. |
+| Shipping lines (Optional) | The shipping the order should have. Leave empty to keep the order's current shipping; send a set to replace it. Replaced only when it differs from the current shipping. |
+| Shipping lines → Title | The name of the shipping method. (e.g., Express) |
+| Shipping lines → Amount | The shipping charge as a decimal string. (e.g., 15.00) |
+| Shipping lines → Currency code | The 3-letter ISO 4217 currency code. Must match the order's currency. (e.g., USD) |
+| Restock (Optional) | Return stock to inventory when a line's quantity goes down — a lower quantity, a line set to 0, or a line removed. Ignored when a quantity goes up. |
+| Notify customer (Optional) | Email the customer the updated order when the edit is committed. |
+| Staff note (Optional) | An internal note added to the order timeline. Not shown to the customer. (e.g., Synced from SAP sales order SO-1023) |
+
+:::note
+Match each line by Variant ID when you have it, otherwise by SKU. If your input already matches the order, nothing is changed. The order must be editable (not archived, not fully fulfilled, placed on or after 1 Jan 2019).
+:::
+
+Click on **Continue**, then click **Run** node.
+
+---------------------
+
+##### Example Configuration
+
+<img src="/img/credentials/shopify/AC-UPDTORDLINE.jpg" alt="Shopify Update Order action example configuration" width="700" />
+
+----------------
+
+##### Result
+
+```json
+[
+  {
+    "id": "gid://shopify/Order/18992586358933",
+    "name": "#1001",
+    "totalPriceSet": {
+      "shopMoney": {
+        "amount": "245.00",
+        "currencyCode": "USD"
+      }
+    }
+  }
+]
+```
+-----------------
+
+#### Update Order Header
+
+Update Order Header action updates the header details of an existing Shopify order — note, email, phone, tags, PO number, custom attributes, shipping address, and metafields. It does not change line items or shipping charges; use the **Update Order** action for those.
+
+##### Select Credentials and Action Events
+
+<img src="/img/credentials/shopify/C-UPDTORD93.jpg" alt="Shopify Update Order Header action configuration" width="700"  />
+
+Click on **Continue** button
+
+--------------------
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Order ID | The GID of the order to update. (e.g., gid://shopify/Order/734509473) |
+| Note | An optional note or comment to attach to the order. |
+| Email | Customer email address. (e.g., customer@example.com) |
+| Phone | Customer phone number in E.164 format. (e.g., +14155551234) |
+| PO Number | Purchase order / reference number. (e.g., PO-2026-001) |
+| Tags | List of tags to assign to the order. Replaces all existing tags. (e.g., priority, wholesale) |
+| Custom Attributes → Key / Value | Key-value pairs to attach to the order. (e.g., gift_message / Happy Birthday!) |
+| Shipping Address → First Name | Recipient first name. (e.g., Antony) |
+| Shipping Address → Last Name | Recipient last name. (e.g., Mathew) |
+| Shipping Address → Company | Company name. (e.g., GAP STORE) |
+| Shipping Address → Address Line 1 | Primary street address. (e.g., Lake district) |
+| Shipping Address → Address Line 2 | Secondary address line. (e.g., Geetak Line) |
+| Shipping Address → City | City name. (e.g., Hyderabad) |
+| Shipping Address → State / Province Code | State or province code. (e.g., TS) |
+| Shipping Address → Country Code | ISO 3166-1 alpha-2 country code. (e.g., IN) |
+| Shipping Address → ZIP / Postal Code | Postal code. (e.g., 500039) |
+| Shipping Address → Phone | Contact phone number. (e.g., +919878094511) |
+| Metafields → Namespace / Key / Value / Type | Custom metafields to attach or update. (e.g., custom / order_source / web / single_line_text_field) |
 
 :::note
 Only the fields provided will be updated. Ensure the correct Order ID is used to avoid modifying the wrong order.
