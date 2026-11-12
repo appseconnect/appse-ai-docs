@@ -2310,9 +2310,11 @@ Click on **Continue**, then **Run** the node.
   - [Create Product with Options and Media](#create-product-with-options-and-media)
 - **Product Variants**
   - [Update Product Variants](#update-product-variants)
+  - [Create Bulk Product Variants](#create-bulk-product-variants)
 - **Inventory**
   - [Activate Inventory Locations](#activate-inventory-locations)
   - [Update Product Inventory](#update-product-inventory)
+  - [Adjust Inventory Quantities](#adjust-inventory-quantities)
 - **Locations**
   - [Get List of Locations](#get-list-of-locations)
 - **Price List**
@@ -2326,6 +2328,8 @@ Click on **Continue**, then **Run** the node.
 - **Discounts**
   - [Create Discount Code](#create-discount-code)
 - **Orders**
+  - [Create Order](#create-order)
+  - [Cancel Order](#cancel-order)
   - [Get Order by Order ID](#get-order-by-order-id)
   - [Get Transactions by Order ID](#get-transactions-by-order-id)
   - [Create Order Risk Assessment](#create-order-risk-assessment)
@@ -2333,10 +2337,10 @@ Click on **Continue**, then **Run** the node.
   - [Update Order](#update-order)
   - [Create Payment Terms](#create-payment-terms)
   - [Update Payment Terms](#update-payment-terms)
-  - [Create Draft Order](#create-draft-order)
 - **Fulfillment**
   - [Create Order Fulfillment](#create-order-fulfillment)
   - [Get Fulfillment Orders by Order ID](#get-fulfillment-orders-by-order-id)
+  - [Get Order Fulfillment Line Items](#get-order-fulfillment-line-items)
 - **Payment Terms Templates**
   - [Get Payment Term Templates by Type](#get-payment-term-templates-by-type)
 - **Refund**
@@ -2353,13 +2357,27 @@ Click on **Continue**, then **Run** the node.
 - **Tags**
   - [Search Records by Tag](#search-records-by-tag)
 - **Payouts**
-  - [Get Payout](#get-payout)
+  - [Get Payouts by Status](#get-payouts-by-status)
   - [Get Payout Balance Transactions](#get-payout-balance-transactions)
 - **Draft Orders**
-  - [Complete Draft Order](#complete-draft-order)
+  - [Create Draft Order](#create-draft-order)
+  - [Convert Draft Order to Order](#convert-draft-order-to-order)
+  - [Get Draft Order by ID](#get-draft-order-by-id)
+  - [Get Draft Orders by Customer ID](#get-draft-orders-by-customer-id)
+  - [Update Draft Order](#update-draft-order)
 - **Returns**
+  - [Get Returnable Items of an Order](#get-returnable-items-of-an-order)
+  - [Create Return](#create-return)
   - [Process Return](#process-return)
   - [Close Return](#close-return)
+- **Gift Cards**
+  - [Create Gift Card](#create-gift-card)
+  - [Get Gift Card by ID](#get-gift-card-by-id)
+  - [Update Gift Card](#update-gift-card)
+  - [Debit Amount From Gift Card](#debit-amount-from-gift-card)
+  - [Deactivate Gift Card](#deactivate-gift-card)
+- **Analytics**
+  - [Get Analytics Data](#get-analytics-data)
 
 ### Customers Actions
 
@@ -7333,6 +7351,11 @@ Click on **Continue**, then click **Run** node.
 ### Tools
 
 Tools expose Shopify operations to the AI layer so an agent can call them directly while reasoning over a task. Each tool takes a small, natural input and returns the matching Shopify records.
+
+- [Get Customer by Phone](#get-customer-by-phone)
+- [Get Product by Name](#get-product-by-name)
+- [Get Order by Order ID](#get-order-by-order-id-1)
+- [Create Order](#create-order-1)
 
 #### Get Customer by Phone
 
