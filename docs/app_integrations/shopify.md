@@ -2054,6 +2054,78 @@ The configuration fields are the same for all triggers — refer to the screensh
 
 ### Actions
 
+- **Customers**
+  - [Get Customer by Email](#get-customer-by-email)
+  - [Update Customer](#update-customer)
+  - [Create a Customer](#create-a-customer)
+- **Companies**
+  - [Create Company](#create-company)
+  - [Create Company Location](#create-company-location)
+  - [Create Company Contact](#create-company-contact)
+  - [Get Company Contact by ID](#get-company-contact-by-id)
+  - [Get Company by Company ID](#get-company-by-company-id)
+  - [Get Locations by Company ID](#get-locations-by-company-id)
+  - [Get Company Payment Terms](#get-company-payment-terms)
+  - [Get Company by External ID](#get-company-by-external-id)
+- **Products**
+  - [Create Product](#create-product)
+  - [Update Product](#update-product)
+  - [Publish a Product](#publish-a-product)
+  - [Get Product by Default Variant SKU](#get-product-by-default-variant-sku)
+  - [Create Product with Options and Media](#create-product-with-options-and-media)
+- **Product Variants**
+  - [Update Product Variants](#update-product-variants)
+- **Inventory**
+  - [Activate Inventory Locations](#activate-inventory-locations)
+  - [Update Product Inventory](#update-product-inventory)
+- **Locations**
+  - [Get List of Locations](#get-list-of-locations)
+- **Price List**
+  - [Create Price List](#create-price-list)
+  - [Add Fixed Prices to Price List](#add-fixed-prices-to-price-list)
+  - [Update Price List Fixed Prices](#update-price-list-fixed-prices)
+  - [Delete Price List Fixed Prices](#delete-price-list-fixed-prices)
+- **Markets**
+  - [Create Market](#create-market)
+  - [Get List of Markets](#get-list-of-markets)
+- **Discounts**
+  - [Create Discount Code](#create-discount-code)
+- **Orders**
+  - [Get Order by Order ID](#get-order-by-order-id)
+  - [Get Transactions by Order ID](#get-transactions-by-order-id)
+  - [Create Order Risk Assessment](#create-order-risk-assessment)
+  - [Get Order Risk Details by Order ID](#get-order-risk-details-by-order-id)
+  - [Update Order](#update-order)
+  - [Create Payment Terms](#create-payment-terms)
+  - [Update Payment Terms](#update-payment-terms)
+  - [Create Draft Order](#create-draft-order)
+- **Fulfillment**
+  - [Create Order Fulfillment](#create-order-fulfillment)
+  - [Get Fulfillment Orders by Order ID](#get-fulfillment-orders-by-order-id)
+- **Payment Terms Templates**
+  - [Get Payment Term Templates by Type](#get-payment-term-templates-by-type)
+- **Refund**
+  - [Create Refund](#create-refund)
+- **Price Lists**
+  - [Get Price List by Catalog ID](#get-price-list-by-catalog-id)
+- **Catalogs**
+  - [Create Catalog](#create-catalog)
+  - [Update Catalog Context](#update-catalog-context)
+- **Metafields**
+  - [Add and Update Metafields](#add-and-update-metafields)
+  - [Search Records by Metafield](#search-records-by-metafield)
+  - [Search for a Record by Custom ID](#search-for-a-record-by-custom-id)
+- **Tags**
+  - [Search Records by Tag](#search-records-by-tag)
+- **Payouts**
+  - [Get Payout](#get-payout)
+  - [Get Payout Balance Transactions](#get-payout-balance-transactions)
+- **Draft Orders**
+  - [Complete Draft Order](#complete-draft-order)
+- **Returns**
+  - [Process Return](#process-return)
+  - [Close Return](#close-return)
+
 ### Customers Actions
 
 #### Get Customer by Email
@@ -5661,6 +5733,14 @@ Click on **Continue**, then click **Run** node.
 
 Search Records by Metafield action finds Shopify records whose metafield matches a given value, using the `metafields.<namespace>.<key>` search filter. Use it to look up a Shopify record by an identifier held in an external system — for example an ERP reference stored on a custom field.
 
+##### Select Credentials and Action Events
+
+<img src="/img/credentials/shopify/C-SRCHRCRDSBYMETAFLD.png" alt="Shopify Search Records by Metafield action configuration" width="700"  />
+
+Click on **Continue** button.
+
+-------------------
+
 ##### Configuration Fields
 
 | Field | Description |
@@ -5679,31 +5759,221 @@ Click on **Continue**, then click **Run** node.
 
 ------------
 
+##### Example Configuration
+
+<img src="/img/credentials/shopify/AC-SRCHRCRDSBYMETAFLD.png" alt="Shopify Search Records by Metafield action example configuration" width="700"  />
+
+------------
+
 ##### Result
 
 ```json
 [
   {
-    "id": "gid://shopify/Order/7240844705964",
-    "name": "#1768",
-    "createdAt": "2026-04-24T17:44:48Z",
-    "updatedAt": "2026-04-24T18:02:11Z",
+    "id": "gid://shopify/Order/7422412914935",
+    "name": "#1001",
+    "createdAt": "2026-02-22T16:19:26Z",
+    "updatedAt": "2026-08-18T11:51:07Z",
     "displayFinancialStatus": "PAID",
-    "displayFulfillmentStatus": "UNFULFILLED",
+    "displayFulfillmentStatus": "FULFILLED",
     "customer": {
-      "id": "gid://shopify/Customer/9304242225324",
-      "displayName": "John Doe",
-      "email": "john.doe@example.com"
+      "id": "gid://shopify/Customer/9874997838071",
+      "displayName": "ABC Company",
+      "email": "companabc233@yopmail.com"
     },
     "totalPriceSet": {
       "shopMoney": {
-        "amount": "150.00",
+        "amount": "4000.0",
         "currencyCode": "USD"
       }
     }
   }
 ]
 ```
+-----------------
+
+#### Search for a Record by Custom ID
+
+Search for a Record by Custom ID action retrieves a single Shopify record using a custom identifier stored in a metafield. Use it to resolve the Shopify record that maps to an ID held in an external system, such as an ERP reference.
+
+##### Select Credentials and Action Events
+
+<img src="/img/credentials/shopify/C-SRCHRCRDBYCUSTMID.png" alt="Shopify Search for a Record by Custom ID action configuration" width="700"  />
+
+Click on **Continue** button.
+
+-------------------
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Record Type | The kind of Shopify record to search. (e.g., "Product Variant") |
+| Metafield Key | Key of the metafield that holds the custom ID. (e.g., "erpproductid") |
+| Metafield Value | The exact custom ID value stored in the metafield. (e.g., "prod2880://122911") |
+
+:::note
+Matching is exact and case-sensitive. If no record matches the custom ID, the response will be empty or null.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+------------
+
+##### Example Configuration
+
+<img src="/img/credentials/shopify/AC-SRCHRCRDBYCUSTMID.png" alt="Shopify Search for a Record by Custom ID action example configuration" width="700"  />
+
+------------
+
+##### Result
+
+```json
+[
+  {
+    "__typename": "ProductVariant",
+    "id": "gid://shopify/ProductVariant/50958144209143",
+    "sku": "JPe51003",
+    "title": "Oneplus Z2 Neckband",
+    "displayName": "Oneplus Z2 Neckband - Oneplus Z2 Neckband",
+    "price": "0.00",
+    "compareAtPrice": null,
+    "availableForSale": true,
+    "inventoryQuantity": 10,
+    "inventoryPolicy": "DENY",
+    "taxable": true,
+    "position": 1,
+    "selectedOptions": [
+      {
+        "name": "Title",
+        "value": "Oneplus Z2 Neckband"
+      }
+    ],
+    "createdAt": "2026-07-22T12:10:23Z",
+    "updatedAt": "2026-11-04T11:34:49Z",
+    "product": {
+      "id": "gid://shopify/Product/10032424812791",
+      "title": "Oneplus Z2 Neckband",
+      "handle": "oneplus-z2-neckband-139",
+      "status": "ACTIVE",
+      "vendor": "APPSeCONNECT",
+      "productType": "Simple"
+    },
+    "inventoryItem": {
+      "id": "gid://shopify/InventoryItem/52999716372727",
+      "sku": "JPe51003",
+      "tracked": true,
+      "requiresShipping": true,
+      "unitCost": null
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Metafield/64736150225143",
+          "namespace": "custom",
+          "key": "erpproductid",
+          "value": "prod2880://122911",
+          "type": "id",
+          "jsonValue": "prod2880://122911",
+          "createdAt": "2026-11-04T11:34:48Z",
+          "updatedAt": "2026-11-04T11:34:48Z",
+          "definition": {
+            "id": "gid://shopify/MetafieldDefinition/497232019703",
+            "name": "erpproductid",
+            "key": "erpproductid",
+            "description": ""
+          }
+        }
+      ]
+    }
+  }
+]
+```
+-----------------
+
+-----------------
+
+### Tags Actions
+
+#### Search Records by Tag
+
+Search Records by Tag action finds Shopify records that carry a given tag.
+
+##### Select Credentials and Action Events
+
+<img src="/img/credentials/shopify/C-SRCHRCRDSBYTAG.png" alt="Shopify Search Records by Tag action configuration" width="700"  />
+
+Click on **Continue** button.
+
+-------------------
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Record Type | The kind of Shopify record to search. (e.g., "Products") |
+| Tag | The tag to match. (e.g., "Summer Sale") |
+| Limit | Maximum number of matching records to return. (e.g., 10) |
+
+:::note
+Tag matching is exact. If no record carries the tag, the response will be empty.
+:::
+
+Enter the Tag exactly as it is stored in Shopify. Tags can be plain text, wrapped in quotes, or contain forward or backward slashes:
+
+| Tag Type | Example Tag |
+|----------|-------------|
+| Without quotes | `Cotton` |
+| With double quotes | `"summer sale"` |
+| With single quotes | `'cold collection'` |
+| With forward slashes | `prod/test101` |
+| With backward slashes | `prod\test101` |
+
+Click on **Continue**, then click **Run** node.
+
+------------
+
+##### Example Configuration
+
+<img src="/img/credentials/shopify/AC-SRCHRCRDSBYTAG.png" alt="Shopify Search Records by Tag action example configuration" width="700"  />
+
+------------
+
+##### Result
+
+```json
+[
+  {
+    "id": "gid://shopify/Product/10032424780023",
+    "title": "Bridal Lehanga",
+    "handle": "bridal-lehanga",
+    "productType": "Simple",
+    "status": "ACTIVE",
+    "vendor": "APPSeCONNECT",
+    "tags": [
+      "\"summer sale\"",
+      "'cold collection'",
+      "Cotton",
+      "prod/test101"
+    ],
+    "totalInventory": 16,
+    "createdAt": "2026-07-22T12:10:21Z",
+    "updatedAt": "2026-11-12T06:57:35Z",
+    "variants": {
+      "nodes": [
+        {
+          "id": "gid://shopify/ProductVariant/50958144176375",
+          "sku": "AV2",
+          "title": "Bridal Lehanga",
+          "price": "0.00"
+        }
+      ]
+    }
+  }
+]
+```
+-----------------
+
 -----------------
 
 ### Payouts Actions
