@@ -2317,11 +2317,12 @@ Click on **Continue**, then **Run** the node.
   - [Adjust Inventory Quantities](#adjust-inventory-quantities)
 - **Locations**
   - [Get List of Locations](#get-list-of-locations)
-- **Price List**
+- **Price Lists**
   - [Create Price List](#create-price-list)
   - [Add Fixed Prices to Price List](#add-fixed-prices-to-price-list)
   - [Update Price List Fixed Prices](#update-price-list-fixed-prices)
   - [Delete Price List Fixed Prices](#delete-price-list-fixed-prices)
+  - [Get Price List by Catalog ID](#get-price-list-by-catalog-id)
 - **Markets**
   - [Create Market](#create-market)
   - [Get List of Markets](#get-list-of-markets)
@@ -2346,8 +2347,6 @@ Click on **Continue**, then **Run** the node.
   - [Get Payment Term Templates by Type](#get-payment-term-templates-by-type)
 - **Refund**
   - [Create Refund](#create-refund)
-- **Price Lists**
-  - [Get Price List by Catalog ID](#get-price-list-by-catalog-id)
 - **Catalogs**
   - [Create Catalog](#create-catalog)
   - [Update Catalog Context](#update-catalog-context)
@@ -4121,7 +4120,7 @@ Click on **Continue** button
 ```
 --------------
 
-### Price List Actions
+### Price Lists Actions
 
 #### Create Price List
 
@@ -4326,6 +4325,72 @@ Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/
       "currency": "USD"
     },
     "userErrors": []
+  }
+]
+```
+--------------
+
+#### Get Price List by Catalog ID
+
+Get Price List by Catalog ID action is used to retrieve price list details associated with a specific Shopify catalog.
+
+##### Select Credentials and Action Events
+
+<img src="/img/credentials/shopify/C-GTPRCLSTbyCATLOG84.jpg" alt="Shopify Get Price List by Catalog action configuration" width="700"  />
+
+Click on **Continue** button
+
+-------------------------
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Catalog ID | Enter the Shopify catalog ID. (e.g., "gid://shopify/CompanyLocationCatalog/64039649452") |
+
+:::note
+`Catalog ID` is required.
+:::
+
+##### Example Configuration
+
+<img src="/img/credentials/shopify/AC-GTPRCLSTbyCATLOG85.jpg" alt="Shopify Get Price List by Catalog action example configuration" width="700"  />
+
+--------------------
+
+##### Result
+
+```json
+[
+  {
+    "id": "gid://shopify/CompanyLocationCatalog/64039649452",
+    "title": "B2B Catalog",
+    "status": "ACTIVE",
+    "priceList": {
+      "id": "gid://shopify/PriceList/24205361324",
+      "name": "B2B Catalog - d544236a-8c9e-4f45-8d9e-6f96ba03e751",
+      "currency": "USD",
+      "fixedPricesCount": 2,
+      "parent": {
+        "adjustment": {
+          "type": "PERCENTAGE_DECREASE",
+          "value": 5
+        }
+      }
+    },
+    "publication": {
+      "id": "gid://shopify/Publication/147472089260",
+      "name": ""
+    },
+    "companyLocations": {
+      "nodes": [
+        {
+          "id": "gid://shopify/CompanyLocation/892502188",
+          "name": "Anitha kumari",
+          "externalId": null
+        }
+      ]
+    }
   }
 ]
 ```
@@ -5864,74 +5929,6 @@ Click on **Continue** button
 ```
 --------------
 
-### Price Lists Actions
-
-#### Get Price List by Catalog ID
-
-Get Price List by Catalog ID action is used to retrieve price list details associated with a specific Shopify catalog.
-
-##### Select Credentials and Action Events
-
-<img src="/img/credentials/shopify/C-GTPRCLSTbyCATLOG84.jpg" alt="Shopify Get Price List by Catalog action configuration" width="700"  />
-
-Click on **Continue** button
-
--------------------------
-
-##### Configuration Fields
-
-| Field | Description |
-|------|-------------|
-| Catalog ID | Enter the Shopify catalog ID. (e.g., "gid://shopify/CompanyLocationCatalog/64039649452") |
-
-:::note
-`Catalog ID` is required.
-:::
-
-##### Example Configuration
-
-<img src="/img/credentials/shopify/AC-GTPRCLSTbyCATLOG85.jpg" alt="Shopify Get Price List by Catalog action example configuration" width="700"  />
-
---------------------
-
-##### Result
-
-```json
-[
-  {
-    "id": "gid://shopify/CompanyLocationCatalog/64039649452",
-    "title": "B2B Catalog",
-    "status": "ACTIVE",
-    "priceList": {
-      "id": "gid://shopify/PriceList/24205361324",
-      "name": "B2B Catalog - d544236a-8c9e-4f45-8d9e-6f96ba03e751",
-      "currency": "USD",
-      "fixedPricesCount": 2,
-      "parent": {
-        "adjustment": {
-          "type": "PERCENTAGE_DECREASE",
-          "value": 5
-        }
-      }
-    },
-    "publication": {
-      "id": "gid://shopify/Publication/147472089260",
-      "name": ""
-    },
-    "companyLocations": {
-      "nodes": [
-        {
-          "id": "gid://shopify/CompanyLocation/892502188",
-          "name": "Anitha kumari",
-          "externalId": null
-        }
-      ]
-    }
-  }
-]
-```
---------------
-
 ### Catalogs Actions
 
 #### Create Catalog
@@ -6156,7 +6153,9 @@ Click on **Continue**, then click **Run** node.
 
 #### Search for a Record by Custom ID
 
-Search for a Record by Custom ID action retrieves a single Shopify record using a custom identifier stored in a metafield. Use it to resolve the Shopify record that maps to an ID held in an external system, such as an ERP reference.
+Search for a Record by Custom ID action retrieves exactly one Shopify record using a custom identifier stored in a metafield of type **ID**, such as an ERP customer number held on a custom field. Supported record types are Customer, Product Variant and Collection.
+
+Use it when you expect a single match for one of those record types. For Orders, Products or Companies, or to find several records, use [Search Records by Metafield](#search-records-by-metafield).
 
 ##### Select Credentials and Action Events
 
@@ -6170,12 +6169,12 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Record Type | The kind of Shopify record to search. (e.g., "Product Variant") |
-| Metafield Key | Key of the metafield that holds the custom ID. (e.g., "erpproductid") |
+| Record Type | The kind of Shopify record to look up. Supported values: `Customer`, `Product Variant`, `Collection`. (e.g., "Product Variant") |
+| Metafield Key | Key of the metafield that holds the custom ID, in the `custom` namespace. (e.g., "erpproductid") |
 | Metafield Value | The exact custom ID value stored in the metafield. (e.g., "prod2880://122911") |
 
 :::note
-Matching is exact and case-sensitive. If no record matches the custom ID, the response will be empty or null.
+The metafield must be of type **ID** and in the `custom` namespace. Matching is exact and case-sensitive. If no record matches the custom ID, the response will be empty or null.
 :::
 
 Click on **Continue**, then click **Run** node.
@@ -6218,7 +6217,7 @@ Click on **Continue**, then click **Run** node.
       "title": "Oneplus Z2 Neckband",
       "handle": "oneplus-z2-neckband-139",
       "status": "ACTIVE",
-      "vendor": "APPSeCONNECT",
+      "vendor": "Example Store",
       "productType": "Simple"
     },
     "inventoryItem": {
@@ -6253,13 +6252,13 @@ Click on **Continue**, then click **Run** node.
 ```
 -----------------
 
------------------
-
 ### Tags Actions
 
 #### Search Records by Tag
 
 Search Records by Tag action finds Shopify records that carry a given tag.
+
+Supported record types: Products, Orders, Draft Orders and Customers.
 
 ##### Select Credentials and Action Events
 
@@ -6273,7 +6272,7 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Record Type | The kind of Shopify record to search. (e.g., "Products") |
+| Record Type | The kind of Shopify record to search. Supported values: `Products`, `Orders`, `Draft Orders`, `Customers`. (e.g., "Products") |
 | Tag | The tag to match. (e.g., "Summer Sale") |
 | Limit | Maximum number of matching records to return. (e.g., 10) |
 
@@ -6311,7 +6310,7 @@ Click on **Continue**, then click **Run** node.
     "handle": "bridal-lehanga",
     "productType": "Simple",
     "status": "ACTIVE",
-    "vendor": "APPSeCONNECT",
+    "vendor": "Example Store",
     "tags": [
       "\"summer sale\"",
       "'cold collection'",
@@ -6334,8 +6333,6 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
-
 -----------------
 
 ### Payouts Actions
