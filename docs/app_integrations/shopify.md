@@ -33,14 +33,14 @@ Before starting, make sure:
 
 You'll be asked to fill in the following details:
 
-| Field           | Description                                                                              |
-|-----------------|------------------------------------------------------------------------------------------|
-| Connection Name | A name to help you identify this connection.                                             |
-| Store Domain    | The domain of your Shopify store (e.g., `newstore`).                     |
-| Client ID       | Obtained from your app's Settings page in the Shopify Dev Dashboard.                    |
-| Client Secret   | Obtained from your app's Settings page in the Shopify Dev Dashboard.                    |
-| Scope           | The OAuth 2.0 permission scopes for your credential.                                     |
-| Callback URL    | Auto-filled automatically. This field is non-editable and pre-populated by appse ai. Use this URL to configure the Redirect URL while creating the Shopify App.   |
+| Field           | Description                                                                                                                                                     |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Connection Name | A name to help you identify this connection.                                                                                                                    |
+| Store Domain    | The domain of your Shopify store (e.g., `newstore`).                                                                                                            |
+| Client ID       | Obtained from your app's Settings page in the Shopify Dev Dashboard.                                                                                            |
+| Client Secret   | Obtained from your app's Settings page in the Shopify Dev Dashboard.                                                                                            |
+| Scope           | The OAuth 2.0 permission scopes for your credential.                                                                                                            |
+| Callback URL    | Auto-filled automatically. This field is non-editable and pre-populated by appse ai. Use this URL to configure the Redirect URL while creating the Shopify App. |
 
 ---
 
@@ -107,13 +107,14 @@ Add all scopes relevant to the actions and triggers you plan to use in your work
 
 Some actions need scopes beyond the defaults. Add them in the Shopify Dev Dashboard if you plan to use these actions:
 
-| Actions | Required Scopes |
-|------|-------------|
+| Actions              | Required Scopes                           |
+| -------------------- | ----------------------------------------- |
 | Draft Orders actions | `read_draft_orders`, `write_draft_orders` |
-| Returns actions | `read_returns`, `write_returns` |
-| Gift Cards actions | `read_gift_cards`, `write_gift_cards` |
-| Analytics actions | `read_reports` |
-| Payouts actions | `read_shopify_payments_payouts` |
+| Returns actions      | `read_returns`, `write_returns`           |
+| Gift Cards actions   | `read_gift_cards`, `write_gift_cards`     |
+| Analytics actions    | `read_reports`                            |
+| Payouts actions      | `read_shopify_payments_payouts`           |
+
 :::
 
 <img src="/img/credentials/shopify/s7.png" alt="Select scopes options" width="700"/>
@@ -125,9 +126,11 @@ Some actions need scopes beyond the defaults. Add them in the Shopify Dev Dashbo
 In the **Redirect URL** section, add the Callback URL exactly as displayed in the Shopify Credential form in appse ai platform:
 
 **For example**
+
 ```
 https://embedded-ui.appse.ai/oauth-callback.html
 ```
+
 <img src="/img/credentials/shopify/s8.png" alt="Redirect URL section" width="700"/>
 
 :::note
@@ -157,7 +160,7 @@ You will see:
 
 - **Client ID** — Copy this directly.
 - **Client Secret** — Click the copy button next to it.
-<img src="/img/credentials/shopify/s12.png" alt="Copy Client ID and Client Secret" width="700"/>
+  <img src="/img/credentials/shopify/s12.png" alt="Copy Client ID and Client Secret" width="700"/>
 
 :::caution
 Store both values securely. You will need them to complete the credential setup in appse ai.
@@ -168,20 +171,21 @@ Store both values securely. You will need them to complete the credential setup 
 #### Step 11: Configure the Credential Form in appse ai
 
 1. **Enter the Shop Subdomain**  
-   From the left-hand menu, click **Settings** at the bottom.
-  <img src="/img/credentials/shopify/s1.png" alt="Shopify settings option" width="700"/>
+    From the left-hand menu, click **Settings** at the bottom.
+   <img src="/img/credentials/shopify/s1.png" alt="Shopify settings option" width="700"/>
 
    The Shop Subdomain is displayed at the top of the sidebar menu.
    <img src="/img/credentials/shopify/s19.png" alt="Store Subdomain" width="700"/>
-   > **Example:** If your Shopify subdomain looks like **marcostore-9454.myshopify.com**, you only need to paste **marcostore-9454** in the credential form. 
 
-   <img src="/img/credentials/shopify/s14.png" alt="appse ai credential form - Store Subdomain field" width="700"/>
+   > **Example:** If your Shopify subdomain looks like **marcostore-9454.myshopify.com**, you only need to paste **marcostore-9454** in the credential form.
+
+    <img src="/img/credentials/shopify/s14.png" alt="appse ai credential form - Store Subdomain field" width="700"/>
 
 2. **Enter the Client Credentials**  
    Fill in the following details:
    - **Client ID**
    - **Client Secret**  
-   <img src="/img/credentials/shopify/s13.png" alt="appse ai credential form - Client ID and Client Secret fields" width="700"/>
+     <img src="/img/credentials/shopify/s13.png" alt="appse ai credential form - Client ID and Client Secret fields" width="700"/>
 
 3. **Save the Configuration**  
    Click on the **"Save"** button. A popup will appear prompting you to log in using your Shopify account.
@@ -190,7 +194,7 @@ Store both values securely. You will need them to complete the credential setup 
    Enter your Shopify Admin Account's:
    - **Email Address**
    - **Password**
-   <img src="/img/credentials/shopify/s17.png" alt="Shopify Oauth Login popup" width="700"/>
+     <img src="/img/credentials/shopify/s17.png" alt="Shopify Oauth Login popup" width="700"/>
 
 5. **Install the App**  
    After logging in, proceed to install the app you developed.
@@ -200,8 +204,8 @@ Store both values securely. You will need them to complete the credential setup 
 
 6. **Confirmation**  
    Once the installation is successful:
-   - The credentials will be authenticated  
-   - Saved securely  
+   - The credentials will be authenticated
+   - Saved securely
    - Displayed on the **Credentials** page with a green tick that confirms that the credential is successfully validated
 
    You can now use the credential for the required workflow integrations.  
@@ -218,11 +222,11 @@ Follow the steps below to quickly set up your Shopify credential using an Admin 
 
 You'll be asked to fill in the following details:
 
-| Field                  | Description                                                   |
-|------------------------|---------------------------------------------------------------|
-| Connection Name        | A name to help you identify this connection.                  |
-| Store Subdomain        | Your Shopify store subdomain ID.                              |
-| Admin API Access Token | Create a custom app in your Shopify account to obtain this.   |
+| Field                  | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| Connection Name        | A name to help you identify this connection.                |
+| Store Subdomain        | Your Shopify store subdomain ID.                            |
+| Admin API Access Token | Create a custom app in your Shopify account to obtain this. |
 
 First, log in to your [Shopify account](https://accounts.shopify.com/select?rid=539d146c-195f-4011-97ab-fe776d9c0e58). Then follow the step-by-step guide below.
 
@@ -355,27 +359,27 @@ New Company Created trigger is activated whenever a new company is created in Sh
 
 Click on **Continue** button
 
--------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                            |
+| ---------------- | ------------------------------------------------------------------------------------------------------ |
 | Fetch data since | Select the date and time to fetch newly created items from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                        |
 
 Click on **Continue**, then **Run** the node.
 
----------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/TC-NCMPNYC2.jpg" alt="Shopify New Company Created trigger example configuration" width="700" />
 
-
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -505,7 +509,8 @@ Click on **Continue**, then **Run** the node.
   }
 ]
 ```
-----------------
+
+---
 
 #### New Customers Created
 
@@ -517,18 +522,18 @@ New Customer Created trigger is activated whenever a new customer is created in 
 
 Click on **Continue** button
 
--------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                            |
+| ---------------- | ------------------------------------------------------------------------------------------------------ |
 | Fetch data since | Select the date and time to fetch newly created items from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                        |
 
 Click on **Continue**, then **Run** the node.
 
----------
+---
 
 ##### Example Configuration
 
@@ -536,9 +541,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -604,7 +610,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
+
+---
 
 #### Customers Updated
 
@@ -616,18 +623,18 @@ Customer Updated trigger is activated whenever a customer is updated in Shopify.
 
 Click on **Continue** button
 
-----------------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                      |
+| ---------------- | ------------------------------------------------------------------------------------------------ |
 | Fetch data since | Select the date and time to fetch updated items from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                  |
 
 Click on **Continue**, then **Run** the node.
 
----------
+---
 
 ##### Example Configuration
 
@@ -635,9 +642,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -703,8 +711,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
 
+---
 
 #### New Company Location Created
 
@@ -716,18 +724,18 @@ New Company Location Created trigger is activated whenever a new company locatio
 
 Click on **Continue** button
 
--------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                            |
+| ---------------- | ------------------------------------------------------------------------------------------------------ |
 | Fetch data since | Select the date and time to fetch newly created items from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                        |
 
 Click on **Continue**, then **Run** the node.
 
----------
+---
 
 ##### Example Configuration
 
@@ -735,9 +743,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -807,7 +816,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
+
+---
 
 #### New Products Created
 
@@ -819,18 +829,18 @@ New Product Created trigger is activated whenever a new product is created in Sh
 
 Click on **Continue** button
 
---------------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                            |
+| ---------------- | ------------------------------------------------------------------------------------------------------ |
 | Fetch data since | Select the date and time to fetch newly created items from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                        |
 
 Click on **Continue**, then **Run** the node.
 
-------------------
+---
 
 ##### Example Configuration
 
@@ -838,9 +848,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -917,7 +928,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
+
+---
 
 #### Products Updated
 
@@ -929,18 +941,18 @@ Products Updated trigger is activated whenever a product is updated in Shopify. 
 
 Click on **Continue** button
 
-------------------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                      |
+| ---------------- | ------------------------------------------------------------------------------------------------ |
 | Fetch data since | Select the date and time to fetch updated items from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                  |
 
 Click on **Continue**, then **Run** the node.
 
----------------------
+---
 
 ##### Example Configuration
 
@@ -948,9 +960,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
-------------------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -1027,7 +1040,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
+
+---
 
 #### New Orders Created
 
@@ -1039,18 +1053,18 @@ New Order Created trigger is activated whenever a new order is created in Shopif
 
 Click on **Continue** button
 
-----------------------------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                            |
+| ---------------- | ------------------------------------------------------------------------------------------------------ |
 | Fetch data since | Select the date and time to fetch newly created items from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                        |
 
 Click on **Continue**, then **Run** the node.
 
----------
+---
 
 ##### Example Configuration
 
@@ -1058,9 +1072,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -1229,7 +1244,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
+
+---
 
 #### Orders Updated
 
@@ -1237,14 +1253,14 @@ Orders Updated trigger is activated whenever an existing order is modified in Sh
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                       |
+| ---------------- | ------------------------------------------------------------------------------------------------- |
 | Fetch data since | Select the date and time to fetch updated orders from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                   |
 
 Click on **Continue**, then **Run** the node.
 
---------------
+---
 
 ##### Result
 
@@ -1292,7 +1308,8 @@ The result has the same structure as the [New Orders Created](#new-orders-create
   }
 ]
 ```
-----------------
+
+---
 
 #### Orders Cancelled
 
@@ -1304,18 +1321,18 @@ Orders Cancelled trigger is activated whenever an order is cancelled in Shopify.
 
 Click on **Continue** button
 
-----------------------------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                        |
+| ---------------- | -------------------------------------------------------------------------------------------------- |
 | Fetch data since | Select the date and time to fetch cancelled items from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                    |
 
 Click on **Continue**, then **Run** the node.
 
-------------------------
+---
 
 ##### Example Configuration
 
@@ -1323,9 +1340,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -1524,7 +1542,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
+
+---
 
 #### New Refund Created
 
@@ -1536,18 +1555,18 @@ New Refund Created trigger is activated whenever a new refund is created in Shop
 
 Click on **Continue** button
 
--------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                              |
+| ---------------- | -------------------------------------------------------------------------------------------------------- |
 | Fetch data since | Select the date and time to fetch newly created refunds from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                          |
 
 Click on **Continue**, then **Run** the node.
 
----------
+---
 
 ##### Example Configuration
 
@@ -1555,9 +1574,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -1776,7 +1796,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
+
+---
 
 #### New Return Created
 
@@ -1788,18 +1809,18 @@ New Return Created trigger is activated whenever a new return is created in Shop
 
 Click on **Continue** button
 
---------------------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                              |
+| ---------------- | -------------------------------------------------------------------------------------------------------- |
 | Fetch data since | Select the date and time to fetch newly created returns from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                          |
 
 Click on **Continue**, then **Run** the node.
 
----------------------
+---
 
 ##### Example Configuration
 
@@ -1807,9 +1828,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -2052,7 +2074,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
+
+---
 
 #### New Abandoned Checkout
 
@@ -2064,18 +2087,18 @@ New Abandoned Checkout trigger is activated whenever a new abandoned checkout is
 
 Click on **Continue** button
 
--------------
+---
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------ |
 | Fetch data since | Select the date and time to fetch newly abandoned checkouts from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                              |
 
 Click on **Continue**, then **Run** the node.
 
----------------------
+---
 
 ##### Example Configuration
 
@@ -2083,9 +2106,10 @@ Click on **Continue**, then **Run** the node.
 The configuration fields are the same for all triggers — refer to the screenshot above.
 :::
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -2123,7 +2147,8 @@ The configuration fields are the same for all triggers — refer to the screensh
   }
 ]
 ```
-----------------
+
+---
 
 #### Fulfillment Created
 
@@ -2131,15 +2156,15 @@ Fulfillment Created trigger is activated whenever an order is fulfilled in Shopi
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
-| Fulfillment Status | Select which orders to fetch: **Partially Fulfilled** or **Fully Fulfilled**. |
-| Fetch data since | Select the date and time to fetch fulfilled orders updated from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Field              | Description                                                                                                 |
+| ------------------ | ----------------------------------------------------------------------------------------------------------- |
+| Fulfillment Status | Select which orders to fetch: **Partially Fulfilled** or **Fully Fulfilled**.                               |
+| Fetch data since   | Select the date and time to fetch fulfilled orders updated from that point onward. (e.g., 27/03/2026 06:51) |
+| Limit              | Set the maximum number of items to retrieve per run. (e.g., 10)                                             |
 
 Click on **Continue**, then **Run** the node.
 
---------------
+---
 
 ##### Result
 
@@ -2173,7 +2198,8 @@ Returns the fulfilled orders, with the same structure as the [Orders Updated](#o
   }
 ]
 ```
-----------------
+
+---
 
 #### New Draft Orders Created
 
@@ -2181,14 +2207,14 @@ New Draft Orders Created trigger is activated whenever a new draft order is crea
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------- |
 | Fetch data since | Select the date and time to fetch newly created draft orders from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                               |
 
 Click on **Continue**, then **Run** the node.
 
---------------
+---
 
 ##### Result
 
@@ -2233,7 +2259,8 @@ Click on **Continue**, then **Run** the node.
   }
 ]
 ```
-----------------
+
+---
 
 #### New Gift Cards Created
 
@@ -2241,14 +2268,14 @@ New Gift Cards Created trigger is activated whenever a new gift card is issued i
 
 ##### Configuration Fields
 
-| Field          | Description |
-|---------------|------------|
+| Field            | Description                                                                                                 |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- |
 | Fetch data since | Select the date and time to fetch newly created gift cards from that point onward. (e.g., 27/03/2026 06:51) |
-| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                             |
 
 Click on **Continue**, then **Run** the node.
 
---------------
+---
 
 ##### Result
 
@@ -2281,7 +2308,8 @@ Click on **Continue**, then **Run** the node.
   }
 ]
 ```
-----------------
+
+---
 
  </TabItem>
 
@@ -2352,10 +2380,10 @@ Click on **Continue**, then **Run** the node.
   - [Update Catalog Context](#update-catalog-context)
 - **Metafields**
   - [Add and Update Metafields](#add-and-update-metafields)
-  - [Search Records by Metafield](#search-records-by-metafield)
-  - [Search for a Record by Custom ID](#search-for-a-record-by-custom-id)
+  - [Search records by metafield](#search-records-by-metafield)
+  - [Search for a record by custom ID](#search-for-a-record-by-custom-id)
 - **Tags**
-  - [Search Records by Tag](#search-records-by-tag)
+  - [Search records by tag](#search-records-by-tag)
 - **Payouts**
   - [Get Payouts by Status](#get-payouts-by-status)
   - [Get Payout Balance Transactions](#get-payout-balance-transactions)
@@ -2391,12 +2419,12 @@ Get Customer by Email action retrieves customer details using the email address.
 
 Click on **Continue** button
 
------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field | Description                                                      |
+| ----- | ---------------------------------------------------------------- |
 | Email | Enter the customer email address. (e.g., "john.doe@example.com") |
 
 :::note
@@ -2405,13 +2433,13 @@ If no customer is found with the provided email, the response will be empty or n
 
 Click on **Continue**, then click **Run** node.
 
------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-GCUSTMRbyEmail2.jpg" alt="Shopify Get Customer by Email action example configuration" width="700"  />
 
-------------
+---
 
 ##### Result
 
@@ -2491,13 +2519,14 @@ The Update Customer action is used to modify an existing customer's details such
 
 Click on **Continue** button
 
------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field       | Description                                                                       |
+| ----------- | --------------------------------------------------------------------------------- |
 | Customer Id | Unique identifier of the customer. (e.g., "gid://shopify/Customer/9304271749292") |
+
 | Optional Fields
 Email | Update the customer email address. (e.g., "work.space@yopmail.com") |
 | First Name | Customer's first name. (e.g., "Work") |
@@ -2518,16 +2547,17 @@ Only the fields provided will be updated. Ensure the correct Customer Id is used
 
 Click on **Continue**, then click **Run** node.
 
--------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-UCUSTMR12.jpg" alt="Shopify Update Customer action example configuration" width="700"  />
 <img src="/img/credentials/shopify/AC-UCUSTMR13.jpg" alt="Shopify Update Customer action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -2601,7 +2631,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------------------
+
+---
 
 #### Create a Customer
 
@@ -2613,13 +2644,14 @@ Create a Customer action is used to create a new customer record with basic cont
 
 Click on **Continue** button
 
---------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field | Description                                                        |
+| ----- | ------------------------------------------------------------------ |
 | Email | Enter the customer email address. (e.g., "alex.chris@yopmail.com") |
+
 | Optional Fields
 First Name | Customer's first name. (e.g., "Chris") |
 | Last Name | Customer's last name. (e.g., "Alex") |
@@ -2641,16 +2673,17 @@ Email is required for creating a customer. Other fields are optional and can be 
 
 Click on **Continue**, then click **Run** node.
 
--------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-CRTCUSTMR15.jpg" alt="Shopify Create Customer action example configuration" width="700"  />
 <img src="/img/credentials/shopify/AC-CRTCUSTMR16.jpg" alt="Shopify Create Customer action example configuration" width="700"  />
 
---------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -2706,7 +2739,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
----------------
+
+---
 
 ### Companies Actions
 
@@ -2720,12 +2754,12 @@ Create Company action is used to create a new company record in the system. It h
 
 Click on **Continue** button
 
----------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field        | Description                                          |
+| ------------ | ---------------------------------------------------- |
 | Company Name | Enter the name of the company. (e.g., "Libas Store") |
 
 :::note
@@ -2734,13 +2768,13 @@ Company Name is required. Additional details can be added later by updating the 
 
 Click on **Continue**, then click **Run** node.
 
------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-CCMPNY20.jpg" alt="Shopify Create Company action example configuration" width="700"  />
 
--------
+---
 
 ##### Result
 
@@ -2760,14 +2794,13 @@ Click on **Continue**, then click **Run** node.
           "name": "Ordering only"
         }
       ],
-      "locations": [
-        {}
-      ]
+      "locations": [{}]
     }
   }
 ]
 ```
------------------
+
+---
 
 #### Create Company Location
 
@@ -2779,15 +2812,16 @@ Create Company Location action is used to add a new location for a company, incl
 
 Click on **Continue** button
 
------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field      | Description                                                                   |
+| ---------- | ----------------------------------------------------------------------------- |
 | Company ID | Unique identifier of the company. (e.g., "gid://shopify/Company/13819740332") |
-| Name | Name of the company location. (e.g., "Libas Store") |
-| Note | Additional notes for the location. (e.g., "Libas Store") |
+| Name       | Name of the company location. (e.g., "Libas Store")                           |
+| Note       | Additional notes for the location. (e.g., "Libas Store")                      |
+
 | Shipping Address
 Country Code | Country code for the address. (e.g., "US") |
 | Optional Fields
@@ -2807,14 +2841,14 @@ Ensure the Company ID is valid before creating a location. Country Code is requi
 
 Click on **Continue**, then click **Run** node.
 
------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-CCMPNYLCTON22.jpg" alt="Shopify Create Company Location action example configuration" width="700"  />
 <img src="/img/credentials/shopify/AC-CCMPNYLCTON23.jpg" alt="Shopify Create Company Location action example configuration" width="700"  />
 
--------------------
+---
 
 ##### Result
 
@@ -2857,7 +2891,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
-----------
+
+---
 
 #### Create Company Contact
 
@@ -2869,14 +2904,15 @@ Create Company Contact action is used to create a contact person associated with
 
 Click on **Continue** button
 
---------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field      | Description                                                                  |
+| ---------- | ---------------------------------------------------------------------------- |
 | Company ID | Unique identifier of the company. (e.g., "gid://shopify/Company/3348889772") |
-| Email | Enter the contact email address. (e.g., "alex.deny@yopmail.com") |
+| Email      | Enter the contact email address. (e.g., "alex.deny@yopmail.com")             |
+
 | Optional Fields
 First Name | Contact person's first name. (e.g., "Deny") |
 | Last Name | Contact person's last name. (e.g., "Veny") |
@@ -2890,13 +2926,13 @@ Ensure the Company ID is valid before creating the contact. Email is typically r
 
 Click on **Continue**, then click **Run** node.
 
----------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-CCMPNYCNTCTN18.jpg" alt="Shopify Create Company Contact action example configuration" width="700"  />
 
--------------------
+---
 
 ##### Result
 
@@ -2920,7 +2956,9 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
---------------
+
+---
+
 #### Get Company Contact by ID
 
 Get Company Contact by ID action retrieves details of a specific company contact using its unique identifier.
@@ -2931,12 +2969,12 @@ Get Company Contact by ID action retrieves details of a specific company contact
 
 Click on **Continue** button
 
-----------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field              | Description                                                                                           |
+| ------------------ | ----------------------------------------------------------------------------------------------------- |
 | Company Contact ID | Enter the unique identifier of the company contact. (e.g., "gid://shopify/CompanyContact/1304559788") |
 
 :::note
@@ -2945,13 +2983,13 @@ If no contact is found for the provided ID, the response will be empty or null.
 
 Click on **Continue**, then click **Run** node.
 
------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-GCMPNYCNTCTbyID25.jpg" alt="Shopify Get Company Contact by ID action example configuration" width="700"  />
 
----------
+---
 
 ##### Result
 
@@ -2982,7 +3020,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------
+
+---
 
 #### Get Company by Company ID
 
@@ -2994,12 +3033,12 @@ Get Company by Company ID action retrieves detailed information of a specific co
 
 Click on **Continue** button
 
--------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field      | Description                                                                             |
+| ---------- | --------------------------------------------------------------------------------------- |
 | Company ID | Enter the unique identifier of the company. (e.g., "gid://shopify/Company/13819740332") |
 
 :::note
@@ -3008,13 +3047,13 @@ If no company is found for the provided ID, the response will be empty or null.
 
 Click on **Continue**, then click **Run** node.
 
--------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-GCMPNYbyCMPNYID27.jpg" alt="Shopify Get Company by Company ID action example configuration" width="700"  />
 
-------------------
+---
 
 ##### Result
 
@@ -3112,7 +3151,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
----------------
+
+---
 
 #### Get Locations by Company ID
 
@@ -3124,14 +3164,14 @@ Get Locations by Company ID action retrieves all locations associated with a spe
 
 Click on **Continue** button
 
----------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field      | Description                                                                             |
+| ---------- | --------------------------------------------------------------------------------------- |
 | Company ID | Enter the unique identifier of the company. (e.g., "gid://shopify/Company/13819740332") |
-| Limit | Define the maximum number of location records to retrieve. (e.g., "10") |
+| Limit      | Define the maximum number of location records to retrieve. (e.g., "10")                 |
 
 :::note
 If no locations are found for the provided Company ID, the response will be empty or null. The result is limited based on the specified value.
@@ -3139,13 +3179,13 @@ If no locations are found for the provided Company ID, the response will be empt
 
 Click on **Continue**, then click **Run** node.
 
---------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-GLCTONbyCMPNYID30.jpg" alt="Shopify Get Locations by Company ID action example configuration" width="700"  />
 
------------------
+---
 
 ##### Result
 
@@ -3182,12 +3222,12 @@ Get Company Payment Terms action retrieves the payment terms configured for a sp
 
 Click on **Continue** button
 
-------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field      | Description                                                                             |
+| ---------- | --------------------------------------------------------------------------------------- |
 | Company ID | Enter the unique identifier of the company. (e.g., "gid://shopify/Company/13819674796") |
 
 :::note
@@ -3196,13 +3236,13 @@ If no payment terms are configured for the provided Company ID, the response may
 
 Click on **Continue**, then click **Run** node.
 
-------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-GCMPNYPYMNTTERM32.jpg" alt="Shopify Get Company Payment Terms action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -3246,12 +3286,12 @@ Get Company by External ID action retrieves company details using an external id
 
 Click on **Continue** button
 
-------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field       | Description                                                        |
+| ----------- | ------------------------------------------------------------------ |
 | External ID | Enter the external identifier of the company. (e.g., "Nayasa-111") |
 
 :::note
@@ -3260,13 +3300,13 @@ If no company is found for the provided External ID, the response will be empty 
 
 Click on **Continue**, then click **Run** node.
 
------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-GCMPNYEXTRNLID34.jpg" alt="Shopify Get Company by External ID action example configuration" width="700"  />
 
-----------------------
+---
 
 ##### Result
 
@@ -3313,7 +3353,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
-------------------
+
+---
 
 ### Products Actions
 
@@ -3327,13 +3368,13 @@ Create Product action is used to create a new product record in Shopify with bas
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Title | Enter the product title. (e.g., "OnePlus 13R") |
+| Field       | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| Title       | Enter the product title. (e.g., "OnePlus 13R")               |
 | Description | Provide the product description. (e.g., "OnePlus13R Mobile") |
 
 :::note
@@ -3344,7 +3385,7 @@ Title is required to create the product. Additional details such as variants, pr
 
 <img src="/img/credentials/shopify/AC-CPRDT36.jpg" alt="Shopify Create Product action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -3416,13 +3457,14 @@ Update Product action is used to update an existing product record in Shopify us
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field      | Description                                                                           |
+| ---------- | ------------------------------------------------------------------------------------- |
 | Product ID | Enter the Shopify product ID to update. (e.g., "gid://shopify/Product/8536686002348") |
+
 | Optional Fields
 Title | Enter the updated product title. (e.g., "OnePlus 13R - Updated") |
 | Description | Provide the updated product description. (e.g., "OnePlus13R Mobile - Updated Description") |
@@ -3435,7 +3477,7 @@ Product ID is required to update a product. Any field left empty will remain unc
 
 <img src="/img/credentials/shopify/AC-UPRDT38.jpg" alt="Shopify Update Product action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -3498,13 +3540,13 @@ Publish a Product action is used to publish an existing Shopify product to a sel
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Product ID | Enter the Shopify product ID to publish. (e.g., "gid://shopify/Product/8536686002348") |
+| Field          | Description                                                                                                                      |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Product ID     | Enter the Shopify product ID to publish. (e.g., "gid://shopify/Product/8536686002348")                                           |
 | Publication ID | Enter the publication (sales channel) ID where the product should be published. (e.g., "gid://shopify/Publication/123613773996") |
 
 :::note
@@ -3515,7 +3557,7 @@ Product ID and Publication ID are required. If the product is already published 
 
 <img src="/img/credentials/shopify/AC-PBLSHPRDT40.jpg" alt="Shopify Publish Product action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -3545,12 +3587,12 @@ Get Product by Default Variant SKU action is used to fetch product details in Sh
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field       | Description                                                                 |
+| ----------- | --------------------------------------------------------------------------- |
 | Product SKU | Enter the default variant SKU to fetch product details. (e.g., "ONEPLUS-R") |
 
 :::note
@@ -3561,7 +3603,7 @@ Default Variant SKU is required. If no product matches the SKU, the response may
 
 <img src="/img/credentials/shopify/AC-GPRDTbySKU42.jpg" alt="Shopify Get Product by SKU action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -3614,6 +3656,7 @@ Default Variant SKU is required. If no product matches the SKU, the response may
   }
 ]
 ```
+
 ---
 
 #### Create Product with Options and Media
@@ -3630,16 +3673,16 @@ Click on **Continue** button.
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|--------------|
-| Title | Specify the product title or name. (e.g., `IQ-V1`) |
-| Description | Enter the product description with details about the product features or specifications. (e.g., `IQ Mobile - Colour(Sea blue) Looks smart and Performance was good`) |
-| Product Type | Specify the category or type of the product. (e.g., `T-Shirt`) |
-| Status | Define the product status in Shopify. (e.g., `ACTIVE`) |
-| Media | Configure one or more media items for the product. |
-| Source URL | Specify the Shopify file URL for the media asset. (e.g., `https://cdn.shopify.com/s/files/1/0000/0000/0000/files/example-product.jpg`) |
-| Media Content Type | Select the type of media content to upload. (e.g., `Image`) |
-| Alt Text | Specify alternative text for the media asset to improve accessibility and SEO. (e.g., `Mobileimg`) |
+| Field              | Description                                                                                                                                                          |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title              | Specify the product title or name. (e.g., `IQ-V1`)                                                                                                                   |
+| Description        | Enter the product description with details about the product features or specifications. (e.g., `IQ Mobile - Colour(Sea blue) Looks smart and Performance was good`) |
+| Product Type       | Specify the category or type of the product. (e.g., `T-Shirt`)                                                                                                       |
+| Status             | Define the product status in Shopify. (e.g., `ACTIVE`)                                                                                                               |
+| Media              | Configure one or more media items for the product.                                                                                                                   |
+| Source URL         | Specify the Shopify file URL for the media asset. (e.g., `https://cdn.shopify.com/s/files/1/0000/0000/0000/files/example-product.jpg`)                               |
+| Media Content Type | Select the type of media content to upload. (e.g., `Image`)                                                                                                          |
+| Alt Text           | Specify alternative text for the media asset to improve accessibility and SEO. (e.g., `Mobileimg`)                                                                   |
 
 :::note
 Title and Media fields are mandatory. Multiple media items can be added if required.
@@ -3650,6 +3693,7 @@ Click on **Continue**, then **Run** node.
 ---
 
 ##### Example Configuration
+
 <img src="/img/credentials/shopify/AC-CreatePrdouctwithMedia1.jpg" alt="Shopify Create Product with Options and Media - Example Configuration" width="700" />
 <img src="/img/credentials/shopify/AC-CreatePrdoctwithMedia2.jpg" alt="Shopify Create Product with Options and Media - Example Configuration" width="700" />
 
@@ -3748,6 +3792,7 @@ Click on **Continue**, then **Run** node.
   }
 ]
 ```
+
 ---
 
 ### Product Variants Actions
@@ -3762,16 +3807,16 @@ Update Product Variants action is used to update an existing product variant in 
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Variant ID | Enter the Shopify variant ID to update. (e.g., "gid://shopify/ProductVariant/46181637980332") |
-| Price (Optional) | Enter the updated variant price. (e.g., "100") |
-| SKU (Optional) | Enter the updated SKU value. (e.g., "ONEPLUS-R") |
-| Tracked (Optional) | Set inventory tracking to `TRUE` or `FALSE`. (e.g., `TRUE`) |
+| Field              | Description                                                                                   |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| Variant ID         | Enter the Shopify variant ID to update. (e.g., "gid://shopify/ProductVariant/46181637980332") |
+| Price (Optional)   | Enter the updated variant price. (e.g., "100")                                                |
+| SKU (Optional)     | Enter the updated SKU value. (e.g., "ONEPLUS-R")                                              |
+| Tracked (Optional) | Set inventory tracking to `TRUE` or `FALSE`. (e.g., `TRUE`)                                   |
 
 :::note
 Variant ID is required. Only the provided optional fields are updated; other values remain unchanged. In this example, `Tracked` is selected as `TRUE`.
@@ -3781,7 +3826,7 @@ Variant ID is required. Only the provided optional fields are updated; other val
 
 <img src="/img/credentials/shopify/AC-UPRDTVRNT44.jpg" alt="Shopify Update Product Variant action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -3816,16 +3861,16 @@ Create Bulk Product Variants action creates multiple variants for an existing pr
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Product ID | The product to create variants for. (e.g., "gid://shopify/Product/8536686002348") |
-| Variants → Price | Selling price of the variant. (e.g., "150.00") |
-| Variants → Compare At Price | Original price shown as strikethrough. (e.g., "180.00") |
-| Variants → Barcode | Barcode (ISBN, UPC, GTIN, etc.). |
-| Variants → Taxable | Whether the variant is taxable. |
-| Variants → Inventory Item | SKU, cost, tracking flag, and weight (value and unit) for the variant. |
-| Variants → Inventory Quantities | Available quantity per Location ID. |
-| Variants → Option Values | Option name and value that define the variant. (e.g., Color: Red) |
+| Field                           | Description                                                                       |
+| ------------------------------- | --------------------------------------------------------------------------------- |
+| Product ID                      | The product to create variants for. (e.g., "gid://shopify/Product/8536686002348") |
+| Variants → Price                | Selling price of the variant. (e.g., "150.00")                                    |
+| Variants → Compare At Price     | Original price shown as strikethrough. (e.g., "180.00")                           |
+| Variants → Barcode              | Barcode (ISBN, UPC, GTIN, etc.).                                                  |
+| Variants → Taxable              | Whether the variant is taxable.                                                   |
+| Variants → Inventory Item       | SKU, cost, tracking flag, and weight (value and unit) for the variant.            |
+| Variants → Inventory Quantities | Available quantity per Location ID.                                               |
+| Variants → Option Values        | Option name and value that define the variant. (e.g., Color: Red)                 |
 
 :::note
 Option names must already exist on the product. Each variant needs a unique combination of option values.
@@ -3833,7 +3878,7 @@ Option names must already exist on the product. Each variant needs a unique comb
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -3863,7 +3908,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 ### Inventory Actions
 
@@ -3877,13 +3923,14 @@ Activate Inventory Locations action is used to activate a specific inventory loc
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field             | Description                                                                               |
+| ----------------- | ----------------------------------------------------------------------------------------- |
 | Inventory Item Id | Enter the inventory item identifier. (e.g., "gid://shopify/InventoryItem/48275854885036") |
+
 | Items (Inventory Update)
 Location ID | Enter the Shopify location ID to activate. (e.g., "gid://shopify/Location/71342817452") |
 | Activate | Set to `TRUE` to activate the inventory location. (e.g., `TRUE`) |
@@ -3896,7 +3943,7 @@ All fields are required. In this example, `Activate` is set to `TRUE` to enable 
 
 <img src="/img/credentials/shopify/AC-ACTVTINVTRYLCTON46.jpg" alt="Shopify Activate Inventory Location action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -3925,7 +3972,8 @@ All fields are required. In this example, `Activate` is set to `TRUE` to enable 
   }
 ]
 ```
-------------
+
+---
 
 #### Update Product Inventory
 
@@ -3937,15 +3985,16 @@ Update Product Inventory action is used to update inventory quantities for a spe
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Inventory Name | Enter the inventory quantity type to update. (e.g., "available") |
-| Reason | Enter the reason for the inventory adjustment. (e.g., "correction") |
+| Field                   | Description                                                          |
+| ----------------------- | -------------------------------------------------------------------- |
+| Inventory Name          | Enter the inventory quantity type to update. (e.g., "available")     |
+| Reason                  | Enter the reason for the inventory adjustment. (e.g., "correction")  |
 | Ignore Compare Quantity | Set to `TRUE` to skip comparison quantity validation. (e.g., `TRUE`) |
+
 | Quantities (Item)
 Inventory Item ID | Enter the Shopify inventory item ID. (e.g., "gid://shopify/InventoryItem/48275854885036") |
 | Location ID | Enter the Shopify location ID where inventory will be updated. (e.g., "gid://shopify/Location/71342817452") |
@@ -3959,7 +4008,7 @@ All fields are required. `Quantities` supports multiple items; in this example, 
 
 <img src="/img/credentials/shopify/AC-UPDTQNTY48.jpg" alt="Shopify Update Quantity action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -3994,7 +4043,8 @@ All fields are required. `Quantities` supports multiple items; in this example, 
   }
 ]
 ```
----------------
+
+---
 
 #### Adjust Inventory Quantities
 
@@ -4002,19 +4052,19 @@ Adjust Inventory Quantities action changes inventory levels by a delta for one o
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Inventory Quantity Name | The quantity to adjust, such as **Available**, **On Hand**, **Incoming**, **Reserved**, **Committed**, **Damaged**, **Quality Control**, or **Safety Stock**. |
-| Reason | Reason for the adjustment, such as **Correction**, **Cycle Count**, **Damaged**, **Received**, **Restock**, **Shrinkage**, or **Other**. |
-| Reference Document URI | Optional link to the source document. (e.g., "gid://erp/StockAdjustment/1001") |
-| Changes → Inventory Item ID | Inventory item to adjust. (e.g., "gid://shopify/InventoryItem/45577551904940") |
-| Changes → Location ID | Location where the change applies. (e.g., "gid://shopify/Location/71018905772") |
-| Changes → Delta | Amount to add (positive) or remove (negative). (e.g., -2) |
-| Changes → Change From Quantity | The quantity you expect before the change. Shopify rejects the change if the current quantity differs. (e.g., 20) |
+| Field                          | Description                                                                                                                                                   |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Inventory Quantity Name        | The quantity to adjust, such as **Available**, **On Hand**, **Incoming**, **Reserved**, **Committed**, **Damaged**, **Quality Control**, or **Safety Stock**. |
+| Reason                         | Reason for the adjustment, such as **Correction**, **Cycle Count**, **Damaged**, **Received**, **Restock**, **Shrinkage**, or **Other**.                      |
+| Reference Document URI         | Optional link to the source document. (e.g., "gid://erp/StockAdjustment/1001")                                                                                |
+| Changes → Inventory Item ID    | Inventory item to adjust. (e.g., "gid://shopify/InventoryItem/45577551904940")                                                                                |
+| Changes → Location ID          | Location where the change applies. (e.g., "gid://shopify/Location/71018905772")                                                                               |
+| Changes → Delta                | Amount to add (positive) or remove (negative). (e.g., -2)                                                                                                     |
+| Changes → Change From Quantity | The quantity you expect before the change. Shopify rejects the change if the current quantity differs. (e.g., 20)                                             |
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -4041,7 +4091,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 ### Locations Actions
 
@@ -4055,12 +4106,12 @@ Get List of Locations action is used to retrieve a list of inventory locations c
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field | Description                                                     |
+| ----- | --------------------------------------------------------------- |
 | Limit | Enter the maximum number of locations to retrieve. (e.g., "10") |
 
 :::note
@@ -4071,7 +4122,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-GTLSTLCTONS50.jpg" alt="Shopify Get List of Locations action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4113,12 +4164,18 @@ Click on **Continue** button
       "address2": "Vijayalakshmi Nagara1",
       "city": "Hyderabad",
       "country": "India",
-      "formatted": ["Ameerpet1", "Vijayalakshmi Nagara1", "500016 Hyderabad TS", "India"]
+      "formatted": [
+        "Ameerpet1",
+        "Vijayalakshmi Nagara1",
+        "500016 Hyderabad TS",
+        "India"
+      ]
     }
   }
 ]
 ```
---------------
+
+---
 
 ### Price Lists Actions
 
@@ -4132,18 +4189,18 @@ Create Price List action is used to create a custom price list in Shopify with c
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Price List Name | Enter the name of the price list. (e.g., "VIPs' Customer Price") |
-| Currency Code | Enter the currency code for this price list. (e.g., "USD") |
-| Parent Adjustment | Configure parent-level adjustment details for the price list. |
-| Adjustment | Select and configure the adjustment block under Parent Adjustment. |
-| Adjustment Type | Select the adjustment type. (e.g., `PERCENTAGE_INCREASE`) |
-| Adjustment Value | Enter the adjustment value. (e.g., "10") |
+| Field             | Description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| Price List Name   | Enter the name of the price list. (e.g., "VIPs' Customer Price")   |
+| Currency Code     | Enter the currency code for this price list. (e.g., "USD")         |
+| Parent Adjustment | Configure parent-level adjustment details for the price list.      |
+| Adjustment        | Select and configure the adjustment block under Parent Adjustment. |
+| Adjustment Type   | Select the adjustment type. (e.g., `PERCENTAGE_INCREASE`)          |
+| Adjustment Value  | Enter the adjustment value. (e.g., "10")                           |
 
 :::note
 All fields are required. In this example, prices are increased by 10% using `PERCENTAGE_INCREASE`.
@@ -4153,7 +4210,7 @@ All fields are required. In this example, prices are increased by 10% using `PER
 
 <img src="/img/credentials/shopify/AC-GTPRCELST52.jpg" alt="Shopify Get Price List action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4175,7 +4232,8 @@ All fields are required. In this example, prices are increased by 10% using `PER
   }
 ]
 ```
---------------
+
+---
 
 #### Add Fixed Prices to Price List
 
@@ -4187,13 +4245,14 @@ Add Fixed Prices to Price List action is used to add fixed variant pricing to an
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field         | Description                                                                    |
+| ------------- | ------------------------------------------------------------------------------ |
 | Price List ID | Enter the Shopify price list ID. (e.g., "gid://shopify/PriceList/24368971948") |
+
 | Prices - (Item)
 Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/46181637980332") |
 | Price Amount | Enter the fixed price amount. (e.g., "150") |
@@ -4207,7 +4266,7 @@ All fields are required. In this example, one fixed price item is added for the 
 
 <img src="/img/credentials/shopify/AC_GTADDFXPRCLST54.jpg" alt="Shopify Get Add Fixed Price List action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4225,7 +4284,8 @@ All fields are required. In this example, one fixed price item is added for the 
   }
 ]
 ```
---------------
+
+---
 
 #### Update Price List Fixed Prices
 
@@ -4237,13 +4297,14 @@ Update Price List Fixed Prices action is used to update fixed prices in an exist
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field         | Description                                                                    |
+| ------------- | ------------------------------------------------------------------------------ |
 | Price List ID | Enter the Shopify price list ID. (e.g., "gid://shopify/PriceList/24368971948") |
+
 | Prices to Add / Update
 Variant ID | Enter the product variant identifier. (e.g., "gid://shopify/ProductVariant/46181637980332") |
 | Price Amount | Specify the fixed price amount. (e.g., "190") |
@@ -4260,7 +4321,7 @@ Variant ID | Enter the variant identifier to remove fixed pricing from the price
 <img src="/img/credentials/shopify/AC-UPDTFXDPRCLST56.jpg" alt="Shopify Update Fixed Price List action example configuration" width="700"  />
 <img src="/img/credentials/shopify/AC-UPDTFXDPRCLST57.jpg" alt="Shopify Update Fixed Price List action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4279,7 +4340,8 @@ Variant ID | Enter the variant identifier to remove fixed pricing from the price
   }
 ]
 ```
---------------
+
+---
 
 #### Delete Price List Fixed Prices
 
@@ -4291,13 +4353,14 @@ Delete Price List Fixed Prices action is used to delete fixed prices for one or 
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field         | Description                                                                    |
+| ------------- | ------------------------------------------------------------------------------ |
 | Price List ID | Enter the Shopify price list ID. (e.g., "gid://shopify/PriceList/24368971948") |
+
 | Variant IDs - Item
 Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/46181637980332") |
 
@@ -4309,7 +4372,7 @@ Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/
 
 <img src="/img/credentials/shopify/AC-DLTFXDPRCLIST59.jpg" alt="Shopify Delete Fixed Price List action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4328,7 +4391,8 @@ Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/
   }
 ]
 ```
---------------
+
+---
 
 #### Get Price List by Catalog ID
 
@@ -4340,12 +4404,12 @@ Get Price List by Catalog ID action is used to retrieve price list details assoc
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field      | Description                                                                              |
+| ---------- | ---------------------------------------------------------------------------------------- |
 | Catalog ID | Enter the Shopify catalog ID. (e.g., "gid://shopify/CompanyLocationCatalog/64039649452") |
 
 :::note
@@ -4356,7 +4420,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-GTPRCLSTbyCATLOG85.jpg" alt="Shopify Get Price List by Catalog action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4394,7 +4458,8 @@ Click on **Continue** button
   }
 ]
 ```
---------------
+
+---
 
 ### Markets Actions
 
@@ -4408,12 +4473,12 @@ Create Market action is used to create a new market in Shopify.
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field       | Description                          |
+| ----------- | ------------------------------------ |
 | Market Name | Enter the market name. (e.g., "USA") |
 
 :::note
@@ -4424,7 +4489,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-CRTMRKT61.jpg" alt="Shopify Create Market action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4454,7 +4519,8 @@ Click on **Continue** button
   }
 ]
 ```
---------------
+
+---
 
 #### Get List of Markets
 
@@ -4466,12 +4532,12 @@ Get List of Markets action is used to fetch the list of markets from Shopify.
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field | Description                                                          |
+| ----- | -------------------------------------------------------------------- |
 | Limit | Enter the maximum number of market records to retrieve. (e.g., "10") |
 
 :::note
@@ -4482,7 +4548,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-GTLSTALLMRKT63.jpg" alt="Shopify Get List of Markets action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4542,7 +4608,8 @@ Click on **Continue** button
   }
 ]
 ```
---------------
+
+---
 
 ### Discounts Actions
 
@@ -4556,17 +4623,18 @@ Create Discount Code action is used to create a new discount code in Shopify wit
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Title | Enter the discount title. (e.g., "SUMMER DIS") |
+| Field         | Description                                                        |
+| ------------- | ------------------------------------------------------------------ |
+| Title         | Enter the discount title. (e.g., "SUMMER DIS")                     |
 | Discount Code | Enter the discount code customers will use. (e.g., "SMR DISCOUNT") |
-| Starts At | Enter the discount start date and time. (e.g., "24/04/2026 13:05") |
+| Starts At     | Enter the discount start date and time. (e.g., "24/04/2026 13:05") |
+
 | Customer Selection (Optionals)
- All Customers | Set to `True` to apply discount to all customers. (e.g., `True`) |
+All Customers | Set to `True` to apply discount to all customers. (e.g., `True`) |
 | Customer Gets (Discount Items) | Configure what the customer receives with this discount.
 All Items | Set to `True` to apply discount to all items. (e.g., `True`) |
 | Discount Value (Optional) | Configure the discount value settings.
@@ -4581,7 +4649,7 @@ Percentage | Enter the discount percentage value. (e.g., "1") |
 <img src="/img/credentials/shopify/AC-CRTDISC65.jpg" alt="Shopify Create Discount action example configuration" width="700"  />
 <img src="/img/credentials/shopify/AC-CRTDISC66.jpg" alt="Shopify Create Discount action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4623,7 +4691,8 @@ Percentage | Enter the discount percentage value. (e.g., "1") |
   }
 ]
 ```
---------------
+
+---
 
 ### Orders Actions
 
@@ -4633,28 +4702,28 @@ Create Order action creates a real sales order in Shopify — not a draft awaiti
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Line Items | **Required.** At least one item. Map a Variant ID and Quantity for catalog items, or a Title, Quantity, and Price for custom items. Optional SKU, vendor, properties, and tax lines. |
-| Customer | Attach an existing customer (**Associate Customer → Customer ID**), or create/update one (**Upsert Customer** with email, name, phone, tags). |
-| Email / Phone | Contact details recorded on the order. |
-| Financial Status | Payment state, such as **Pending**, **Authorized**, **Paid**, or **Partially Paid**. Derived from Transactions when left unmapped. |
-| Fulfillment Status | **Fulfilled**, **Partial**, or **Restocked**. Defaults to unfulfilled. |
-| Processed At | When the order was placed in the source system. |
-| Currency / Presentment Currency | Order currency. Defaults to the store currency. |
-| Shipping Address / Billing Address | Name, company, address lines, city, province code, country code, ZIP, and phone. |
-| Shipping Lines | Shipping method title, price, carrier code, and tax lines. |
-| Tax Lines / Taxes Included | Order-level taxes, and whether line prices already include tax. |
-| Transactions | Payments recorded against the order: amount, kind (**Sale**, **Authorization**, **Capture**), status, and gateway. |
-| Fulfillment | Map only if the order has already shipped: location, tracking company, tracking number, and shipment status. |
-| Discount Code | One discount only: percentage, fixed amount, or free shipping. |
-| Note / Tags / PO Number | Internal note, tags, and purchase order reference. |
-| Custom Attributes / Metafields | Extra key-value data and structured metafields. |
-| Source Name / Source Identifier / Source URL | Origin channel and the order's ID in the source system — useful for de-duplication. |
-| Order Name | Order number shown in Shopify admin. Auto-generated when unmapped. |
-| Company Location ID | B2B company location buying on this order. |
-| Send Order Confirmation / Send Shipping Confirmation | Whether Shopify emails the customer. |
-| Inventory Behaviour | How the order affects stock. Defaults to **Bypass** (no inventory claimed). |
+| Field                                                | Description                                                                                                                                                                          |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Line Items                                           | **Required.** At least one item. Map a Variant ID and Quantity for catalog items, or a Title, Quantity, and Price for custom items. Optional SKU, vendor, properties, and tax lines. |
+| Customer                                             | Attach an existing customer (**Associate Customer → Customer ID**), or create/update one (**Upsert Customer** with email, name, phone, tags).                                        |
+| Email / Phone                                        | Contact details recorded on the order.                                                                                                                                               |
+| Financial Status                                     | Payment state, such as **Pending**, **Authorized**, **Paid**, or **Partially Paid**. Derived from Transactions when left unmapped.                                                   |
+| Fulfillment Status                                   | **Fulfilled**, **Partial**, or **Restocked**. Defaults to unfulfilled.                                                                                                               |
+| Processed At                                         | When the order was placed in the source system.                                                                                                                                      |
+| Currency / Presentment Currency                      | Order currency. Defaults to the store currency.                                                                                                                                      |
+| Shipping Address / Billing Address                   | Name, company, address lines, city, province code, country code, ZIP, and phone.                                                                                                     |
+| Shipping Lines                                       | Shipping method title, price, carrier code, and tax lines.                                                                                                                           |
+| Tax Lines / Taxes Included                           | Order-level taxes, and whether line prices already include tax.                                                                                                                      |
+| Transactions                                         | Payments recorded against the order: amount, kind (**Sale**, **Authorization**, **Capture**), status, and gateway.                                                                   |
+| Fulfillment                                          | Map only if the order has already shipped: location, tracking company, tracking number, and shipment status.                                                                         |
+| Discount Code                                        | One discount only: percentage, fixed amount, or free shipping.                                                                                                                       |
+| Note / Tags / PO Number                              | Internal note, tags, and purchase order reference.                                                                                                                                   |
+| Custom Attributes / Metafields                       | Extra key-value data and structured metafields.                                                                                                                                      |
+| Source Name / Source Identifier / Source URL         | Origin channel and the order's ID in the source system — useful for de-duplication.                                                                                                  |
+| Order Name                                           | Order number shown in Shopify admin. Auto-generated when unmapped.                                                                                                                   |
+| Company Location ID                                  | B2B company location buying on this order.                                                                                                                                           |
+| Send Order Confirmation / Send Shipping Confirmation | Whether Shopify emails the customer.                                                                                                                                                 |
+| Inventory Behaviour                                  | How the order affects stock. Defaults to **Bypass** (no inventory claimed).                                                                                                          |
 
 :::note
 Shopify accepts only one discount code per order. A future **Processed At** value is clamped to the current time. Set **Inventory Behaviour** to decrement stock if the source system has not already done so.
@@ -4662,7 +4731,7 @@ Shopify accepts only one discount code per order. A future **Processed At** valu
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -4712,7 +4781,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Cancel Order
 
@@ -4720,14 +4790,14 @@ Cancel Order action cancels an existing Shopify order. Choose the reason, whethe
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Order ID | The order to cancel. (e.g., "gid://shopify/Order/7240844705964") |
-| Cancellation Reason | **Customer Requested**, **Payment Declined**, **Fraudulent Order**, **Insufficient Inventory**, **Staff Error**, or **Other**. |
-| Restock Inventory | Whether to return the line items to inventory. |
-| Refund Method | **Original Payment Method**, **Store Credit**, or **No Refund**. Leave blank or choose **No Refund** to cancel without refunding. Store credit is issued without an expiry date. |
-| Notify Customer | Whether to email the customer a cancellation notice. |
-| Staff Note | Internal note about the cancellation. Not visible to the customer. |
+| Field               | Description                                                                                                                                                                      |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Order ID            | The order to cancel. (e.g., "gid://shopify/Order/7240844705964")                                                                                                                 |
+| Cancellation Reason | **Customer Requested**, **Payment Declined**, **Fraudulent Order**, **Insufficient Inventory**, **Staff Error**, or **Other**.                                                   |
+| Restock Inventory   | Whether to return the line items to inventory.                                                                                                                                   |
+| Refund Method       | **Original Payment Method**, **Store Credit**, or **No Refund**. Leave blank or choose **No Refund** to cancel without refunding. Store credit is issued without an expiry date. |
+| Notify Customer     | Whether to email the customer a cancellation notice.                                                                                                                             |
+| Staff Note          | Internal note about the cancellation. Not visible to the customer.                                                                                                               |
 
 :::note
 The order must not already be cancelled, and must not have pending payment authorizations, open returns, or fulfillments that cannot be cancelled.
@@ -4735,7 +4805,7 @@ The order must not already be cancelled, and must not have pending payment autho
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -4750,7 +4820,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Get Order by Order ID
 
@@ -4762,12 +4833,12 @@ Get Order by Order ID action is used to retrieve order details in Shopify using 
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field    | Description                                                          |
+| -------- | -------------------------------------------------------------------- |
 | Order ID | Enter the Shopify order ID. (e.g., "gid://shopify/Order/1234567890") |
 
 :::note
@@ -4778,7 +4849,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-GTORDbyORDID68.jpg" alt="Shopify Get Order by Order ID action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -4978,7 +5049,8 @@ Click on **Continue** button
   }
 ]
 ```
---------------
+
+---
 
 #### Get Transactions by Order ID
 
@@ -4990,12 +5062,12 @@ Get Transactions by Order ID action is used to retrieve transaction details for 
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field    | Description                                                             |
+| -------- | ----------------------------------------------------------------------- |
 | Order ID | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964") |
 
 :::note
@@ -5006,7 +5078,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-GTTRANSCTONbyORDID70.jpg" alt="Shopify Get Transactions by Order ID action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -5063,7 +5135,8 @@ Click on **Continue** button
   }
 ]
 ```
---------------
+
+---
 
 #### Create Order Risk Assessment
 
@@ -5075,15 +5148,16 @@ Create Order Risk Assessment action is used to create a risk assessment for a sp
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Order ID | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964") |
-| Risk Level | Enter the risk level. (e.g., "Low") |
-| Risk Facts | Add risk facts to assess the order risk. |
+| Field      | Description                                                             |
+| ---------- | ----------------------------------------------------------------------- |
+| Order ID   | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964") |
+| Risk Level | Enter the risk level. (e.g., "Low")                                     |
+| Risk Facts | Add risk facts to assess the order risk.                                |
+
 | Item Risk Fact (Item)
 Description | Enter the description for item (e.g., "Billing Address region is Risk") |
 | Sentiment | Enter the sentiment for item (e.g., "Positive (lowers risk)") |
@@ -5096,7 +5170,7 @@ Description | Enter the description for item (e.g., "Billing Address region is R
 
 <img src="/img/credentials/shopify/AC-CRTRSKASSMNT72.jpg" alt="Shopify Create Risk Assessment action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -5135,7 +5209,8 @@ Description | Enter the description for item (e.g., "Billing Address region is R
   }
 ]
 ```
---------------
+
+---
 
 #### Get Order Risk Details by Order ID
 
@@ -5147,12 +5222,12 @@ Get Order Risk Details by Order ID action is used to retrieve risk assessment de
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field    | Description                                                             |
+| -------- | ----------------------------------------------------------------------- |
 | Order ID | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964") |
 
 :::note
@@ -5163,7 +5238,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-GTRSKASSMNTbyORDID74.jpg" alt="Shopify Get Risk Assessment by Order ID action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -5253,7 +5328,8 @@ Click on **Continue** button
   }
 ]
 ```
---------------
+
+---
 
 #### Update Order
 
@@ -5265,24 +5341,24 @@ Update Order action updates an existing Shopify order to match the line items an
 
 Click on **Continue** button
 
---------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Order ID | The order to update. Accepts just the number (e.g., 18992586358933) or the full GID (e.g., gid://shopify/Order/18992586358933). |
-| Line items | The full set of line items the order should end with. Any line already on the order that is not listed here is removed. |
-| Line items → Variant ID | The product variant for the line. Just the number (e.g., 47326334648469) or the full GID. Used to match the line; takes precedence over SKU. |
-| Line items → SKU | The variant SKU. Used to match the line when no Variant ID is given, and to look up the variant when adding a new line. Must match exactly one variant in the store. |
-| Line items → Quantity | The quantity this line should have. Whole number, 0 or more. Setting 0 removes the line. |
-| Shipping lines (Optional) | The shipping the order should have. Leave empty to keep the order's current shipping; send a set to replace it. Replaced only when it differs from the current shipping. |
-| Shipping lines → Title | The name of the shipping method. (e.g., Express) |
-| Shipping lines → Amount | The shipping charge as a decimal string. (e.g., 15.00) |
-| Shipping lines → Currency code | The 3-letter ISO 4217 currency code. Must match the order's currency. (e.g., USD) |
-| Restock (Optional) | Return stock to inventory when a line's quantity goes down — a lower quantity, a line set to 0, or a line removed. Ignored when a quantity goes up. |
-| Notify customer (Optional) | Email the customer the updated order when the edit is committed. |
-| Staff note (Optional) | An internal note added to the order timeline. Not shown to the customer. (e.g., Synced from SAP sales order SO-1023) |
+| Field                          | Description                                                                                                                                                              |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Order ID                       | The order to update. Accepts just the number (e.g., 18992586358933) or the full GID (e.g., gid://shopify/Order/18992586358933).                                          |
+| Line items                     | The full set of line items the order should end with. Any line already on the order that is not listed here is removed.                                                  |
+| Line items → Variant ID        | The product variant for the line. Just the number (e.g., 47326334648469) or the full GID. Used to match the line; takes precedence over SKU.                             |
+| Line items → SKU               | The variant SKU. Used to match the line when no Variant ID is given, and to look up the variant when adding a new line. Must match exactly one variant in the store.     |
+| Line items → Quantity          | The quantity this line should have. Whole number, 0 or more. Setting 0 removes the line.                                                                                 |
+| Shipping lines (Optional)      | The shipping the order should have. Leave empty to keep the order's current shipping; send a set to replace it. Replaced only when it differs from the current shipping. |
+| Shipping lines → Title         | The name of the shipping method. (e.g., Express)                                                                                                                         |
+| Shipping lines → Amount        | The shipping charge as a decimal string. (e.g., 15.00)                                                                                                                   |
+| Shipping lines → Currency code | The 3-letter ISO 4217 currency code. Must match the order's currency. (e.g., USD)                                                                                        |
+| Restock (Optional)             | Return stock to inventory when a line's quantity goes down — a lower quantity, a line set to 0, or a line removed. Ignored when a quantity goes up.                      |
+| Notify customer (Optional)     | Email the customer the updated order when the edit is committed.                                                                                                         |
+| Staff note (Optional)          | An internal note added to the order timeline. Not shown to the customer. (e.g., Synced from SAP sales order SO-1023)                                                     |
 
 :::note
 Match each line by Variant ID when you have it, otherwise by SKU. If your input already matches the order, nothing is changed. The order must be editable (not archived, not fully fulfilled, placed on or after 1 Jan 2019).
@@ -5290,13 +5366,13 @@ Match each line by Variant ID when you have it, otherwise by SKU. If your input 
 
 Click on **Continue**, then click **Run** node.
 
----------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-UPDTORDLINE.jpg" alt="Shopify Update Order action example configuration" width="700" />
 
-----------------
+---
 
 ##### Result
 
@@ -5314,7 +5390,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Update Order Header
 
@@ -5326,29 +5403,29 @@ Update Order Header action updates the header details of an existing Shopify ord
 
 Click on **Continue** button
 
---------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Order ID | The GID of the order to update. (e.g., gid://shopify/Order/734509473) |
-| Note | An optional note or comment to attach to the order. |
-| Email | Customer email address. (e.g., customer@example.com) |
-| Phone | Customer phone number in E.164 format. (e.g., +14155551234) |
-| PO Number | Purchase order / reference number. (e.g., PO-2026-001) |
-| Tags | List of tags to assign to the order. Replaces all existing tags. (e.g., priority, wholesale) |
-| Custom Attributes → Key / Value | Key-value pairs to attach to the order. (e.g., gift_message / Happy Birthday!) |
-| Shipping Address → First Name | Recipient first name. (e.g., Antony) |
-| Shipping Address → Last Name | Recipient last name. (e.g., Mathew) |
-| Shipping Address → Company | Company name. (e.g., GAP STORE) |
-| Shipping Address → Address Line 1 | Primary street address. (e.g., Lake district) |
-| Shipping Address → Address Line 2 | Secondary address line. (e.g., Geetak Line) |
-| Shipping Address → City | City name. (e.g., Hyderabad) |
-| Shipping Address → State / Province Code | State or province code. (e.g., TS) |
-| Shipping Address → Country Code | ISO 3166-1 alpha-2 country code. (e.g., IN) |
-| Shipping Address → ZIP / Postal Code | Postal code. (e.g., 500039) |
-| Shipping Address → Phone | Contact phone number. (e.g., +919878094511) |
+| Field                                       | Description                                                                                         |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Order ID                                    | The GID of the order to update. (e.g., gid://shopify/Order/734509473)                               |
+| Note                                        | An optional note or comment to attach to the order.                                                 |
+| Email                                       | Customer email address. (e.g., customer@example.com)                                                |
+| Phone                                       | Customer phone number in E.164 format. (e.g., +14155551234)                                         |
+| PO Number                                   | Purchase order / reference number. (e.g., PO-2026-001)                                              |
+| Tags                                        | List of tags to assign to the order. Replaces all existing tags. (e.g., priority, wholesale)        |
+| Custom Attributes → Key / Value             | Key-value pairs to attach to the order. (e.g., gift_message / Happy Birthday!)                      |
+| Shipping Address → First Name               | Recipient first name. (e.g., Antony)                                                                |
+| Shipping Address → Last Name                | Recipient last name. (e.g., Mathew)                                                                 |
+| Shipping Address → Company                  | Company name. (e.g., GAP STORE)                                                                     |
+| Shipping Address → Address Line 1           | Primary street address. (e.g., Lake district)                                                       |
+| Shipping Address → Address Line 2           | Secondary address line. (e.g., Geetak Line)                                                         |
+| Shipping Address → City                     | City name. (e.g., Hyderabad)                                                                        |
+| Shipping Address → State / Province Code    | State or province code. (e.g., TS)                                                                  |
+| Shipping Address → Country Code             | ISO 3166-1 alpha-2 country code. (e.g., IN)                                                         |
+| Shipping Address → ZIP / Postal Code        | Postal code. (e.g., 500039)                                                                         |
+| Shipping Address → Phone                    | Contact phone number. (e.g., +919878094511)                                                         |
 | Metafields → Namespace / Key / Value / Type | Custom metafields to attach or update. (e.g., custom / order_source / web / single_line_text_field) |
 
 :::note
@@ -5357,14 +5434,14 @@ Only the fields provided will be updated. Ensure the correct Order ID is used to
 
 Click on **Continue**, then click **Run** node.
 
----------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-UPDTORD94.jpg" alt="Shopify Update Order action example configuration" width="700"  />
 <img src="/img/credentials/shopify/AC-UPDTORD95.jpg" alt="Shopify Update Order action example configuration" width="700"  />
 
-----------------
+---
 
 ##### Result
 
@@ -5402,7 +5479,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Create Payment Terms
 
@@ -5414,17 +5492,17 @@ Create Payment Terms action is used to create payment terms for an order in Shop
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Reference ID | Specify the unique Shopify order reference ID for which the payment terms should be created. (e.g., `gid://shopify/Order/7245694337196`) |
-| Payment Terms Attributes | Configure the payment term details required for the order payment setup. |
-| Payment Terms Template ID | Specify the Shopify payment terms template ID to apply predefined payment conditions. (e.g., `gid://shopify/PaymentTermsTemplate/1`) |
-| Payment Schedules | Configure one or more payment schedules for the payment terms. |
-| Issued At | Specify the date and time when the payment terms are issued. (e.g., `22/05/2026 10:46`) |
+| Field                     | Description                                                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Reference ID              | Specify the unique Shopify order reference ID for which the payment terms should be created. (e.g., `gid://shopify/Order/7245694337196`) |
+| Payment Terms Attributes  | Configure the payment term details required for the order payment setup.                                                                 |
+| Payment Terms Template ID | Specify the Shopify payment terms template ID to apply predefined payment conditions. (e.g., `gid://shopify/PaymentTermsTemplate/1`)     |
+| Payment Schedules         | Configure one or more payment schedules for the payment terms.                                                                           |
+| Issued At                 | Specify the date and time when the payment terms are issued. (e.g., `22/05/2026 10:46`)                                                  |
 
 :::note
 Reference ID, Payment Terms Attributes, Payment Terms Template ID, and Payment Schedules are required fields.
@@ -5432,12 +5510,13 @@ Reference ID, Payment Terms Attributes, Payment Terms Template ID, and Payment S
 
 Click on **Continue**, then click **Run** node..
 
--------------------------
+---
 
 ##### Example Configuration
+
 <img src="/img/credentials/shopify/AC-CRTPMNTTRMS12.jpg" alt="Shopify Create Payment Terms - Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
 
@@ -5456,7 +5535,8 @@ Click on **Continue**, then click **Run** node..
   }
 ]
 ```
----------------------------------------
+
+---
 
 #### Update Payment Terms
 
@@ -5468,17 +5548,17 @@ Update Payment Terms action is used to modify existing payment terms for an orde
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Payment Terms ID | Specify the unique Shopify payment terms ID that needs to be updated. (e.g., `gid://shopify/PaymentTerms/39358660780`) |
-| Payment Terms Attributes | Configure the updated payment term details for the order. |
+| Field                     | Description                                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Payment Terms ID          | Specify the unique Shopify payment terms ID that needs to be updated. (e.g., `gid://shopify/PaymentTerms/39358660780`)                |
+| Payment Terms Attributes  | Configure the updated payment term details for the order.                                                                             |
 | Payment Terms Template ID | Specify the Shopify payment terms template ID to update predefined payment conditions. (e.g., `gid://shopify/PaymentTermsTemplate/2`) |
-| Payment Schedules | Configure one or more updated payment schedules for the payment terms. |
-| Issued At | Specify the updated issued date and time for the payment terms. (e.g., `22/05/2026 10:57`) |
+| Payment Schedules         | Configure one or more updated payment schedules for the payment terms.                                                                |
+| Issued At                 | Specify the updated issued date and time for the payment terms. (e.g., `22/05/2026 10:57`)                                            |
 
 :::note
 Payment Terms ID and Payment Terms Attributes are required fields. Other fields are optional and can be updated as needed.
@@ -5486,12 +5566,13 @@ Payment Terms ID and Payment Terms Attributes are required fields. Other fields 
 
 Click on **Continue**, then click **Run** node..
 
--------------------------
+---
 
 ##### Example Configuration
+
 <img src="/img/credentials/shopify/AC-UPDTPMNTTRMS14.jpg" alt="Shopify Update Payment Terms - Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
 
@@ -5521,7 +5602,8 @@ Click on **Continue**, then click **Run** node..
   }
 ]
 ```
----------------------------------------
+
+---
 
 ### Fulfillment Actions
 
@@ -5535,17 +5617,18 @@ Create Order Fulfillment action is used to create a fulfillment for a specific S
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Line Items by Fulfillment Order * | Configure line items grouped by fulfillment order. |
-| Fulfillment Order ID * | Enter the fulfillment order ID. (e.g., "gid://shopify/FulfillmentOrder/8230582943916") |
+| Field                              | Description                                                                            |
+| ---------------------------------- | -------------------------------------------------------------------------------------- |
+| Line Items by Fulfillment Order \* | Configure line items grouped by fulfillment order.                                     |
+| Fulfillment Order ID \*            | Enter the fulfillment order ID. (e.g., "gid://shopify/FulfillmentOrder/8230582943916") |
+
 | Item - Fulfillment Order Line Items (Optional)
-Line Item ID * | Enter the fulfillment order line item ID. (e.g., "gid://shopify/FulfillmentOrderLineItem/17189762039980") |
-| Quantity * | Enter the quantity to fulfill. (e.g., "1") |
+Line Item ID _ | Enter the fulfillment order line item ID. (e.g., "gid://shopify/FulfillmentOrderLineItem/17189762039980") |
+| Quantity _ | Enter the quantity to fulfill. (e.g., "1") |
 | Tracking Info (Optional)
 Tracking Number (Optional) | Enter the tracking number. (e.g., "TRACK-123") |
 
@@ -5558,7 +5641,7 @@ Tracking Number (Optional) | Enter the tracking number. (e.g., "TRACK-123") |
 <img src="/img/credentials/shopify/AC-CRTORDFULFILMT76.jpg" alt="Shopify Create Order Fulfillment action example configuration" width="700"  />
 <img src="/img/credentials/shopify/AC-CRTORDFULFILMT77.jpg" alt="Shopify Create Order Fulfillment action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -5612,7 +5695,8 @@ Tracking Number (Optional) | Enter the tracking number. (e.g., "TRACK-123") |
   }
 ]
 ```
---------------
+
+---
 
 #### Get Fulfillment Orders by Order ID
 
@@ -5624,12 +5708,12 @@ Get Fulfillment Orders by Order ID action is used to retrieve fulfillment orders
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field    | Description                                                             |
+| -------- | ----------------------------------------------------------------------- |
 | Order ID | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964") |
 
 :::note
@@ -5640,7 +5724,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-GTORDRFULMT79.jpg" alt="Shopify Get Order Fulfillment action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -5722,7 +5806,8 @@ Click on **Continue** button
   }
 ]
 ```
---------------
+
+---
 
 #### Get Order Fulfillment Line Items
 
@@ -5730,13 +5815,13 @@ Get Order Fulfillment Line Items action retrieves every fulfillment on an order,
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field    | Description                                                       |
+| -------- | ----------------------------------------------------------------- |
 | Order ID | The order to look up. (e.g., "gid://shopify/Order/7240844705964") |
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -5772,7 +5857,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 ### Payment Terms Templates Actions
 
@@ -5786,12 +5872,12 @@ Get Payment Term Templates by Type action is used to retrieve payment term templ
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field             | Description                                                                                                                              |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Payment Term Type | Select the payment term template type. Supported values: `Receipt`, `Net`, `Fixed`, `Fulfillment`, `deferred`, `Unknown ` (e.g., "Net"). |
 
 :::note
@@ -5802,7 +5888,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-GTPAYMNTTERMbyTYPE81.jpg" alt="Shopify Get Payment Term by Type action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -5858,7 +5944,8 @@ Click on **Continue** button
   }
 ]
 ```
---------------
+
+---
 
 ### Refund Actions
 
@@ -5872,17 +5959,17 @@ Create Refund action is used to create a refund for an existing Shopify order.
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Refund Input * | Enter the refund input payload. |
-| Order ID * | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964") |
-| Refund Line Items (Optional) | Configure line items to be refunded. |
-| Line Item ID * | Enter the line item ID to refund. (e.g., "gid://shopify/LineItem/17065684533420") |
-| Quantity * | Enter the quantity to refund. (e.g., "1") |
+| Field                        | Description                                                                       |
+| ---------------------------- | --------------------------------------------------------------------------------- |
+| Refund Input \*              | Enter the refund input payload.                                                   |
+| Order ID \*                  | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964")           |
+| Refund Line Items (Optional) | Configure line items to be refunded.                                              |
+| Line Item ID \*              | Enter the line item ID to refund. (e.g., "gid://shopify/LineItem/17065684533420") |
+| Quantity \*                  | Enter the quantity to refund. (e.g., "1")                                         |
 
 :::note
 `Refund Input` and `Order ID` are required. For line item refunds, `Line Item ID` and `Quantity` are required.
@@ -5892,7 +5979,7 @@ Click on **Continue** button
 
 <img src="/img/credentials/shopify/AC-CRTREFND83.jpg" alt="Shopify Create Refund action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -5927,7 +6014,8 @@ Click on **Continue** button
   }
 ]
 ```
---------------
+
+---
 
 ### Catalogs Actions
 
@@ -5941,15 +6029,16 @@ Create Catalog action is used to create a catalog in Shopify with status and con
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Title * | Enter the catalog title. (e.g., "Retail Sales") |
-| Status * | Enter the catalog status. (e.g., "ACTIVE") |
-| Context * | Configure catalog context details. |
+| Field      | Description                                     |
+| ---------- | ----------------------------------------------- |
+| Title \*   | Enter the catalog title. (e.g., "Retail Sales") |
+| Status \*  | Enter the catalog status. (e.g., "ACTIVE")      |
+| Context \* | Configure catalog context details.              |
+
 | Company Location IDs (Optional)Item
 Company Location ID | Enter the company location ID. (e.g., "gid://shopify/CompanyLocation/13888618668") |
 
@@ -5961,7 +6050,7 @@ Company Location ID | Enter the company location ID. (e.g., "gid://shopify/Compa
 
 <img src="/img/credentials/shopify/AC-CRTCATLOG87.jpg" alt="Shopify Create Catalog action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
 
@@ -5979,25 +6068,28 @@ Company Location ID | Enter the company location ID. (e.g., "gid://shopify/Compa
   }
 ]
 ```
---------------
+
+---
 
 #### Update Catalog Context
 
 Update Catalog Context action is used to update the context of an existing catalog in Shopify, including company location associations.
 
 ##### Select Credentials and Action Events
+
 <img src="/img/credentials/shopify/C-UPDTCATLOG88.jpg" alt="Shopify Update Catalog action configuration" width="700"  />
 
 Click on **Continue** button
 
--------------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Catalog ID * | Enter the catalog ID to update. (e.g., "gid://shopify/CompanyLocationCatalog/82843992236") |
-| Contexts (Optional) | Configure catalog context details. |
+| Field               | Description                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| Catalog ID \*       | Enter the catalog ID to update. (e.g., "gid://shopify/CompanyLocationCatalog/82843992236") |
+| Contexts (Optional) | Configure catalog context details.                                                         |
+
 | Company Location IDs (Optional) Item.
 Company Location ID | Enter the company location ID. (e.g., "gid://shopify/CompanyLocation/13888618668") |
 
@@ -6006,16 +6098,18 @@ Company Location ID | Enter the company location ID. (e.g., "gid://shopify/Compa
 :::
 
 ##### Example Configuration
- 1. Remove
-<img src="/img/credentials/shopify/AC-UPDTCATLOG89.jpg" alt="Shopify Update Catalog action example configuration" width="700"  />
 
- 2. Add
+1.  Remove
+    <img src="/img/credentials/shopify/AC-UPDTCATLOG89.jpg" alt="Shopify Update Catalog action example configuration" width="700"  />
+
+2.  Add
 
  <img src="/img/credentials/shopify/AC-UPDTCATLOG90.jpg" alt="Shopify Update Catalog action example configuration" width="700"  />
 
---------------------
+---
 
 ##### Result
+
 ```json
 [
   {
@@ -6030,7 +6124,8 @@ Company Location ID | Enter the company location ID. (e.g., "gid://shopify/Compa
   }
 ]
 ```
---------------
+
+---
 
 ### Metafields Actions
 
@@ -6044,17 +6139,17 @@ Add and Update Metafields action is used to create or update metafields for a Sh
 
 Click on **Continue** button.
 
--------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field     | Description                                                                                |
+| --------- | ------------------------------------------------------------------------------------------ |
 | Object ID | Enter the unique identifier of the resource. (e.g., "gid://shopify/Product/8536686002348") |
-| Namespace | Group name used to organize metafields. (e.g., "PRD_IMG") |
-| Key | Unique key name for the metafield inside the namespace. (e.g., "Type") |
-| Value | Enter the metafield value. (e.g., "png") |
-| Type | Specify the metafield data type. (e.g., "Single Line Text") |
+| Namespace | Group name used to organize metafields. (e.g., "PRD_IMG")                                  |
+| Key       | Unique key name for the metafield inside the namespace. (e.g., "Type")                     |
+| Value     | Enter the metafield value. (e.g., "png")                                                   |
+| Type      | Specify the metafield data type. (e.g., "Single Line Text")                                |
 
 :::note
 If the namespace and key already exist for the given object, the value will be updated. Otherwise, a new metafield will be created.
@@ -6062,13 +6157,13 @@ If the namespace and key already exist for the given object, the value will be u
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-AD&UDMETAFLDS92.jpg" alt="Shopify Add Update Metafields action example configuration" width="700"  />
 
---------------
+---
 
 ##### Result
 
@@ -6086,11 +6181,12 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
 
-#### Search Records by Metafield
+---
 
-Search Records by Metafield action finds Shopify records whose metafield matches a given value, using the `metafields.<namespace>.<key>` search filter. Use it to look up a Shopify record by an identifier held in an external system — for example an ERP reference stored on a custom field.
+#### Search records by metafield
+
+Search records by metafield action finds Shopify records whose metafield matches a given value, using the `metafields.<namespace>.<key>` search filter. Use it to look up a Shopify record by an identifier held in an external system — for example an ERP reference stored on a custom field.
 
 ##### Select Credentials and Action Events
 
@@ -6098,17 +6194,17 @@ Search Records by Metafield action finds Shopify records whose metafield matches
 
 Click on **Continue** button.
 
--------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Record Type | The kind of Shopify record to search. Supported values: `Orders`, `Products`, `Companies`, `Company Locations`. (e.g., "Orders") |
-| Metafield Namespace | Namespace of the metafield definition. Custom fields created in the Shopify admin use `custom`; app-owned metafields use `$app`. (e.g., "custom") |
-| Metafield Key | Key of the metafield definition, without the namespace. Together with the namespace this builds the filter `metafields.custom.erp_reference_id`. (e.g., "erp_reference_id") |
-| Metafield Value | The exact value stored in the metafield. (e.g., "123456789") |
-| Limit | Maximum number of matching records to return, up to Shopify's connection maximum of 250. When looking up a single record by an external ID, set this to 1. (e.g., 1) |
+| Field               | Description                                                                                                                                                                 |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Record Type         | The kind of Shopify record to search. Supported values: `Orders`, `Products`, `Companies`, `Company Locations`. (e.g., "Orders")                                            |
+| Metafield Namespace | Namespace of the metafield definition. Custom fields created in the Shopify admin use `custom`; app-owned metafields use `$app`. (e.g., "custom")                           |
+| Metafield Key       | Key of the metafield definition, without the namespace. Together with the namespace this builds the filter `metafields.custom.erp_reference_id`. (e.g., "erp_reference_id") |
+| Metafield Value     | The exact value stored in the metafield. (e.g., "123456789")                                                                                                                |
+| Limit               | Maximum number of matching records to return, up to Shopify's connection maximum of 250. When looking up a single record by an external ID, set this to 1. (e.g., 1)        |
 
 :::note
 The metafield definition must have the **Admin filterable** capability enabled on the same record type, otherwise Shopify ignores the filter and returns unfiltered records. Matching is exact and case-sensitive, so the value must match what is stored in Shopify exactly. Enter the value on its own — the action wraps it in the double quotes Shopify's filter syntax expects.
@@ -6116,13 +6212,13 @@ The metafield definition must have the **Admin filterable** capability enabled o
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/shopify/AC-SRCHRCRDSBYMETAFLD.png" alt="Shopify Search Records by Metafield action example configuration" width="700"  />
 
-------------
+---
 
 ##### Result
 
@@ -6149,43 +6245,44 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
 
-#### Search for a Record by Custom ID
+---
 
-Search for a Record by Custom ID action retrieves exactly one Shopify record using a custom identifier stored in a metafield of type **ID**, such as an ERP customer number held on a custom field. Supported record types are Customer, Product Variant and Collection.
+#### Search for a record by custom ID
 
-Use it when you expect a single match for one of those record types. For Orders, Products or Companies, or to find several records, use [Search Records by Metafield](#search-records-by-metafield).
+Search for a record by custom ID action retrieves exactly one Shopify record using a custom identifier stored in a metafield of type **ID**, such as an ERP customer number held on a custom field. Supported record types are Customer, Product Variant and Collection.
+
+Use it when you expect a single match for one of those record types. For Orders, Products or Companies, or to find several records, use [Search records by metafield](#search-records-by-metafield).
 
 ##### Select Credentials and Action Events
 
-<img src="/img/credentials/shopify/C-SRCHRCRDBYCUSTMID.png" alt="Shopify Search for a Record by Custom ID action configuration" width="700"  />
+<img src="/img/credentials/shopify/C-SRCHRCRDBYCUSTMID.png" alt="Shopify Search for a record by custom ID action configuration" width="700"  />
 
 Click on **Continue** button.
 
--------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Record Type | The kind of Shopify record to look up. Supported values: `Customer`, `Product Variant`, `Collection`. (e.g., "Product Variant") |
-| Metafield Key | Key of the metafield that holds the custom ID, in the `custom` namespace. (e.g., "erpproductid") |
-| Metafield Value | The exact custom ID value stored in the metafield. (e.g., "prod2880://122911") |
+| Field           | Description                                                                                                                     |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Record Type     | The kind of Shopify record to look up. Supported values: `Customer`, `Product Variant`, `Collection`. (e.g., "Product Variant") |
+| Metafield Key   | Key of the metafield that holds the custom ID. (e.g., "erpproductid")                                                           |
+| Metafield Value | The exact custom ID value stored in the metafield. (e.g., "prod2880://122911")                                                  |
 
 :::note
-The metafield must be of type **ID** and in the `custom` namespace. Matching is exact and case-sensitive. If no record matches the custom ID, the response will be empty or null.
+The metafield must be of type **ID**. Matching is exact and case-sensitive. If no record matches the custom ID, the response will be empty or null.
 :::
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Example Configuration
 
-<img src="/img/credentials/shopify/AC-SRCHRCRDBYCUSTMID.png" alt="Shopify Search for a Record by Custom ID action example configuration" width="700"  />
+<img src="/img/credentials/shopify/AC-SRCHRCRDBYCUSTMID.png" alt="Shopify Search for a record by custom ID action example configuration" width="700"  />
 
-------------
+---
 
 ##### Result
 
@@ -6250,31 +6347,32 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 ### Tags Actions
 
-#### Search Records by Tag
+#### Search records by tag
 
-Search Records by Tag action finds Shopify records that carry a given tag.
+Search records by tag action finds Shopify records that carry a given tag.
 
 Supported record types: Products, Orders, Draft Orders and Customers.
 
 ##### Select Credentials and Action Events
 
-<img src="/img/credentials/shopify/C-SRCHRCRDSBYTAG.png" alt="Shopify Search Records by Tag action configuration" width="700"  />
+<img src="/img/credentials/shopify/C-SRCHRCRDSBYTAG.png" alt="Shopify Search records by tag action configuration" width="700"  />
 
 Click on **Continue** button.
 
--------------------
+---
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field       | Description                                                                                                                   |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Record Type | The kind of Shopify record to search. Supported values: `Products`, `Orders`, `Draft Orders`, `Customers`. (e.g., "Products") |
-| Tag | The tag to match. (e.g., "Summer Sale") |
-| Limit | Maximum number of matching records to return. (e.g., 10) |
+| Tag         | The tag to match. (e.g., "Summer Sale")                                                                                       |
+| Limit       | Maximum number of matching records to return. (e.g., 10)                                                                      |
 
 :::note
 Tag matching is exact. If no record carries the tag, the response will be empty.
@@ -6282,23 +6380,23 @@ Tag matching is exact. If no record carries the tag, the response will be empty.
 
 Enter the Tag exactly as it is stored in Shopify. Tags can be plain text, wrapped in quotes, or contain forward or backward slashes:
 
-| Tag Type | Example Tag |
-|----------|-------------|
-| Without quotes | `Cotton` |
-| With double quotes | `"summer sale"` |
-| With single quotes | `'cold collection'` |
-| With forward slashes | `prod/test101` |
-| With backward slashes | `prod\test101` |
+| Tag Type              | Example Tag         |
+| --------------------- | ------------------- |
+| Without quotes        | `Cotton`            |
+| With double quotes    | `"summer sale"`     |
+| With single quotes    | `'cold collection'` |
+| With forward slashes  | `prod/test101`      |
+| With backward slashes | `prod\test101`      |
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Example Configuration
 
-<img src="/img/credentials/shopify/AC-SRCHRCRDSBYTAG.png" alt="Shopify Search Records by Tag action example configuration" width="700"  />
+<img src="/img/credentials/shopify/AC-SRCHRCRDSBYTAG.png" alt="Shopify Search records by tag action example configuration" width="700"  />
 
-------------
+---
 
 ##### Result
 
@@ -6311,12 +6409,7 @@ Click on **Continue**, then click **Run** node.
     "productType": "Simple",
     "status": "ACTIVE",
     "vendor": "Example Store",
-    "tags": [
-      "\"summer sale\"",
-      "'cold collection'",
-      "Cotton",
-      "prod/test101"
-    ],
+    "tags": ["\"summer sale\"", "'cold collection'", "Cotton", "prod/test101"],
     "totalInventory": 16,
     "createdAt": "2026-07-22T12:10:21Z",
     "updatedAt": "2026-11-12T06:57:35Z",
@@ -6333,7 +6426,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 ### Payouts Actions
 
@@ -6343,13 +6437,13 @@ Get Payouts by Status action retrieves Shopify Payments payouts for the connecte
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Limit | **Required.** Maximum number of payouts to return. (e.g., 1) |
-| Payout Status | Optional filter: **Scheduled**, **Paid**, **Failed**, or **Canceled**. Leave blank to return payouts of every status. |
-| Payout ID | Optional. Return a single payout. Use the numeric payout ID (`legacyResourceId`), not the `gid://` form. (e.g., "1234567890") |
-| Sort Key | Optional. **Issued At** (default), **Amount**, **Status**, **ID**, **Adjustment Gross**, **Advance Gross**, **Charge Gross**, **Duties Gross**, **Fee Amount**, **Refund Gross**, or **Shipping Label Gross**. |
-| Sort Descending | Optional. **Yes** to return the newest first. |
+| Field           | Description                                                                                                                                                                                                    |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Limit           | **Required.** Maximum number of payouts to return. (e.g., 1)                                                                                                                                                   |
+| Payout Status   | Optional filter: **Scheduled**, **Paid**, **Failed**, or **Canceled**. Leave blank to return payouts of every status.                                                                                          |
+| Payout ID       | Optional. Return a single payout. Use the numeric payout ID (`legacyResourceId`), not the `gid://` form. (e.g., "1234567890")                                                                                  |
+| Sort Key        | Optional. **Issued At** (default), **Amount**, **Status**, **ID**, **Adjustment Gross**, **Advance Gross**, **Charge Gross**, **Duties Gross**, **Fee Amount**, **Refund Gross**, or **Shipping Label Gross**. |
+| Sort Descending | Optional. **Yes** to return the newest first.                                                                                                                                                                  |
 
 :::tip
 To get the latest released payout, set **Sort Key** to **Issued At**, **Sort Descending** to **Yes**, and **Limit** to `1`.
@@ -6361,7 +6455,7 @@ This action requires Shopify Payments to be enabled on the store and the `read_s
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -6447,7 +6541,8 @@ Click on **Continue**, then click **Run** node.
   }
 }
 ```
------------------
+
+---
 
 #### Get Payout Balance Transactions
 
@@ -6455,12 +6550,12 @@ Get Payout Balance Transactions action retrieves the individual Shopify Payments
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Limit | **Required.** Maximum number of balance transactions to return. Shopify allows up to 250. (e.g., 50) |
-| Payout ID | Optional. The payout whose transactions you want to retrieve. Use the numeric payout ID (`legacyResourceId`) returned by **Get Payouts by Status**, not the `gid://` form. Leave blank to return transactions across all payouts. (e.g., "1234567890") |
-| Sort Key | Optional. **Processed At** (default), **Amount**, **Fee**, **Net**, **ID**, **Order Name**, **Payment Method Name**, **Payout Date**, **Payout Status**, or **Transaction Type**. |
-| Sort Descending | Optional. **Yes** (default) returns the newest first. |
+| Field           | Description                                                                                                                                                                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Limit           | **Required.** Maximum number of balance transactions to return. Shopify allows up to 250. (e.g., 50)                                                                                                                                                   |
+| Payout ID       | Optional. The payout whose transactions you want to retrieve. Use the numeric payout ID (`legacyResourceId`) returned by **Get Payouts by Status**, not the `gid://` form. Leave blank to return transactions across all payouts. (e.g., "1234567890") |
+| Sort Key        | Optional. **Processed At** (default), **Amount**, **Fee**, **Net**, **ID**, **Order Name**, **Payment Method Name**, **Payout Date**, **Payout Status**, or **Transaction Type**.                                                                      |
+| Sort Descending | Optional. **Yes** (default) returns the newest first.                                                                                                                                                                                                  |
 
 :::note
 This action requires Shopify Payments to be enabled on the store and the `read_shopify_payments_payouts` scope on the credential.
@@ -6468,7 +6563,7 @@ This action requires Shopify Payments to be enabled on the store and the `read_s
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -6505,7 +6600,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 ### Draft Orders Actions
 
@@ -6523,34 +6619,34 @@ Click on **Continue** button.
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|--------------|
-| Line Items | Configure one or more products to include in the draft order. |
-| Quantity | Specify the quantity of the line item. (e.g., `1`) |
-| Variant ID (Optional) | Specify the Shopify product variant ID for the line item. (e.g., `gid://shopify/ProductVariant/44001881456812`) |
-| Title (Optional) | Specify the line item title. (e.g., `128 meg SDRAM`) |
-| Original Unit Price (Optional) Amount | Specify the unit price of the line item. (e.g., `150.0`) |
-| Currency Code | Specify the currency code for the unit price. (e.g., `USD`) |
-| SKU (Optional) | Specify the SKU of the line item. (e.g., `128 SDRAM`) |
-| Email (Optional) | Specify the customer's email address for the draft order. (e.g., `hilsy33@yopmail.com`) |
-| Phone (Optional) | Specify the customer's phone number. (e.g., `+919080034561`) |
-| PO Number (Optional) | Specify a purchase order/reference number for the draft order. (e.g., `PO-109302`) |
-| Note (Optional) | Add any additional notes for the draft order. (e.g., `Test Note`) |
-| Billing Address (Optional) First Name | Billing contact's first name. (e.g., `Hilsy`) |
-| Last Name | Billing contact's last name. (e.g., `Update`) |
-| Address 1 | Primary billing address line. (e.g., `10 Downing Street`) |
-| City | Billing city. (e.g., `Hollister`) |
-| Province Code | Billing state/province code. (e.g., `CA`) |
-| Country Code | Billing country code. (e.g., `US`) |
-| Zip | Billing postal code. (e.g., `95023`) |
-| Phone | Billing contact phone number. (e.g., `+919080034561`) |
-| Shipping Address (Optional) | Configure the shipping destination using the same fields as the Billing Address. |
-| Applied Discount (Optional) Title | Title of the discount applied on the draft order. (e.g., `Discount`) |
-| Description | Description of the discount. (e.g., `Discount In Percentage`) |
-| Value | Discount value. (e.g., `2`) |
-| Value Type | Type of the discount value. (e.g., `PERCENTAGE`) |
-| Shipping Line (Optional) Title | Shipping method title. (e.g., `Freight`) |
-| Price | Shipping price. (e.g., `10.0`) |
+| Field                                 | Description                                                                                                     |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Line Items                            | Configure one or more products to include in the draft order.                                                   |
+| Quantity                              | Specify the quantity of the line item. (e.g., `1`)                                                              |
+| Variant ID (Optional)                 | Specify the Shopify product variant ID for the line item. (e.g., `gid://shopify/ProductVariant/44001881456812`) |
+| Title (Optional)                      | Specify the line item title. (e.g., `128 meg SDRAM`)                                                            |
+| Original Unit Price (Optional) Amount | Specify the unit price of the line item. (e.g., `150.0`)                                                        |
+| Currency Code                         | Specify the currency code for the unit price. (e.g., `USD`)                                                     |
+| SKU (Optional)                        | Specify the SKU of the line item. (e.g., `128 SDRAM`)                                                           |
+| Email (Optional)                      | Specify the customer's email address for the draft order. (e.g., `hilsy33@yopmail.com`)                         |
+| Phone (Optional)                      | Specify the customer's phone number. (e.g., `+919080034561`)                                                    |
+| PO Number (Optional)                  | Specify a purchase order/reference number for the draft order. (e.g., `PO-109302`)                              |
+| Note (Optional)                       | Add any additional notes for the draft order. (e.g., `Test Note`)                                               |
+| Billing Address (Optional) First Name | Billing contact's first name. (e.g., `Hilsy`)                                                                   |
+| Last Name                             | Billing contact's last name. (e.g., `Update`)                                                                   |
+| Address 1                             | Primary billing address line. (e.g., `10 Downing Street`)                                                       |
+| City                                  | Billing city. (e.g., `Hollister`)                                                                               |
+| Province Code                         | Billing state/province code. (e.g., `CA`)                                                                       |
+| Country Code                          | Billing country code. (e.g., `US`)                                                                              |
+| Zip                                   | Billing postal code. (e.g., `95023`)                                                                            |
+| Phone                                 | Billing contact phone number. (e.g., `+919080034561`)                                                           |
+| Shipping Address (Optional)           | Configure the shipping destination using the same fields as the Billing Address.                                |
+| Applied Discount (Optional) Title     | Title of the discount applied on the draft order. (e.g., `Discount`)                                            |
+| Description                           | Description of the discount. (e.g., `Discount In Percentage`)                                                   |
+| Value                                 | Discount value. (e.g., `2`)                                                                                     |
+| Value Type                            | Type of the discount value. (e.g., `PERCENTAGE`)                                                                |
+| Shipping Line (Optional) Title        | Shipping method title. (e.g., `Freight`)                                                                        |
+| Price                                 | Shipping price. (e.g., `10.0`)                                                                                  |
 
 :::note
 Line Items with Quantity is the only required field. All other fields are optional and can be configured as needed.
@@ -6741,7 +6837,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
----------------------------------------
+
+---
 
 #### Convert Draft Order to Order
 
@@ -6749,8 +6846,8 @@ Convert Draft Order to Order action converts an existing draft order into a real
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field          | Description                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------------------- |
 | Draft Order ID | Unique identifier of the draft order to complete. (e.g., "gid://shopify/DraftOrder/1157317255212") |
 
 :::note
@@ -6759,7 +6856,7 @@ The draft order must be in `OPEN` or `INVOICE_SENT` status. A draft order that i
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -6788,7 +6885,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Get Draft Order by ID
 
@@ -6796,13 +6894,13 @@ Get Draft Order by ID action retrieves a single draft order with its customer, a
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field          | Description                                                                   |
+| -------------- | ----------------------------------------------------------------------------- |
 | Draft Order ID | The draft order to retrieve. (e.g., "gid://shopify/DraftOrder/1157317255212") |
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -6835,7 +6933,8 @@ Returns one draft order with the same structure as the [New Draft Orders Created
   }
 ]
 ```
------------------
+
+---
 
 #### Get Draft Orders by Customer ID
 
@@ -6843,20 +6942,20 @@ Get Draft Orders by Customer ID action retrieves the draft orders that belong to
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field       | Description                                                                                 |
+| ----------- | ------------------------------------------------------------------------------------------- |
 | Customer ID | The customer whose draft orders to retrieve. (e.g., "gid://shopify/Customer/9304242225324") |
-| Limit | Maximum number of draft orders to return. (e.g., 10) |
+| Limit       | Maximum number of draft orders to return. (e.g., 10)                                        |
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
 Returns a list of draft orders with the same structure as [Get Draft Order by ID](#get-draft-order-by-id).
 
------------------
+---
 
 #### Update Draft Order
 
@@ -6864,18 +6963,18 @@ Update Draft Order action modifies an existing draft order — note, email, tags
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Draft Order ID | **Required.** The draft order to update. (e.g., "gid://shopify/DraftOrder/1157317255212") |
-| Email | Customer email for the draft order. |
-| Note | Internal note. |
-| Tax Exempt | Whether the draft order is tax exempt. |
-| Tags | Tags to apply. |
-| Custom Attributes | Key-value pairs stored on the draft order. |
-| Line Items | Variant ID and Quantity, with optional title, unit price, SKU, taxable, requires shipping, and a per-line discount. |
-| Applied Discount | Order-level discount: value, value type (**Percentage** or **Fixed Amount**), title, and description. |
-| Shipping Address / Billing Address | Name, company, address lines, city, province code, country code, ZIP, and phone. |
-| Metafields | Namespace, key, value, and type. |
+| Field                              | Description                                                                                                         |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Draft Order ID                     | **Required.** The draft order to update. (e.g., "gid://shopify/DraftOrder/1157317255212")                           |
+| Email                              | Customer email for the draft order.                                                                                 |
+| Note                               | Internal note.                                                                                                      |
+| Tax Exempt                         | Whether the draft order is tax exempt.                                                                              |
+| Tags                               | Tags to apply.                                                                                                      |
+| Custom Attributes                  | Key-value pairs stored on the draft order.                                                                          |
+| Line Items                         | Variant ID and Quantity, with optional title, unit price, SKU, taxable, requires shipping, and a per-line discount. |
+| Applied Discount                   | Order-level discount: value, value type (**Percentage** or **Fixed Amount**), title, and description.               |
+| Shipping Address / Billing Address | Name, company, address lines, city, province code, country code, ZIP, and phone.                                    |
+| Metafields                         | Namespace, key, value, and type.                                                                                    |
 
 :::note
 Mapped **Line Items** replace the draft order's existing line items, so include every line you want to keep. Only `OPEN` or `INVOICE_SENT` draft orders can be updated.
@@ -6883,7 +6982,7 @@ Mapped **Line Items** replace the draft order's existing line items, so include 
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -6908,7 +7007,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 ### Returns Actions
 
@@ -6918,8 +7018,8 @@ Get Returnable Items of an Order action retrieves the fulfilled line items on an
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field    | Description                                                                          |
+| -------- | ------------------------------------------------------------------------------------ |
 | Order ID | The order to check for returnable items. (e.g., "gid://shopify/Order/7240844705964") |
 
 :::note
@@ -6928,7 +7028,7 @@ Only fulfilled items appear under `returnableFulfillments`. The `quantity` on ea
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -6983,7 +7083,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Create Return
 
@@ -6991,20 +7092,20 @@ Create Return action opens a return against an order for one or more fulfilled l
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Order ID | The order to return items from. (e.g., "gid://shopify/Order/7240844705964") |
-| Return Line Items → Fulfillment Line Item ID | Fulfilled item being returned. Use **Get Returnable Items of an Order** to find it. (e.g., "gid://shopify/FulfillmentLineItem/11523498262700") |
-| Return Line Items → Quantity | Units to return. Cannot exceed the returnable quantity. (e.g., 1) |
-| Return Line Items → Return Reason | **Defective**, **Not As Described**, **Wrong Item**, **Size Too Large**, **Size Too Small**, **Style**, **Color**, **Unwanted**, **Unknown**, or **Other**. |
-| Return Line Items → Return Reason Note | Optional free-text detail. |
-| Exchange Line Items (Optional) → Variant ID | Replacement variant to send. (e.g., "gid://shopify/ProductVariant/46203847561324") |
-| Exchange Line Items → Quantity | Units of the replacement. (e.g., 1) |
-| Exchange Line Items → Applied Discount | Optional discount on the exchange item — a fixed amount and currency, or a percentage. |
+| Field                                        | Description                                                                                                                                                 |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Order ID                                     | The order to return items from. (e.g., "gid://shopify/Order/7240844705964")                                                                                 |
+| Return Line Items → Fulfillment Line Item ID | Fulfilled item being returned. Use **Get Returnable Items of an Order** to find it. (e.g., "gid://shopify/FulfillmentLineItem/11523498262700")              |
+| Return Line Items → Quantity                 | Units to return. Cannot exceed the returnable quantity. (e.g., 1)                                                                                           |
+| Return Line Items → Return Reason            | **Defective**, **Not As Described**, **Wrong Item**, **Size Too Large**, **Size Too Small**, **Style**, **Color**, **Unwanted**, **Unknown**, or **Other**. |
+| Return Line Items → Return Reason Note       | Optional free-text detail.                                                                                                                                  |
+| Exchange Line Items (Optional) → Variant ID  | Replacement variant to send. (e.g., "gid://shopify/ProductVariant/46203847561324")                                                                          |
+| Exchange Line Items → Quantity               | Units of the replacement. (e.g., 1)                                                                                                                         |
+| Exchange Line Items → Applied Discount       | Optional discount on the exchange item — a fixed amount and currency, or a percentage.                                                                      |
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -7049,7 +7150,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Process Return
 
@@ -7057,9 +7159,10 @@ Process Return action processes an existing return in Shopify. Use it to confirm
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field     | Description                                                                           |
+| --------- | ------------------------------------------------------------------------------------- |
 | Return ID | Unique identifier of the return to process. (e.g., "gid://shopify/Return/9628778560") |
+
 | Return Line Items (Optional)
 Return Line Item ID | Returned item being confirmed as received. Use the Return Line Item IDs from **Create Return**. (e.g., "gid://shopify/ReturnLineItem/13953695808") |
 | Quantity | Number of units to process. Cannot exceed the processable quantity on the return line item. (e.g., 1) |
@@ -7080,7 +7183,7 @@ Issue Refund → Order Transactions → Parent Transaction ID | The original pay
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -7120,7 +7223,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Close Return
 
@@ -7128,8 +7232,8 @@ Close Return action closes an existing return in Shopify. Use it to finalise a r
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field     | Description                                                                         |
+| --------- | ----------------------------------------------------------------------------------- |
 | Return ID | Unique identifier of the return to close. (e.g., "gid://shopify/Return/9628778560") |
 
 :::note
@@ -7138,7 +7242,7 @@ A return can be closed at any point, whether or not its line items have been pro
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -7160,7 +7264,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 ### Gift Cards Actions
 
@@ -7170,14 +7275,14 @@ Create Gift Card action issues a new gift card with an initial value, and option
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Initial Value | **Required.** Starting balance in the store currency. (e.g., 50.00) |
-| Gift Card Code | Custom code (8–20 characters). Shopify generates one when left blank. |
-| Customer ID | Customer who owns the gift card. (e.g., "gid://shopify/Customer/9304242225324") |
-| Expires On | Expiry date. (e.g., "2027-04-24") |
-| Note | Internal note. |
-| Template Suffix | Theme template suffix for the gift card page. |
+| Field                | Description                                                                                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Initial Value        | **Required.** Starting balance in the store currency. (e.g., 50.00)                                           |
+| Gift Card Code       | Custom code (8–20 characters). Shopify generates one when left blank.                                         |
+| Customer ID          | Customer who owns the gift card. (e.g., "gid://shopify/Customer/9304242225324")                               |
+| Expires On           | Expiry date. (e.g., "2027-04-24")                                                                             |
+| Note                 | Internal note.                                                                                                |
+| Template Suffix      | Theme template suffix for the gift card page.                                                                 |
 | Recipient Attributes | Recipient Customer ID, plus optional message, preferred name, and the date and time to send the notification. |
 
 :::caution
@@ -7186,7 +7291,7 @@ The full gift card code is returned only once, in `giftCardCode`. Store it secur
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -7217,7 +7322,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Get Gift Card by ID
 
@@ -7225,19 +7331,19 @@ Get Gift Card by ID action retrieves a gift card's balance, status, expiry, cust
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field        | Description                                                           |
+| ------------ | --------------------------------------------------------------------- |
 | Gift Card ID | The gift card to retrieve. (e.g., "gid://shopify/GiftCard/612345678") |
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
 Returns one gift card with the same structure as the [New Gift Cards Created](#new-gift-cards-created) trigger.
 
------------------
+---
 
 #### Update Gift Card
 
@@ -7245,24 +7351,24 @@ Update Gift Card action changes a gift card's customer, expiry date, note, templ
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Gift Card ID | **Required.** The gift card to update. (e.g., "gid://shopify/GiftCard/612345678") |
-| Customer ID | New owning customer. |
-| Expires On | New expiry date. (e.g., "2027-12-31") |
-| Note | Internal note. |
-| Template Suffix | Theme template suffix for the gift card page. |
+| Field                | Description                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| Gift Card ID         | **Required.** The gift card to update. (e.g., "gid://shopify/GiftCard/612345678")             |
+| Customer ID          | New owning customer.                                                                          |
+| Expires On           | New expiry date. (e.g., "2027-12-31")                                                         |
+| Note                 | Internal note.                                                                                |
+| Template Suffix      | Theme template suffix for the gift card page.                                                 |
 | Recipient Attributes | Recipient Customer ID, plus optional message, preferred name, and notification date and time. |
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
 Returns `giftCard` (same structure as **Create Gift Card**) and `userErrors`.
 
------------------
+---
 
 #### Debit Amount From Gift Card
 
@@ -7270,13 +7376,13 @@ Debit Amount From Gift Card action deducts an amount from a gift card balance an
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Gift Card ID | The gift card to debit. (e.g., "gid://shopify/GiftCard/612345678") |
-| Debit Amount → Amount | Amount to deduct. (e.g., 20.00) |
+| Field                        | Description                                                            |
+| ---------------------------- | ---------------------------------------------------------------------- |
+| Gift Card ID                 | The gift card to debit. (e.g., "gid://shopify/GiftCard/612345678")     |
+| Debit Amount → Amount        | Amount to deduct. (e.g., 20.00)                                        |
 | Debit Amount → Currency Code | ISO 4217 currency code, matching the gift card currency. (e.g., "USD") |
-| Processed At | When the debit happened. Defaults to now. |
-| Note | Note recorded on the transaction. (e.g., "Redeemed at POS store 12") |
+| Processed At                 | When the debit happened. Defaults to now.                              |
+| Note                         | Note recorded on the transaction. (e.g., "Redeemed at POS store 12")   |
 
 :::note
 The debit cannot exceed the current balance, and the gift card must be enabled and not expired.
@@ -7284,7 +7390,7 @@ The debit cannot exceed the current balance, and the gift card must be enabled a
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -7310,7 +7416,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 #### Deactivate Gift Card
 
@@ -7318,8 +7425,8 @@ Deactivate Gift Card action disables a gift card so it can no longer be used.
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
+| Field        | Description                                                             |
+| ------------ | ----------------------------------------------------------------------- |
 | Gift Card ID | The gift card to deactivate. (e.g., "gid://shopify/GiftCard/612345678") |
 
 :::caution
@@ -7328,7 +7435,7 @@ Deactivation is permanent. A deactivated gift card cannot be re-enabled.
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -7348,7 +7455,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 ### Analytics Actions
 
@@ -7358,11 +7466,11 @@ Get Analytics Data action runs a ShopifyQL query against the **Sales**, **Orders
 
 ##### Configuration Fields
 
-| Field | Description |
-|------|-------------|
-| Table | Dataset to query: **Sales**, **Orders**, or **Customers**. Used as the `FROM` clause. |
+| Field           | Description                                                                              |
+| --------------- | ---------------------------------------------------------------------------------------- |
+| Table           | Dataset to query: **Sales**, **Orders**, or **Customers**. Used as the `FROM` clause.    |
 | ShopifyQL Query | The clauses after `FROM`, excluding `LIMIT`. (e.g., `SHOW total_sales BY day SINCE -7d`) |
-| Limit | Maximum number of rows to return. (e.g., 100) |
+| Limit           | Maximum number of rows to return. (e.g., 100)                                            |
 
 :::note
 Requires the `read_reports` scope. If the query is invalid, `parseErrors` explains why and `tableData` is empty.
@@ -7370,7 +7478,7 @@ Requires the `read_reports` scope. If the query is invalid, `parseErrors` explai
 
 Click on **Continue**, then click **Run** node.
 
-------------
+---
 
 ##### Result
 
@@ -7405,7 +7513,8 @@ Click on **Continue**, then click **Run** node.
   }
 ]
 ```
------------------
+
+---
 
 </TabItem>
 
@@ -7426,8 +7535,8 @@ Tools expose Shopify operations to the AI layer so an agent can call them direct
 
 ##### Input Fields
 
-| Field | Description |
-|------|-------------|
+| Field | Description                                                                                              |
+| ----- | -------------------------------------------------------------------------------------------------------- |
 | Phone | Customer phone number to search for, including the country code where available. (e.g., "+919876543210") |
 
 :::note
@@ -7460,7 +7569,8 @@ If no customer matches the phone number, the tool returns an empty result. Numbe
   }
 ]
 ```
------------------
+
+---
 
 #### Get Product by Name
 
@@ -7468,8 +7578,8 @@ If no customer matches the phone number, the tool returns an empty result. Numbe
 
 ##### Input Fields
 
-| Field | Description |
-|------|-------------|
+| Field        | Description                                                                |
+| ------------ | -------------------------------------------------------------------------- |
 | Product Name | Full or partial product title to search for. (e.g., "Wireless Headphones") |
 
 :::note
@@ -7504,7 +7614,8 @@ The search matches on the product title, so a partial name can return multiple p
   }
 ]
 ```
------------------
+
+---
 
 #### Get Order by Order ID
 
@@ -7512,15 +7623,15 @@ The search matches on the product title, so a partial name can return multiple p
 
 ##### Input Fields
 
-| Field | Description |
-|------|-------------|
+| Field    | Description                                                        |
+| -------- | ------------------------------------------------------------------ |
 | Order ID | The order to retrieve. (e.g., "gid://shopify/Order/7240844705964") |
 
 ##### Result
 
 Returns one order with the same structure as the **Get Order by Order ID** action.
 
------------------
+---
 
 #### Create Order
 
@@ -7528,11 +7639,11 @@ Returns one order with the same structure as the **Get Order by Order ID** actio
 
 ##### Input Fields
 
-| Field | Description |
-|------|-------------|
-| Line Items | **Required.** At least one item, each with a Variant ID and Quantity. (e.g., "gid://shopify/ProductVariant/46203847561324", 2) |
-| Customer → Customer To Associate → Customer ID | Existing customer to attach. (e.g., "gid://shopify/Customer/9304242225324") |
-| Shipping Address / Billing Address | Last name, address line 1, city, province code, country code, and ZIP. |
+| Field                                          | Description                                                                                                                    |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Line Items                                     | **Required.** At least one item, each with a Variant ID and Quantity. (e.g., "gid://shopify/ProductVariant/46203847561324", 2) |
+| Customer → Customer To Associate → Customer ID | Existing customer to attach. (e.g., "gid://shopify/Customer/9304242225324")                                                    |
+| Shipping Address / Billing Address             | Last name, address line 1, city, province code, country code, and ZIP.                                                         |
 
 :::caution
 Every order is created with `PENDING` payment. The tool writes to the store and cannot be undone from the tool, so the agent should confirm the line items with the user before calling it.
@@ -7562,7 +7673,8 @@ Every order is created with `PENDING` payment. The tool writes to the store and 
   }
 ]
 ```
------------------
+
+---
 
 </TabItem>
 
@@ -7571,4 +7683,3 @@ Every order is created with `PENDING` payment. The tool writes to the store and 
 ## Support
 
 Need help? Contact the support team at [support@appse.ai](mailto:support@appse.ai)
-
