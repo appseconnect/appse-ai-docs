@@ -73,7 +73,7 @@ Select 'Server-based applications':
 
 ### Step 7: Configure Application
 1. Write 'App name' and 'Homepage URL'
-2. Copy 'Callback API URL' from appse.ai's Zoho Desk credential form
+2. Copy 'Callback API URL' from appse ai's Zoho Desk credential form
 3. Paste it in 'Authorized Redirect URIs'
 4. Click 'Create' after filling in all fields
 
@@ -86,7 +86,7 @@ Copy 'Client ID' and 'Client secret':
 <img src="\img\credentials\zoho-desk\copy_client_id_secret.png" alt="copy client id and secret" width="700"/>
 
 ### Step 9: Paste Credentials
-Paste the credentials in appse.ai's Zoho Desk credential form:
+Paste the credentials in appse ai's Zoho Desk credential form:
 
 <img src="\img\credentials\zoho-desk\paste_client_id_secret.png" alt="paste client id and client secret" width="700"/>
 
@@ -102,7 +102,7 @@ Click on 'Ok' to use the same credentials for all data centers:
 ## Final Authorization
 
 ### Step 11: Save and Authorize
-Go to appse.ai's [credential page](https://workflow.appse.ai/credentials) and select Zoho Desk's credential. Click on 'Save & Authorise' to continue:
+Go to appse ai's [credential page](https://workflow.appse.ai/credentials) and select Zoho Desk's credential. Click on 'Save & Authorise' to continue:
 
 <img src="\img\credentials\zoho-desk\save_authorise.png" alt="save & authorize" width="700"/>
 
@@ -119,29 +119,207 @@ If you followed all the steps correctly, your Zoho Desk credential should be suc
 
 ## Triggers and Actions
 
-Every application has a pre-defined set of triggers and actions that allow users to perform application specific activities within the platform. Here is a list of all the actions and triggers available:
+Every application has a pre-defined set of triggers and actions that let you perform application-specific activities within the platform. Here is the full list for Zoho Desk.
+
+### Triggers
+
+- [On New Ticket Created](#on-new-ticket-created)
+- [On Ticket Updated](#on-ticket-updated)
 
 ### Actions
 
-> Tickets Actions
+> Tickets
 
-- Get Tickets
-- Get a Ticket
-- Create a Ticket
-- Update a Ticket
+- [Create a Ticket](#create-a-ticket)
+- [Get a Ticket](#get-a-ticket)
+- [Update a Ticket](#update-a-ticket)
 
-> Departments Actions
+> Contacts, Accounts and Contracts
 
-- Get Departments
-- Get a Department
+- [Update a Contact](#update-a-contact)
+- [Update an Account](#update-an-account)
+- [Update a Contract](#update-a-contract)
 
-> Agents Actions
+> Agents and Departments
 
-- Get Agents
-- Get an Agent
+- [Search Agent](#search-agent)
+- [Search Department](#search-department)
+
+> Generic (Preview)
+
+- [Get Record by ID](#get-record-by-id)
+- [Search Records](#search-records)
+
+---
+
+## Triggers
+
+Zoho Desk triggers poll for tickets on a schedule and start your workflow once for every ticket found.
+
+### On New Ticket Created
+
+Fires when a new ticket is created in Zoho Desk. Tickets are fetched in order of creation time, newest first.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Fetch Tickets Since | Yes | Date and time from which to fetch newly created tickets. |
+
+:::tip
+Set **Fetch Tickets Since** carefully before activating the workflow. Changing it after activation does not affect the running execution.
+:::
+
+### On Ticket Updated
+
+Fires when an existing ticket is updated in Zoho Desk.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Fetch Tickets Since | Yes | Date and time from which to fetch modified tickets. |
+
+---
+
+## Actions
+
+### Create a Ticket
+
+Creates a new ticket in Zoho Desk.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Select Contact | Yes | Contact reporting the issue. Pick from the dropdown. |
+| Ticket Subject | Yes | Short summary of the issue (e.g., `Login Error`). |
+| Ticket Description | No | Full details of the issue: error messages, steps to reproduce, context. |
+| Assign to Department | Yes | Department that should handle the ticket (e.g., Technical Support, Billing). |
+| Ticket Source Channel | No | `Email`, `Phone`, `Web`, `Chat`, `Social` or `API`. Default: `Web`. |
+| Priority Level | No | `High`, `Medium` or `Low`. |
+| Initial Status | No | `Open`, `On Hold`, `Escalated` or `Closed`. Most tickets start as `Open`. |
+| Assign to Agent | No | Agent to assign. Leave empty to use your auto-assignment rules. |
+| Contact Email | No | Email address to reach the requester. |
+| Contact Phone | No | Phone number to reach the requester. |
+| Custom Fields | No | Key-value pairs of custom field API names and values (e.g., `cf_dueindays`). Find API names in Zoho Desk under **Setup > Customization > Layouts and Fields**. |
+
+### Get a Ticket
+
+Retrieves a single ticket by its ID.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Ticket ID | Yes | ID of the ticket to retrieve. |
+| Additional Information to Include | No | Comma-separated extras: `contacts`, `products`, `assignee`, `departments`, `contract`, `isRead`, `team`, `skills`. Leave empty for basic ticket info. |
+
+### Update a Ticket
+
+Updates an existing ticket. Leave any field empty to keep its current value.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Ticket ID | Yes | ID of the ticket to update. |
+| Update Subject | No | New subject line. |
+| Reassign to Department | No | Move the ticket to another department. |
+| Update Description | No | New or updated description. |
+| Update Status | No | `Open`, `Closed`, `Escalated` or `On Hold`. Custom statuses from your Zoho Desk setup are also supported. |
+| Custom Fields | No | Key-value pairs of custom field API names and values. |
+
+### Update a Contact
+
+Updates an existing contact. Only the fields you fill in are changed.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Contact ID | Yes | ID of the contact to update. |
+| First name / Last name | No | Contact's name. |
+| Email / Secondary email | No | Primary and alternate email addresses. |
+| Phone / Mobile | No | Phone and mobile numbers, with country code if applicable. |
+| Job title | No | Contact's designation (e.g., IT Manager). |
+| Contact type | No | Loaded from the Contact Type picklist in your Zoho Desk portal. |
+| Account | No | Account to associate the contact with. |
+| Contact owner | No | Agent who owns the contact. |
+| Description | No | Notes about the contact. |
+| Street / City / State / Country / Zip code | No | Contact's address. |
+| Custom fields | No | Key-value pairs of custom field names and values (e.g., `cf_customer_tier`). |
+
+### Update an Account
+
+Updates an existing account. Only the fields you fill in are changed.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Account ID | Yes | ID of the account to update. |
+| Account name | No | New account name. |
+| Email / Phone / Fax | No | Primary contact details of the account. |
+| Website | No | Full website URL (e.g., `https://www.example.com`). |
+| Industry | No | Loaded from the Industry picklist in your Zoho Desk portal. |
+| Account code | No | Internal reference code. |
+| Annual revenue | No | Annual revenue as a number (e.g., `250000`). |
+| Account owner | No | Agent who owns the account. |
+| Description | No | Notes about the account. |
+| Street / City / State / Country / Zip code | No | Account's address. |
+| Custom fields | No | Key-value pairs of custom field names and values (e.g., `cf_region`). |
+
+### Update a Contract
+
+Updates an existing contract. Only the fields you fill in are changed.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Contract ID | Yes | ID of the contract to update. |
+| Contract name | No | New contract name. |
+| Start date | No | Effective date in `yyyy-MM-dd` format. |
+| End date | No | Expiry date in `yyyy-MM-dd` format. Must be later than the start date. |
+| Product | No | Product covered by the contract. |
+| Contract owner | No | Agent who owns the contract. |
+| Notify days before | No | Days before expiry to notify the owner about renewal (e.g., `15`). |
+| Description | No | Description or terms of the contract. |
+| Custom fields | No | Key-value pairs of custom field names and values (e.g., `cf_renewal_type`). |
+
+### Search Agent
+
+Finds agents by name or email.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Search by Name or Email | Yes | Part of an agent's first name, last name or email. |
+| Sort Order | No | `asc` (A–Z) or `desc` (Z–A). Default: `asc`. |
+
+### Search Department
+
+Finds departments by name.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Search by Department Name | Yes | Part of a department name (e.g., `support`, `billing`). |
+| Sort By | No | Field to sort results by. |
+| Sort Direction | No | `A` (ascending) or `D` (descending). Default: `A`. |
+
+### Get Record by ID
+
+:::info
+This action is in **Preview**.
+:::
+
+Retrieves a single record from any supported Zoho Desk module.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Module | Yes | `Tickets`, `Contacts`, `Accounts`, `Agents`, `Departments`, `Tasks`, `Calls`, `Events` or `Teams`. |
+| Record ID | Yes | ID of the record to retrieve. |
+
+### Search Records
+
+:::info
+This action is in **Preview**.
+:::
+
+Retrieves records from any supported module using a filter query.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| Module | Yes | `Tickets`, `Contacts`, `Accounts`, `Tasks`, `Calls` or `Events`. |
+| Filter Query | Yes | Filter string. Single: `email=support@zohosupport.com`. Multiple, joined with `&`: `email=support@zohosupport.com&lastName=Lawrence`. |
+| Limit | Yes | Maximum records to return. Default: `10`, maximum: `100`. |
 
 ---
 
 ## Need Help?
 
-If you're unsure about any field or face connection issues, reach out to our support team at hello@appse.ai
+If you're unsure about any field or face connection issues, reach out to our support team at [support@appse.ai](mailto:support@appse.ai)
