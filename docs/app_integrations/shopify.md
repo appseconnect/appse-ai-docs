@@ -105,15 +105,11 @@ Select the scopes relevant to the APIs you want to use — such as customer, ord
 :::note
 Add all scopes relevant to the actions and triggers you plan to use in your workflows. After the credential is validated in appse ai, the scopes configured here in the Shopify Dev Dashboard overwrite the scopes in the **API Access Scope** field in the Shopify OAuth credential form. Those scopes are then used for workflow execution. By default, the scopes displayed in the **API Access Scope** field in appse ai are: `read_customers`, `write_customers`, `read_orders`, `write_orders`, `read_products`, `write_products`, `read_all_orders`, `read_gift_cards`, `write_gift_cards`, `read_returns`, `write_returns`. After authorization, these scopes are overwritten by the actual scopes that are configured in your shopify app.
 
-Some actions need scopes beyond the defaults. Add them in the Shopify Dev Dashboard if you plan to use these actions:
+To use all the Shopify actions currently available in appse ai, configure the following scopes in the Shopify Dev Dashboard:
 
-| Actions              | Required Scopes                           |
-| -------------------- | ----------------------------------------- |
-| Draft Orders actions | `read_draft_orders`, `write_draft_orders` |
-| Returns actions      | `read_returns`, `write_returns`           |
-| Gift Cards actions   | `read_gift_cards`, `write_gift_cards`     |
-| Analytics actions    | `read_reports`                            |
-| Payouts actions      | `read_shopify_payments_payouts`           |
+`read_all_orders` `read_orders` `write_orders` `read_customers` `write_customers` `read_products` `write_products` `read_draft_orders` `write_draft_orders` `read_inventory` `write_inventory` `read_locations` `write_locations` `read_returns` `write_returns` `read_gift_cards` `write_gift_cards` `read_gift_card_transactions` `write_gift_card_transactions` `read_discounts` `write_discounts` `read_markets` `write_markets` `read_payment_terms` `write_payment_terms` `read_publications` `write_publications` `read_order_edits` `write_order_edits` `read_reports` `read_shopify_payments_payouts` `read_merchant_managed_fulfillment_orders` `write_merchant_managed_fulfillment_orders` `read_shopify_payments_accounts`
+
+Add `read_users` only if you plan to use the **Create return** action. It is needed to return the staff member who created the return in that action's output, and is available only on Shopify Plus or Advanced stores. Otherwise, use **Create return without staff details in output**, which does not need it.
 
 :::
 
@@ -282,7 +278,9 @@ Set a name for your custom app and click **"Create app"**.
 
 Click **"Configure Admin API scopes"** and enable the following scopes:
 
-`read_all_orders` `read_customers` `write_customers` `read_fulfillments` `write_fulfillments` `read_inventory` `write_inventory` `read_locations` `write_locations` `read_orders` `write_orders` `read_products` `write_products` `read_publications` `write_publications` `read_discounts` `write_discounts` `read_shipping` `write_shipping` `read_returns` `write_returns` `read_draft_orders` `write_draft_orders` `read_gift_cards` `write_gift_cards` `read_reports` `read_shopify_payments_payouts`
+`read_all_orders` `read_orders` `write_orders` `read_customers` `write_customers` `read_products` `write_products` `read_draft_orders` `write_draft_orders` `read_inventory` `write_inventory` `read_locations` `write_locations` `read_returns` `write_returns` `read_gift_cards` `write_gift_cards` `read_gift_card_transactions` `write_gift_card_transactions` `read_discounts` `write_discounts` `read_markets` `write_markets` `read_payment_terms` `write_payment_terms` `read_publications` `write_publications` `read_order_edits` `write_order_edits` `read_reports` `read_shopify_payments_payouts` `read_merchant_managed_fulfillment_orders` `write_merchant_managed_fulfillment_orders` `read_shopify_payments_accounts`
+
+Add `read_users` only if you plan to use the **Create return** action. It is needed to return the staff member who created the return in that action's output, and is available only on Shopify Plus or Advanced stores. Otherwise, use **Create return without staff details in output**, which does not need it.
 
 <img src="/img/credentials/shopify/choose-scopes.png" alt="appse ai shopify choose scopes" width="700"/>
 
@@ -2315,7 +2313,7 @@ Click on **Continue**, then **Run** the node.
 
 <TabItem value="actions" label="Actions">
 
-### Actions
+### Action Events
 
 - **Customers**
   - [Get Customer by Email](#get-customer-by-email)
@@ -2395,7 +2393,8 @@ Click on **Continue**, then **Run** the node.
   - [Update Draft Order](#update-draft-order)
 - **Returns**
   - [Get Returnable Items of an Order](#get-returnable-items-of-an-order)
-  - [Create Return](#create-return)
+  - [Create return](#create-return)
+  - [Create return without staff details in output](#create-return-without-staff-details-in-output)
   - [Process Return](#process-return)
   - [Close Return](#close-return)
 - **Gift Cards**
@@ -7014,7 +7013,7 @@ Click on **Continue**, then click **Run** node.
 
 #### Get Returnable Items of an Order
 
-Get Returnable Items of an Order action retrieves the fulfilled line items on an order that can still be returned, together with the order's payment transactions and any existing returns. Use it as the first step of a returns flow: it gives you the **Fulfillment Line Item IDs** and returnable quantities for **Create Return**, and the transaction IDs for refunding in **Process Return**.
+Get Returnable Items of an Order action retrieves the fulfilled line items on an order that can still be returned, together with the order's payment transactions and any existing returns. Use it as the first step of a returns flow: it gives you the **Fulfillment Line Item IDs** and returnable quantities for **Create return**, and the transaction IDs for refunding in **Process Return**.
 
 ##### Configuration Fields
 
@@ -7086,22 +7085,36 @@ Click on **Continue**, then click **Run** node.
 
 ---
 
-#### Create Return
+#### Create return
 
-Create Return action opens a return against an order for one or more fulfilled line items, with a reason and quantity for each. Optionally add exchange items to ship to the customer.
+Create return action opens a return against an order for one or more fulfilled line items, with a reason and quantity for each. Optionally add exchange items to ship to the customer. The output includes details (ID, name and email) of the staff member who created the return.
+
+:::warning
+This action requires the `read_users` scope on your Shopify credential, because the output includes details of the staff member who created the return. Per Shopify, staff member data is available only on **Shopify Plus** or **Advanced** stores. If the scope is missing, the return is still created in Shopify, but the action output shows an Access denied error because it cannot display the staff member details. If your Shopify app does not have `read_users`, or your store is not on Shopify Plus or Advanced, use [Create return without staff details in output](#create-return-without-staff-details-in-output) instead.
+:::
 
 ##### Configuration Fields
 
-| Field                                        | Description                                                                                                                                                 |
-| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Order ID                                     | The order to return items from. (e.g., "gid://shopify/Order/7240844705964")                                                                                 |
-| Return Line Items → Fulfillment Line Item ID | Fulfilled item being returned. Use **Get Returnable Items of an Order** to find it. (e.g., "gid://shopify/FulfillmentLineItem/11523498262700")              |
-| Return Line Items → Quantity                 | Units to return. Cannot exceed the returnable quantity. (e.g., 1)                                                                                           |
-| Return Line Items → Return Reason            | **Defective**, **Not As Described**, **Wrong Item**, **Size Too Large**, **Size Too Small**, **Style**, **Color**, **Unwanted**, **Unknown**, or **Other**. |
-| Return Line Items → Return Reason Note       | Optional free-text detail.                                                                                                                                  |
-| Exchange Line Items (Optional) → Variant ID  | Replacement variant to send. (e.g., "gid://shopify/ProductVariant/46203847561324")                                                                          |
-| Exchange Line Items → Quantity               | Units of the replacement. (e.g., 1)                                                                                                                         |
-| Exchange Line Items → Applied Discount       | Optional discount on the exchange item — a fixed amount and currency, or a percentage.                                                                      |
+| Field | Description |
+|------|-------------|
+| Order ID | The order to return items from. (e.g., "gid://shopify/Order/7240844705964") |
+| Return line items → Fulfillment line item ID | Fulfilled item being returned. Use **Get Returnable Items of an Order** to find it. (e.g., "gid://shopify/FulfillmentLineItem/11523498262700") |
+| Return line items → Quantity | Units to return. Cannot exceed the returnable quantity. (e.g., 1) |
+| Return line items → Return reason | **Defective**, **Not as described**, **Wrong item**, **Unwanted**, **Size too small**, **Size too large**, **Color**, **Style**, **Other**, or **Unknown**. Defaults to **Unknown**. |
+| Return line items → Return reason note | Optional free-text detail. (e.g., "Cap is cracked") |
+| Exchange line items (optional) → Variant ID | Replacement variant to send. (e.g., "gid://shopify/ProductVariant/46203847561324") |
+| Exchange line items → Quantity | Units of the replacement. (e.g., 1) |
+| Exchange line items → Applied discount → Description | Optional description of the discount. (e.g., "Exchange goodwill discount") |
+| Exchange line items → Applied discount → Discount value → Fixed amount → Amount | Fixed discount amount. Required together with **Currency code**. (e.g., "10.00") |
+| Exchange line items → Applied discount → Discount value → Fixed amount → Currency code | ISO 4217 currency code for the fixed amount. Required together with **Amount**. (e.g., "USD") |
+| Exchange line items → Applied discount → Discount value → Percentage | Percentage discount. (e.g., 10) |
+
+:::note
+- **Order ID** and **Return line items** are required.
+- Each return line needs **Fulfillment line item ID**, **Quantity** and **Return reason** (defaults to **Unknown**).
+- Each exchange line needs **Variant ID** and **Quantity**.
+- For **Discount value**, use either **Fixed amount** (Amount + Currency code) or **Percentage**, not both.
+:::
 
 Click on **Continue**, then click **Run** node.
 
@@ -7118,6 +7131,11 @@ Click on **Continue**, then click **Run** node.
       "status": "OPEN",
       "totalQuantity": 1,
       "createdAt": "2026-04-25T08:40:12Z",
+      "staffMember": {
+        "id": "gid://shopify/StaffMember/104857600172",
+        "name": "Alex Morgan",
+        "email": "alex.morgan@example.com"
+      },
       "order": {
         "id": "gid://shopify/Order/7240844705964",
         "name": "#1768"
@@ -7153,9 +7171,133 @@ Click on **Continue**, then click **Run** node.
 
 ---
 
+#### Create return without staff details in output
+
+Create return without staff details in output action works the same as **Create return**: it opens a return against an order for one or more fulfilled line items, with a reason and quantity for each, and can optionally add exchange items to ship to the customer. The only difference is that the output does not include details of the staff member who created the return, so the action does not need the `read_users` scope.
+
+:::tip Which action to use?
+| Shopify credential and store | Use |
+|------|-------------|
+| `read_returns`, `write_returns` **and** `read_users`, on a **Shopify Plus** or **Advanced** store | [Create return](#create-return) — output includes the staff member who created the return. |
+| `read_returns`, `write_returns` but **not** `read_users`, or a store on any other plan | **Create return without staff details in output** |
+
+Per Shopify, staff member data needs the `read_users` scope and a Shopify Plus or Advanced store. To check your scopes, open your app in the Shopify Dev Dashboard and review the **Admin API scope configuration**.
+:::
+
+##### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Order ID | The order to return items from. (e.g., "gid://shopify/Order/7240844705964") |
+| Return line items → Fulfillment line item ID | Fulfilled item being returned. Use **Get Returnable Items of an Order** to find it. (e.g., "gid://shopify/FulfillmentLineItem/11523498262700") |
+| Return line items → Quantity | Units to return. Cannot exceed the returnable quantity. (e.g., 1) |
+| Return line items → Return reason | **Defective**, **Not as described**, **Wrong item**, **Unwanted**, **Size too small**, **Size too large**, **Color**, **Style**, **Other**, or **Unknown**. Defaults to **Unknown**. |
+| Return line items → Return reason note | Optional free-text detail. (e.g., "Cap is cracked") |
+| Exchange line items (optional) → Variant ID | Replacement variant to send. (e.g., "gid://shopify/ProductVariant/46203847561324") |
+| Exchange line items → Quantity | Units of the replacement. (e.g., 1) |
+| Exchange line items → Applied discount → Description | Optional description of the discount. (e.g., "Exchange goodwill discount") |
+| Exchange line items → Applied discount → Discount value → Fixed amount → Amount | Fixed discount amount. Required together with **Currency code**. (e.g., "10.00") |
+| Exchange line items → Applied discount → Discount value → Fixed amount → Currency code | ISO 4217 currency code for the fixed amount. Required together with **Amount**. (e.g., "USD") |
+| Exchange line items → Applied discount → Discount value → Percentage | Percentage discount. (e.g., 10) |
+
+:::note
+- **Order ID** and **Return line items** are required.
+- Each return line needs **Fulfillment line item ID**, **Quantity** and **Return reason** (defaults to **Unknown**).
+- Each exchange line needs **Variant ID** and **Quantity**.
+- For **Discount value**, use either **Fixed amount** (Amount + Currency code) or **Percentage**, not both.
+:::
+
+Click on **Continue**, then click **Run** node.
+
+------------
+
+##### Result
+
+```json
+[
+  {
+    "return": {
+      "id": "gid://shopify/Return/9628778560",
+      "name": "#1768-R1",
+      "order": {
+        "id": "gid://shopify/Order/7240844705964",
+        "name": "#1768"
+      },
+      "status": "OPEN",
+      "decline": null,
+      "refunds": {
+        "nodes": []
+      },
+      "closedAt": null,
+      "createdAt": "2026-04-25T08:40:12Z",
+      "totalQuantity": 1,
+      "returnLineItems": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ReturnLineItem/13953695808",
+            "quantity": 1,
+            "totalWeight": {
+              "unit": "KILOGRAMS",
+              "value": 0
+            },
+            "customerNote": null,
+            "restockingFee": null,
+            "refundedQuantity": 0,
+            "returnReasonNote": "",
+            "processedQuantity": 0,
+            "refundableQuantity": 1,
+            "fulfillmentLineItem": {
+              "id": "gid://shopify/FulfillmentLineItem/11523498262700",
+              "lineItem": {
+                "id": "gid://shopify/LineItem/17054211965100",
+                "sku": "RE021",
+                "name": "Water Bottle"
+              }
+            },
+            "processableQuantity": 1,
+            "unprocessedQuantity": 1,
+            "returnReasonDefinition": {
+              "id": "gid://shopify/ReturnReasonDefinition/4",
+              "name": "Received the wrong item",
+              "handle": "received-the-wrong-item",
+              "deleted": false
+            },
+            "withCodeDiscountedTotalPriceSet": {
+              "shopMoney": {
+                "amount": "75.0",
+                "currencyCode": "USD"
+              },
+              "presentmentMoney": {
+                "amount": "75.0",
+                "currencyCode": "USD"
+              }
+            }
+          }
+        ]
+      },
+      "exchangeLineItems": {
+        "nodes": []
+      },
+      "requestApprovedAt": "2026-04-25T08:40:12Z",
+      "returnShippingFees": [],
+      "reverseFulfillmentOrders": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ReverseFulfillmentOrder/37302665525",
+            "status": "OPEN"
+          }
+        ]
+      }
+    },
+    "userErrors": []
+  }
+]
+```
+-----------------
+
 #### Process Return
 
-Process Return action processes an existing return in Shopify. Use it to confirm which returned items were received and which exchange items should be shipped, completing an exchange started with the **Create Return** action. Only the line items you map are processed — anything left unmapped is omitted from the request.
+Process Return action processes an existing return in Shopify. Use it to confirm which returned items were received and which exchange items should be shipped, completing an exchange started with the **Create return** or **Create return without staff details in output** action. Only the line items you map are processed — anything left unmapped is omitted from the request.
 
 ##### Configuration Fields
 
@@ -7164,10 +7306,10 @@ Process Return action processes an existing return in Shopify. Use it to confirm
 | Return ID | Unique identifier of the return to process. (e.g., "gid://shopify/Return/9628778560") |
 
 | Return Line Items (Optional)
-Return Line Item ID | Returned item being confirmed as received. Use the Return Line Item IDs from **Create Return**. (e.g., "gid://shopify/ReturnLineItem/13953695808") |
+Return Line Item ID | Returned item being confirmed as received. Use the Return Line Item IDs from **Create return** or **Create return without staff details in output**. (e.g., "gid://shopify/ReturnLineItem/13953695808") |
 | Quantity | Number of units to process. Cannot exceed the processable quantity on the return line item. (e.g., 1) |
 | Exchange Line Items (Optional)
-Exchange Line Item ID | Exchange item to release to the customer. Use the Exchange Line Item IDs from **Create Return**. (e.g., "gid://shopify/ExchangeLineItem/433291328") |
+Exchange Line Item ID | Exchange item to release to the customer. Use the Exchange Line Item IDs from **Create return** or **Create return without staff details in output**. (e.g., "gid://shopify/ExchangeLineItem/433291328") |
 | Quantity | Number of exchange units to process. Cannot exceed the processable quantity on the exchange line item. (e.g., 1) |
 | Financial Transfer (Optional)
 Issue Refund → Order Transactions → Parent Transaction ID | The original payment transaction to refund against. Must be of kind `CAPTURE` or `SALE` — use the **Get Transactions by Order ID** action to find it. (e.g., "gid://shopify/OrderTransaction/6039361192000") |
