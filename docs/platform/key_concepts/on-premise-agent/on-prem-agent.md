@@ -73,8 +73,9 @@ Confirm each item below on the target machine before running the installer.
 
 #### Network
 
-- Outbound HTTPS (port 443) access to the appse ai gateway endpoint (*.appse.ai)
-- Firewall allowlist entry for the gateway domain or IP if outbound traffic is restricted.
+- Outbound HTTPS (port 443) access to the appse ai gateway host `opgw.appse.ai`
+- WebSocket traffic allowed to `opgw.appse.ai` through any proxy or firewall
+- Firewall allowlist entry for `opgw.appse.ai` if outbound traffic is restricted. Use the exact host name; some firewalls do not accept wildcards such as `*.appse.ai`.
 - The gateway URL `https://opgw.appse.ai/hub/agent` must be reachable from the target machine. See [Verify gateway connectivity](#verify-gateway-connectivity).
 
 ---
@@ -332,14 +333,14 @@ The installed agent connects out to the appse ai gateway. If a firewall, proxy, 
 
 To check that the gateway is reachable:
 
-- Sign in to the server where the On-Prem Connector is installed
-- Open a browser on that server
-- Go to `https://opgw.appse.ai/hub/agent`
+1. Sign in to the server where the On-Prem Connector is installed.
+2. Open a browser on that server.
+3. Go to `https://opgw.appse.ai/hub/agent`.
 
 | Browser response | Meaning | Action |
 |---|---|---|
-| Plain text page showing **Connection ID required** | The gateway is reachable. The URL is not blocked. | No network change needed. Restart the agent service, then check the status again. |
-| Timeout, "This site can't be reached", proxy/firewall block page, or certificate error | The gateway is blocked from this server | Ask your network team to allow outbound HTTPS (port 443) to `*.appse.ai`, and to exclude the gateway from SSL inspection |
+| Plain text page showing **Connection ID required** | The gateway is reachable. The URL is not blocked. | No network change needed. Restart the agent service (see [Restart the agent service](#restart-the-agent-service)), then check the status again. |
+| Timeout, "This site can't be reached", proxy/firewall block page, or certificate error | The gateway is blocked from this server | Ask your network team to: <br/>• Allow outbound HTTPS (port 443) to `opgw.appse.ai` <br/>• Allow WebSocket traffic (HTTP `Upgrade` to `wss://`) to `opgw.appse.ai` through any proxy <br/>• Exclude `opgw.appse.ai` from SSL inspection |
 
 <img src="/img/platform/key-concepts/on-premise-agent/url-unblocked.png" alt="Gateway URL reachable - Connection ID required response" width="700"/>
 
@@ -347,15 +348,34 @@ To check that the gateway is reachable:
 **Connection ID required** is the expected response. The browser does not send a connection ID, so the gateway rejects the request, but it still answers. That answer confirms the server can reach appse ai.
 :::
 
+:::caution
+The agent keeps a long-lived WebSocket connection to `/hub/agent`. A browser test only proves that plain HTTPS gets through. A proxy can still block or cut WebSocket traffic, so the connector stays **Offline** or keeps dropping. If the browser test passes but the connector does not stay **Online**, ask your network team to allow WebSocket traffic to `opgw.appse.ai`.
+:::
+
 :::tip
 On servers without a browser, run this in PowerShell instead:
 
 ```powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest -Uri "https://opgw.appse.ai/hub/agent" -UseBasicParsing
 ```
 
+The first line forces TLS 1.2. Windows PowerShell 5.1 can default to an older TLS version, and the resulting TLS error looks like a blocked connection.
+
 An error response that contains **Connection ID required** also means the gateway is reachable.
 :::
+
+### Restart the agent service
+
+1. On the server, press **Win + R**, type `services.msc`, and press **Enter**.
+2. Find the **appseai agent** service.
+3. Right-click it and select **Restart**.
+4. Return to the **On-Prem Connectors** page in appse ai and check that the status changes to **Online**.
+
+If the connector is still **Offline** after the restart:
+
+1. Check the agent logs in `C:\Program Files\appse ai\On-premise agent\logs` for connection errors.
+2. Contact [support@appse.ai](mailto:support@appse.ai). Include the connector name, the result of the gateway test above, and the latest log file.
 
 ---
 
