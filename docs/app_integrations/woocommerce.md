@@ -176,6 +176,8 @@ Here is the list of available actions in WooCommerce:
 | **Update Order**                 | Update an existing WooCommerce order.                                     |
 | **Get Order Refund by Order ID** | Retrieve refund details for a specific WooCommerce order.                 |
 | **Create Order Refund**          | Create a refund for a WooCommerce order based on the order ID.            |
+| **Create Order Fulfillment with Tracking** | Create a fulfillment for a WooCommerce order with the fulfilled line items, tracking number, and shipment provider. |
+| **Get Order Fulfillment by ID**  | Retrieve a single fulfillment of a specific WooCommerce order.            |
 
 ## Support
 
