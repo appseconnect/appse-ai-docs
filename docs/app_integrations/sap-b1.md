@@ -41,14 +41,14 @@ If you have selected **Service Layer (Cloud)** on the Select Authentication scre
 
 ##### Configuration Fields
 
-| Field           | Description                                                                                                                                                   |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Host URL        | The server URL where your SAP B1 is hosted                                                                                                                    |
-| Port            | Optional. Default is `50000`. Leave blank if your Service Layer URL has no explicit port. Example URL: `https://example.com:50000/b1s/v1/` → port is `50000`. |
-| Username        | Your SAP B1 username                                                                                                                                          |
-| Password        | Your SAP B1 password                                                                                                                                          |
-| Company DB      | The company database name used in SAP B1                                                                                                                      |
-| Additional Path | Provide Additional Path (Optional)                                                                                                                            |
+| Field       | Description                                  |
+|-------------|----------------------------------------------|
+| Host URL    | The server URL where your SAP B1 is hosted   |
+| Port        | Optional. Default is `50000`. Leave blank if your Service Layer URL has no explicit port. Example URL: `https://example.com:50000/b1s/v1/` → port is `50000`. |
+| Username    | Your SAP B1 username                         |
+| Password    | Your SAP B1 password                         |
+| Company DB  | The company database name used in SAP B1     |
+| Additional Path | Provide Additional Path (Optional) |
 
 ##### Step-by-Step Guide
 
@@ -59,24 +59,24 @@ Provide a name for your credential in the `Connection Name` field. This will be 
 ##### 2. Find Your Host URL and Port
 
 - Open the SAP Business One **Service Layer** configuration or ask your SAP B1 administrator.
-  - It will look something like: `https://{localip}:50000/ControlCenter/`
-  - You should see page titled - `System Landscape Directory`
+   - It will look something like: `https://{localip}:50000/ControlCenter/`
+   - You should see page titled - `System Landscape Directory`
 
 - Login to the platform using your **System Landscape Directory Credentials**.
-  <img src="/img/credentials/sap-b1/sap-b1-cred-sld-login.png" alt="SAP B1 Step-by-Step Guide step 1 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-sld-login.png" alt="SAP B1 Step-by-Step Guide step 1 of 5 screenshot" />
 
 - Locate the base URL used to access the Service Layer API. Go to _Services_ -> _Service Layer_
-  <img src="/img/credentials/sap-b1/sap-b1-cred-host-url.png" alt="SAP B1 Step-by-Step Guide step 2 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-host-url.png" alt="SAP B1 Step-by-Step Guide step 2 of 5 screenshot" />
 
 - Add your Host URL and Port. The Port field is optional; the default is `50000`. Leave it blank if your Service Layer URL has no explicit port. With respect to the image you will be adding:
-  > - **Host URL**: `https://10.0.2.68`
-  > - **Port**: `50000` (or leave blank if your Service Layer URL has no explicit port)
+> - **Host URL**: `https://10.0.2.68`
+> - **Port**: `50000` (or leave blank if your Service Layer URL has no explicit port)
 
 ##### 3. Find Your Company DB Name
 
 - In the same **System Landscape Directory**
 - Go to _DB Instances and Companies_ -> Click on Your Server Name
-  <img src="/img/credentials/sap-b1/sap-b1-cred-db-name.png" alt="SAP B1 Step-by-Step Guide step 3 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-db-name.png" alt="SAP B1 Step-by-Step Guide step 3 of 5 screenshot" />
 
 Copy the **Schema Name**, this is your `Database Name`
 
@@ -87,7 +87,6 @@ Depending on your setup, you might see `https://insync.pro` instead of `https://
 :::
 
 ##### 4. Get Your Username and Password
-
 <img src="/img/credentials/sap-b1/sap-b1-credentials.png" alt="SAP B1 Step-by-Step Guide step 5 of 5 screenshot" width="602" height="306" />
 
 - Use your **SAP B1 client login credentials**.
@@ -119,14 +118,14 @@ On the **Configure Credentials** screen, select an active connector from the **O
 
 After selecting a connector, fill in the Service Layer credential fields:
 
-| Field           | Description                                                                                                                                                   |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Host URL        | The server URL where your SAP B1 is hosted                                                                                                                    |
-| Port            | Optional. Default is `50000`. Leave blank if your Service Layer URL has no explicit port. Example URL: `https://example.com:50000/b1s/v1/` → port is `50000`. |
-| Username        | Your SAP B1 username                                                                                                                                          |
-| Password        | Your SAP B1 password                                                                                                                                          |
-| Company DB      | The company database name used in SAP B1                                                                                                                      |
-| Additional Path | Provide Additional Path (Optional)                                                                                                                            |
+| Field       | Description                                  |
+|-------------|----------------------------------------------|
+| Host URL    | The server URL where your SAP B1 is hosted   |
+| Port        | Optional. Default is `50000`. Leave blank if your Service Layer URL has no explicit port. Example URL: `https://example.com:50000/b1s/v1/` → port is `50000`. |
+| Username    | Your SAP B1 username                         |
+| Password    | Your SAP B1 password                         |
+| Company DB  | The company database name used in SAP B1     |
+| Additional Path | Provide Additional Path (Optional) |
 
 ##### Step-by-Step Guide
 
@@ -137,24 +136,24 @@ Provide a name for your credential in the `Connection Name` field. This will be 
 ##### 2. Find Your Host URL and Port
 
 - Open the SAP Business One **Service Layer** configuration or ask your SAP B1 administrator.
-  - It will look something like: `https://{localip}:50000/ControlCenter/`
-  - You should see page titled - `System Landscape Directory`
+   - It will look something like: `https://{localip}:50000/ControlCenter/`
+   - You should see page titled - `System Landscape Directory`
 
 - Login to the platform using your **System Landscape Directory Credentials**.
-  <img src="/img/credentials/sap-b1/sap-b1-cred-sld-login.png" alt="SAP B1 Step-by-Step Guide step 1 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-sld-login.png" alt="SAP B1 Step-by-Step Guide step 1 of 5 screenshot" />
 
 - Locate the base URL used to access the Service Layer API. Go to _Services_ -> _Service Layer_
-  <img src="/img/credentials/sap-b1/sap-b1-cred-host-url.png" alt="SAP B1 Step-by-Step Guide step 2 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-host-url.png" alt="SAP B1 Step-by-Step Guide step 2 of 5 screenshot" />
 
 - Add your Host URL and Port. The Port field is optional; the default is `50000`. Leave it blank if your Service Layer URL has no explicit port. With respect to the image you will be adding:
-  > - **Host URL**: `https://10.0.2.68`
-  > - **Port**: `50000` (or leave blank if your Service Layer URL has no explicit port)
+> - **Host URL**: `https://10.0.2.68`
+> - **Port**: `50000` (or leave blank if your Service Layer URL has no explicit port)
 
 ##### 3. Find Your Company DB Name
 
 - In the same **System Landscape Directory**
 - Go to _DB Instances and Companies_ -> Click on Your Server Name
-  <img src="/img/credentials/sap-b1/sap-b1-cred-db-name.png" alt="SAP B1 Step-by-Step Guide step 3 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-db-name.png" alt="SAP B1 Step-by-Step Guide step 3 of 5 screenshot" />
 
 Copy the **Schema Name**, this is your `Database Name`
 
@@ -165,7 +164,6 @@ Depending on your setup, you might see `https://insync.pro` instead of `https://
 :::
 
 ##### 4. Get Your Username and Password
-
 <img src="/img/credentials/sap-b1/sap-b1-credentials.png" alt="SAP B1 Step-by-Step Guide step 5 of 5 screenshot" width="602" height="306" />
 
 - Use your **SAP B1 client login credentials**.
@@ -186,7 +184,7 @@ Once you've filled in the necessary fields, click **"Save"** to store and verify
 - If successful, your SAP B1 credential will show a "check" icon. Now you can use this application for your integrations.
 - If it fails, you will be displayed a "!" icon. In that case, please recheck your API Key and Domain or contact support.
 
----
+--------
 
 ## Triggers and Actions
 
@@ -213,6 +211,7 @@ Use these links to open the matching trigger directly in the Trigger tab:
 - [New Returns Created](?sap-b1-section=triggers#new-returns-created)
 - [New Activities Created](?sap-b1-section=triggers#new-activities-created)
 
+
 #### New Items Created
 
 **New Item Created** trigger starts the workflow automatically when a new item is created in SAP Business One.
@@ -222,7 +221,7 @@ It captures the item details and passes them to the next step for further proces
 This is a trigger node, so it does not take any input data.
 :::
 
----
+------------------
 
 #### Select Credentials and Trigger Event
 
@@ -230,25 +229,24 @@ This is a trigger node, so it does not take any input data.
 
 Click on the **Continue** button.
 
----
+----------------------
 
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+----------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/TriggerConfiguration.jpg" width="700"  alt="SAP B1 New Items Created step 2 of 2 screenshot" />
 
 ##### Result
-
 ```json
 [
   {
@@ -261,18 +259,18 @@ Click on **Continue** button, then **Run** the node.
   }
 ]
 ```
-
----
+-------
 
 #### Items Updated
 
 **Items Updated Trigger** initiates a workflow whenever existing item details are modified in the SAP Business One. It captures the updated item information and passes it as structured data.
 
+
 :::note
 The trigger executes only after the item update is successfully saved. All relevant details (such as item ID, updated fields, and timestamps) are included in the output payload.
 :::
 
----
+---------------------
 
 #### Select Credentials and Trigger Event
 
@@ -282,14 +280,14 @@ Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+-----------------
 
 ##### Example Configuration
 
@@ -298,7 +296,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -347,17 +344,17 @@ The configuration fields are the same for all triggers - refer to the screenshot
 ]
 ```
 
----
+------
 
 #### New Order Created
 
-**New Order Created Trigger** initiates a workflow whenever a new order is successfully created in the SAP Business One. It automatically captures order details and passes them as structured data to subsequent steps in the workflow.
+**New Order Created Trigger** initiates a workflow whenever a new order is successfully created in the SAP Business One. It automatically captures order details and passes them as structured data to subsequent steps in the workflow.    
 
 :::note
 The trigger executes only after the order is fully created and confirmed in the system. All relevant order fields (such as order ID, customer details, and items) are included in the output payload.
 :::
 
----
+--------
 
 #### Select Credentials and Trigger Event
 
@@ -365,16 +362,17 @@ The trigger executes only after the order is fully created and confirmed in the 
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+--------
 
 ##### Example Configuration
 
@@ -383,7 +381,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -400,7 +397,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
   }
 ]
 ```
-
 #### New Quotation Created
 
 **New Quotation Created Trigger** initiates a workflow whenever a new quotation is generated in the SAP Business One. It captures quotation details and passes them as structured data to subsequent steps in the workflow.
@@ -409,7 +405,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 The trigger executes only after the quotation is successfully created. All relevant quotation details (such as quotation ID, customer information, pricing, and items) are included in the output payload.
 :::
 
----
+------
 
 #### Select Credentials and Trigger Event
 
@@ -417,16 +413,17 @@ The trigger executes only after the quotation is successfully created. All relev
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -435,7 +432,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -454,8 +450,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
   }
 ]
 ```
-
----
+-------
 
 #### New Business Partner Created
 
@@ -465,7 +460,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 The trigger executes only after the business partner is successfully created. All relevant details (such as partner ID, name, contact information, and address) are included in the output payload.
 :::
 
----
+-------------------
 
 #### Select Credentials and Trigger Event
 
@@ -473,16 +468,17 @@ The trigger executes only after the business partner is successfully created. Al
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -491,7 +487,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -508,11 +503,12 @@ The configuration fields are the same for all triggers - refer to the screenshot
 
 **Business Partners Updated Trigger** initiates a workflow whenever existing business partner details are modified in the SAP Business One. It captures the updated information and passes it as structured data to subsequent workflow steps.
 
+
 :::note
 The trigger executes only after the business partner update is successfully saved. All relevant details (such as partner ID, modified fields, contact information, and timestamps) are included in the output payload.
 :::
 
----
+-----
 
 #### Select Credentials and Trigger Event
 
@@ -520,16 +516,17 @@ The trigger executes only after the business partner update is successfully save
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -551,7 +548,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 ]
 ```
 
----
+--------
 
 #### New AR Invoices Created
 
@@ -561,7 +558,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 The trigger executes only after the AR invoice is successfully created. All relevant invoice details (such as invoice ID, customer information, amount, due date, and line items) are included in the output payload.
 :::
 
----
+--------
 
 #### Select Credentials and Trigger Event
 
@@ -569,16 +566,18 @@ The trigger executes only after the AR invoice is successfully created. All rele
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -587,7 +586,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -600,7 +598,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 ]
 ```
 
----
+-------
 
 #### New Credit Note Created
 
@@ -610,7 +608,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 The trigger executes only after the credit note is successfully created. All relevant details (such as credit note ID, customer information, amount, and related invoice details) are included in the output payload.
 :::
 
----
+-------
 
 #### Select Credentials and Trigger Event
 
@@ -618,16 +616,17 @@ The trigger executes only after the credit note is successfully created. All rel
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -636,7 +635,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -649,7 +647,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 ]
 ```
 
----
+---------
 
 #### New Delivery Notes Created
 
@@ -659,7 +657,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 The trigger executes only after the delivery note is successfully created. All relevant details (such as delivery note ID, customer information, shipment details, and items) are included in the output payload.
 :::
 
----
+-------
 
 #### Select Credentials and Trigger Event
 
@@ -667,16 +665,17 @@ The trigger executes only after the delivery note is successfully created. All r
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -685,7 +684,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -703,7 +701,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 ]
 ```
 
----
+--------
 
 #### New Incoming Payments Created
 
@@ -713,7 +711,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 The trigger executes only after the incoming payment is successfully created. All relevant details (such as payment ID, customer information, amount, payment method, and associated invoices) are included in the output payload.
 :::
 
----
+-------
 
 #### Select Credentials and Trigger Event
 
@@ -721,16 +719,17 @@ The trigger executes only after the incoming payment is successfully created. Al
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -739,7 +738,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -752,7 +750,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 ]
 ```
 
----
+---------
 
 #### New Service Calls Created
 
@@ -762,7 +760,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 The trigger executes only after the service call is successfully created. All relevant details (such as service call ID, customer information, issue description, and priority) are included in the output payload.
 :::
 
----
+-------
 
 #### Select Credentials and Trigger Event
 
@@ -770,16 +768,17 @@ The trigger executes only after the service call is successfully created. All re
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -788,7 +787,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -801,7 +799,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 ]
 ```
 
----
+--------------
 
 #### New Returns Created
 
@@ -811,7 +809,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 The trigger executes only after the return is successfully created. All relevant details (such as return ID, customer information, returned items, and reason for return) are included in the output payload.
 :::
 
----
+-------
 
 #### Select Credentials and Trigger Event
 
@@ -819,16 +817,17 @@ The trigger executes only after the return is successfully created. All relevant
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -837,7 +836,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -855,7 +853,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 ]
 ```
 
----
+---------------
 
 #### New Activities Created
 
@@ -865,7 +863,7 @@ The configuration fields are the same for all triggers - refer to the screenshot
 The trigger executes only after the activity is successfully created. All relevant details (such as activity ID, type, associated entity, and timestamps) are included in the output payload.
 :::
 
----
+--------
 
 #### Select Credentials and Trigger Event
 
@@ -873,16 +871,17 @@ The trigger executes only after the activity is successfully created. All releva
 
 Click on the **Continue** button.
 
+
 ##### Configuration Fields
 
-| Field            | Description                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
-| Limit            | Set the maximum number of items to retrieve per run. (e.g., 10)                                         |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 Click on **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
@@ -891,7 +890,6 @@ The configuration fields are the same for all triggers - refer to the screenshot
 :::
 
 ##### Result
-
 ```json
 [
   {
@@ -946,8 +944,7 @@ Use these links to open the matching action section directly in the Action tab:
 - [Goods Issue Actions](?sap-b1-section=actions#goods-issue-actions)
 - [Search Records Action](?sap-b1-section=actions#search-records-action)
 
----
-
+----
 ### BusinessPartners Actions
 
 #### Get a BusinessPartner by EmailAddress
@@ -960,20 +957,19 @@ This action is commonly used to **lookup partner information**, **validate exist
 If multiple records match the provided email address, the system may return the first matching result or a list of records based on configuration. If no match is found, the output will be empty or null.
 :::
 
----
+-------
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GBPbyEM44.jpg" width="700"  alt="SAP B1 Get a BusinessPartner by EmailAddress step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+------------
 
 ##### Configuration Fields
 
-| Field         | Description                                                                                                                                                                      |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Email Address | Enter the email address of the business partner to search for. This field is used as the primary identifier to fetch the corresponding record. (e.g., "tesla.nesla@yopmail.com") |
 
 Click on the **Continue** button, then **Run** the node.
@@ -982,10 +978,9 @@ Click on the **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/SAP-AC-GETBPbyEmail14.jpg" width="700"  alt="SAP B1 Get a BusinessPartner by EmailAddress step 2 of 2 screenshot" />
 
----
+-------------
 
 ##### Result
-
 ```json
 {
   "CardCode": "165120",
@@ -1022,8 +1017,7 @@ Click on the **Continue** button, then **Run** the node.
   ]
 }
 ```
-
----
+----------------
 
 #### Get CardCode by ContactEmployee email
 
@@ -1035,34 +1029,31 @@ This action is commonly used to **lookup partner information**, **validate exist
 If multiple records match the provided email address, the system may return the first matching result or a list of records based on configuration. If no match is found, the output will be empty or null.
 :::
 
----
+------
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GCCbyCEmp45.jpg" width="700"  alt="SAP B1 Get CardCode by ContactEmployee email step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------
 
 ##### Configuration Fields
 
-| Field | Description                                                                                                                                                                      |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | Email | Enter the email address of the business partner to search for. This field is used as the primary identifier to fetch the corresponding record (e.g., "amrutha.roy@yopmail.com"). |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+-------
 
 ##### Example Configuration
-
    <img src="/img/credentials/sap-b1/SAP-AC-GET-CC-by-CE-email16.jpg" width="700"  alt="SAP B1 Get CardCode by ContactEmployee email step 2 of 2 screenshot" />
 
----
+-----------------
 
 ##### Result
-
 ```json
 [
   {
@@ -1105,7 +1096,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-----------
 
 #### Create New Business Partner
 
@@ -1116,60 +1107,58 @@ This action is commonly used to **onboard new customers or vendors**, **store co
 CardCode must be unique. Optional fields can be configured based on business requirements, and missing optional values will not block the creation process.
 :::
 
----
+--------------------
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CNBP46.jpg" width="700"  alt="SAP B1 Create New BusinessPartner step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field    | Description                                                           |
-| -------- | --------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | CardCode | Enter a unique identifier for the business partner (e.g., "STOP002"). |
 
 ##### Optional Fields
-
 ##### Customer Details
 
-| Field         | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
-| Customer Name | Enter required customer name (e.g., "Config")                |
-| Phone1        | Enter required phone number (e.g., "9987654321")             |
+| Field | Description |
+|---|---|
+| Customer Name | Enter required customer name (e.g., "Config") |
+| Phone1 | Enter required phone number (e.g., "9987654321") |
 | Email Address | Enter required mobile number (e.g., "config.co@yopmail.com") |
 
 ##### BP Addresses
 
-| Field           | Description                                               |
-| --------------- | --------------------------------------------------------- |
-| Address Name    | Enter address name (e.g., "ADD 12345")                    |
-| Address Type    | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
-| Street          | Enter street name (e.g., "Madhura Nagar")                 |
-| Block or Sector | Enter block or sector (e.g., "B70 TLR Residency")         |
-| Zip Code        | Enter zip code (e.g., "500038")                           |
-| City            | Enter city (e.g., "Hyderabad")                            |
-| Country         | Enter country (e.g., "India")                             |
-| State           | Enter state (e.g., "Telangana")                           |
+| Field | Description |
+|---|---|
+| Address Name | Enter address name (e.g., "ADD 12345") |
+| Address Type | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
+| Street | Enter street name (e.g., "Madhura Nagar") |
+| Block or Sector | Enter block or sector (e.g., "B70 TLR Residency") |
+| Zip Code | Enter zip code (e.g., "500038") |
+| City | Enter city (e.g., "Hyderabad") |
+| Country | Enter country (e.g., "India") |
+| State | Enter state (e.g., "Telangana") |
 
 ##### Contact Employees
 
-| Field         | Description                                           |
-| ------------- | ----------------------------------------------------- |
-| Name          | Enter contact employee name (e.g., "Check 0110")      |
-| First Name    | Enter first name (e.g., "Demo")                       |
-| Last Name     | Enter last name (e.g., "Customer")                    |
-| Phone1        | Enter phone number if required.                       |
+| Field | Description |
+|---|---|
+| Name | Enter contact employee name (e.g., "Check 0110") |
+| First Name | Enter first name (e.g., "Demo") |
+| Last Name | Enter last name (e.g., "Customer") |
+| Phone1 | Enter phone number if required. |
 | Email Address | Enter email address (e.g., "demo.1234co@yopmail.com") |
-| Job Title     | Enter job title if required.                          |
-| Position      | Enter position if required.                           |
+| Job Title | Enter job title if required. |
+| Position | Enter position if required. |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+-----------------
 
 ##### Configuration Fields
 
@@ -1178,10 +1167,9 @@ Click on the **Continue** button, then **Run** the node.
    <img src="/img/credentials/sap-b1/SAP-AC-NBPD21.jpg" width="700"  alt="SAP B1 Create New BusinessPartner step 4 of 5 screenshot" />
    <img src="/img/credentials/sap-b1/SAP-AC-NBPD22.jpg" width="700"  alt="SAP B1 Create New BusinessPartner step 5 of 5 screenshot" />
 
----
+-----------
 
 ##### Result
-
 ```json
 [
   {
@@ -1213,7 +1201,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-----------------
 
 #### Create a New Business Partner Without CardCode
 
@@ -1224,7 +1212,6 @@ The CardCode is auto-generated by the system. Optional fields can be configured 
 :::
 
 ##### Select the Credential and Action Event
-
    <img src="/img/credentials/sap-b1/SAP-C-CNBWOUTCC24.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
@@ -1233,30 +1220,30 @@ Click on the **Continue** button.
 
 ##### 1. Customer Name
 
-| Field           | Description                                                         |
-| --------------- | ------------------------------------------------------------------- |
-| Customer Name   | Enter required customer name (e.g., "WilliamRober")                 |
-| Phone1          | Enter required phone number (e.g., "8909876545")                    |
-| Email Address   | Enter required email address (e.g., "william.rober333@yopmail.com") |
-| Address Name    | Enter address name (e.g., "ADD 12346")                              |
-| Address Type    | Select either **Ship To** or **Bill To** (e.g., "ShipTo")           |
-| Street          | Enter street name (e.g., "Madhura Nagar")                           |
-| Block or Sector | Enter block or sector (e.g., "B70 TLR Residency")                   |
-| Zip Code        | Enter ZIP code (e.g., "500038")                                     |
-| City            | Enter city (e.g., "Hyderabad")                                      |
-| Country         | Enter country (e.g., "India")                                       |
-| State           | Enter state (e.g., "Telangana")                                     |
-| Name            | Enter contact employee name (e.g., "Check 0111")                    |
-| First Name      | Enter first name (e.g., "Demo")                                     |
-| Last Name       | Enter last name (e.g., "Customer")                                  |
-| Phone1          | Enter phone number if required (e.g., "9987654322")                 |
-| Email Address   | Enter email address (e.g., "demo.auto@yopmail.com")                 |
-| Job Title       | Enter job title if required (e.g., "Sales Executive")               |
-| Position        | Enter position if required (e.g., "Manager")                        |
+| Field          | Description |
+|---------------|------------|
+| Customer Name | Enter required customer name (e.g., "WilliamRober") |
+| Phone1 | Enter required phone number (e.g., "8909876545") |
+| Email Address | Enter required email address (e.g., "william.rober333@yopmail.com") |
+| Address Name | Enter address name (e.g., "ADD 12346") |
+| Address Type | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
+| Street | Enter street name (e.g., "Madhura Nagar") |
+| Block or Sector | Enter block or sector (e.g., "B70 TLR Residency") |
+| Zip Code | Enter ZIP code (e.g., "500038") |
+| City | Enter city (e.g., "Hyderabad") |
+| Country | Enter country (e.g., "India") |
+| State | Enter state (e.g., "Telangana") |
+| Name | Enter contact employee name (e.g., "Check 0111") |
+| First Name | Enter first name (e.g., "Demo") |
+| Last Name | Enter last name (e.g., "Customer") |
+| Phone1 | Enter phone number if required (e.g., "9987654322") |
+| Email Address | Enter email address (e.g., "demo.auto@yopmail.com") |
+| Job Title | Enter job title if required (e.g., "Sales Executive") |
+| Position | Enter position if required (e.g., "Manager") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+---------------
 
 ##### Configuration Fields
 
@@ -1265,10 +1252,9 @@ Click on the **Continue** button, then **Run** the node.
   <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC27.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode step 4 of 5 screenshot" />
   <img src="/img/credentials/sap-b1/SAP-AC-NBPWOUTCC28.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode step 5 of 5 screenshot" />
 
----
+--------------
 
 ##### Result
-
 ```json
 [
   {
@@ -1280,7 +1266,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-----------------
 
 #### Update a Business Partner
 
@@ -1293,40 +1279,39 @@ Only the fields provided in the configuration will be updated. Fields left empty
 :::
 
 ##### Select the Credential and Action Event
-
    <img src="/img/credentials/sap-b1/SAP-C-UBP29.jpg" width="700"  alt="SAP B1 Update a businesspartner step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
----
+-----------------
 
 ##### Configuration Fields
 
-| Field           | Description                                                  |
-| --------------- | ------------------------------------------------------------ |
-| Card Code       | Enter business partner code to update. (e.g., "STOP001")     |
-| Customer Name   | Enter required customer name (e.g., "Robbin Martin")         |
-| Phone1          | Enter required phone number (e.g., "9879090907")             |
-| Email Address   | Enter required email address (e.g., "config.co@yopmail.com") |
-| Address Name    | Enter address name (e.g., "ADD 12345")                       |
-| Address Type    | Select either **Ship To** or **Bill To** (e.g., "ShipTo")    |
-| Street          | Enter street name (e.g., "Madhura Nagar")                    |
-| Block or Sector | Enter block or sector (e.g., "B70 TLR Residency")            |
-| Zip Code        | Enter ZIP code (e.g., "500038")                              |
-| City            | Enter city (e.g., "Hyderabad")                               |
-| Country         | Enter country (e.g., "India")                                |
-| State           | Enter state (e.g., "Telangana")                              |
-| Name            | Enter contact employee name (e.g., "Check 0110")             |
-| First Name      | Enter first name (e.g., "Demo")                              |
-| Last Name       | Enter last name (e.g., "Customer")                           |
-| Phone1          | Enter phone number if required (e.g., "9987654322")          |
-| Email Address   | Enter email address (e.g., "demo.1234co@yopmail.com")        |
-| Job Title       | Enter job title if required (e.g., "Sales Lead")             |
-| Position        | Enter position if required (e.g., "Manager")                 |
+| Field          | Description |
+|---------------|------------|
+| Card Code | Enter business partner code to update. (e.g., "STOP001") |
+| Customer Name | Enter required customer name (e.g., "Robbin Martin") |
+| Phone1 | Enter required phone number (e.g., "9879090907") |
+| Email Address | Enter required email address (e.g., "config.co@yopmail.com") |
+| Address Name | Enter address name (e.g., "ADD 12345") |
+| Address Type | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
+| Street | Enter street name (e.g., "Madhura Nagar") |
+| Block or Sector | Enter block or sector (e.g., "B70 TLR Residency") |
+| Zip Code | Enter ZIP code (e.g., "500038") |
+| City | Enter city (e.g., "Hyderabad") |
+| Country | Enter country (e.g., "India") |
+| State | Enter state (e.g., "Telangana") |
+| Name | Enter contact employee name (e.g., "Check 0110") |
+| First Name | Enter first name (e.g., "Demo") |
+| Last Name | Enter last name (e.g., "Customer") |
+| Phone1 | Enter phone number if required (e.g., "9987654322") |
+| Email Address | Enter email address (e.g., "demo.1234co@yopmail.com") |
+| Job Title | Enter job title if required (e.g., "Sales Lead") |
+| Position | Enter position if required (e.g., "Manager") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+-----------------
 
 ##### Example Configuration
 
@@ -1335,10 +1320,9 @@ Click on the **Continue** button, then **Run** the node.
    <img src="/img/credentials/sap-b1/SAP-AC-UBP32.jpg" width="700"  alt="SAP B1 Update a businesspartner step 4 of 5 screenshot" />
    <img src="/img/credentials/sap-b1/SAP-AC-UBP33.jpg" width="700"  alt="SAP B1 Update a businesspartner step 5 of 5 screenshot" />
 
----
+-----------------
 
 ##### Result
-
 ```json
 [
   {
@@ -1348,7 +1332,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+---------
+
 
 ### Items Actions
 
@@ -1363,18 +1348,17 @@ If the provided ItemCode does not exist, the output will be empty or null.
 :::
 
 ##### Select the Credential and Action Event
-
    <img src="/img/credentials/sap-b1/SAP-C-GIC35.jpg" width="700"  alt="SAP B1 Get a Item by ItemCode step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+--------------
 
 ##### Configuration Fields
 
-| Field    | Description                                                                   |
-| -------- | ----------------------------------------------------------------------------- |
-| ItemCode | Enter the unique identifier of the item to fetch its details. (e.g,. "AN005") |
+| Field          | Description |
+|---------------|------------|
+| ItemCode | Enter the unique identifier of the item to fetch its details. (e.g,. "AN005")|
 
 Click on the **Continue** button, then **Run** the node.
 
@@ -1382,10 +1366,9 @@ Click on the **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/SAP-AC-GIC36.jpg" width="700"  alt="SAP B1 Get a Item by ItemCode step 2 of 2 screenshot" />
 
----
+----------
 
 ##### Result
-
 ```json
 [
   {
@@ -1398,7 +1381,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-------------
 
 #### Create a New Item {#create-a-new-item}
 
@@ -1411,38 +1394,37 @@ If ItemCode is not provided, SAP may not generate Item. Optional fields can be c
 :::
 
 ##### Select the Credential and Action Event
-
    <img src="/img/credentials/sap-b1/SAP-C-CNI38.jpg" width="700"  alt="SAP B1 Create a New Item step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------------
 
 ##### Configuration Fields
 
-| Field                     | Description                                                                                                                                                |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Item Code                 | Unique identifier for the item (e.g., "DOC-910").                                                                                                          |
-| Item Name                 | Enter the name of the item (e.g., "ThinkPad-V1.2.2").                                                                                                      |
-| Optional Fields Remarks   | Additional notes or comments related to the item. (e.g., "ThinkPad is a line of business-focused laptops developed by Lenovo, originally created by IBM.") |
-| Item Prices               | Defines pricing details for the item across different price lists. (e.g., "PriceList: 1 - 500 INR, PriceList: 2 - 550 INR")                                |
-| Inventory Item            | Indicates whether the item is managed in inventory. (e.g., "Yes or No")                                                                                    |
-| InventoryUOM              | Item's stock is tracked and managed in the inventory system (e.g., Nos, Kg, Liters).                                                                       |
-| Location                  | Specifies the storage location of the item.(e.g., "Warehouse-1")                                                                                           |
-| Item Group Code           | Categorizes the item into a specific group. (e.g., "100")                                                                                                  |
-| Additional Identifier     | Any extra reference ID for the item (e.g., "ALT-56789").                                                                                                   |
-| Purchase Item             | Marks the item as available for purchasing. (e.g., "Yes or No")                                                                                            |
-| Sales Item                | Marks the item as available for sales. (e.g., "Yes or No")                                                                                                 |
-| Ship Type                 | Defines the shipping method applicable to the item. (e.g., "5, 6")                                                                                         |
-| Tax Type                  | Specifies the tax category applicable to the item. (e.g., "tt_Yes")                                                                                        |
-| Manage Stock by Warehouse | Enables stock tracking per warehouse. (e.g., "Yes or No")                                                                                                  |
-| WT Liable                 | Indicates if withholding tax is applicable. (e.g., "Yes or No")                                                                                            |
-| BaseUnitName              | Defines the base unit of measurement for the item. (e.g., "Nos")                                                                                           |
-| ItemType                  | Specifies the type of item (e.g., product or service).(e.g., "Items, Labour, travel")                                                                      |
-| ServiceGroup              | Groups service-type items under a category. (e.g., "-1")                                                                                                   |
-| ProductSource             | Defines the origin/source of the product.(e.g., "Local")                                                                                                   |
-| BarCode                   | Unique barcode identifier for the item (e.g., "8901234567890").                                                                                            |
-| VatLiable                 | Indicates if VAT is applicable to the item.(e.g., "Yes or No")                                                                                             |
+| Field          | Description |
+|---------------|------------|
+| Item Code | Unique identifier for the item (e.g., "DOC-910"). |
+| Item Name | Enter the name of the item (e.g., "ThinkPad-V1.2.2"). |
+| Optional Fields Remarks | Additional notes or comments related to the item. (e.g., "ThinkPad is a line of business-focused laptops developed by Lenovo, originally created by IBM.") |
+| Item Prices | Defines pricing details for the item across different price lists. (e.g., "PriceList: 1 - 500 INR, PriceList: 2 - 550 INR") |
+| Inventory Item | Indicates whether the item is managed in inventory. (e.g., "Yes or No")|
+| InventoryUOM | Item's stock is tracked and managed in the inventory system (e.g., Nos, Kg, Liters). |
+| Location | Specifies the storage location of the item.(e.g., "Warehouse-1")|
+|Item Group Code | Categorizes the item into a specific group. (e.g., "100")|
+| Additional Identifier | Any extra reference ID for the item (e.g., "ALT-56789"). |
+| Purchase Item | Marks the item as available for purchasing. (e.g., "Yes or No")|
+| Sales Item | Marks the item as available for sales. (e.g., "Yes or No")|
+| Ship Type | Defines the shipping method applicable to the item. (e.g., "5, 6")|
+| Tax Type | Specifies the tax category applicable to the item. (e.g., "tt_Yes")|
+| Manage Stock by Warehouse | Enables stock tracking per warehouse. (e.g., "Yes or No")|
+| WT Liable | Indicates if withholding tax is applicable. (e.g., "Yes or No")|
+| BaseUnitName | Defines the base unit of measurement for the item. (e.g., "Nos")|
+| ItemType | Specifies the type of item (e.g., product or service).(e.g., "Items, Labour, travel")|
+| ServiceGroup | Groups service-type items under a category. (e.g., "-1")|
+| ProductSource | Defines the origin/source of the product.(e.g., "Local")|
+| BarCode | Unique barcode identifier for the item (e.g., "8901234567890"). |
+| VatLiable | Indicates if VAT is applicable to the item.(e.g., "Yes or No")|
 
 :::note
 These fields are optional and can be configured based on business requirements.
@@ -1459,7 +1441,6 @@ Click on the **Continue** button, then **Run** the node.
    <img src="/img/credentials/sap-b1/SAP-AC-NIC43.jpg" width="700"  alt="SAP B1 Create a New Item step 6 of 6 screenshot" />
 
 ##### Result
-
 ```json
 [
   {
@@ -1475,7 +1456,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-----------------
 
 #### Update an Item {#update-a-item}
 
@@ -1488,19 +1469,16 @@ Only the fields provided will be updated. Fields left empty will remain unchange
 :::
 
 ##### Select the Credential and Action Event
-
    <img src="/img/credentials/sap-b1/ItemUpdate_C.jpg" width="700"  alt="SAP B1 Update an Item step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
----
+------------
 
 ##### Configuration Fields
-
-| Field     | Description                                                   |
-| --------- | ------------------------------------------------------------- |
-| Item Code | Unique identifier of the item to be updated.(e.g.,"ITM-1001") |
-
+| Field          | Description |
+|---------------|------------|
+| Item Code | Unique identifier of the item to be updated.(e.g.,"ITM-1001")
 | Optionals
 Item Name | Name of the item. (e.g., "Laptop Pro 15") |
 | Remarks | Additional notes or comments related to the item. (e.g.,"Updated model with enhanced features") |
@@ -1525,7 +1503,6 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-UI49.jpg" width="700"  alt="SAP B1 Update an Item step 3 of 3 screenshot" />
 
 ##### Result
-
 ```json
 [
   {
@@ -1535,7 +1512,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+---------------
+
 
 ### Quotations Actions
 
@@ -1550,29 +1528,27 @@ If multiple quotations match the provided reference number, the SAP may return t
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GETQTbyNumAtCard51.jpg" width="700"  alt="SAP B1 Get a quotation by customer reference no step 1 of 2 screenshot" />
 
----
+-------
 
 ##### Configuration Fields
 
-| Field     | Description                                                                                     |
-| --------- | ----------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|------------|
 | NumAtCard | Enter the customer reference number associated with the quotation. (e.g., "664111000000373064") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+----------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-GETQbyNumAtCard52.jpg" width="700"  alt="SAP B1 Get a quotation by customer reference no step 2 of 2 screenshot" />
 
----
+----------
 
 ##### Result
-
 ```json
 [
   {
@@ -1585,7 +1561,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------
+
 
 #### Create a new quotation
 
@@ -1596,18 +1573,16 @@ Mandatory fields must be provided to create a quotation. Optional fields can be 
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-NQTC54.jpg" width="700"  alt="SAP B1 Create a new quotation step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field      | Description                                                 |
-| ---------- | ----------------------------------------------------------- |
+| Field          | Description |
+|---------------|---------------|
 | DocDueDate | Specify the due date of the quotation. (e.g., "2026-08-04") |
-| CardCode   | Enter the customer code. (e.g., "BC6129916")                |
-
+| CardCode | Enter the customer code. (e.g., "BC6129916") |
 | DocumentLines
 ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
 | Quantity | Quantity of the item. (e.g., "3") |
@@ -1631,12 +1606,12 @@ DocDate | Date of the quotation. (e.g., "2026-03-13") |
 | BillToCountry | Enter the BillTo country. (e.g., "India") |
 | BillToZipCode | Enter the BillTo ZIP code. (e.g., "500016") |
 | BillToState | Enter the BillTo state. (e.g., "Telangana") |
-| Document Additional Expenses (Optional)
+| Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+--------------
 
 ##### Example Configuration
 
@@ -1647,7 +1622,6 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-NQTC59.jpg" width="700"  alt="SAP B1 Create a new quotation step 6 of 6 screenshot" />
 
 ##### Result
-
 ```json
 [
   {
@@ -1669,7 +1643,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-----------------
 
 #### Update quotation
 
@@ -1682,19 +1656,17 @@ Only the fields provided will be updated. Fields left empty will remain unchange
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-UQT61.jpg" width="700"  alt="SAP B1 Update quotation step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field    | Description                                                      |
-| -------- | ---------------------------------------------------------------- |
+| Field          | Description |
+|---------------|---------------|
 | DocEntry | Enter the quotation document number to be updated. (e.g., "503") |
-
 | Optional Document Fields  
-| DocDueDate | Update the due date of the quotation. (e.g., "2026-08-09") |
+| DocDueDate | Update the due date of the quotation. (e.g., "2026-08-09") | 
 | CardCode | CardCode will be unique. (e.g., "BC6129916") |
 | NumAtCard | Update the customer reference number. (e.g., "Ref-100") |
 | ShipToStreet | Enter the ShipTo street. (e.g., "Madhura Nagar") |
@@ -1717,12 +1689,12 @@ UnitPrice | Price per unit of the item. (e.g., "123") |
 | TaxCode | Tax code applicable to the item. (e.g., "NT") |
 | Vat Group | VAT group classification. (e.g., "VAT1") |
 | Discount Percentage | Discount applied to the item. (e.g., "10") |
-| Document Additional Expenses (Optional)
+| Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
 
 Click on the **Continue** button, then **Run** the node.
 
-##### Example Configuration
+##### Example Configuration 
 
 <img src="/img/credentials/sap-b1/SAP-AC-UQT62.jpg" width="700"  alt="SAP B1 Update quotation step 2 of 6 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-UQT63.jpg" width="700"  alt="SAP B1 Update quotation step 3 of 6 screenshot" />
@@ -1731,7 +1703,6 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-UQT66.jpg" width="700"  alt="SAP B1 Update quotation step 6 of 6 screenshot" />
 
 ##### Result
-
 ```json
 [
   {
@@ -1741,7 +1712,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-----------
 
 #### Update quotation customer reference no
 
@@ -1754,32 +1725,30 @@ Only the `NumAtCard` field will be updated for the specified quotation. Ensure t
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-UQTbyNumAtCard68.jpg" width="700"  alt="SAP B1 Update quotation customer reference no step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+---------
 
 ##### Configuration Fields
 
-| Field     | Description                                                              |
-| --------- | ------------------------------------------------------------------------ |
-| DocEntry  | Enter the internal document entry number of the quotation. (e.g., "503") |
-| NumAtCard | Enter the updated customer reference number. (e.g., "REF-104")           |
+| Field          | Description |
+|---------------|---------------|
+| DocEntry | Enter the internal document entry number of the quotation. (e.g., "503") |
+| NumAtCard | Enter the updated customer reference number. (e.g., "REF-104") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+---------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-UQTbyNumAtCard69.jpg" width="700"  alt="SAP B1 Update quotation customer reference no step 2 of 2 screenshot" />
 
----
+------------------
 
 ##### Result
-
 ```json
 [
   {
@@ -1789,7 +1758,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+------------------
 
 ### Orders Actions
 
@@ -1804,17 +1773,16 @@ If multiple sales orders match the provided reference number, SAP may return the
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GETSObyCRno71.jpg" width="700"  alt="SAP B1 Get an sales order by customer reference no step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field     | Description                                                                            |
-| --------- | -------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|---------------|
 | NumAtCard | Enter the customer reference number associated with the sales order. (e.g., "Ref-104") |
 
 Click on the **Continue** button, then **Run** the node.
@@ -1823,10 +1791,9 @@ Click on the **Continue** button, then **Run** the node.
 
 <img src="/img/credentials/sap-b1/SAP-AC-GETSObyNumAtCard72.jpg" width="700"  alt="SAP B1 Get an sales order by customer reference no step 2 of 2 screenshot" />
 
----
+------------
 
 ##### Result
-
 ```json
 [
   {
@@ -1850,19 +1817,18 @@ The result will include only up to the specified size limit. If no matching reco
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GETSOLbyIC74.jpg" width="700"  alt="SAP B1 Get order list by item code step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------
 
 ##### Configuration Fields
 
-| Field      | Description                                                                          |
-| ---------- | ------------------------------------------------------------------------------------ |
-| Size Limit | Specify the maximum number of records to retrieve. (e.g., "100")                     |
-| Item Code  | Enter the unique identifier of the item to search for in orders. (e.g., "BCB2B0001") |
+| Field          | Description |
+|---------------|---------------|
+| Size Limit | Specify the maximum number of records to retrieve. (e.g., "100") |
+| Item Code | Enter the unique identifier of the item to search for in orders. (e.g., "BCB2B0001") |
 
 Click on the **Continue** button, then **Run** the node.
 
@@ -1870,10 +1836,9 @@ Click on the **Continue** button, then **Run** the node.
 
 <img src="/img/credentials/sap-b1/SAP-AC-GETSOLbyIC75.jpg" width="700"  alt="SAP B1 Get order list by item code step 2 of 2 screenshot" />
 
----
+----------
 
 ##### Result
-
 ```json
 [
   {
@@ -1886,7 +1851,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+---------
 
 #### Create a new sales order
 
@@ -1899,19 +1864,17 @@ Mandatory fields must be provided to create a sales order. Optional fields can b
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CNO77.jpg" width="700"  alt="SAP B1 Create a new sales order step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field             | Description                                               |
-| ----------------- | --------------------------------------------------------- |
-| Document Date     | Specify the date of the sales order. (e.g., "2026-04-01") |
-| Document Due Date | Specify the due or delivery date. (e.g., "2026-04-05")    |
-| Card Code         | Enter the customer code. (e.g., "BC6129916")              |
-
+| Field          | Description |
+|---------------|---------------|
+| Document Date | Specify the date of the sales order. (e.g., "2026-04-01") |
+| Document Due Date | Specify the due or delivery date. (e.g., "2026-04-05") |
+| Card Code | Enter the customer code. (e.g., "BC6129916") |
 | DocumentLines
 ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
 | Quantity | Quantity of the item. (e.g., "5") |
@@ -1920,7 +1883,7 @@ UnitPrice | Price per unit of the item. (e.g., "123") |
 | TaxCode | Tax code applicable to the item. (e.g., "NT") |
 | Vat Group | VAT group classification. (e.g., "VAT1") |
 | Discount Percentage | Discount applied to the item. (e.g., "10") |
-| Additional Fields
+| Additional Fields 
 Contact Person Code | Identifier for the contact person. (e.g., "134") |
 | NumAtCard | Customer reference number. (e.g., "Ref-104") |
 | ShipToStreet | Enter the ShipTo street. (e.g., "Madhura Nagar") |
@@ -1935,10 +1898,10 @@ Contact Person Code | Identifier for the contact person. (e.g., "134") |
 | BillToCountry | Enter the BillTo country. (e.g., "India") |
 | BillToZipCode | Enter the BillTo ZIP code. (e.g., "500016") |
 | BillToState | Enter the BillTo state. (e.g., "Telangana") |
-| Document Additional Expenses (Optional)
+| Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
 
----
+-------
 
 ##### Example Configuration
 
@@ -1947,10 +1910,9 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 <img src="/img/credentials/sap-b1/SAP-AC-CNO80.jpg" width="700"  alt="SAP B1 Create a new sales order step 4 of 5 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CNO81.jpg" width="700"  alt="SAP B1 Create a new sales order step 5 of 5 screenshot" />
 
----
+------------
 
 ##### Result
-
 ```json
 [
   {
@@ -1970,7 +1932,7 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 ]
 ```
 
----
+------------------
 
 #### Create a Service
 
@@ -1983,26 +1945,24 @@ Mandatory fields must be provided to create the service document. Optional field
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CS83.jpg" width="700"  alt="SAP B1 Create a Service step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
----
+------------
 
 ##### Configuration Fields
 
-| Field             | Description                                                              |
-| ----------------- | ------------------------------------------------------------------------ |
-| Object Type       | Select the document type (**Orders** or **Quotation**). (e.g., "orders") |
-| Card Code         | Enter the customer code. (e.g., "BC6129916")                             |
-| Document Date     | Specify the document date. (e.g., "2026-04-01")                          |
-| Document Due Date | Specify the due date. (e.g., "2026-05-09")                               |
-| Item Descritpion  | Description of the service provided. (e.g., "Installation service")      |
-| Unit Price        | Price per unit of service. (e.g., "200")                                 |
-| Quantity          | Number of service units. (e.g., "3")                                     |
-
-| Optionals
+| Field          | Description |
+|---------------|---------------|
+| Object Type | Select the document type (**Orders** or **Quotation**). (e.g., "orders") |
+| Card Code | Enter the customer code. (e.g., "BC6129916") |
+| Document Date | Specify the document date. (e.g., "2026-04-01") |
+| Document Due Date | Specify the due date. (e.g., "2026-05-09") |
+| Item Descritpion | Description of the service provided. (e.g., "Installation service") |
+| Unit Price | Price per unit of service. (e.g., "200") |
+| Quantity | Number of service units. (e.g., "3") |
+| Optionals 
 TaxCode | Tax code applicable to the item. (e.g., "NT") |
 | Discount Percentage | Discount applied to the item. (e.g., "10") |
 | Additional Field
@@ -2010,7 +1970,7 @@ Comments | Add any remarks or notes related to the service document. (e.g., "Urg
 
 Click on the **Continue** button, then **Run** the node.
 
----
+----------
 
 ##### Example Configuration
 
@@ -2018,10 +1978,9 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-CS85.jpg" width="700"  alt="SAP B1 Create a Service step 3 of 4 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CS86.jpg" width="700"  alt="SAP B1 Create a Service step 4 of 4 screenshot" />
 
----
+---------
 
 ##### Result
-
 ```json
 [
   {
@@ -2036,7 +1995,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+---------------------
 
 #### Update Order
 
@@ -2048,26 +2007,24 @@ This action is commonly used to **update order details**, **modify pricing or it
 Only the fields provided will be updated. Fields left empty will remain unchanged in the existing order.
 :::
 
----
+------
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-UO88.jpg" width="700"  alt="SAP B1 Update Order step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
----
+------------
 
 ##### Configuration Fields
 
-| Field                      | Description                                                            |
-| -------------------------- | ---------------------------------------------------------------------- |
-| DocEntry                   | Enter the internal document entry number of the order. (e.g., "11464") |
-| Doc Due Date               | Update the due/delivery date. (e.g., "2026-08-11")                     |
-| NumAtCard                  | Update the customer reference number. (e.g., "Ref-104")                |
-| Rounding                   | Enable or disable rounding (**tYes** or **tNo**). (e.g., "tYes")       |
-| Rounding Difference Amount | Specify the rounding adjustment value. (e.g., "2.50")                  |
-
+| Field         | Description |
+|---------------|---------------|
+| DocEntry | Enter the internal document entry number of the order. (e.g., "11464") |
+| Doc Due Date | Update the due/delivery date. (e.g., "2026-08-11") |
+| NumAtCard | Update the customer reference number. (e.g., "Ref-104") |
+| Rounding | Enable or disable rounding (**tYes** or **tNo**). (e.g., "tYes") |
+| Rounding Difference Amount | Specify the rounding adjustment value. (e.g., "2.50") |
 | DocumentLines
 ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
 | Quantity | Quantity of the item. (e.g., "8") |
@@ -2088,12 +2045,12 @@ UnitPrice | Price per unit of the item. (e.g., "160") |
 | BillToCountry | Enter the BillTo country. (e.g., "India") |
 | BillToZipCode | Enter the BillTo ZIP code. (e.g., "500016") |
 | BillToState | Enter the BillTo state. (e.g., "Telangana") |
-| Document Additional Expenses (Optional)
+| Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+--------------
 
 ##### Example Configuration
 
@@ -2103,10 +2060,9 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-UO92.jpg" width="700"  alt="SAP B1 Update Order step 5 of 6 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-UO93.jpg" width="700"  alt="SAP B1 Update Order step 6 of 6 screenshot" />
 
----
+------------
 
 ##### Result
-
 ```json
 [
   {
@@ -2115,7 +2071,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+------------------
 
 #### Update salesorder customer reference no
 
@@ -2128,30 +2084,28 @@ Only the `NumAtCard` field will be updated for the specified sales order. Ensure
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-USOCRno95.jpg" width="700"  alt="SAP B1 Update salesorder customer reference no step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------
 
 ##### Configuration Fields
 
-| Field     | Description                                                                    |
-| --------- | ------------------------------------------------------------------------------ |
-| DocEntry  | Enter the internal document entry number of the sales order. (e.g., ("11464")) |
-| NumAtCard | Enter the updated customer reference number. (e.g., "Ref-104")                 |
+| Field          | Description |
+|---------------|---------------|
+| DocEntry | Enter the internal document entry number of the sales order. (e.g., ("11464")) |
+| NumAtCard | Enter the updated customer reference number. (e.g., "Ref-104") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+-------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-USOCRno96.jpg" width="700"  alt="SAP B1 Update salesorder customer reference no step 2 of 2 screenshot" />
 
 ##### Result
-
 ```json
 [
   {
@@ -2160,7 +2114,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+---------------
 
 #### Cancel a Sales Order
 
@@ -2173,29 +2127,27 @@ Once a sales order is cancelled, it cannot be reactivated. Ensure the correct Do
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CSO98.jpg" width="700"  alt="SAP B1 Cancel a Sales Order step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+---------------
 
 ##### Configuration Fields
 
-| Field    | Description                                                                                  |
-| -------- | -------------------------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|---------------|
 | DocEntry | Enter the internal document entry number of the sales order to be cancelled. (e.g., "11464") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+----------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-CSO99.jpg" width="700"  alt="SAP B1 Cancel a Sales Order step 2 of 2 screenshot" />
 
 ##### Result
-
 ```json
 [
   {
@@ -2207,11 +2159,11 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------
 
 ### Invoices Actions
 
-#### Get invoice by DocEntry
+#### Get invoice by DocEntry 
 
 **Get Invoice by DocEntry** action retrieves invoice details using the internal document entry number (`DocEntry`). It returns the matching invoice record as a structured object.
 
@@ -2222,31 +2174,30 @@ If the provided DocEntry does not exist, the output will be empty or null.
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GETbyDocEntry113.jpg" width="700"  alt="SAP B1 Get invoice by DocEntry step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field    | Description                                                              |
-| -------- | ------------------------------------------------------------------------ |
+| Field          | Description |
+|---------------|---------------|
 | DocEntry | Enter the internal document entry number of the invoice. (e.g., "11462") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+
+-----------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-GETbyDocEntry114.jpg" width="700"  alt="SAP B1 Get invoice by DocEntry step 2 of 2 screenshot" />
 
----
+-------------
 
 ##### Result
-
 ```json
 [
   {
@@ -2259,7 +2210,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------
 
 #### Get invoice by order DocEntry
 
@@ -2272,15 +2223,14 @@ If no invoices are linked to the provided order DocEntry, the output will be emp
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GETbyODRDocEntry110.jpg" width="700"  alt="SAP B1 Get invoice by order DocEntry step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field    | Description                                                                  |
-| -------- | ---------------------------------------------------------------------------- |
+| Field          | Description |
+|---------------|---------------|
 | DocEntry | Enter the internal document entry number of the sales order. (e.g., "11464") |
 
 Click on the **Continue** button, then **Run** the node.
@@ -2289,10 +2239,9 @@ Click on the **Continue** button, then **Run** the node.
 
 <img src="/img/credentials/sap-b1/SAP-AC-GETbyODRDocEntry111.jpg" width="700"  alt="SAP B1 Get invoice by order DocEntry step 2 of 2 screenshot" />
 
----
+-----------
 
 ##### Result
-
 ```json
 [
   {
@@ -2312,7 +2261,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-------------
 
 #### Get invoice by NumAtCard
 
@@ -2325,17 +2274,16 @@ If multiple invoices match the provided reference number, the system may return 
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GETINVbyNumAtCard107.jpg" width="700"  alt="SAP B1 Get invoice by NumAtCard step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+------------
 
 ##### Configuration Fields
 
-| Field     | Description                                                                          |
-| --------- | ------------------------------------------------------------------------------------ |
+| Field          | Description |
+|---------------|---------------|
 | NumAtCard | Enter the customer reference number associated with the invoice. (e.g., "REF-INV01") |
 
 Click on the **Continue** button, then **Run** the node.
@@ -2345,7 +2293,6 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-GETINVbyNumAtCard108.jpg" width="700"  alt="SAP B1 Get invoice by NumAtCard step 2 of 2 screenshot" />
 
 ##### Result
-
 ```json
 [
   {
@@ -2358,7 +2305,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-------------
 
 #### Create a new AR invoice
 
@@ -2371,22 +2318,20 @@ Mandatory fields must be provided to create an invoice. Optional fields can be c
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CNINV102.jpg" width="700"  alt="SAP B1 Create a new AR invoice step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field           | Description                                                                           |
-| --------------- | ------------------------------------------------------------------------------------- |
-| DocDate         | Specify the invoice date. (e.g., "2026-04-01")                                        |
-| DocDueDate      | Specify the due date of the invoice. (e.g., "2026-05-19")                             |
-| CardCode        | Enter the customer code. (e.g., "BC6129916")                                          |
+| Field          | Description |
+|---------------|---------------|
+| DocDate | Specify the invoice date. (e.g., "2026-04-01") |
+| DocDueDate | Specify the due date of the invoice. (e.g., "2026-05-19") |
+| CardCode | Enter the customer code. (e.g., "BC6129916") |
 | Reserve Invoice | Select the invoice type (**AR Invoice** or **Reserve Invoice**). (e.g., "AR Invoice") |
-
 | DocumentLines
 ItemCode | Unique identifier of the item. (e.g., "WOOCOM101")
 | Quantity | Quantity of the item. (e.g., "7") |
@@ -2400,12 +2345,12 @@ UnitPrice | Price per unit of the item. (e.g., "500") |
 | BaseEntry | Base document entry reference. (e.g., "1455") |
 | NumAtCard | Enter the customer reference number. (e.g., "REF-INV01") |
 | ContactPerson | Identifier of the contact person. (e.g., "134") |
-| Document Additional Expenses (Optional)
+| Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+------------
 
 ##### Example Configuration
 
@@ -2413,10 +2358,9 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-CNINV104.jpg" width="700"  alt="SAP B1 Create a new AR invoice step 3 of 4 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CNINV105.jpg" width="700"  alt="SAP B1 Create a new AR invoice step 4 of 4 screenshot" />
 
----
+------------
 
 ##### Result
-
 ```json
 [
   {
@@ -2440,7 +2384,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+----------------
+
 
 ### Returns Actions
 
@@ -2455,21 +2400,19 @@ Mandatory fields must be provided to create a return document. Optional fields c
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CRETURN107.jpg" width="700"  alt="SAP B1 Create Returns step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------
 
 ##### Configuration Fields
 
-| Field      | Description                                               |
-| ---------- | --------------------------------------------------------- |
-| DocDate    | Specify the invoice date. (e.g., "2026-04-01")            |
+| Field          | Description |
+|---------------|---------------|
+| DocDate | Specify the invoice date. (e.g., "2026-04-01") |
 | DocDueDate | Specify the due date of the invoice. (e.g., "2026-05-19") |
-| CardCode   | Enter the customer code. (e.g., "ZC0001")                 |
-
+| CardCode | Enter the customer code. (e.g., "ZC0001") |
 | DocumentLines
 ItemCode | Unique identifier of the item. (e.g., "DIET001")
 | Quantity | Quantity of the item. (e.g., "1") |
@@ -2484,13 +2427,13 @@ UnitPrice | Price per unit of the item. (e.g., "20") |
 | BaseEntry | Base document entry reference. (e.g., "1455") |
 | NumAtCard | Enter the customer reference number. (e.g., "REF-INV01") |
 | ContactPerson | Identifier of the contact person. (e.g., "134") |
-| Document Additional Expenses (Optional)
+| Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs such as handling or return charges. (e.g., "300") |
 | Comments | Add remarks related to the return. (e.g., "Damaged item returned") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+--------
 
 ##### Example Configuration
 
@@ -2498,10 +2441,9 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-CRETURN109.jpg" width="700"  alt="SAP B1 Create Returns step 3 of 4 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CRETURN110.jpg" width="700"  alt="SAP B1 Create Returns step 4 of 4 screenshot" />
 
----
+-------------
 
 ##### Result
-
 ```json
 [
   {
@@ -2526,7 +2468,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------------
 
 ### ServiceCall Actions
 
@@ -2535,37 +2477,35 @@ Click on the **Continue** button, then **Run** the node.
 **Create Service Call** action creates a new service request in the SAP with customer, item, and issue details. It helps in tracking service activities and managing support processes.
 
 :::note
-Mandatory fields must be provided to create a service call. Optional fields can be configured based on business requirements.
-:::
+ Mandatory fields must be provided to create a service call. Optional fields can be configured based on business requirements.
+ :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CSRVCCL121.jpg" width="700"  alt="SAP B1 Create Service Call step 1 of 7 screenshot" />
 
 Click on the **Continue** button.
 
----
+-----------
 
 ##### Configuration Fields
 
-| Field               | Description                                                                                   |
-| ------------------- | --------------------------------------------------------------------------------------------- |
-| Customer Code       | Enter the customer code. (e.g., "BC6129916")                                                  |
-| Subject             | Provide the subject of the service call. (e.g., "DemoCall")                                   |
-| Status              | Define the current status of the service call. (e.g., "Open")                                 |
-| Customer Name       | Enter the name of the customer. (e.g., "MAX")                                                 |
-| Contact Person Code | Identifier of the contact person. (e.g., "134")                                               |
-| Description         | Detailed description of the issue/request. (e.g., "This call is regarding testing purposes.") |
-| Priority            | Set the priority level. (e.g., "High")                                                        |
-| Start Date          | Specify the start date of the service. (e.g., "2026-04-06")                                   |
-| Start Time          | Specify the start time. (e.g., "17:32:00")                                                    |
-| End Due Date        | Specify the expected completion date. (e.g., "2026-04-20")                                    |
-| End Time            | Specify the expected completion time. (e.g., "23:32:00")                                      |
-| Assigned Date       | Date when the service is assigned. (e.g., "2026-04-01")                                       |
-| Item Code           | Unique identifier of the item. (e.g., "BCB2B0001")                                            |
-| Item Description    | Description of the item. (e.g., "Hyderated Water Bottle1")                                    |
-| Item Group Code     | Categorizes the item. (e.g., "100")                                                           |
-
+| Field | Description |
+|------|-------------|
+| Customer Code | Enter the customer code. (e.g., "BC6129916") |
+| Subject | Provide the subject of the service call. (e.g., "DemoCall") |
+| Status | Define the current status of the service call. (e.g., "Open") |
+| Customer Name | Enter the name of the customer. (e.g., "MAX") |
+| Contact Person Code | Identifier of the contact person. (e.g., "134") |
+| Description | Detailed description of the issue/request. (e.g., "This call is regarding testing purposes.") |
+| Priority | Set the priority level. (e.g., "High") |
+| Start Date | Specify the start date of the service. (e.g., "2026-04-06") |
+| Start Time | Specify the start time. (e.g., "17:32:00") |
+| End Due Date | Specify the expected completion date. (e.g., "2026-04-20") |
+| End Time | Specify the expected completion time. (e.g., "23:32:00") |
+| Assigned Date | Date when the service is assigned. (e.g., "2026-04-01") |
+| Item Code | Unique identifier of the item. (e.g., "BCB2B0001") |
+| Item Description | Description of the item. (e.g., "Hyderated Water Bottle1") |
+| Item Group Code | Categorizes the item. (e.g., "100") |
 | Optionals
 | Ship To Address Type | Type of shipping address. (e.g., "Customer") |
 | ShipToStreet | Shipping street address. (e.g., "Domin Street") |
@@ -2588,7 +2528,7 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** the node.
 
----
+-----------
 
 ##### Example Configuration
 
@@ -2599,10 +2539,9 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL126.jpg" width="700"  alt="SAP B1 Create Service Call step 6 of 7 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL127.jpg" width="700"  alt="SAP B1 Create Service Call step 7 of 7 screenshot" />
 
----
+---------------
 
 ##### Result
-
 ```json
 [
   {
@@ -2624,7 +2563,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------
+
 
 #### Update Service Call
 
@@ -2633,37 +2573,34 @@ Click on the **Continue** button, then **Run** the node.
 :::note
 Ensure valid status and priority values are selected based on business rules. Optional address fields can be updated if required.
 :::
-
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-USVCL130.jpg" width="700"  alt="SAP B1 Update Service Call step 1 of 8 screenshot" />
 
 Click on the **Continue** button.
 
----
+------------
 
 ##### Configuration Fields
 
-| Field               | Description                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------ |
-| Service Call Id     | Enter the service call identifier. (e.g., "84")                                      |
-| Customer Code       | Enter the customer code. (e.g., "BC6129916")                                         |
-| Customer Name       | Enter the name of the customer. (e.g., "MAX WELL")                                   |
-| Contact Person Code | Identifier of the contact person. (e.g., "134")                                      |
-| Subject             | Provide the subject of the service call. (e.g., "DemoCall - updated")                |
-| Description         | Updated description of the issue. (e.g., "This call is regarding testing purposes.") |
-| Priority            | Select priority based on requirement. (e.g., "Medium")                               |
-| Status              | Select current status. (e.g., "Closed")                                              |
-| Start Date          | Specify the start date. (e.g., "2026-04-06")                                         |
-| Start Time          | Specify the start time. (e.g., "17:32:00")                                           |
-| End Due Date        | Specify the expected completion date. (e.g., "2026-04-20")                           |
-| End Time            | Specify the expected completion time. (e.g., "23:32:00")                             |
-| Assigned Date       | Date when the service is assigned. (e.g., "2026-04-01")                              |
-| Item Code           | Unique identifier of the item. (e.g., "BCB2B0001")                                   |
-| Item Description    | Description of the item. (e.g., "Hyderated Water Bottle1")                           |
-| Item Group Code     | Categorizes the item. (e.g., "100")                                                  |
-| Resolution          | Final resolution or action taken. (e.g., "Test")                                     |
-
+| Field | Description |
+|------|-------------|
+| Service Call Id | Enter the service call identifier. (e.g., "84") |
+| Customer Code | Enter the customer code. (e.g., "BC6129916") |
+| Customer Name | Enter the name of the customer. (e.g., "MAX WELL") |
+| Contact Person Code | Identifier of the contact person. (e.g., "134") |
+| Subject | Provide the subject of the service call. (e.g., "DemoCall - updated") |
+| Description | Updated description of the issue. (e.g., "This call is regarding testing purposes.") |
+| Priority | Select priority based on requirement. (e.g., "Medium") |
+| Status | Select current status. (e.g., "Closed") |
+| Start Date | Specify the start date. (e.g., "2026-04-06") |
+| Start Time | Specify the start time. (e.g., "17:32:00") |
+| End Due Date | Specify the expected completion date. (e.g., "2026-04-20") |
+| End Time | Specify the expected completion time. (e.g., "23:32:00") |
+| Assigned Date | Date when the service is assigned. (e.g., "2026-04-01") |
+| Item Code | Unique identifier of the item. (e.g., "BCB2B0001") |
+| Item Description | Description of the item. (e.g., "Hyderated Water Bottle1") |
+| Item Group Code | Categorizes the item. (e.g., "100") |
+| Resolution | Final resolution or action taken. (e.g., "Test") |
 | Optional Fields
 Ship To Address Type | Type of shipping address. (e.g., "Customer") |
 | ShipToStreet | Shipping street address. (e.g., "Domin Street") |
@@ -2688,10 +2625,9 @@ Ship To Address Type | Type of shipping address. (e.g., "Customer") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+-------------
 
 ##### Example Configuration
-
 <img src="/img/credentials/sap-b1/SAP-AC-USRVCCL131.jpg" width="700"  alt="SAP B1 Update Service Call step 2 of 8 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-USRVCCL132.jpg" width="700"  alt="SAP B1 Update Service Call step 3 of 8 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-USRVCCL133.jpg" width="700"  alt="SAP B1 Update Service Call step 4 of 8 screenshot" />
@@ -2700,10 +2636,9 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-USRVCCL136.jpg" width="700"  alt="SAP B1 Update Service Call step 7 of 8 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-USRVCCL137.jpg" width="700"  alt="SAP B1 Update Service Call step 8 of 8 screenshot" />
 
----
+-----------
 
 ##### Result
-
 ```json
 [
   {
@@ -2712,7 +2647,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------------
+
 
 ### SalesOpportunities Actions
 
@@ -2725,30 +2661,27 @@ Sales Opportunity Lines are mandatory to track stages and progress of the opport
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CNSOPPR141.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity step 1 of 8 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------
 
 ##### Configuration Fields
 
-| Field                | Description                                                     |
-| -------------------- | --------------------------------------------------------------- |
-| BusinessPartner Code | Enter the customer/business partner code. (e.g., "BC6129916")   |
-| Opportunity Name     | Provide the name of the opportunity. (e.g., "Demo Opportunity") |
-| Start Date           | Specify the opportunity start date. (e.g., "2026-04-06")        |
-
+| Field | Description |
+|------|-------------|
+| BusinessPartner Code | Enter the customer/business partner code. (e.g., "BC6129916") |
+| Opportunity Name | Provide the name of the opportunity. (e.g., "Demo Opportunity") |
+| Start Date | Specify the opportunity start date. (e.g., "2026-04-06") |
 ##### Sales Opportunity Lines
 
-| Field               | Description                                                    |
-| ------------------- | -------------------------------------------------------------- |
-| Start Date          | Specify the start date of the stage. (e.g., "2026-04-06")      |
-| Closing Date        | Expected closing date of the opportunity. (e.g., "2026-04-06") |
-| Maximum Local Total | Estimated maximum value of the opportunity. (e.g., "80000")    |
-| Stage Key           | Define the stage of the opportunity. (e.g., "3")               |
-
+| Field | Description |
+|------|-------------|
+| Start Date | Specify the start date of the stage. (e.g., "2026-04-06") |
+| Closing Date | Expected closing date of the opportunity. (e.g., "2026-04-06") |
+| Maximum Local Total | Estimated maximum value of the opportunity. (e.g., "80000") |
+| Stage Key | Define the stage of the opportunity. (e.g., "3") |
 ##### Optional Fields
 
 | Contact Person Code | Identifier of the contact person. (e.g., "134") |
@@ -2757,7 +2690,7 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** the node.
 
----
+----------------------
 
 ##### Example Configuration
 
@@ -2765,10 +2698,9 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-CNSOPP143.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity step 3 of 8 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CNSOPP144.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity step 4 of 8 screenshot" />
 
----
+------------
 
 ##### Result
-
 ```json
 [
   {
@@ -2801,7 +2733,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+-------------
+
 
 ### Exchange Rate Actions
 
@@ -2816,32 +2749,30 @@ If no date is provided, the system may return the latest available exchange rate
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GCRNCYRATE147.jpg" width="700"  alt="SAP B1 Get Currency Exchange Rate step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field         | Description                                                                             |
-| ------------- | --------------------------------------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | Currency Code | Enter the currency code for which the exchange rate is required. (e.g., "Indian Rupee") |
-| Date          | Specify the date to fetch the exchange rate. (e.g., "2026-04-06")                       |
+| Date | Specify the date to fetch the exchange rate. (e.g., "2026-04-06") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-GCRNCYRATE148.jpg" width="700"  alt="SAP B1 Get Currency Exchange Rate step 2 of 2 screenshot" />
 
----
+----------
 
 ##### Result
-
 ```json
 [
   {
@@ -2850,7 +2781,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+------------
+
 
 #### Set Currency Rate
 
@@ -2860,36 +2792,34 @@ Click on the **Continue** button, then **Run** the node.
 Ensure the exchange rate is accurate, as it impacts financial transactions and reporting.
 :::
 
----
+--------------
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-STCRNCYRATE150.jpg" width="700"  alt="SAP B1 Set Currency Rate step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+------------------
 
 ##### Configuration Fields
 
-| Field         | Description                                                            |
-| ------------- | ---------------------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | Currency Code | Enter the currency code for which the rate is being set. (e.g., "INR") |
-| Rate Date     | Specify the date for the exchange rate. (e.g., "2026-04-06")           |
-| Exchange Rate | Enter the exchange rate value. (e.g., "3.9")                           |
+| Rate Date | Specify the date for the exchange rate. (e.g., "2026-04-06") |
+| Exchange Rate | Enter the exchange rate value. (e.g., "3.9") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+-------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-SCRNCYRATE151.jpg" width="700"  alt="SAP B1 Set Currency Rate step 2 of 2 screenshot" />
 
----
+-----------
 
 ##### Result
-
 ```json
 [
   {
@@ -2902,7 +2832,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------------
+
 
 ### Sales Tax Codes Actions
 
@@ -2915,60 +2846,55 @@ Tax configurations should be set carefully as they directly impact financial cal
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CSLSTAXCODE234.jpg" width="700"  alt="SAP B1 Create Sales Tax Code step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+------------------
 
 ##### Configuration Fields
 
-| Field        | Description                                   |
-| ------------ | --------------------------------------------- |
-| Tax Code     | Unique identifier for the tax. (e.g., "IMST") |
-| Tax Name     | Name of the tax. (e.g., "IMST")               |
-| Tax Rate (%) | Percentage of the tax rate. (e.g., "5")       |
-
+| Field | Description |
+|------|-------------|
+| Tax Code | Unique identifier for the tax. (e.g., "IMST") |
+| Tax Name | Name of the tax. (e.g., "IMST") |
+| Tax Rate (%) | Percentage of the tax rate. (e.g., "5") |
 ##### Sales Tax Code Lines
 
-| Field                        | Description                                       |
-| ---------------------------- | ------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | Tax Authority Code (STACode) | Code representing the tax authority. (e.g., "CA") |
-| Tax Authority Type (STAType) | Type of tax authority. (e.g., "Country")          |
-
+| Tax Authority Type (STAType) | Type of tax authority. (e.g., "Country") |
 ##### Optional Fields
 
-| Field           | Description                                                      |
-| --------------- | ---------------------------------------------------------------- |
-| Sales Tax Code  | Additional tax code reference if applicable. (e.g., "GST_SALES") |
-| Effective Rate  | Effective tax rate after adjustments. (e.g., "18")               |
-| Tax on Tax Code | Specifies dependent tax code. (e.g., "CESS")                     |
-| Tax on Tax Type | Type of tax applied on another tax. (e.g., "Inclusive")          |
-
+| Field | Description |
+|------|-------------|
+| Sales Tax Code | Additional tax code reference if applicable. (e.g., "GST_SALES") |
+| Effective Rate | Effective tax rate after adjustments. (e.g., "18") |
+| Tax on Tax Code | Specifies dependent tax code. (e.g., "CESS") |
+| Tax on Tax Type | Type of tax applied on another tax. (e.g., "Inclusive") |
 ##### Additional Optional Settings
 
-| Field                              | Description                                                      |
-| ---------------------------------- | ---------------------------------------------------------------- |
-| Valid for AR (Accounts Receivable) | Indicates if applicable for sales transactions. (e.g., "Yes")    |
-| Valid for AP (Accounts Payable)    | Indicates if applicable for purchase transactions. (e.g., "Yes") |
-| Freight                            | Specifies if tax applies to freight charges. (e.g., "Yes")       |
-| Is Item Level                      | Determines if tax is applied at item level. (e.g., "Yes")        |
-| FA Debit                           | Indicates if applicable for fixed asset debit. (e.g., "No")      |
-| Inactive                           | Marks the tax code as inactive if not in use. (e.g., "No")       |
+| Field | Description |
+|------|-------------|
+| Valid for AR (Accounts Receivable) | Indicates if applicable for sales transactions. (e.g., "Yes") |
+| Valid for AP (Accounts Payable) | Indicates if applicable for purchase transactions. (e.g., "Yes") |
+| Freight | Specifies if tax applies to freight charges. (e.g., "Yes") |
+| Is Item Level | Determines if tax is applied at item level. (e.g., "Yes") |
+| FA Debit | Indicates if applicable for fixed asset debit. (e.g., "No") |
+| Inactive | Marks the tax code as inactive if not in use. (e.g., "No") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+-------------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-CSLSTAXCODE235.jpg" width="700"  alt="SAP B1 Create Sales Tax Code step 2 of 2 screenshot" />
 
----
+-------------
 
 ##### Result
-
 ```json
 [
   {
@@ -2997,52 +2923,47 @@ Click on the **Continue** button, then **Run** the node.
   }
 ]
 ```
-
----
+--------------------
 
 #### Update Sales Tax Code
 
 **Update Sales Tax Code** action is used to modify an existing tax code in the SAP. It allows updating tax details and configurations based on business or compliance requirements.
 
 ##### Select the Credential and Action Event
-
 Click on the **Continue** button.
 
----
+-------
 
 ##### Configuration Fields
 
-| Field                 | Description                                             |
-| --------------------- | ------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | Tax Code (Identifier) | Enter the unique tax code to be updated. (e.g., "IMST") |
-| Tax Name              | Name of the tax. (e.g., "IMST")                         |
-| Tax Rate (%)          | Percentage of the tax rate. (e.g., "6")                 |
-
+| Tax Name | Name of the tax. (e.g., "IMST") |
+| Tax Rate (%) | Percentage of the tax rate. (e.g., "6") |
 ##### Sales Tax Code Lines
 
-| Field                        | Description                                       |
-| ---------------------------- | ------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | Tax Authority Code (STACode) | Code representing the tax authority. (e.g., "CA") |
-| Tax Authority Type (STAType) | Type of tax authority. (e.g., "Country")          |
-
+| Tax Authority Type (STAType) | Type of tax authority. (e.g., "Country") |
 ##### Optional Fields
 
-| Field           | Description                                                      |
-| --------------- | ---------------------------------------------------------------- |
-| Sales Tax Code  | Additional tax code reference if applicable. (e.g., "GST_SALES") |
-| Effective Rate  | Effective tax rate after adjustments. (e.g., "18")               |
-| Tax on Tax Code | Specifies dependent tax code. (e.g., "CESS")                     |
-| Tax on Tax Type | Type of tax applied on another tax. (e.g., "Inclusive")          |
-
+| Field | Description |
+|------|-------------|
+| Sales Tax Code | Additional tax code reference if applicable. (e.g., "GST_SALES") |
+| Effective Rate | Effective tax rate after adjustments. (e.g., "18") |
+| Tax on Tax Code | Specifies dependent tax code. (e.g., "CESS") |
+| Tax on Tax Type | Type of tax applied on another tax. (e.g., "Inclusive") |
 ##### Additional Optional Settings
 
-| Field                              | Description                                                      |
-| ---------------------------------- | ---------------------------------------------------------------- |
-| Valid for AR (Accounts Receivable) | Indicates if applicable for sales transactions. (e.g., "Yes")    |
-| Valid for AP (Accounts Payable)    | Indicates if applicable for purchase transactions. (e.g., "Yes") |
-| Freight                            | Specifies if tax applies to freight charges. (e.g., "Yes")       |
-| Is Item Level                      | Determines if tax is applied at item level. (e.g., "Yes")        |
-| FA Debit                           | Indicates if applicable for fixed asset debit. (e.g., "No")      |
+| Field | Description |
+|------|-------------|
+| Valid for AR (Accounts Receivable) | Indicates if applicable for sales transactions. (e.g., "Yes") |
+| Valid for AP (Accounts Payable) | Indicates if applicable for purchase transactions. (e.g., "Yes") |
+| Freight | Specifies if tax applies to freight charges. (e.g., "Yes") |
+| Is Item Level | Determines if tax is applied at item level. (e.g., "Yes") |
+| FA Debit | Indicates if applicable for fixed asset debit. (e.g., "No") |
 
 :::note
 Only the provided fields will be updated. Ensure the correct Tax Code is used, as it directly impacts financial calculations and reporting.
@@ -3050,13 +2971,13 @@ Only the provided fields will be updated. Ensure the correct Tax Code is used, a
 
 Click on the **Continue** button, then **Run** node
 
----
+-----------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-USLSTAXCODE236.jpg" width="700"  alt="SAP B1 Update Sales Tax Code screenshot" />
 
----
+----------
 
 ##### Result
 
@@ -3068,7 +2989,7 @@ Click on the **Continue** button, then **Run** node
 ]
 ```
 
----
+-------------------
 
 ### Special Prices Action
 
@@ -3081,31 +3002,29 @@ This action returns all special prices associated with the given Card Code, incl
 :::
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GSPRCbyCRDCDE153.jpg" width="700"  alt="SAP B1 Get Special Prices by Card Code step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------
 
 ##### Configuration Fields
 
-| Field     | Description                                                            |
-| --------- | ---------------------------------------------------------------------- |
+| Field | Description |
+|------|--------------|
 | Card Code | Enter the business partner (customer/vendor) code. (e.g., "BC6129916") |
 
 Click on the **Continue** button, then **Run** the node.
 
----
+------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-GETSPRCbyCRDCODE154.jpg" width="700"  alt="SAP B1 Get Special Prices by Card Code step 2 of 2 screenshot" />
 
----
+--------------
 
 ##### Result
-
 ```json
 [
   {
@@ -3183,7 +3102,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------
 
 ### Return Request Actions
 
@@ -3192,20 +3111,18 @@ Click on the **Continue** button, then **Run** the node.
 **Create Return Request** action creates a new return request document in the SAP for items that need to be returned. It captures customer, item, and pricing details for further processing.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CRTNRQST161.jpg" width="700"  alt="SAP B1 Create Return Request step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field    | Description                                           |
-| -------- | ----------------------------------------------------- |
-| DocDate  | Specify the return request date. (e.g., "2026-04-30") |
-| CardCode | Enter the customer code. (e.g., "BC6129916")          |
-
+| Field | Description |
+|------|-------------|
+| DocDate | Specify the return request date. (e.g., "2026-04-30") |
+| CardCode | Enter the customer code. (e.g., "BC6129916") |
 | Document Lines
 ItemCode | Unique identifier of the item. (e.g., "BCB2B0001") |
 | Quantity | Quantity of the item to be returned. (e.g., "2") |
@@ -3224,7 +3141,7 @@ DocDate | Specify document date if different. (e.g., "2026-04-10") |
 | ContactPersonCode | Identifier of the contact person. (e.g., "134") |
 | Comment | Additional remarks. (e.g., "null") |
 | Additional Expenses (Optional)
-Additional Expenses | Extra charges such as handling or logistics. (e.g., "200") |
+ Additional Expenses | Extra charges such as handling or logistics. (e.g., "200") |
 
 :::note
 Mandatory fields must be provided to create a return request. Optional fields can be configured based on business requirements.
@@ -3232,7 +3149,7 @@ Mandatory fields must be provided to create a return request. Optional fields ca
 
 Click on the **Continue** button, then **Run** the node.
 
----
+-------
 
 ##### Example Configuration
 
@@ -3240,10 +3157,9 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST163.jpg" width="700"  alt="SAP B1 Create Return Request step 3 of 4 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST164.jpg" width="700"  alt="SAP B1 Create Return Request step 4 of 4 screenshot" />
 
----
+---------
 
 ##### Result
-
 ```json
 [
   {
@@ -3285,7 +3201,8 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+---------------------
+
 
 ### Sales Opportunities Action
 
@@ -3294,21 +3211,19 @@ Click on the **Continue** button, then **Run** the node.
 **Create a New Sales Opportunity** action is used to record and track potential sales deals in the system, including stages, expected value, and customer details.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CSOPP191.jpg" width="700"  alt="SAP B1 Create a new sales opportunity step 5 of 8 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------
 
 ##### Configuration Fields
 
-| Field                 | Description                                                             |
-| --------------------- | ----------------------------------------------------------------------- |
-| Business Partner Code | Enter the customer/business partner code. (e.g., "BC6129916")           |
-| Opportunity Name      | Provide the name of the opportunity. (e.g., "OPPO TEST 22")             |
-| Start Date            | Specify the opportunity start date and time. (e.g., "14/04/2026 13:18") |
-
+| Field | Description |
+|------|-------------|
+| Business Partner Code | Enter the customer/business partner code. (e.g., "BC6129916") |
+| Opportunity Name | Provide the name of the opportunity. (e.g., "OPPO TEST 22") |
+| Start Date | Specify the opportunity start date and time. (e.g., "14/04/2026 13:18") |
 | Sales Opportunity Lines
 Start Date | Specify the stage start date and time. (e.g., "14/04/2026 13:20") |
 | Closing Date | Expected closing date and time. (e.g., "14/04/2026 13:20") |
@@ -3325,7 +3240,7 @@ Sales Opportunity Lines are required to track the progress and lifecycle of the 
 
 Click on the **Continue** button, then **Run** the node.
 
----
+------------
 
 ##### Example Configuration
 
@@ -3333,7 +3248,7 @@ Click on the **Continue** button, then **Run** the node.
 <img src="/img/credentials/sap-b1/SAP-AC-CNSOPP193.jpg" width="700"  alt="SAP B1 Create a new sales opportunity step 7 of 8 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CNSOPP194.jpg" width="700"  alt="SAP B1 Create a new sales opportunity step 8 of 8 screenshot" />
 
----
+--------------
 
 ##### Result
 
@@ -3424,7 +3339,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------------
 
 ### Purchase Order Action
 
@@ -3433,21 +3348,19 @@ Click on the **Continue** button, then **Run** the node.
 **Create Purchase Order** action creates a new purchase order in the SAP for procuring goods or services from a vendor. It captures vendor, item, pricing, and delivery details.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CPRORD205.jpg" width="700"  alt="SAP B1 Create Purchase Order step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field         | Description                                              |
-| ------------- | -------------------------------------------------------- |
-| Vendor Code   | Enter the vendor code. (e.g., "SRITEST")                 |
-| Document Date | Specify the purchase order date. (e.g., "2026-04-17")    |
+| Field | Description |
+|------|-------------|
+| Vendor Code | Enter the vendor code. (e.g., "SRITEST") |
+| Document Date | Specify the purchase order date. (e.g., "2026-04-17") |
 | Delivery Date | Specify the expected delivery date. (e.g., "2026-04-24") |
-
 | Document Lines
 Item Code | Unique identifier of the item. (e.g., "DIET002") |
 | Quantity | Quantity of the item. (e.g., "10") |
@@ -3476,8 +3389,8 @@ Ship To Address |
 | ShipToZipCode | Postal code (e.g., "500039") |
 | ShipToCountry | Country (e.g., "IN") |
 | ShipToState | State (e.g., "TS") |
-| BillToStreet | Billing street address (e.g., "Mark street") |
-| BillToStreetNo | Street number (e.g., "RD 200") |
+| BillToStreet | Billing street address (e.g., "Mark street") | 
+| BillToStreetNo | Street number (e.g., "RD 200") | 
 | BillToBuilding | Building name (e.g., "Lake Apartment") |
 | BillToCity | City (e.g., "Hyderabad") |
 | BillToZipCode | Postal code (e.g., "500038") |
@@ -3491,7 +3404,7 @@ Mandatory fields must be provided to create a purchase order. Optional fields ca
 
 Click on the **Continue** button, then **Run** the node.
 
----
+--------------
 
 ##### Example Configuration
 
@@ -3553,28 +3466,25 @@ Click on the **Continue** button, then **Run** the node.
   }
 ]
 ```
-
----
+--------------
 
 #### Update Purchase Order
 
 **Update Purchase Order** action modifies an existing purchase order using the document entry (DocEntry). It allows updating vendor reference details, item lines, and address information.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-UPRORD201.jpg" width="700"  alt="SAP B1 Update Purchase Order step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
----
+-----------
 
 ##### Configuration Fields
 
-| Field                     | Description                                                                  |
-| ------------------------- | ---------------------------------------------------------------------------- |
-| DocEntry                  | Enter the internal document entry number of the purchase order. (e.g., "39") |
-| NumAtCard (Vendor Ref No) | Enter the vendor reference number. (e.g., "728902")                          |
-
+| Field | Description |
+|------|-------------|
+| DocEntry | Enter the internal document entry number of the purchase order. (e.g., "39") |
+| NumAtCard (Vendor Ref No) | Enter the vendor reference number. (e.g., "728902") |
 | Document Lines
 Line Number | Enter Item Line Number e.g., ("01")|
 | Item Code | Unique identifier of the item. (e.g., "DIET002") |
@@ -3598,13 +3508,14 @@ BillToStreet | Billing street address e.g., ("Mark Spencer street")|
 | BillToCountry | Country e.g., ("IN")|
 | BillToState | State e.g., ("TS")|
 
+
 :::note
 Only the fields provided will be updated. Ensure the correct DocEntry is used to avoid modifying the wrong purchase order.
 :::
 
 Click on the **Continue** button., then **Run** the node
 
----
+-----------
 
 ##### Example Configuration
 
@@ -3623,7 +3534,8 @@ Click on the **Continue** button., then **Run** the node
 ]
 ```
 
----
+----------------------
+
 
 ### Incoming Payments Action
 
@@ -3641,21 +3553,59 @@ Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field | Description |
-| ----- | ----------- |
-| Card Code (required) | Enter the customer code. (e.g., "BC6129916") |
-| Credit Card Details (required) | Add the credit card details for the payment. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Credit Card (required)</td><td>Specify the credit card type. (e.g., "1")</td></tr><tr><td>Credit Card Number (required)</td><td>Enter the credit card number. (e.g., "4242")</td></tr><tr><td>Card Valid Until (required)</td><td>Enter the card expiry date. (e.g., "2028-04-19")</td></tr><tr><td>Voucher (required)</td><td>Enter the payment voucher/reference number. (e.g., "1")</td></tr><tr><td>Credit Amount (required)</td><td>Enter the payment amount. (e.g., "500")</td></tr><tr><td>Number of Instalments (Optional)</td><td>Enter the number of instalments for the payment. (e.g., "2")</td></tr><tr><td>First Instalment Amount (Optional)</td><td>Enter the amount of the first instalment. (e.g., "500")</td></tr></tbody></table> |
-| Posting Date (Optional) | Specify the posting date of the incoming payment, in **YYYY-MM-DD** format. (e.g., "2026-04-17") |
-| Document Date (Optional) | Specify the document date of the incoming payment, in **YYYY-MM-DD** format. (e.g., "2026-04-17") |
-| Due Date (Optional) | Specify the due date for the payment, in **YYYY-MM-DD** format. (e.g., "2026-04-17") |
-| Remarks (Optional) | Add any additional notes related to the payment. (e.g., "Payment received via credit card") |
-| Journal Remarks (Optional) | Add remarks that appear in the corresponding journal entry. (e.g., "Incoming Payments - ZC0001") |
-| Payment Invoices (Optional) | Apply the payment to one or more AR documents. The linked document must belong to the same customer and must not be closed. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Invoice Document Entry (required)</td><td>Enter the DocEntry of the AR document to apply. (e.g., "1172")</td></tr><tr><td>Invoice Type (required)</td><td>Select the document type: <code>AR invoice</code>, <code>AR credit note</code> or <code>AR down payment</code>. Defaults to AR invoice. (e.g., "AR invoice")</td></tr><tr><td>Sum Applied (Optional)</td><td>Enter the amount to apply against the linked document. (e.g., "500.00")</td></tr><tr><td>Discount Percent (Optional)</td><td>Enter the cash discount percentage from the customer's payment terms. Use <code>0</code> to pay the full amount. (e.g., "2")</td></tr></tbody></table> |
-| Cash Flow Assignments (Optional) | Assign the payment amount to a cash flow category. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Amount (local currency) (required)</td><td>Enter the amount assigned to this cash flow line in local currency. The total across all lines must equal the transfer amount. (e.g., "717.5")</td></tr><tr><td>Cash Flow Line Item (Optional)</td><td>Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers")</td></tr></tbody></table> |
-| Payment Document References (Optional) | Link the payment to other SAP documents for reference. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Referenced Document Entry (required)</td><td>Enter the DocEntry of the referenced document. (e.g., "12345")</td></tr><tr><td>Referenced Object Type (required)</td><td>Select the type of the referenced SAP document. Defaults to AR invoice (13).</td></tr></tbody></table> |
+| Field     | Description                                  |
+| --------- | -------------------------------------------- |
+| Card Code | Enter the customer code. (e.g., "BC6129916") |
+
+##### Credit Card Details
+
+| Field                              | Description                                                  |
+| ---------------------------------- | ------------------------------------------------------------ |
+| Credit Card                        | Specify the credit card type. (e.g., "1")                    |
+| Credit Card Number                 | Enter the credit card number. (e.g., "4242")                 |
+| Card Valid Until                   | Enter the card expiry date. (e.g., "2028-04-19")             |
+| Voucher                            | Enter the payment voucher/reference number. (e.g., "1")      |
+| Credit Amount                      | Enter the payment amount. (e.g., "500")                      |
+| Number of Instalments (Optional)   | Enter the number of instalments for the payment. (e.g., "2") |
+| First Instalment Amount (Optional) | Enter the amount of the first instalment. (e.g., "500")      |
+
+##### Optional Fields
+
+| Field           | Description                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------- |
+| Posting Date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
+| Document Date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
+| Due Date        | Specify the due date for the payment. (e.g., "2026-04-17")                                   |
+| Remarks         | Add any additional notes related to the payment. (e.g., "Payment received via credit card")  |
+| Journal Remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
+
+##### Payment Invoices
+
+| Field                       | Description                                                                                                     |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Invoice Document Entry      | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
+| Invoice Type                | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
+| Sum Applied (Optional)      | Enter the amount to apply against the document. (e.g., "500.00")                                                |
+| Discount Percent (Optional) | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+
+##### Cash Flow Assignments
+
+| Field                          | Description                                                                                                     |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| Amount (local currency)        | Enter the amount assigned to this cash flow line in local currency. (e.g., "500.00")                            |
+| Cash Flow Line Item (Optional) | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers") |
+
+##### Payment Document References
+
+| Field                     | Description                                                                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Referenced Document Entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
+| Referenced Object Type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
 
 :::note
 Ensure credit card details are accurate and valid before processing the payment.
+
+When you link AR documents in **Payment Invoices**, each document must belong to the same customer and must not be closed.
 :::
 
 Click on the **Continue** button, then **Run** node
@@ -3727,21 +3677,56 @@ Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field | Description |
-| ----- | ----------- |
-| Card Code (required) | Enter the customer code. (e.g., "ZC0001") |
-| Payment Checks (required) | Add one item per cheque received. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Cheque Bank Account (required)</td><td>Enter the bank account linked to the cheque. (e.g., "_SYS00000000006")</td></tr><tr><td>Cheque Amount (required)</td><td>Enter the cheque amount. (e.g., "500")</td></tr><tr><td>Cheque Due Date (Optional)</td><td>Specify the cheque clearance date. (e.g., "2026-04-17")</td></tr><tr><td>Transferable (Optional)</td><td>Indicate if the cheque is transferable (<strong>Yes</strong> or <strong>No</strong>). (e.g., "Yes")</td></tr></tbody></table> |
-| Posting Date (Optional) | Specify the posting date of the incoming payment, in **YYYY-MM-DD** format. (e.g., "2026-04-17") |
-| Document Date (Optional) | Specify the document date of the incoming payment, in **YYYY-MM-DD** format. (e.g., "2026-04-17") |
-| Due Date (Optional) | Specify the due date for the payment, in **YYYY-MM-DD** format. (e.g., "2026-04-17") |
-| Remarks (Optional) | Add any additional notes. (e.g., "Cheque received from customer") |
-| Journal Remarks (Optional) | Add remarks that appear in the corresponding journal entry. (e.g., "Incoming Payments - ZC0001") |
-| Payment Invoices (Optional) | Apply the payment to one or more AR documents. The linked document must belong to the same customer and must not be closed. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Invoice Document Entry (required)</td><td>Enter the DocEntry of the AR document to apply. (e.g., "1172")</td></tr><tr><td>Invoice Type (required)</td><td>Select the document type: <code>AR invoice</code>, <code>AR credit note</code> or <code>AR down payment</code>. Defaults to AR invoice. (e.g., "AR invoice")</td></tr><tr><td>Sum Applied (Optional)</td><td>Enter the amount to apply against the linked document. (e.g., "500.00")</td></tr><tr><td>Discount Percent (Optional)</td><td>Enter the cash discount percentage from the customer's payment terms. Use <code>0</code> to pay the full amount. (e.g., "2")</td></tr></tbody></table> |
-| Cash Flow Assignments (Optional) | Assign the payment amount to a cash flow category. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Amount (local currency) (required)</td><td>Enter the amount assigned to this cash flow line in local currency. The total across all lines must equal the transfer amount. (e.g., "717.5")</td></tr><tr><td>Cash Flow Line Item (Optional)</td><td>Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers")</td></tr></tbody></table> |
-| Payment Document References (Optional) | Link the payment to other SAP documents for reference. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Referenced Document Entry (required)</td><td>Enter the DocEntry of the referenced document. (e.g., "12345")</td></tr><tr><td>Referenced Object Type (required)</td><td>Select the type of the referenced SAP document. Defaults to AR invoice (13).</td></tr></tbody></table> |
+| Field     | Description                               |
+| --------- | ----------------------------------------- |
+| Card Code | Enter the customer code. (e.g., "ZC0001") |
+
+##### Payment Checks
+
+| Field                      | Description                                                               |
+| -------------------------- | ------------------------------------------------------------------------- |
+| Cheque Bank Account        | Enter the bank account linked to the cheque. (e.g., "\_SYS00000000006")   |
+| Cheque Amount              | Enter the cheque amount. (e.g., "500")                                    |
+| Cheque Due Date (Optional) | Specify the cheque clearance date. (e.g., "2026-04-17")                   |
+| Transferable (Optional)    | Indicate if the cheque is transferable (**Yes** or **No**). (e.g., "Yes") |
+
+##### Optional Fields
+
+| Field           | Description                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------- |
+| Posting Date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
+| Document Date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
+| Due Date        | Specify the due date for the payment. (e.g., "2026-04-17")                                   |
+| Remarks         | Add any additional notes. (e.g., "Cheque received from customer")                            |
+| Journal Remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
+
+##### Payment Invoices
+
+| Field                       | Description                                                                                                     |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Invoice Document Entry      | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
+| Invoice Type                | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
+| Sum Applied (Optional)      | Enter the amount to apply against the document. (e.g., "500.00")                                                |
+| Discount Percent (Optional) | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+
+##### Cash Flow Assignments
+
+| Field                          | Description                                                                                                     |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| Amount (local currency)        | Enter the amount assigned to this cash flow line in local currency. (e.g., "500.00")                            |
+| Cash Flow Line Item (Optional) | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers") |
+
+##### Payment Document References
+
+| Field                     | Description                                                                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Referenced Document Entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
+| Referenced Object Type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
 
 :::note
 Ensure cheque details are accurate before processing to avoid payment discrepancies.
+
+When you link AR documents in **Payment Invoices**, each document must belong to the same customer and must not be closed.
 :::
 
 Click on the **Continue** button, then **Run** node
@@ -3799,21 +3784,48 @@ Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field | Description |
-| ----- | ----------- |
-| CardCode (required) | Enter the customer code. (e.g., "NR") |
-| Cash Account (required) | Specify the cash account to which payment is received. (e.g., "\_SYS00000000002") |
-| Cash Amount (required) | Enter the amount received in cash. (e.g., "600") |
-| Posting Date (Optional) | Specify the posting date of the incoming payment, in **YYYY-MM-DD** format. (e.g., "2026-04-17") |
-| Document Date (Optional) | Specify the document date of the incoming payment, in **YYYY-MM-DD** format. (e.g., "2026-04-17") |
-| Remarks (Optional) | Add any notes related to the payment. (e.g., "Demo Purpose") |
-| Journal Remarks (Optional) | Add remarks that appear in the corresponding journal entry. (e.g., "Incoming Payments - ZC0001") |
-| Payment Invoices (Optional) | Apply the payment to one or more AR documents. The linked document must belong to the same customer and must not be closed. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Invoice Document Entry (required)</td><td>Enter the DocEntry of the AR document to apply. (e.g., "1172")</td></tr><tr><td>Invoice Type (required)</td><td>Select the document type: <code>AR invoice</code>, <code>AR credit note</code> or <code>AR down payment</code>. Defaults to AR invoice. (e.g., "AR invoice")</td></tr><tr><td>Sum Applied (Optional)</td><td>Enter the amount to apply against the linked document. (e.g., "500.00")</td></tr><tr><td>Discount Percent (Optional)</td><td>Enter the cash discount percentage from the customer's payment terms. Use <code>0</code> to pay the full amount. (e.g., "2")</td></tr></tbody></table> |
-| Cash Flow Assignments (Optional) | Assign the payment amount to a cash flow category. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Amount (local currency) (required)</td><td>Enter the amount assigned to this cash flow line in local currency. The total across all lines must equal the transfer amount. (e.g., "717.5")</td></tr><tr><td>Cash Flow Line Item (Optional)</td><td>Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers")</td></tr></tbody></table> |
-| Payment Document References (Optional) | Link the payment to other SAP documents for reference. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Referenced Document Entry (required)</td><td>Enter the DocEntry of the referenced document. (e.g., "12345")</td></tr><tr><td>Referenced Object Type (required)</td><td>Select the type of the referenced SAP document. Defaults to AR invoice (13).</td></tr></tbody></table> |
+| Field        | Description                                                                       |
+| ------------ | --------------------------------------------------------------------------------- |
+| CardCode     | Enter the customer code. (e.g., "NR")                                             |
+| Cash Account | Specify the cash account to which payment is received. (e.g., "\_SYS00000000002") |
+| Cash Amount  | Enter the amount received in cash. (e.g., "600")                                  |
+
+##### Optional Fields
+
+| Field           | Description                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------- |
+| Posting Date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
+| Document Date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
+| Remarks         | Add any notes related to the payment. (e.g., "Demo Purpose")                                 |
+| Journal Remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
+
+##### Payment Invoices
+
+| Field                       | Description                                                                                                     |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Invoice Document Entry      | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
+| Invoice Type                | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
+| Sum Applied (Optional)      | Enter the amount to apply against the document. (e.g., "500.00")                                                |
+| Discount Percent (Optional) | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+
+##### Cash Flow Assignments
+
+| Field                          | Description                                                                                                     |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| Amount (local currency)        | Enter the amount assigned to this cash flow line in local currency. (e.g., "500.00")                            |
+| Cash Flow Line Item (Optional) | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers") |
+
+##### Payment Document References
+
+| Field                     | Description                                                                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Referenced Document Entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
+| Referenced Object Type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
 
 :::note
 Ensure the correct cash account and amount are provided to maintain accurate financial records.
+
+When you link AR documents in **Payment Invoices**, each document must belong to the same customer and must not be closed.
 :::
 
 Click on the **Continue** button, then **Run** node
@@ -3863,27 +3875,52 @@ Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field                                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Card Code (required)                   | Enter the business partner (customer) code as defined in SAP Business One. (e.g., "C30000")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Transfer Bank Account (required)       | Select the house bank account the payment is received into. (e.g., "100-3443-7867")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Transfer Amount (required)             | Enter the total amount received in the bank account. (e.g., "717.5")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Posting Date (Optional)                | Specify the posting date of the incoming payment, in **YYYY-MM-DD** format. (e.g., "2026-11-19")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Document Date (Optional)               | Specify the document date of the incoming payment, in **YYYY-MM-DD** format. (e.g., "2026-11-19")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Due Date (Optional)                    | Specify the due date for the payment, in **YYYY-MM-DD** format. (e.g., "2026-11-19")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Document Currency (Optional)           | Specify the payment currency. It must match the bank account currency. Leave empty to use the customer's currency. (e.g., "$")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Remarks (Optional)                     | Add remarks that appear on the incoming payment document.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Journal Remarks (Optional)             | Add remarks that appear in the corresponding journal entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Transfer Date (Optional)               | Specify the date the bank transfer was received, in **YYYY-MM-DD** format. (e.g., "2026-11-19")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Transfer Reference (Optional)          | Enter the bank reference or UTR number used for reconciliation. (e.g., "UTR2026031012345")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Payment Invoices (Optional)            | Apply the payment to one or more AR documents. The linked document must belong to the same customer and must not be closed. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Invoice Document Entry (required)</td><td>Enter the DocEntry of the AR document to apply. (e.g., "1172")</td></tr><tr><td>Invoice Type (required)</td><td>Select the document type: <code>AR invoice</code>, <code>AR credit note</code> or <code>AR down payment</code>. Defaults to AR invoice. (e.g., "AR invoice")</td></tr><tr><td>Sum Applied (Optional)</td><td>Enter the amount to apply against the linked document. (e.g., "500.00")</td></tr><tr><td>Discount Percent (Optional)</td><td>Enter the cash discount percentage from the customer's payment terms. Use <code>0</code> to pay the full amount. (e.g., "2")</td></tr></tbody></table> |
-| Cash Flow Assignments (Optional)       | Assign the payment amount to a cash flow category. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Amount (local currency) (required)</td><td>Enter the amount assigned to this cash flow line in local currency. The total across all lines must equal the transfer amount. (e.g., "717.5")</td></tr><tr><td>Cash Flow Line Item (Optional)</td><td>Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers")</td></tr></tbody></table>                                                                                                                                                                                                                                                                                                                                         |
-| Payment Document References (Optional) | Link the payment to other SAP documents for reference. Each item has these fields:<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td>Referenced Document Entry (required)</td><td>Enter the DocEntry of the referenced document. (e.g., "12345")</td></tr><tr><td>Referenced Object Type (required)</td><td>Select the type of the referenced SAP document. Defaults to AR invoice (13).</td></tr></tbody></table>                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Field                 | Description                                                                         |
+| --------------------- | ----------------------------------------------------------------------------------- |
+| Card Code             | Enter the business partner (customer) code. (e.g., "C30000")                        |
+| Transfer Bank Account | Select the house bank account the payment is received into. (e.g., "100-3443-7867") |
+| Transfer Amount       | Enter the total amount received in the bank account. (e.g., "717.5")                |
+
+##### Optional Fields
+
+| Field              | Description                                                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Posting Date       | Specify the posting date of the incoming payment. (e.g., "2026-11-19")                                                         |
+| Document Date      | Specify the document date of the incoming payment. (e.g., "2026-11-19")                                                        |
+| Due Date           | Specify the due date for the payment. (e.g., "2026-11-19")                                                                     |
+| Document Currency  | Specify the payment currency. It must match the bank account currency. Leave empty to use the customer's currency. (e.g., "$") |
+| Transfer Date      | Specify the date the bank transfer was received. (e.g., "2026-11-19")                                                          |
+| Transfer Reference | Enter the bank reference or UTR number used for reconciliation. (e.g., "UTR2026031012345")                                     |
+| Remarks            | Add remarks that appear on the incoming payment document.                                                                      |
+| Journal Remarks    | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001")                                   |
+
+##### Payment Invoices
+
+| Field                       | Description                                                                                                     |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Invoice Document Entry      | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
+| Invoice Type                | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
+| Sum Applied (Optional)      | Enter the amount to apply against the document. (e.g., "500.00")                                                |
+| Discount Percent (Optional) | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+
+##### Cash Flow Assignments
+
+| Field                          | Description                                                                                                     |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| Amount (local currency)        | Enter the amount assigned to this cash flow line in local currency. (e.g., "500.00")                            |
+| Cash Flow Line Item (Optional) | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers") |
+
+##### Payment Document References
+
+| Field                     | Description                                                                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Referenced Document Entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
+| Referenced Object Type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
 
 :::note
 Ensure the bank account and transfer amount are accurate before processing to avoid payment discrepancies.
 
-The linked AR document must belong to the same customer and must not be closed.
+When you link AR documents in **Payment Invoices**, each document must belong to the same customer and must not be closed.
 :::
 
 Click on the **Continue** button, then **Run** node
@@ -4067,21 +4104,19 @@ In this sample, `TransferAccount` shows the G/L account (`_SYS00000000002`) behi
 **Create Delivery Note** action creates a delivery document in the SAP for goods being shipped to a customer. It captures delivery, item, and logistics details for order fulfillment.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CDLVRYNT222.jpg" width="700"  alt="SAP B1 Create a Delivery Note step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field         | Description                                              |
-| ------------- | -------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | Document Date | Specify the delivery document date. (e.g., "2026-04-18") |
 | Delivery Date | Specify the expected delivery date. (e.g., "2026-04-18") |
-| Customer Code | Enter the customer code. (e.g., "ZC0001")                |
-
+| Customer Code | Enter the customer code. (e.g., "ZC0001") |
 | Document Lines
 Item Code | Unique identifier of the item. (e.g., "DIET002") |
 | Quantity | Quantity to be delivered. (e.g., "10") |
@@ -4119,7 +4154,7 @@ Mandatory fields must be provided to create a delivery note. Optional fields can
 
 Click on the **Continue** button, then **Run** node
 
----
+------
 
 ##### Example Configuration
 
@@ -4127,7 +4162,7 @@ Click on the **Continue** button, then **Run** node
 <img src="/img/credentials/sap-b1/SAP-AC-CDLVRYNT224.jpg" width="700"  alt="SAP B1 Create a Delivery Note step 3 of 4 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CDLVRYNT225.jpg" width="700"  alt="SAP B1 Create a Delivery Note step 4 of 4 screenshot" />
 
----
+----------
 
 ##### Result
 
@@ -4188,19 +4223,17 @@ Click on the **Continue** button, then **Run** node
 **Update Delivery Note** action modifies an existing delivery document using the document entry (DocEntry). It allows updating item details, quantities, pricing, and header information.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-UDLVRYNT226.jpg" width="700"  alt="SAP B1 Update a Delivery Note step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field         | Description                                                                  |
-| ------------- | ---------------------------------------------------------------------------- |
-| DocEntry      | Enter the internal document entry number of the delivery note. (e.g., "151") |
-| Delivery Date | Enter the updated delivery date. (e.g., "2026-04-18")                        |
-| Customer Code | Enter the Customer Code. (e.g., "ZC0001")                                    |
-
+| Field | Description |
+|------|-------------|
+| DocEntry | Enter the internal document entry number of the delivery note. (e.g., "151") |
+| Delivery Date | Enter the updated delivery date. (e.g., "2026-04-18") |
+| Customer Code | Enter the Customer Code. (e.g., "ZC0001") |
 | Document Lines (Optional)
 Line Number | Specify the line number to update. (e.g., "1") |
 | Item Code | Update the item code. (e.g., "DIET002") |
@@ -4234,7 +4267,7 @@ Only the fields provided will be updated. Ensure the correct DocEntry is used to
 
 Click on the **Continue** button, then **Run** node
 
----
+---------
 
 ##### Example Configuration
 
@@ -4242,7 +4275,7 @@ Click on the **Continue** button, then **Run** node
 <img src="/img/credentials/sap-b1/SAP-AC-UDLVRYNT228.jpg" width="700"  alt="SAP B1 Update a Delivery Note step 3 of 4 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-UDLVRYNT229.jpg" width="700"  alt="SAP B1 Update a Delivery Note step 4 of 4 screenshot" />
 
----
+---------------
 
 ##### Result
 
@@ -4254,22 +4287,22 @@ Click on the **Continue** button, then **Run** node
 ]
 ```
 
+
 #### Get Delivery by Order DocEntry
 
 **Get Delivery by Order DocEntry** action retrieves delivery note details associated with a specific sales order using the order's document entry number. It returns the related delivery document(s) as structured data.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GDLVRYNTbyDOCENTRYNO229.jpg" width="700"  alt="SAP B1 Get Delivery by Order DocEntry step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+------------
 
 ##### Configuration Fields
 
-| Field          | Description                                                                 |
-| -------------- | --------------------------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | Order DocEntry | Enter the internal document entry number of the sales order. (e.g., "1876") |
 
 :::note
@@ -4278,13 +4311,13 @@ If no delivery notes are linked to the provided Order DocEntry, the output will 
 
 Click on the **Continue** button, then **Run** node
 
----
+---------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-GDLVRYNTbyDOCENTRYNO230.jpg" width="700"  alt="SAP B1 Get Delivery by Order DocEntry step 2 of 2 screenshot" />
 
----
+------------
 
 ##### Result
 
@@ -4307,23 +4340,21 @@ Click on the **Continue** button, then **Run** node
   }
 ]
 ```
-
----
+--------------
 
 #### Get Delivery by NumAtCard
 
 **Get Delivery by Customer Reference Number** action retrieves delivery note details using the customer reference number (`NumAtCard`). It returns the matching delivery document(s) as structured data.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GDLVRYNTbyNumAtCard231.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
 ##### Configuration Fields
 
-| Field     | Description                                                                      |
-| --------- | -------------------------------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | NumAtCard | Enter the customer reference number associated with the delivery. (e.g., "1564") |
 
 :::note
@@ -4332,13 +4363,13 @@ If multiple delivery notes match the provided reference number, the system may r
 
 Click on the **Continue** button, then **Run** node
 
----
+--------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-GDLVRYNTbyNumAtCard232.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 2 of 5 screenshot" />
 
----
+-----------
 
 ##### Result
 
@@ -4400,8 +4431,7 @@ Click on the **Continue** button, then **Run** node
   }
 ]
 ```
-
----
+----------
 
 ### DownPayments Actions
 
@@ -4410,21 +4440,19 @@ Click on the **Continue** button, then **Run** node
 **Create Down Payment** action creates a down payment document for a customer. It is used to record advance payments before the final invoice is generated.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CDNPMNTINVC231.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 3 of 5 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------------
 
 ##### Configuration Fields
 
-| Field      | Description                                     |
-| ---------- | ----------------------------------------------- |
-| Doc Date   | Specify the document date. (e.g., "2026-04-18") |
-| DocDueDate | Specify the due date. (e.g., "2026-04-18")      |
-| Card Code  | Enter the customer code. (e.g., "POST321")      |
-
+| Field | Description |
+|------|-------------|
+| Doc Date | Specify the document date. (e.g., "2026-04-18") |
+| DocDueDate | Specify the due date. (e.g., "2026-04-18") |
+| Card Code | Enter the customer code. (e.g., "POST321") |
 | Document Lines
 Item Code | Unique identifier of the item. (e.g., "LT001") |
 | Quantity | Quantity of the item. (e.g., "10") |
@@ -4439,14 +4467,14 @@ Down payments are typically used for advance billing. Ensure correct customer an
 
 Click on the **Continue** button, then **Run** node
 
----
+--------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-CDNPAMNTINV232.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 4 of 5 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CDNPAMNTINV233.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 5 of 5 screenshot" />
 
----
+-------------
 
 ##### Result
 
@@ -4469,8 +4497,7 @@ Click on the **Continue** button, then **Run** node
   ]
 }
 ```
-
----
+----------------
 
 ### SalesForecast Action
 
@@ -4479,26 +4506,25 @@ Click on the **Continue** button, then **Run** node
 **Create Sales Forecast** action is used to define future sales expectations for items over a specified period. It helps in planning inventory, production, and business strategies.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-CSLSFRCST239.jpg" width="700"  alt="SAP B1 Create a SalesForecast step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
----
+--------------------------
 
 ##### Configuration Fields
 
-| Field                          | Description                                                               |
-| ------------------------------ | ------------------------------------------------------------------------- |
-| Forecast Code                  | Unique identifier for the forecast. (e.g., "D022")                        |
-| Forecast Name                  | Name of the forecast. (e.g., "For Daily forecast3")                       |
-| Forecast Start Date (Optional) | Start date of the forecast period. (e.g., "2026-04-19")                   |
-| Forecast End Date (Optional)   | End date of the forecast period. (e.g., "2026-04-28")                     |
-| Item Code                      | Unique identifier of the item in Sales Forecast Lines. (e.g., "DIET003")  |
-| Forecasted Day                 | Date for the forecast entry in Sales Forecast Lines. (e.g., "2026-02-27") |
-| Quantity                       | Forecasted quantity in Sales Forecast Lines. (e.g., "10")                 |
-| Warehouse (Optional)           | Warehouse related to the forecast line. (e.g., "01")                      |
-| Forecast View (Optional)       | Defines how forecast is viewed. (e.g., "fvtDaily")                        |
+| Field | Description |
+|------|-------------|
+| Forecast Code | Unique identifier for the forecast. (e.g., "D022") |
+| Forecast Name | Name of the forecast. (e.g., "For Daily forecast3") |
+| Forecast Start Date (Optional) | Start date of the forecast period. (e.g., "2026-04-19") |
+| Forecast End Date (Optional) | End date of the forecast period. (e.g., "2026-04-28") |
+| Item Code | Unique identifier of the item in Sales Forecast Lines. (e.g., "DIET003") |
+| Forecasted Day | Date for the forecast entry in Sales Forecast Lines. (e.g., "2026-02-27") |
+| Quantity | Forecasted quantity in Sales Forecast Lines. (e.g., "10") |
+| Warehouse (Optional) | Warehouse related to the forecast line. (e.g., "01") |
+| Forecast View (Optional) | Defines how forecast is viewed. (e.g., "fvtDaily") |
 
 :::note
 Forecast lines are essential for defining item-level predictions. Optional fields can be configured based on planning requirements.
@@ -4506,14 +4532,14 @@ Forecast lines are essential for defining item-level predictions. Optional field
 
 Click on the **Continue** button, then **Run** node
 
----
+-------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-CSLSFRCST240.jpg" width="700"  alt="SAP B1 Create a SalesForecast step 2 of 3 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CSLSFRCST241.png" width="700"  alt="SAP B1 Create a SalesForecast step 3 of 3 screenshot" />
 
----
+----------------
 
 ##### Result
 
@@ -4544,25 +4570,24 @@ Click on the **Continue** button, then **Run** node
 **Update Sales Forecast** action is used to modify an existing sales forecast using its unique identifier. It allows updating forecast details and item-level forecast data.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-USLSFRCS242.jpg" width="700"  alt="SAP B1 Update SalesForecast step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
----
+--------------------
 
 #### Configuration
 
-| Field                          | Description                                                               |
-| ------------------------------ | ------------------------------------------------------------------------- |
-| Id (Numerator)                 | Enter the unique identifier of the forecast. (e.g., "42")                 |
-| Forecast Name (Optional)       | Update the name of the forecast. (e.g., "For Daily forecast333-Latest")   |
-| Forecast Start Date (Optional) | Update the start date of the forecast period. (e.g., "2026-04-19")        |
-| Forecast End Date (Optional)   | Update the end date of the forecast period. (e.g., "2026-04-28")          |
-| Item Code (Optional)           | Unique identifier of the item in Sales Forecast Lines. (e.g., "DIET002")  |
-| Forecasted Day (Optional)      | Date for the forecast entry in Sales Forecast Lines. (e.g., "2026-04-19") |
-| Quantity (Optional)            | Updated forecasted quantity in Sales Forecast Lines. (e.g., "11")         |
-| Warehouse (Optional)           | Warehouse related to the forecast line. (e.g., "01")                      |
+| Field | Description |
+|------|-------------|
+| Id (Numerator) | Enter the unique identifier of the forecast. (e.g., "42") |
+| Forecast Name (Optional) | Update the name of the forecast. (e.g., "For Daily forecast333-Latest") |
+| Forecast Start Date (Optional) | Update the start date of the forecast period. (e.g., "2026-04-19") |
+| Forecast End Date (Optional) | Update the end date of the forecast period. (e.g., "2026-04-28") |
+| Item Code (Optional) | Unique identifier of the item in Sales Forecast Lines. (e.g., "DIET002") |
+| Forecasted Day (Optional) | Date for the forecast entry in Sales Forecast Lines. (e.g., "2026-04-19") |
+| Quantity (Optional) | Updated forecasted quantity in Sales Forecast Lines. (e.g., "11") |
+| Warehouse (Optional) | Warehouse related to the forecast line. (e.g., "01") |
 
 :::note
 Only the provided fields will be updated. Ensure the correct forecast Id is used to avoid modifying the wrong forecast data.
@@ -4570,14 +4595,14 @@ Only the provided fields will be updated. Ensure the correct forecast Id is used
 
 Click on the **Continue** button, then **Run** node
 
----
+------------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-USLSFRCST243.jpg" width="700"  alt="SAP B1 Update SalesForecast step 2 of 3 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-USLSFRCST244.jpg" width="700"  alt="SAP B1 Update SalesForecast step 3 of 3 screenshot" />
 
----
+-----------------
 
 ##### Result
 
@@ -4589,24 +4614,23 @@ Click on the **Continue** button, then **Run** node
 ]
 ```
 
----
+---------------
 
 #### Get Sales Forecast by Id
 
 **Get Sales Forecast by Id** action retrieves details of a specific sales forecast using its unique identifier (Numerator). It returns forecast header and line-level data.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GSLSFRCSTbyId245.jpg" width="700"  alt="SAP B1 Get Sales Forecast by Id step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+---------------------
 
 ##### Configuration Fields
 
-| Field          | Description                                                     |
-| -------------- | --------------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | Id (Numerator) | Enter the unique identifier of the sales forecast. (e.g., "42") |
 
 :::note
@@ -4615,13 +4639,13 @@ If no forecast exists for the provided Id, the response will be empty or null.
 
 Click on the **Continue** button, then **Run** node
 
----
+--------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-GSLSFRCSTbyId246.jpg" width="700"  alt="SAP B1 Get Sales Forecast by Id step 2 of 2 screenshot" />
 
----
+---------------
 
 ##### Result
 
@@ -4659,20 +4683,20 @@ Click on the **Continue** button, then **Run** node
 
 Click on the **Continue** button.
 
----
+--------------------------
 
 ##### Configuration Fields
 
-| Field                      | Description                                                       |
-| -------------------------- | ----------------------------------------------------------------- |
-| Payment Type               | Select the type of payment. (e.g., "Incoming Payment (Customer)") |
-| Card Code                  | Enter the customer/vendor code. (e.g., "ZC0001")                  |
-| Document Date (Optional)   | Specify the document date. (e.g., "2026-04-19")                   |
-| Tax Date (Optional)        | Specify the tax date. (e.g., "2026-04-19")                        |
-| Due Date (Optional)        | Specify the due date. (e.g., "2026-04-19")                        |
-| Remarks (Optional)         | Add any notes related to the payment. (e.g., "Demo Purpose")      |
-| Journal Remarks (Optional) | Enter accounting-related remarks. (e.g., "Incoming Payment")      |
-| Cash Amount (Optional)     | Enter the cash amount for the payment. (e.g., "600")              |
+| Field | Description |
+|------|-------------|
+| Payment Type | Select the type of payment. (e.g., "Incoming Payment (Customer)") |
+| Card Code | Enter the customer/vendor code. (e.g., "ZC0001") |
+| Document Date (Optional) | Specify the document date. (e.g., "2026-04-19") |
+| Tax Date (Optional) | Specify the tax date. (e.g., "2026-04-19") |
+| Due Date (Optional) | Specify the due date. (e.g., "2026-04-19") |
+| Remarks (Optional) | Add any notes related to the payment. (e.g., "Demo Purpose") |
+| Journal Remarks (Optional) | Enter accounting-related remarks. (e.g., "Incoming Payment") |
+| Cash Amount (Optional) | Enter the cash amount for the payment. (e.g., "600") |
 
 :::note
 Draft payments can be reviewed and finalized later. Mandatory fields must be provided to create the draft successfully.
@@ -4680,14 +4704,14 @@ Draft payments can be reviewed and finalized later. Mandatory fields must be pro
 
 Click on the **Continue** button, then **Run** node
 
----
+----------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-CDRFTPAMNTS248.jpg" width="700"  alt="SAP B1 Create Payment Draft step 2 of 3 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CDRFTPAMNTS249.jpg" width="700"  alt="SAP B1 Create Payment Draft step 3 of 3 screenshot" />
 
----
+-------------
 
 ##### Result
 
@@ -4728,17 +4752,16 @@ Click on the **Continue** button, then **Run** node
 **Get Payment Draft by DocEntry** action retrieves details of a specific payment draft using its internal document entry number. It returns the draft payment information as structured data.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-GDRFTPAMNTbyDOCENTRY249.jpg" width="700"  alt="SAP B1 Get Payment Draft by DocEntry step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------------
 
 ##### Configuration Fields
 
-| Field    | Description                                                                 |
-| -------- | --------------------------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | DocEntry | Enter the internal document entry number of the payment draft. (e.g., "30") |
 
 :::note
@@ -4747,13 +4770,13 @@ If no draft exists for the provided DocEntry, the response will be empty or null
 
 Click on the **Continue** button, then **Run** node
 
----
+-----------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-CDRFTPAMNTbyDOCENTRY250.jpg" width="700"  alt="SAP B1 Get Payment Draft by DocEntry step 2 of 2 screenshot" />
 
----
+---------------
 
 ##### Result
 
@@ -4786,17 +4809,16 @@ Click on the **Continue** button, then **Run** node
 **Convert Payment Draft to Incoming Payment** action converts an existing payment draft into a finalized incoming payment. This is typically done after reviewing and confirming the draft details.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-ConvertdrafttoIncomingPayments251.jpg" width="700"  alt="SAP B1 Convert Payment Draft to Incoming Payment step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
----
+----------------------
 
 ##### Configuration Fields
 
-| Field    | Description                                                                 |
-| -------- | --------------------------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | DocEntry | Enter the internal document entry number of the payment draft. (e.g., "30") |
 
 :::note
@@ -4805,14 +4827,14 @@ Once converted, the draft becomes a posted incoming payment and may no longer be
 
 Click on the **Continue** button, then **Run** node
 
----
+---------------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-ConvertdrafttoIncomingPayment251.jpg" width="700"  alt="SAP B1 Convert Payment Draft to Incoming Payment step 2 of 3 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AR-ConvertdrafttoIncomingPayment252.jpg" width="700"  alt="SAP B1 Convert Payment Draft to Incoming Payment step 3 of 3 screenshot" />
 
----
+-------
 
 ##### Result
 
@@ -4823,8 +4845,7 @@ Click on the **Continue** button, then **Run** node
   }
 ]
 ```
-
----
+------------
 
 ### Blanket Agreements Actions
 
@@ -4833,29 +4854,28 @@ Click on the **Continue** button, then **Run** node
 **Create Sales Blanket Agreement** action is used to define long-term agreements with customers for supplying goods or services under predefined terms. It helps in managing recurring sales with agreed pricing and quantities.
 
 ##### Select the Credential and Action Event
-
 <img src="/img/credentials/sap-b1/SAP-C-BLNKARGEMNT253.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
----
+--------------------
 
 ##### Configuration Fields
 
-| Field                          | Description                                                              |
-| ------------------------------ | ------------------------------------------------------------------------ |
-| Agreement Type                 | Specify the type of agreement. (e.g., "atGeneral")                       |
-| BP Code                        | Enter the business partner (customer) code. (e.g., "ZC0001")             |
-| Agreement Method               | Define how the agreement is managed. (e.g., "amItem")                    |
-| End Date                       | Specify the agreement end date. (e.g., "2026-04-20")                     |
-| Item No                        | Unique identifier of the item in Agreement Item Lines. (e.g., "DIET002") |
-| Planned Quantity (Optional)    | Planned quantity for the agreement item. (e.g., "4")                     |
-| Unit Price (Optional)          | Agreed price per unit. (e.g., "100")                                     |
-| Line Discount (Optional)       | Discount applied on the item. (e.g., "2")                                |
-| BP Name (Optional)             | Name of the business partner. (e.g., "GivaJewellers")                    |
-| NumAtCard (Optional)           | Customer reference number. (e.g., "664111000000360085")                  |
-| Contact Person Code (Optional) | Identifier of the contact person. (e.g., "4")                            |
-| Remarks (Optional)             | Additional notes. (e.g., "Demo Purpose")                                 |
+| Field | Description |
+|------|-------------|
+| Agreement Type | Specify the type of agreement. (e.g., "atGeneral") |
+| BP Code | Enter the business partner (customer) code. (e.g., "ZC0001") |
+| Agreement Method | Define how the agreement is managed. (e.g., "amItem") |
+| End Date | Specify the agreement end date. (e.g., "2026-04-20") |
+| Item No | Unique identifier of the item in Agreement Item Lines. (e.g., "DIET002") |
+| Planned Quantity (Optional) | Planned quantity for the agreement item. (e.g., "4") |
+| Unit Price (Optional) | Agreed price per unit. (e.g., "100") |
+| Line Discount (Optional) | Discount applied on the item. (e.g., "2") |
+| BP Name (Optional) | Name of the business partner. (e.g., "GivaJewellers") |
+| NumAtCard (Optional) | Customer reference number. (e.g., "664111000000360085") |
+| Contact Person Code (Optional) | Identifier of the contact person. (e.g., "4") |
+| Remarks (Optional) | Additional notes. (e.g., "Demo Purpose") |
 
 :::note
 Blanket agreements are used for long-term contracts. Ensure correct pricing and quantities are defined before creating the agreement.
@@ -4863,7 +4883,7 @@ Blanket agreements are used for long-term contracts. Ensure correct pricing and 
 
 Click on the **Continue** button, then **Run** node
 
----
+--------------------
 
 ##### Example Configuration
 
@@ -4871,7 +4891,7 @@ Click on the **Continue** button, then **Run** node
 <img src="/img/credentials/sap-b1/SAP-AC-CBLNKTAGREMENT256.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement step 3 of 4 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CBLNKTAGREMENT257.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement step 4 of 4 screenshot" />
 
----
+-----------------------
 
 ##### Result
 
@@ -4910,23 +4930,23 @@ Click on the **Continue** button, then **Run** node
 
 Click on the **Continue** button.
 
----
+------------------------
 
 ##### Configuration Fields
 
-| Field                       | Description                                               |
-| --------------------------- | --------------------------------------------------------- |
-| Agreement No                | Enter the unique agreement number. (e.g., "22")           |
-| BP Code (Optional)          | Update the business partner code. (e.g., "ZC0001")        |
-| BP Name (Optional)          | Update the business partner name. (e.g., "GivaJewellers") |
-| NumAtCard (Optional)        | Customer reference number. (e.g., "664111000000360085")   |
-| Remarks (Optional)          | Additional notes. (e.g., "Demo Purpose - Updated")        |
-| End Date (Optional)         | Update the agreement end date. (e.g., "2026-04-20")       |
-| Agreement Row Number        | Specify the line number to update. (e.g., "0")            |
-| Item No (Optional)          | Update the item code. (e.g., "DIET003")                   |
-| Planned Quantity (Optional) | Update the planned quantity. (e.g., "6")                  |
-| Unit Price (Optional)       | Update the unit price. (e.g., "100")                      |
-| Line Discount (Optional)    | Update the discount percentage. (e.g., "5")               |
+| Field | Description |
+|------|-------------|
+| Agreement No | Enter the unique agreement number. (e.g., "22") |
+| BP Code (Optional) | Update the business partner code. (e.g., "ZC0001") |
+| BP Name (Optional) | Update the business partner name. (e.g., "GivaJewellers") |
+| NumAtCard (Optional) | Customer reference number. (e.g., "664111000000360085") |
+| Remarks (Optional) | Additional notes. (e.g., "Demo Purpose - Updated") |
+| End Date (Optional) | Update the agreement end date. (e.g., "2026-04-20") |
+| Agreement Row Number | Specify the line number to update. (e.g., "0") |
+| Item No (Optional) | Update the item code. (e.g., "DIET003") |
+| Planned Quantity (Optional) | Update the planned quantity. (e.g., "6") |
+| Unit Price (Optional) | Update the unit price. (e.g., "100") |
+| Line Discount (Optional) | Update the discount percentage. (e.g., "5") |
 
 :::note
 Only the provided fields will be updated. Ensure the correct Agreement No and row number are used to avoid unintended changes.
@@ -4934,14 +4954,14 @@ Only the provided fields will be updated. Ensure the correct Agreement No and ro
 
 Click on the **Continue** button, then **Run** node
 
----
+-----------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-USLABLANKTAGREMENT258.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement step 2 of 4 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-USLSBLNKTAGREMENT259.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement step 3 of 4 screenshot" />
 
----
+-------------
 
 ##### Result
 
@@ -4967,12 +4987,12 @@ Click on the **Continue** button, then **Run** node
 
 Click on **Continue** button
 
----
+----------------
 
 ##### Configuration Fields
 
-| Field         | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
+| Field | Description |
+|------|-------------|
 | Serial Number | Enter the unique serial number of the item. (e.g., "SL-001") |
 
 :::note
@@ -4981,7 +5001,7 @@ If the provided serial number does not exist, the response will be empty or null
 
 Click on the **Continue** button, then **Run** node
 
----
+--------------
 
 ##### Example Configuration
 
@@ -5022,18 +5042,17 @@ Click on the **Continue** button, then **Run** node
 
 Click on the **Continue** button.
 
----
+------------------
 
 ##### Configuration Fields
 
-| Field         | Description                                           |
-| ------------- | ----------------------------------------------------- |
-| Customer Code | Enter the customer code. (e.g., "ZC0001")             |
-| Contract Type | Specify the contract type. (e.g., "Serial Number")    |
-| Service Type  | Define the type of service. (e.g., "Warranty")        |
-| Start Date    | Specify the contract start date. (e.g., "2026-04-20") |
-| End Date      | Specify the contract end date. (e.g., "2026-04-30")   |
-
+| Field | Description |
+|------|-------------|
+| Customer Code | Enter the customer code. (e.g., "ZC0001") |
+| Contract Type | Specify the contract type. (e.g., "Serial Number") |
+| Service Type | Define the type of service. (e.g., "Warranty") |
+| Start Date | Specify the contract start date. (e.g., "2026-04-20") |
+| End Date | Specify the contract end date. (e.g., "2026-04-30") |
 | Service Contract Lines
 Internal Serial Number | Enter the internal serial number. (e.g., "SL-001") |
 | Item Code | Unique identifier of the item. (e.g., "SERIAL001") |
@@ -5055,7 +5074,7 @@ Ensure correct serial numbers and service dates are configured, as they define t
 
 Click on the **Continue** button, then **Run** node
 
----
+--------------
 
 ##### Example Configuration
 
@@ -5064,7 +5083,7 @@ Click on the **Continue** button, then **Run** node
 <img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT266.jpg" width="700"  alt="SAP B1 Create Service Contract step 4 of 5 screenshot" />
 <img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT267.jpg" width="700"  alt="SAP B1 Create Service Contract step 5 of 5 screenshot" />
 
----
+--------------------
 
 ##### Result
 
@@ -5150,12 +5169,12 @@ Click on the **Continue** button, then **Run** node
 
 Click on the **Continue** button.
 
----
+--------------------
 
 ##### Configuration Fields
 
-| Field         | Description                               |
-| ------------- | ----------------------------------------- |
+| Field | Description |
+|------|-------------|
 | Customer Code | Enter the customer code. (e.g., "ZC0001") |
 
 :::note
@@ -5164,13 +5183,13 @@ If no service contracts are found for the provided customer code, the response w
 
 Click on the **Continue** button, then **Run** node
 
----
+----------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-GSRVCCNTRCTbyCSTMRCDE269.jpg" width="700"  alt="SAP B1 Get Service Contracts by Customer Code step 2 of 2 screenshot" />
 
----
+-------------
 
 ##### Result
 
@@ -5316,18 +5335,17 @@ Click on the **Continue** button, then **Run** node
 Retrieves the details of a service contract using the specified contract ID.
 
 ##### Select Credentials and Action Events
-
 <img src="/img/credentials/sap-b1/SAP-C-GTSRVCCONTRCTbyCNTRCTID.jpg" width="700"  alt="SAP B1 Get Service Contract by Contract ID step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
----
+---------------------------
 
 ##### Configuration Fields
 
-| Field       | Description                                                                   |
-| ----------- | ----------------------------------------------------------------------------- |
-| Contract ID | Enter the unique identifier of the service contract to retrieve. Example: `5` |
+| Field | Description |
+|------|-------------|
+| Contract ID  | Enter the unique identifier of the service contract to retrieve. Example: `5` |
 
 :::note
 `Contract ID` is mandatory.
@@ -5335,13 +5353,13 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** node.
 
----
+-------------------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-GTSRVCCONTRCTbyCNTRCTID.jpg" width="700"  alt="SAP B1 Get Service Contract by Contract ID step 2 of 2 screenshot" />
 
----
+-------------------------
 
 ##### Result
 
@@ -5415,8 +5433,8 @@ Click on the **Continue** button, then **Run** node.
   }
 ]
 ```
+---------------------------------------
 
----
 
 ### Customer Equipment Card Actions
 
@@ -5430,17 +5448,16 @@ Click on the **Continue** button, then **Run** node.
 
 Click on the **Continue** button.
 
----
+-------------------
 
 ##### Configuration Fields
 
-| Field                  | Description                                                      |
-| ---------------------- | ---------------------------------------------------------------- |
-| Customer Code          | Enter the customer code. (e.g., "ZC0001")                        |
+| Field | Description |
+|------|-------------|
+| Customer Code | Enter the customer code. (e.g., "ZC0001") |
 | Internal Serial Number | Unique internal serial number of the equipment. (e.g., "SL-002") |
-| Item Code              | Identifier of the item/equipment. (e.g., "SERIAL001")            |
-| Install Location       | Specify the installation location. (e.g., "01")                  |
-
+| Item Code | Identifier of the item/equipment. (e.g., "SERIAL001") |
+| Install Location | Specify the installation location. (e.g., "01") |
 | Optional Fields
 Contact Employee Code | Identifier of the contact employee. (e.g., "4") |
 | Manufacturer Serial Number | Manufacturer-provided serial number. (e.g., "SL-002") |
@@ -5451,13 +5468,13 @@ Ensure serial numbers are unique and correctly mapped to the customer for accura
 
 Click on the **Continue** button, then **Run** node
 
----
+-------------------
 
 ##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-CEQPCRD271.jpg" width="700"  alt="SAP B1 Create Customer Equipment Card step 2 of 2 screenshot" />
 
----
+-----------
 
 ##### Result
 
@@ -5512,7 +5529,9 @@ Click on the **Continue** button, then **Run** node
 ]
 ```
 
----
+
+---------------------------------------
+
 
 ### Goods Receipt Actions
 
@@ -5526,24 +5545,23 @@ Select your SAP Business One credential and choose **Create Goods Receipt** as t
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field          | Description                                                                                         |
-| -------------- | --------------------------------------------------------------------------------------------------- |
-| Posting Date   | Posting date of the goods receipt in yyyy-MM-dd format. Leave blank for today. (e.g., "2026-10-12") |
-| Reference      | External reference number, such as a WMS or production document number. (e.g., "WMS-1001")          |
-| Remarks        | Additional notes for the goods receipt. (e.g., "Cycle count adjustment")                            |
-| Journal Remark | Remark posted to the journal entry, max 50 characters. (e.g., "Goods Receipt - WMS-1001")           |
-
+| Field | Description |
+|------|-------------|
+| Posting Date | Posting date of the goods receipt in yyyy-MM-dd format. Leave blank for today. (e.g., "2026-10-12") |
+| Reference | External reference number, such as a WMS or production document number. (e.g., "WMS-1001") |
+| Remarks | Additional notes for the goods receipt. (e.g., "Cycle count adjustment") |
+| Journal Remark | Remark posted to the journal entry, max 50 characters. (e.g., "Goods Receipt - WMS-1001") |
 | Document Lines (Required)
 Item Code | SAP B1 item code to receive. (e.g., "A00001") |
 | Quantity | Quantity to receive into the warehouse. Must be greater than 0. (e.g., "10") |
 | Warehouse Code | Warehouse the stock is received into. (e.g., "01") |
 | Optional Fields (Document Lines)
 Unit Price | Price per unit used to value the stock movement. (e.g., "25.50") |
-| Account Code | G/L offset account for the line. Overrides the default inventory offset account. (e.g., "\_SYS00000000094") |
+| Account Code | G/L offset account for the line. Overrides the default inventory offset account. (e.g., "_SYS00000000094") |
 | UoM Entry | Unit of measure entry. Leave blank to use the item default. (e.g., "1") |
 | Project Code | SAP B1 project code for the line. (e.g., "PRJ01") |
 | Distribution Rule | Distribution rule (cost center) for the line. (e.g., "CC01") |
@@ -5560,7 +5578,7 @@ At least one document line with Item Code, Quantity, and Warehouse Code is requi
 
 Click on the **Continue** button, then **Run** the node.
 
----
+--------------
 
 ##### Result
 
@@ -5589,7 +5607,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------
 
 #### Update Goods Receipt
 
@@ -5605,14 +5623,13 @@ Select your SAP Business One credential and choose **Update Goods Receipt** as t
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field    | Description                                                               |
-| -------- | ------------------------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | DocEntry | Unique document entry number of the goods receipt to update. (e.g., "12") |
-
 | Optional Fields
 Reference | External reference number. (e.g., "WMS-1001-R") |
 | Remarks | Additional notes for the goods receipt. (e.g., "Corrected reference") |
@@ -5624,7 +5641,7 @@ Only the fields provided will be updated. Ensure the correct DocEntry is used to
 
 Click on the **Continue** button, then **Run** the node.
 
----
+--------------
 
 ##### Result
 
@@ -5636,7 +5653,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------
 
 ### Goods Issue Actions
 
@@ -5650,24 +5667,23 @@ Select your SAP Business One credential and choose **Create Goods Issue** as the
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field          | Description                                                                                       |
-| -------------- | ------------------------------------------------------------------------------------------------- |
-| Posting Date   | Posting date of the goods issue in yyyy-MM-dd format. Leave blank for today. (e.g., "2026-10-12") |
-| Reference      | External reference number, such as a WMS or production document number. (e.g., "WMS-1001")        |
-| Remarks        | Additional notes for the goods issue. (e.g., "Cycle count adjustment")                            |
-| Journal Remark | Remark posted to the journal entry, max 50 characters. (e.g., "Goods Issue - WMS-1001")           |
-
+| Field | Description |
+|------|-------------|
+| Posting Date | Posting date of the goods issue in yyyy-MM-dd format. Leave blank for today. (e.g., "2026-10-12") |
+| Reference | External reference number, such as a WMS or production document number. (e.g., "WMS-1001") |
+| Remarks | Additional notes for the goods issue. (e.g., "Cycle count adjustment") |
+| Journal Remark | Remark posted to the journal entry, max 50 characters. (e.g., "Goods Issue - WMS-1001") |
 | Document Lines (Required)
 Item Code | SAP B1 item code to issue. (e.g., "A00001") |
 | Quantity | Quantity to issue from the warehouse. Must be greater than 0. (e.g., "10") |
 | Warehouse Code | Warehouse the stock is issued from. (e.g., "01") |
 | Optional Fields (Document Lines)
 Unit Price | Price per unit. Usually left blank so SAP B1 uses the item cost. (e.g., "25.50") |
-| Account Code | G/L offset account for the line. Overrides the default inventory offset account. (e.g., "\_SYS00000000094") |
+| Account Code | G/L offset account for the line. Overrides the default inventory offset account. (e.g., "_SYS00000000094") |
 | UoM Entry | Unit of measure entry. Leave blank to use the item default. (e.g., "1") |
 | Project Code | SAP B1 project code for the line. (e.g., "PRJ01") |
 | Distribution Rule | Distribution rule (cost center) for the line. (e.g., "CC01") |
@@ -5684,7 +5700,7 @@ At least one document line with Item Code, Quantity, and Warehouse Code is requi
 
 Click on the **Continue** button, then **Run** the node.
 
----
+--------------
 
 ##### Result
 
@@ -5713,7 +5729,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------
 
 #### Update Goods Issue
 
@@ -5729,14 +5745,13 @@ Select your SAP Business One credential and choose **Update Goods Issue** as the
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field    | Description                                                             |
-| -------- | ----------------------------------------------------------------------- |
+| Field | Description |
+|------|-------------|
 | DocEntry | Unique document entry number of the goods issue to update. (e.g., "12") |
-
 | Optional Fields
 Reference | External reference number. (e.g., "WMS-1001-R") |
 | Remarks | Additional notes for the goods issue. (e.g., "Corrected reference") |
@@ -5748,7 +5763,7 @@ Only the fields provided will be updated. Ensure the correct DocEntry is used to
 
 Click on the **Continue** button, then **Run** the node.
 
----
+--------------
 
 ##### Result
 
@@ -5760,7 +5775,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
----
+--------------
 
 ### Search Records Action
 
@@ -5776,16 +5791,15 @@ Select your SAP Business One credential and choose **Search Records** as the act
 
 Click on the **Continue** button.
 
----
+-------------
 
 ##### Configuration Fields
 
-| Field            | Description                                                                                                                                                          |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object Name      | SAP B1 object to search. Includes Business Partners, Items, Orders, Invoices, Purchase Orders, **Goods Receipt**, **Goods Issue**, and more. (e.g., "Goods Receipt") |
-| Filter Value     | OData `$filter` expression, without the `$filter=` prefix. (e.g., "DocDate ge '2026-10-01'")                                                                         |
-| Limit of records | Maximum number of records to return. (e.g., "20")                                                                                                                    |
-
+| Field | Description |
+|------|-------------|
+| Object Name | SAP B1 object to search. Includes Business Partners, Items, Orders, Invoices, Purchase Orders, **Goods Receipt**, **Goods Issue**, and more. (e.g., "Goods Receipt") |
+| Filter Value | OData `$filter` expression, without the `$filter=` prefix. (e.g., "DocDate ge '2026-10-01'") |
+| Limit of records | Maximum number of records to return. (e.g., "20") |
 | Optional Fields
 Select fields to fetch | Comma-separated fields to return. (e.g., "DocEntry, DocNum, DocDate, Comments") |
 
@@ -5795,7 +5809,7 @@ Select **Goods Receipt** or **Goods Issue** as the Object Name to search invento
 
 Click on the **Continue** button, then **Run** the node.
 
----
+--------------
 
 ##### Result
 
