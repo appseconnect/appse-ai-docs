@@ -2,6 +2,7 @@
 title: "SAP Business One DIS"
 description: Step-by-step guide to set up SAP Business One DIS credentials for appse ai integration
 slug: /app-integrations/sap-business-one-dis
+toc_max_heading_level: 4
 ---
 
 SAP Business One DIS is an on-premise integration for SAP Business One that connects your local SAP instance to appse ai through a dedicated On-Prem Connector.
@@ -83,15 +84,15 @@ Once your On-Prem Connector is online, complete SAP Business One DIS authenticat
 
 Fill in the following required fields once the connector is selected:
 
-| Field | Description |
-|------|-------------|
-| Connection Name | A name for this SAP Business One DIS connection to be identified in appse ai. |
-| SAP Server Address | The hostname or IP address of the SAP Business One server. |
-| Company Database | The SAP Business One company database name (for example, `SBODemoUS`). |
-| Username | SAP Business One username with access to the target company. |
-| Password | Password for the SAP Business One user account. |
-| License Server | The address and port of your SAP license server (for example, `sapserver:30000`). |
-| Database Type | The database platform used by SAP Business One (for example, Microsoft SQL 2019). |
+| Field              | Description                                                                       |
+| ------------------ | --------------------------------------------------------------------------------- |
+| Connection Name    | A name for this SAP Business One DIS connection to be identified in appse ai.     |
+| SAP Server Address | The hostname or IP address of the SAP Business One server.                        |
+| Company Database   | The SAP Business One company database name (for example, `SBODemoUS`).            |
+| Username           | SAP Business One username with access to the target company.                      |
+| Password           | Password for the SAP Business One user account.                                   |
+| License Server     | The address and port of your SAP license server (for example, `sapserver:30000`). |
+| Database Type      | The database platform used by SAP Business One (for example, Microsoft SQL 2019). |
 
 For help locating each value in SAP Business One, see the [How to Find Your Credential Values](#how-to-find-your-credential-values) section below.
 
@@ -100,50 +101,6 @@ For help locating each value in SAP Business One, see the [How to Find Your Cred
 - After all required fields are filled, click **Save** to store the credential.
 - If the connection is valid, the credential is saved and displayed with a green tick.
 - You can then use the credential in workflows as needed.
-
-## Triggers
-
-The SAP Business One DIS integration currently supports the following triggers. Use these triggers to start workflows when data changes occur in SAP Business One.
-
-| Trigger | Description |
-| --- | --- |
-| **Item inventory updated (OnHand)** | Fetches data records when an item on-hand quantity changes in SAP Business One. |
-| **Item price updated** | Fetches data records when an item price is updated. |
-| **Items updated** | Fetches data records when existing items are updated. |
-| **New A/R invoices created** | Fetches data records when new accounts receivable invoices are created. |
-| **New business partners created** | Fetches data records when new business partners are created. |
-| **Business partners updated** | Fetches data records when existing business partners are updated. |
-| **New delivery notes created** | Fetches data records when new delivery notes are created. |
-| **New items created** | Fetches data records when new items are created. |
-| **Credit notes created** | Fetches data records when credit notes are created. |
-
-## Actions
-
-The SAP Business One DIS integration currently supports the following actions. Use these actions in workflows to create, update, query, and retrieve SAP Business One records via DIS.
-
-| Action | Description |
-| --- | --- |
-| **Create business partner** | Creates a new business partner record in SAP Business One. Use this to add customers, vendors, or other partner entities. |
-| **Update business partner** | Updates an existing business partner record with the latest details such as contact information, address, or classification. |
-| **Create item** | Creates a new item in the SAP Business One inventory catalog. Useful for adding products or materials. |
-| **Update item** | Updates an existing item record with new pricing, stock levels, descriptions, or other metadata. |
-| **Create sales quotation** | Creates a new sales quotation document in SAP Business One. |
-| **Update sales quotation** | Updates an existing sales quotation with revised line items, pricing, or customer details. |
-| **Create sales order** | Creates a new sales order document in SAP Business One. |
-| **Update sales order** | Updates an existing sales order with revised quantities, pricing, dates, or other order details. |
-| **Create delivery note** | Creates a new delivery note document in SAP Business One to record goods shipped to a customer. |
-| **Update delivery note** | Updates an existing delivery note with changes such as delivery date, quantities, or shipping details. |
-| **Create returns** | Creates a returns document in SAP Business One to process customer returns. |
-| **Create an A/R credit note** | Creates a new accounts receivable (A/R) credit note in SAP Business One. |
-| **Update an A/R credit note** | Updates an existing A/R credit note with revised amounts, line items, or reference details. |
-| **Update an A/R invoice** | Updates an existing accounts receivable (A/R) invoice with respective details. |
-| **Create draft incoming payment** | Creates a draft incoming payment record in SAP Business One for customer payments. |
-| **Create a purchase order** | Creates a new purchase order document in SAP Business One. |
-| **Create an A/P invoice** | Creates a new accounts payable (A/P) invoice in SAP Business One for vendor billing and payables processing. |
-| **Create equipment card** | Creates a new equipment card record in SAP Business One for tracking assets or installed equipment. |
-| **Update equipment card** | Updates an existing equipment card with revised details such as status, location, or maintenance information. |
-| **Execute a select query** | Runs a custom select query against SAP Business One data and returns the results for use in workflow logic or validation. |
-| **Get record by key** | Retrieves a single SAP Business One record by its primary key for lookup, validation, or conditional workflow decisions. Supported modules: `oBusinessPartners` (Business Partner), `oItems` (Item), `oOrders` (Sales Order), `oInvoices` (Invoice A/R), `oDeliveryNotes` (Delivery Note), `oQuotations` (Quotation), `oCreditNotes` (Credit Note), `oPurchaseOrders` (Purchase Order), `oJournalEntries` (Journal Entry), `oIncomingPayments` (Incoming Payment). |
 
 ## How to Find Your Credential Values
 
@@ -189,7 +146,7 @@ The SAP Business One DIS integration currently supports the following actions. U
 
 <img src="/img/credentials/sap-business-one-dis/databasetype.png" alt="SAP Business One database type dropdown showing available SQL options" width="700"/>
 
-## Troubleshoot
+### Troubleshoot
 
 If the following error is displayed for SAP DIS:
 
@@ -201,7 +158,191 @@ To resolve this error:
 - Stop the SAP-related service from Services.
 - Delete the folder at `C:\Windows\Temp\SM_OBS_DLL\1000120` (Note: The folder name may vary depending on your environment).
 - Start the SAP service again, verify it is running, and try the connection once more.
-:::
+  :::
+
+## Triggers and Actions
+
+### Triggers
+
+The SAP Business One DIS integration currently supports the following triggers. Use these triggers to start workflows when data changes occur in SAP Business One.
+
+| Trigger                             | Description                                                                     |
+| ----------------------------------- | ------------------------------------------------------------------------------- |
+| **Item inventory updated (OnHand)** | Fetches data records when an item on-hand quantity changes in SAP Business One. |
+| **Item price updated**              | Fetches data records when an item price is updated.                             |
+| **Items updated**                   | Fetches data records when existing items are updated.                           |
+| **New A/R invoices created**        | Fetches data records when new accounts receivable invoices are created.         |
+| **New business partners created**   | Fetches data records when new business partners are created.                    |
+| **Business partners updated**       | Fetches data records when existing business partners are updated.               |
+| **New delivery notes created**      | Fetches data records when new delivery notes are created.                       |
+| **New items created**               | Fetches data records when new items are created.                                |
+| **Credit notes created**            | Fetches data records when credit notes are created.                             |
+
+### Actions
+
+The SAP Business One DIS integration currently supports the following actions. Use these actions in workflows to create, update, query, and retrieve SAP Business One records via DIS.
+
+| Action                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Create business partner**       | Creates a new business partner record in SAP Business One. Use this to add customers, vendors, or other partner entities.                                                                                                                                                                                                                                                                                                                                          |
+| **Update business partner**       | Updates an existing business partner record with the latest details such as contact information, address, or classification.                                                                                                                                                                                                                                                                                                                                       |
+| **Create item**                   | Creates a new item in the SAP Business One inventory catalog. Useful for adding products or materials.                                                                                                                                                                                                                                                                                                                                                             |
+| **Update item**                   | Updates an existing item record with new pricing, stock levels, descriptions, or other metadata.                                                                                                                                                                                                                                                                                                                                                                   |
+| **Create sales quotation**        | Creates a new sales quotation document in SAP Business One.                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Update sales quotation**        | Updates an existing sales quotation with revised line items, pricing, or customer details.                                                                                                                                                                                                                                                                                                                                                                         |
+| **Create sales order**            | Creates a new sales order document in SAP Business One.                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Update sales order**            | Updates an existing sales order with revised quantities, pricing, dates, or other order details.                                                                                                                                                                                                                                                                                                                                                                   |
+| **Create delivery note**          | Creates a new delivery note document in SAP Business One to record goods shipped to a customer.                                                                                                                                                                                                                                                                                                                                                                    |
+| **Update delivery note**          | Updates an existing delivery note with changes such as delivery date, quantities, or shipping details.                                                                                                                                                                                                                                                                                                                                                             |
+| **Create returns**                | Creates a returns document in SAP Business One to process customer returns.                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Create an A/R credit note**     | Creates a new accounts receivable (A/R) credit note in SAP Business One.                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Update an A/R credit note**     | Updates an existing A/R credit note with revised amounts, line items, or reference details.                                                                                                                                                                                                                                                                                                                                                                        |
+| **Update an A/R invoice**         | Updates an existing accounts receivable (A/R) invoice with respective details.                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Create draft incoming payment** | Creates a draft incoming payment record in SAP Business One for customer payments.                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Create a purchase order**       | Creates a new purchase order document in SAP Business One.                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Create an A/P invoice**         | Creates a new accounts payable (A/P) invoice in SAP Business One for vendor billing and payables processing.                                                                                                                                                                                                                                                                                                                                                       |
+| **Create equipment card**         | Creates a new equipment card record in SAP Business One for tracking assets or installed equipment.                                                                                                                                                                                                                                                                                                                                                                |
+| **Update equipment card**         | Updates an existing equipment card with revised details such as status, location, or maintenance information.                                                                                                                                                                                                                                                                                                                                                      |
+| **Execute a select query**        | Runs a custom select query against SAP Business One data and returns the results for use in workflow logic or validation.                                                                                                                                                                                                                                                                                                                                          |
+| **Get record by key**             | Retrieves a single SAP Business One record by its primary key for lookup, validation, or conditional workflow decisions. Supported modules: `oBusinessPartners` (Business Partner), `oItems` (Item), `oOrders` (Sales Order), `oInvoices` (Invoice A/R), `oDeliveryNotes` (Delivery Note), `oQuotations` (Quotation), `oCreditNotes` (Credit Note), `oPurchaseOrders` (Purchase Order), `oJournalEntries` (Journal Entry), `oIncomingPayments` (Incoming Payment). |
+
+### Advanced actions
+
+Advanced actions for user-defined objects (UDO) in SAP Business One.
+
+| Action  | Description                                                                                             |
+| ------- | ------------------------------------------------------------------------------------------------------- |
+| **UDO** | Creates, updates, or reads records of a user-defined object (UDO) in SAP Business One. See [UDO](#udo). |
+
+### UDO {#udo}
+
+The **UDO** action is used to create, update, or read records of user-defined objects (UDO) in SAP Business One. The objects already present in your SAP company database are loaded dynamically, and once you select one, all of its fields are loaded so you can configure them and run the action.
+
+Use it, for example, to sync custom data between SAP Business One and other systems.
+
+#### Select the credential and action event
+
+In the node, select your SAP Business One DIS account and choose **UDO** as the **Action event**. Click **Continue**.
+
+<img src="/img/credentials/sap-business-one-dis/udo-select-action.png" alt="SAP Business One DIS select UDO action event" width="700"/>
+
+#### Select the operation
+
+On the **Configure** tab, select an **Operation**: **Create**, **Update**, or **Read**.
+
+<img src="/img/credentials/sap-business-one-dis/udo-operation-select.png" alt="SAP Business One DIS UDO operation dropdown" width="700"/>
+
+| Operation | Description                                                                                 |
+| --------- | ------------------------------------------------------------------------------------------- |
+| Create    | Creates a new record in the selected user-defined object.                                   |
+| Update    | Updates an existing record in the selected user-defined object, identified by its **Code**. |
+| Read      | Retrieves records from the selected user-defined object.                                    |
+
+After you pick an operation, select the **User-defined object** to work with. The list shows the objects that already exist in SAP Business One. As soon as you select an object, its fields are loaded dynamically for you to configure.
+
+#### Create
+
+<img src="/img/credentials/sap-business-one-dis/udo-create-operation.png" alt="SAP Business One DIS UDO create operation" width="700"/>
+
+##### Configuration Fields
+
+| Field               | Description                                                                                          |
+| ------------------- | ---------------------------------------------------------------------------------------------------- |
+| Operation           | Select **Create**.                                                                                   |
+| User-defined object | Select the object from the list of objects loaded from SAP Business One. (e.g., "APPSECONNECT_SYNC") |
+
+After you select the object, all of its fields are loaded dynamically. Configure the fields you need, then click **Continue** and **Run** the node.
+
+##### Example Configuration
+
+This example creates a record in the `APPSECONNECT_SYNC` user-defined object:
+
+- **Operation** is set to **Create**.
+- **User-defined object** is set to `APPSECONNECT_SYNC`. Once it is selected, the object's fields are loaded.
+- **Code** is the required key of the new record.
+- **Name**, **SAP Object Code**, **SAP Object Type** and **SAP Unique ID** are optional fields loaded for this object. Fill in the ones you need and remove the rest with the delete icon.
+- Use **Select to add field** to add any other field of the object.
+
+Click **Continue**, then **Run** the node to create the record.
+
+<img src="/img/credentials/sap-business-one-dis/udo-create-config.png" alt="SAP Business One DIS UDO create example configuration" width="700"/>
+
+#### Update
+
+<img src="/img/credentials/sap-business-one-dis/udo-update-operation.png" alt="SAP Business One DIS UDO update operation" width="700"/>
+
+##### Configuration Fields
+
+| Field               | Description                                                                                          |
+| ------------------- | ---------------------------------------------------------------------------------------------------- |
+| Operation           | Select **Update**.                                                                                   |
+| User-defined object | Select the object from the list of objects loaded from SAP Business One. (e.g., "APPSECONNECT_SYNC") |
+
+After you select the object, all of its fields are loaded dynamically. Configure the fields you need, then click **Continue** and **Run** the node.
+
+##### Example Configuration
+
+This example updates a record in the `APPSECONNECT_SYNC` user-defined object:
+
+- **Operation** is set to **Update**.
+- **User-defined object** is set to `APPSECONNECT_SYNC`. Once it is selected, the object's fields are loaded.
+- **Code** is the required key of the record to update.
+- **Name** and **SAP Object Type** are optional fields loaded for this object. Enter new values only for the fields you want to change.
+- Use **Select to add field** to add any other field of the object.
+
+Click **Continue**, then **Run** the node to update the record.
+
+<img src="/img/credentials/sap-business-one-dis/udo-update-config.png" alt="SAP Business One DIS UDO update example configuration" width="700"/>
+
+#### Read
+
+<img src="/img/credentials/sap-business-one-dis/udo-read-operation.png" alt="SAP Business One DIS UDO read operation" width="700"/>
+
+##### Configuration Fields
+
+| Field                         | Description                                                                                          |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Operation                     | Select **Read**.                                                                                     |
+| User-defined object           | Select the object from the list of objects loaded from SAP Business One. (e.g., "APPSECONNECT_SYNC") |
+| Limit of records              | Enter the maximum number of records to return. (e.g., "1")                                           |
+| Include child tables          | Turn on to include the object's child tables in the result.                                          |
+| Code (key) (Optional)         | Enter the code (key) to read a specific record.                                                      |
+| Filter (SQL WHERE) (Optional) | Enter a SQL WHERE condition to filter the records returned.                                          |
+
+##### Example Configuration
+
+This example reads records from the `APPSECONNECT_SYNC` user-defined object:
+
+- **Operation** is set to **Read**.
+- **User-defined object** is set to `APPSECONNECT_SYNC`.
+- **Limit of records** is set to `1`, so at most one record is returned.
+- **Include child tables** is turned on, so the object's child tables are returned with each record.
+- **Code (key)** is optional. Enter it to read one specific record.
+- **Filter (SQL WHERE)** is optional. Enter a SQL WHERE condition to return only the records that match.
+
+Click **Continue**, then **Run** the node to read the records.
+
+<img src="/img/credentials/sap-business-one-dis/udo-read-config.png" alt="SAP Business One DIS UDO read example configuration" width="700"/>
+
+**Filter examples**
+
+The **Filter (SQL WHERE)** field accepts a SQL WHERE condition, written without the `WHERE` keyword. Use the field names of the selected object.
+
+Read records created within a date range:
+
+```sql
+CreateDate > '2026-05-05' AND CreateDate < '2026-07-07'
+```
+
+<img src="/img/credentials/sap-business-one-dis/udo-read-filter-date-range.png" alt="SAP Business One DIS UDO read with a date range filter" width="700"/>
+
+Read records created after a date that have a given status (for example, `O` for open):
+
+```sql
+CreateDate > '2026-05-05' AND Status = 'O'
+```
+
+<img src="/img/credentials/sap-business-one-dis/udo-read-filter-status.png" alt="SAP Business One DIS UDO read with a status filter" width="700"/>
 
 ## Support
 
