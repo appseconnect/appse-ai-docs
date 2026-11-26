@@ -81,6 +81,8 @@ If the authorization flow fails, ensure the Amazon account you signed in with ha
 
 Here is a list of the available triggers and actions for Amazon Seller Central:
 
+For vendor purchase orders and acknowledgements, see [Amazon Vendor Central](/app-integrations/amazon-vendor-central/).
+
 ### Triggers
 
 All triggers below are **polling-based** — appse ai periodically checks Amazon for new or changed data since the last run.
@@ -112,7 +114,7 @@ All triggers below are **polling-based** — appse ai periodically checks Amazon
 
 | Action                | Description                                                                                                                         |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Get Order by ID**   | Retrieves a single order by its **Order ID**.                                                                                       |
+| **Get Order by ID**   | Retrieves a single order by its **Order ID**. Also requires **Included Data**, a comma-separated list of additional datasets to include in the response.                                                                                       |
 | **Get Order Metrics** | Retrieves aggregated sales metrics (units, orders, average price, total sales) for a marketplace over a date range and granularity. |
 
 **Feeds**
@@ -166,7 +168,7 @@ All triggers below are **polling-based** — appse ai periodically checks Amazon
 | Action                               | Description                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Get Financial Events**             | Retrieves financial events for a date range, for automated financial reporting and reconciliation. Requires **Posted After**, **Posted Before**, and a **Limit**.                                                                                                                                                                           |
-| **Get financial events of an order** | Retrieves all financial events posted for a specific order. This includes shipment events (charges, fees, taxes, and promotions), refund events (returns and customer refunds), and other adjustments, chargebacks, and service fees where Amazon has posted them against the order. Requires an **Order ID** and **Max Results Per Page**. |
+| **Get financial events of an order** | Retrieves all financial events posted for a specific order. This includes shipment events (charges, fees, taxes, and promotions), refund events (returns and customer refunds), and other adjustments, chargebacks, and service fees where Amazon has posted them against the order. Requires an **Order ID** and **Max results per page**. |
 
 ---
 
