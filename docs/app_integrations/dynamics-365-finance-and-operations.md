@@ -11,7 +11,7 @@ Microsoft Dynamics 365 Finance and Operations helps organizations manage finance
 
 ## Setup Credential
 
-Follow the steps below to set up your Dynamics 365 Finance and Operations credential. The integration supports two authentication modes — **Production / Sandbox** and **OneBox (Developer VM)**.
+Follow the steps below to set up your Dynamics 365 Finance and Operations credential. The integration supports three authentication modes — **Production / Sandbox**, **OneBox (Developer VM)**, and **Service to service (client credentials)**.
 
 ## Select Authentication
 
@@ -19,6 +19,7 @@ When adding a Dynamics 365 Finance and Operations credential, first choose one o
 
 - **Production / Sandbox** — for hosted D365 F&O environments on `.operations.dynamics.com`
 - **OneBox (Developer VM)** — for local or custom OneBox developer environments
+- **Service to service (client credentials)** — for unattended, server-to-server access to a hosted D365 F&O environment using your own Microsoft Entra ID app registration
 
 <img src="/img/credentials/dynamics-365-finance-and-operations/credentialchoice.png" alt="Select Authentication screen showing Production / Sandbox and OneBox (Developer VM) options" width="700"/>
 
@@ -70,6 +71,43 @@ Click **Save & Authorize** to complete the setup.
 
 - ✓ **Success:** The credential is saved and automatically verified by appse ai.  
 - ! **Failure:** Verify that the Base URL and Tenant ID are correct and try again.
+
+</TabItem>
+
+<TabItem value="clientcredentials" label="Service to service (client credentials)">
+
+Use this mode when the integration must run unattended — no interactive user sign-in, and no dependency on a named user's session. appse ai obtains the access token directly from Microsoft Entra ID using your own app registration (OAuth 2.0 `client_credentials` grant).
+
+:::info Before you begin
+
+You need a Microsoft Entra ID app registration with a client secret, and that application must be registered inside D365 F&O under **System administration → Setup → Microsoft Entra ID applications**, mapped to a service account user. The permissions available to the integration are the permissions of that mapped user.
+
+:::
+
+#### Required Fields
+
+Fill in the following details to configure a **Service to service (client credentials)** credential:
+
+| Field | Description |
+| --- | --- |
+| **Connection Name** | A name to identify this Dynamics 365 Finance and Operations connection in appse ai. |
+| **Environment name** | The part of your D365 F&O URL before `.operations.dynamics.com`. For `https://testenv.operations.dynamics.com/data`, enter `testenv`. For a sandbox such as `https://contoso-uat.sandbox.operations.dynamics.com`, enter `contoso-uat.sandbox`. The prefix `https://` and suffix `.operations.dynamics.com` are automatically applied by appse ai. |
+| **Tenant ID** | Your Microsoft Entra ID tenant ID. Copy it from the [Azure Portal](https://portal.azure.com) → Microsoft Entra ID → Overview → Tenant ID. |
+| **Client ID (application ID)** | The Application (client) ID of your app registration. Copy it from the [Azure Portal](https://portal.azure.com) → Microsoft Entra ID → App registrations → your app → Application (client) ID. The same Client ID must be registered in D365 F&O under System administration → Setup → Microsoft Entra ID applications. |
+| **Client secret** | The secret generated for your app registration. Copy it from the [Azure Portal](https://portal.azure.com) → Microsoft Entra ID → App registrations → your app → Certificates & secrets → New client secret → copy the **Value**. |
+
+:::note
+The base URL, token URL, and API access scope are generated automatically from the environment name and tenant ID you provide. No authorization URL is used — the client credentials grant has no user consent redirect.
+:::
+
+Click **Save & Authorize** to complete the setup. No sign-in window appears in this mode; appse ai requests the token directly from Microsoft Entra ID and verifies the credential by calling the D365 F&O legal entities endpoint.
+
+- ✓ **Success:** The credential is saved and automatically verified by appse ai.  
+- ! **Failure:** Verify the environment name, Tenant ID, Client ID, and client secret, and confirm that the application is registered in D365 F&O and mapped to an active service account user.
+
+:::warning
+Client secrets expire. Note the expiry date set in the Azure Portal and rotate the secret in both Microsoft Entra ID and the appse ai credential before it lapses, otherwise workflows using this credential will begin to fail authentication.
+:::
 
 </TabItem>
 </Tabs>
@@ -184,13 +222,32 @@ The Dynamics 365 Finance and Operations integration currently supports the follo
 - **Tenant ID errors:**  
   Confirm the Tenant ID is copied from the [Azure Portal](https://portal.azure.com) → Microsoft Entra ID → Overview → Tenant ID.
 
+- **Credential verification fails (Service to service):**  
+  Check each item in turn:
+  - The client secret is the secret **Value**, not the Secret ID, and has not expired.
+  - The Client ID and Tenant ID belong to the same app registration and tenant.
+  - The application is registered in D365 F&O under **System administration → Setup → Microsoft Entra ID applications** and mapped to an active service account user — a valid token with no D365 F&O registration returns an authorization error, not a token error.
+  - The environment name resolves to your actual environment, including the `.sandbox` part for sandbox URLs.
+
+- **Token acquired but requests are rejected:**  
+  The mapped service account user in D365 F&O does not have the required security roles. Assign the roles needed by the entities your workflow reads or writes.
+
 ## Frequently Asked Questions
 
 **Do I need to enter the full Dynamics 365 Finance and Operations URL?**  
-It depends on the authentication mode. For **Production / Sandbox**, only the environment name is required — appse ai automatically constructs the full base URL. For **OneBox (Developer VM)**, enter the complete Base URL of your environment.
+It depends on the authentication mode. For **Production / Sandbox** and **Service to service (client credentials)**, only the environment name is required — appse ai automatically constructs the full base URL. For **OneBox (Developer VM)**, enter the complete Base URL of your environment.
 
 **Do I need to configure OAuth details manually?**  
-No. OAuth 2.0 authorization is handled internally by appse ai for both authentication modes.
+No. OAuth 2.0 authorization is handled internally by appse ai for all authentication modes. For **Production / Sandbox** and **OneBox (Developer VM)**, appse ai also supplies the application registration. For **Service to service (client credentials)**, you supply your own Client ID and client secret; appse ai still builds the token URL and scope for you.
+
+**When should I use Service to service (client credentials) instead of Production / Sandbox?**  
+Use it for unattended integrations that must not depend on an interactive user sign-in or a named user's session — for example, scheduled or high-volume background workflows. It also lets you govern access through your own Microsoft Entra ID app registration and a dedicated D365 F&O service account.
+
+**Does the Service to service mode require a user account in D365 F&O?**  
+Yes. The Entra ID application must be registered in D365 F&O and mapped to a service account user. The integration inherits that user's security roles, so scope the roles to only what your workflows need.
+
+**What happens when the client secret expires?**  
+Authentication stops and workflows using the credential begin to fail. Generate a new secret in the Azure Portal and update the **Client secret** field on the appse ai credential before the existing one expires.
 
 ## Support
 
