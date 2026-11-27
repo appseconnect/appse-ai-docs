@@ -1,5 +1,6 @@
 ---
 title: "WooCommerce"
+description: Step-by-step guide to set up WooCommerce credentials and automate e-commerce workflows in appse ai.
 slug: /app-integrations/woocommerce/
 ---
 
@@ -153,10 +154,10 @@ Here is the list of available triggers in WooCommerce:
 
 | Trigger                  | Description                                                       |
 | ------------------------ | ----------------------------------------------------------------- |
-| **New Products Created** | Retrieves events when a new product is added to WooCommerce.      |
-| **Products Updated**     | Retrieves events when an existing WooCommerce product is updated. |
-| **New Orders Created**   | Retrieves events when a new order is placed in WooCommerce.       |
-| **Orders Updated**       | Retrieves events when an existing WooCommerce order is updated.   |
+| **New products created** | Retrieves events when a new product is added to WooCommerce.      |
+| **Products updated**     | Retrieves events when an existing WooCommerce product is updated. |
+| **New orders created**   | Retrieves events when a new order is placed in WooCommerce.       |
+| **Orders updated**       | Retrieves events when an existing WooCommerce order is updated.   |
 
 ## Actions
 
@@ -164,21 +165,27 @@ Here is the list of available actions in WooCommerce:
 
 | Action                           | Description                                                               |
 | -------------------------------- | ------------------------------------------------------------------------- |
-| **Get Product by SKU**           | Retrieve detailed product information from WooCommerce by SKU.            |
-| **Get Customer by ID**           | Retrieve detailed customer information using the WooCommerce customer ID. |
-| **Create Customer**              | Create a new customer in WooCommerce.                                     |
-| **Update Customer**              | Update an existing WooCommerce customer’s details.                        |
-| **Get Customer by Email**        | Retrieve customer information using the customer email address.           |
-| **Create Product**               | Create a new product in WooCommerce.                                      |
-| **Update Product**               | Update an existing WooCommerce product.                                   |
-| **Search Orders by Date Range**  | Search WooCommerce orders within a specified date range.                  |
-| **Create Order**                 | Create a new order in WooCommerce.                                        |
-| **Update Order**                 | Update an existing WooCommerce order.                                     |
-| **Get Order Refund by Order ID** | Retrieve refund details for a specific WooCommerce order.                 |
-| **Create Order Refund**          | Create a refund for a WooCommerce order based on the order ID.            |
-| **Create Order Fulfillment with Tracking** | Create a fulfillment for a WooCommerce order with the fulfilled line items, tracking number, and shipment provider. |
-| **Get Order Fulfillment by ID**  | Retrieve a single fulfillment of a specific WooCommerce order.            |
+| **Get product by SKU**           | Retrieve detailed product information from WooCommerce by SKU.            |
+| **Get customer by ID**           | Retrieve detailed customer information using the WooCommerce customer ID. |
+| **Create customer**              | Create a new customer in WooCommerce.                                     |
+| **Update customer**              | Update an existing WooCommerce customer’s details.                        |
+| **Get customer by email**        | Retrieve customer information using the customer email address.           |
+| **Create product**               | Create a new product in WooCommerce.                                      |
+| **Update product**               | Update an existing WooCommerce product.                                   |
+| **Create product attribute**     | Create a new global product attribute in WooCommerce.                     |
+| **Create product variation**     | Create a new variation for a variable WooCommerce product.                |
+| **Get product variations**       | Retrieve all variations of a specific WooCommerce product.                |
+| **Get all product categories**   | Fetch all product categories from WooCommerce with an optional search filter. |
+| **Get product category by ID**   | Fetch a single WooCommerce product category using its unique category ID. |
+| **Search orders by date range**  | Search WooCommerce orders within a specified date range.                  |
+| **Create order**                 | Create a new order in WooCommerce.                                        |
+| **Update order**                 | Update an existing WooCommerce order.                                     |
+| **Get order refunds**            | Retrieve refund details for a specific WooCommerce order.                 |
+| **Create order refund**          | Create a refund for a WooCommerce order based on the order ID.            |
+| **Create order fulfillment with tracking** | Create a fulfillment for a WooCommerce order with the fulfilled line items, tracking number, and shipment provider. |
+| **Get order fulfillment by ID**  | Retrieve a single fulfillment of a specific WooCommerce order.            |
+| **Create coupon**                | Create a new coupon in WooCommerce.                                       |
 
 ## Support
 
-Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
+Need help? Contact our support team at [support@appse.ai](mailto:support@appse.ai)
