@@ -3555,57 +3555,57 @@ Click on the **Continue** button.
 
 | Field     | Description                                  |
 | --------- | -------------------------------------------- |
-| Card Code | Enter the customer code. (e.g., "BC6129916") |
+| Card code | Enter the customer code. (e.g., "BC6129916") |
 
-##### Credit Card Details
+##### Credit card details
 
 | Field                              | Description                                                  |
 | ---------------------------------- | ------------------------------------------------------------ |
-| Credit Card                        | Specify the credit card type. (e.g., "1")                    |
-| Credit Card Number                 | Enter the credit card number. (e.g., "4242")                 |
-| Card Valid Until                   | Enter the card expiry date. (e.g., "2028-04-19")             |
-| Voucher                            | Enter the payment voucher/reference number. (e.g., "1")      |
-| Credit Amount                      | Enter the payment amount. (e.g., "500")                      |
-| Number of Instalments (Optional)   | Enter the number of instalments for the payment. (e.g., "2") |
-| First Instalment Amount (Optional) | Enter the amount of the first instalment. (e.g., "500")      |
+| Credit card (required)             | Specify the credit card type. (e.g., "1")                    |
+| Credit card number (required)      | Enter the credit card number. (e.g., "4242")                 |
+| Card valid until (required)        | Enter the card expiry date. (e.g., "2028-04-19")             |
+| Voucher (required)                 | Enter the payment voucher/reference number. (e.g., "1")      |
+| Credit amount (required)           | Enter the payment amount. (e.g., "500")                      |
+| Number of instalments (optional)   | Enter the number of instalments for the payment. (e.g., "2") |
+| First instalment amount (optional) | Enter the amount of the first instalment. (e.g., "500")      |
 
 ##### Optional Fields
 
 | Field           | Description                                                                                  |
 | --------------- | -------------------------------------------------------------------------------------------- |
-| Posting Date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
-| Document Date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
-| Due Date        | Specify the due date for the payment. (e.g., "2026-04-17")                                   |
+| Posting date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
+| Document date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
+| Due date        | Specify the due date for the payment. (e.g., "2026-04-17")                                   |
 | Remarks         | Add any additional notes related to the payment. (e.g., "Payment received via credit card")  |
-| Journal Remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
+| Journal remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
 
-##### Payment Invoices
+##### Payment invoices
 
-| Field                       | Description                                                                                                     |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Invoice Document Entry      | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
-| Invoice Type                | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
-| Sum Applied (Optional)      | Enter the amount to apply against the document. (e.g., "500.00")                                                |
-| Discount Percent (Optional) | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+| Field                             | Description                                                                                                     |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Invoice document entry (required) | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
+| Invoice type (required)           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
+| Sum applied (optional)            | Enter the amount to apply against the document. (e.g., "500.00")                                                |
+| Discount percent (optional)       | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
 
-##### Cash Flow Assignments
+##### Cash flow assignments
 
-| Field                          | Description                                                                                                     |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| Amount (local currency)        | Enter the amount assigned to this cash flow line in local currency. (e.g., "500.00")                            |
-| Cash Flow Line Item (Optional) | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers") |
+| Field                              | Description                                                                                                              |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Amount (local currency) (required) | Enter the amount assigned to this cash flow line in local currency. It should match the **Credit amount**. (e.g., "500") |
+| Cash flow line item (optional)     | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers")          |
 
-##### Payment Document References
+##### Payment document references
 
 | Field                     | Description                                                                                                                                                |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Referenced Document Entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
-| Referenced Object Type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
+| Referenced document entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
+| Referenced object type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
 
 :::note
 Ensure credit card details are accurate and valid before processing the payment.
 
-When you link AR documents in **Payment Invoices**, each document must belong to the same customer and must not be closed.
+When you link AR documents in **Payment invoices**, each document must belong to the same customer and must not be closed.
 :::
 
 Click on the **Continue** button, then **Run** node
@@ -3679,54 +3679,54 @@ Click on the **Continue** button.
 
 | Field     | Description                               |
 | --------- | ----------------------------------------- |
-| Card Code | Enter the customer code. (e.g., "ZC0001") |
+| Card code | Enter the customer code. (e.g., "ZC0001") |
 
-##### Payment Checks
+##### Payment checks
 
-| Field                      | Description                                                               |
-| -------------------------- | ------------------------------------------------------------------------- |
-| Cheque Bank Account        | Enter the bank account linked to the cheque. (e.g., "\_SYS00000000006")   |
-| Cheque Amount              | Enter the cheque amount. (e.g., "500")                                    |
-| Cheque Due Date (Optional) | Specify the cheque clearance date. (e.g., "2026-04-17")                   |
-| Transferable (Optional)    | Indicate if the cheque is transferable (**Yes** or **No**). (e.g., "Yes") |
+| Field                          | Description                                                               |
+| ------------------------------ | ------------------------------------------------------------------------- |
+| Cheque bank account (required) | Enter the bank account linked to the cheque. (e.g., "\_SYS00000000006")   |
+| Cheque amount (required)       | Enter the cheque amount. (e.g., "500")                                    |
+| Cheque due date (optional)     | Specify the cheque clearance date. (e.g., "2026-04-17")                   |
+| Transferable (optional)        | Indicate if the cheque is transferable (**Yes** or **No**). (e.g., "Yes") |
 
 ##### Optional Fields
 
 | Field           | Description                                                                                  |
 | --------------- | -------------------------------------------------------------------------------------------- |
-| Posting Date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
-| Document Date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
-| Due Date        | Specify the due date for the payment. (e.g., "2026-04-17")                                   |
+| Posting date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
+| Document date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
+| Due date        | Specify the due date for the payment. (e.g., "2026-04-17")                                   |
 | Remarks         | Add any additional notes. (e.g., "Cheque received from customer")                            |
-| Journal Remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
+| Journal remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
 
-##### Payment Invoices
+##### Payment invoices
 
-| Field                       | Description                                                                                                     |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Invoice Document Entry      | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
-| Invoice Type                | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
-| Sum Applied (Optional)      | Enter the amount to apply against the document. (e.g., "500.00")                                                |
-| Discount Percent (Optional) | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+| Field                             | Description                                                                                                     |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Invoice document entry (required) | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
+| Invoice type (required)           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
+| Sum applied (optional)            | Enter the amount to apply against the document. (e.g., "500.00")                                                |
+| Discount percent (optional)       | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
 
-##### Cash Flow Assignments
+##### Cash flow assignments
 
-| Field                          | Description                                                                                                     |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| Amount (local currency)        | Enter the amount assigned to this cash flow line in local currency. (e.g., "500.00")                            |
-| Cash Flow Line Item (Optional) | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers") |
+| Field                              | Description                                                                                                              |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Amount (local currency) (required) | Enter the amount assigned to this cash flow line in local currency. It should match the **Cheque amount**. (e.g., "500") |
+| Cash flow line item (optional)     | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers")          |
 
-##### Payment Document References
+##### Payment document references
 
 | Field                     | Description                                                                                                                                                |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Referenced Document Entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
-| Referenced Object Type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
+| Referenced document entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
+| Referenced object type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
 
 :::note
 Ensure cheque details are accurate before processing to avoid payment discrepancies.
 
-When you link AR documents in **Payment Invoices**, each document must belong to the same customer and must not be closed.
+When you link AR documents in **Payment invoices**, each document must belong to the same customer and must not be closed.
 :::
 
 Click on the **Continue** button, then **Run** node
@@ -3786,46 +3786,46 @@ Click on the **Continue** button.
 
 | Field        | Description                                                                       |
 | ------------ | --------------------------------------------------------------------------------- |
-| CardCode     | Enter the customer code. (e.g., "NR")                                             |
-| Cash Account | Specify the cash account to which payment is received. (e.g., "\_SYS00000000002") |
-| Cash Amount  | Enter the amount received in cash. (e.g., "600")                                  |
+| Card code    | Enter the customer code. (e.g., "NR")                                             |
+| Cash account | Specify the cash account to which payment is received. (e.g., "\_SYS00000000002") |
+| Cash amount  | Enter the amount received in cash. (e.g., "600")                                  |
 
 ##### Optional Fields
 
 | Field           | Description                                                                                  |
 | --------------- | -------------------------------------------------------------------------------------------- |
-| Posting Date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
-| Document Date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
+| Posting date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
+| Document date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
 | Remarks         | Add any notes related to the payment. (e.g., "Demo Purpose")                                 |
-| Journal Remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
+| Journal remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
 
-##### Payment Invoices
+##### Payment invoices
 
-| Field                       | Description                                                                                                     |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Invoice Document Entry      | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
-| Invoice Type                | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
-| Sum Applied (Optional)      | Enter the amount to apply against the document. (e.g., "500.00")                                                |
-| Discount Percent (Optional) | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+| Field                             | Description                                                                                                     |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Invoice document entry (required) | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
+| Invoice type (required)           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
+| Sum applied (optional)            | Enter the amount to apply against the document. (e.g., "500.00")                                                |
+| Discount percent (optional)       | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
 
-##### Cash Flow Assignments
+##### Cash flow assignments
 
-| Field                          | Description                                                                                                     |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| Amount (local currency)        | Enter the amount assigned to this cash flow line in local currency. (e.g., "500.00")                            |
-| Cash Flow Line Item (Optional) | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers") |
+| Field                              | Description                                                                                                            |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Amount (local currency) (required) | Enter the amount assigned to this cash flow line in local currency. It should match the **Cash amount**. (e.g., "600") |
+| Cash flow line item (optional)     | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers")        |
 
-##### Payment Document References
+##### Payment document references
 
 | Field                     | Description                                                                                                                                                |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Referenced Document Entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
-| Referenced Object Type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
+| Referenced document entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
+| Referenced object type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
 
 :::note
 Ensure the correct cash account and amount are provided to maintain accurate financial records.
 
-When you link AR documents in **Payment Invoices**, each document must belong to the same customer and must not be closed.
+When you link AR documents in **Payment invoices**, each document must belong to the same customer and must not be closed.
 :::
 
 Click on the **Continue** button, then **Run** node
@@ -3877,50 +3877,50 @@ Click on the **Continue** button.
 
 | Field                 | Description                                                                         |
 | --------------------- | ----------------------------------------------------------------------------------- |
-| Card Code             | Enter the business partner (customer) code. (e.g., "C30000")                        |
-| Transfer Bank Account | Select the house bank account the payment is received into. (e.g., "100-3443-7867") |
-| Transfer Amount       | Enter the total amount received in the bank account. (e.g., "717.5")                |
+| Card code             | Enter the business partner (customer) code. (e.g., "C30000")                        |
+| Transfer bank account | Select the house bank account the payment is received into. (e.g., "100-3443-7867") |
+| Transfer amount       | Enter the total amount received in the bank account. (e.g., "717.5")                |
 
 ##### Optional Fields
 
 | Field              | Description                                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| Posting Date       | Specify the posting date of the incoming payment. (e.g., "2026-11-19")                                                         |
-| Document Date      | Specify the document date of the incoming payment. (e.g., "2026-11-19")                                                        |
-| Due Date           | Specify the due date for the payment. (e.g., "2026-11-19")                                                                     |
-| Document Currency  | Specify the payment currency. It must match the bank account currency. Leave empty to use the customer's currency. (e.g., "$") |
-| Transfer Date      | Specify the date the bank transfer was received. (e.g., "2026-11-19")                                                          |
-| Transfer Reference | Enter the bank reference or UTR number used for reconciliation. (e.g., "UTR2026031012345")                                     |
+| Posting date       | Specify the posting date of the incoming payment. (e.g., "2026-11-19")                                                         |
+| Document date      | Specify the document date of the incoming payment. (e.g., "2026-11-19")                                                        |
+| Due date           | Specify the due date for the payment. (e.g., "2026-11-19")                                                                     |
+| Document currency  | Specify the payment currency. It must match the bank account currency. Leave empty to use the customer's currency. (e.g., "$") |
+| Transfer date      | Specify the date the bank transfer was received. (e.g., "2026-11-19")                                                          |
+| Transfer reference | Enter the bank reference or UTR number used for reconciliation. (e.g., "UTR2026031012345")                                     |
 | Remarks            | Add remarks that appear on the incoming payment document.                                                                      |
-| Journal Remarks    | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001")                                   |
+| Journal remarks    | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001")                                   |
 
-##### Payment Invoices
+##### Payment invoices
 
-| Field                       | Description                                                                                                     |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Invoice Document Entry      | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
-| Invoice Type                | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
-| Sum Applied (Optional)      | Enter the amount to apply against the document. (e.g., "500.00")                                                |
-| Discount Percent (Optional) | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+| Field                             | Description                                                                                                     |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Invoice document entry (required) | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
+| Invoice type (required)           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
+| Sum applied (optional)            | Enter the amount to apply against the document. (e.g., "500.00")                                                |
+| Discount percent (optional)       | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
 
-##### Cash Flow Assignments
+##### Cash flow assignments
 
-| Field                          | Description                                                                                                     |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| Amount (local currency)        | Enter the amount assigned to this cash flow line in local currency. (e.g., "500.00")                            |
-| Cash Flow Line Item (Optional) | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers") |
+| Field                              | Description                                                                                                                  |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Amount (local currency) (required) | Enter the amount assigned to this cash flow line in local currency. It should match the **Transfer amount**. (e.g., "717.5") |
+| Cash flow line item (optional)     | Select the cash flow line item from the SAP cash flow hierarchy. (e.g., "Payments for Invoices from Customers")              |
 
-##### Payment Document References
+##### Payment document references
 
 | Field                     | Description                                                                                                                                                |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Referenced Document Entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
-| Referenced Object Type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
+| Referenced document entry | Enter the DocEntry of the referenced document. (e.g., "12345")                                                                                             |
+| Referenced object type    | Select the type of the referenced SAP document, such as **AR invoice (13)**, **Sales order (17)** or **Delivery notes (15)**. Defaults to AR invoice (13). |
 
 :::note
 Ensure the bank account and transfer amount are accurate before processing to avoid payment discrepancies.
 
-When you link AR documents in **Payment Invoices**, each document must belong to the same customer and must not be closed.
+When you link AR documents in **Payment invoices**, each document must belong to the same customer and must not be closed.
 :::
 
 Click on the **Continue** button, then **Run** node
