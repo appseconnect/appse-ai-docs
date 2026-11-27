@@ -3559,15 +3559,17 @@ Click on the **Continue** button.
 
 ##### Credit card details
 
-| Field                              | Description                                                  |
-| ---------------------------------- | ------------------------------------------------------------ |
-| Credit card (required)             | Specify the credit card type. (e.g., "1")                    |
-| Credit card number (required)      | Enter the credit card number. (e.g., "4242")                 |
-| Card valid until (required)        | Enter the card expiry date. (e.g., "2028-04-19")             |
-| Voucher (required)                 | Enter the payment voucher/reference number. (e.g., "1")      |
-| Credit amount (required)           | Enter the payment amount. (e.g., "500")                      |
-| Number of instalments (optional)   | Enter the number of instalments for the payment. (e.g., "2") |
-| First instalment amount (optional) | Enter the amount of the first instalment. (e.g., "500")      |
+| Field                                   | Description                                                           |
+| --------------------------------------- | --------------------------------------------------------------------- |
+| Credit card (required)                  | Specify the credit card type. (e.g., "1")                             |
+| Credit card number (required)           | Enter the credit card number. (e.g., "4242")                          |
+| Card valid until (required)             | Enter the card expiry date. (e.g., "2028-04-19")                      |
+| Voucher (required)                      | Enter the payment voucher/reference number. (e.g., "1")               |
+| Credit amount (required)                | Enter the payment amount. (e.g., "500")                               |
+| Payment method code (optional)          | Enter the payment method code of the credit card payment. (e.g., "1") |
+| Number of instalments (optional)        | Enter the number of instalments for the payment. (e.g., "1")          |
+| First instalment amount (optional)      | Enter the amount of the first instalment. (e.g., "500")               |
+| Additional instalment amount (optional) | Enter the amount of each additional instalment. (e.g., "0")           |
 
 ##### Optional Fields
 
@@ -3581,12 +3583,11 @@ Click on the **Continue** button.
 
 ##### Payment invoices
 
-| Field                             | Description                                                                                                     |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Invoice document entry (required) | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
-| Invoice type (required)           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
-| Sum applied (optional)            | Enter the amount to apply against the document. (e.g., "500.00")                                                |
-| Discount percent (optional)       | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+| Field                             | Description                                                                            |
+| --------------------------------- | -------------------------------------------------------------------------------------- |
+| Invoice document entry (required) | Enter the DocEntry of the AR document to apply. (e.g., "1172")                         |
+| Invoice type (required)           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice") |
+| Sum applied (optional)            | Enter the amount to apply against the document. (e.g., "500.00")                       |
 
 ##### Cash flow assignments
 
@@ -3687,6 +3688,8 @@ Click on the **Continue** button.
 | ------------------------------ | ------------------------------------------------------------------------- |
 | Cheque bank account (required) | Enter the bank account linked to the cheque. (e.g., "\_SYS00000000006")   |
 | Cheque amount (required)       | Enter the cheque amount. (e.g., "500")                                    |
+| Cheque number (optional)       | Enter the cheque number. (e.g., "1")                                      |
+| Bank code (optional)           | Enter the code of the bank the cheque is drawn on.                        |
 | Cheque due date (optional)     | Specify the cheque clearance date. (e.g., "2026-04-17")                   |
 | Transferable (optional)        | Indicate if the cheque is transferable (**Yes** or **No**). (e.g., "Yes") |
 
@@ -3702,12 +3705,11 @@ Click on the **Continue** button.
 
 ##### Payment invoices
 
-| Field                             | Description                                                                                                     |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Invoice document entry (required) | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
-| Invoice type (required)           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
-| Sum applied (optional)            | Enter the amount to apply against the document. (e.g., "500.00")                                                |
-| Discount percent (optional)       | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+| Field                             | Description                                                                            |
+| --------------------------------- | -------------------------------------------------------------------------------------- |
+| Invoice document entry (required) | Enter the DocEntry of the AR document to apply. (e.g., "1172")                         |
+| Invoice type (required)           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice") |
+| Sum applied (optional)            | Enter the amount to apply against the document. (e.g., "500.00")                       |
 
 ##### Cash flow assignments
 
@@ -3750,7 +3752,7 @@ Click on the **Continue** button, then **Run** node
     "DocType": "rCustomer",
     "DocDate": "2026-04-17",
     "CardCode": "ZC0001",
-    "CardName": "GivaJewellers",
+    "CardName": "Test Customer",
     "DocCurrency": "$",
     "Remarks": "Cheque received from customer",
     "JournalRemarks": "Incoming Payments - ZC0001",
@@ -3792,21 +3794,18 @@ Click on the **Continue** button.
 
 ##### Optional Fields
 
-| Field           | Description                                                                                  |
-| --------------- | -------------------------------------------------------------------------------------------- |
-| Posting date    | Specify the posting date of the incoming payment. (e.g., "2026-04-17")                       |
-| Document date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                      |
-| Remarks         | Add any notes related to the payment. (e.g., "Demo Purpose")                                 |
-| Journal remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
+| Field           | Description                                                                              |
+| --------------- | ---------------------------------------------------------------------------------------- |
+| Document date   | Specify the document date of the incoming payment. (e.g., "2026-04-17")                  |
+| Remarks         | Add any notes related to the payment. (e.g., "Demo Purpose")                             |
+| Journal remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - NR") |
 
 ##### Payment invoices
 
-| Field                             | Description                                                                                                     |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Invoice document entry (required) | Enter the DocEntry of the AR document to apply. (e.g., "1172")                                                  |
-| Invoice type (required)           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice")                          |
-| Sum applied (optional)            | Enter the amount to apply against the document. (e.g., "500.00")                                                |
-| Discount percent (optional)       | Enter the cash discount percentage from the customer's payment terms. Use 0 to pay the full amount. (e.g., "2") |
+| Field                  | Description                                                                            |
+| ---------------------- | -------------------------------------------------------------------------------------- |
+| Invoice document entry | Enter the DocEntry of the AR document to apply. (e.g., "1172")                         |
+| Invoice type           | Select **AR invoice**, **AR credit note** or **AR down payment**. (e.g., "AR invoice") |
 
 ##### Cash flow assignments
 
@@ -3850,7 +3849,7 @@ Click on the **Continue** button, then **Run** node
     "CardCode": "NR",
     "DocCurrency": "$",
     "Remarks": "Demo Purpose",
-    "JournalRemarks": "Incoming Payments - ZC0001",
+    "JournalRemarks": "Incoming Payments - NR",
 
     "PaymentCash": {
       "CashAccount": "_SYS00000000002",
@@ -3938,7 +3937,7 @@ Click on the **Continue** button, then **Run** node
 ```json
 [
   {
-    "odata.metadata": "https://insync.pro/b1s/v1/$metadata#IncomingPayments/@Element",
+    "odata.metadata": "https://<your-server>:50000/b1s/v1/$metadata#IncomingPayments/@Element",
     "odata.etag": "W/\"356A192B7913B04C54574D18C28D46E6395428AB\"",
     "DocNum": 292,
     "DocType": "rCustomer",
