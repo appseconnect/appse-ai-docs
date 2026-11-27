@@ -177,6 +177,7 @@ Here is the list of available actions in WooCommerce:
 | **Get product variations**       | Retrieve all variations of a specific WooCommerce product.                |
 | **Get all product categories**   | Fetch all product categories from WooCommerce with an optional search filter. |
 | **Get product category by ID**   | Fetch a single WooCommerce product category using its unique category ID. |
+| **Get order by ID**              | Retrieve detailed order information using the WooCommerce order ID.       |
 | **Search orders by date range**  | Search WooCommerce orders within a specified date range.                  |
 | **Create order**                 | Create a new order in WooCommerce.                                        |
 | **Update order**                 | Update an existing WooCommerce order.                                     |
